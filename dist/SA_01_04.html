@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <a href="" data-layer-open="layer-select-crime-prevention-team">권한 그룹</a>
+
+    <!-- layer: 권한 그룹 선택 -->
+    <div class="layer-wrap layer-select-crime-prevention-team" data-layer="layer-select-crime-prevention-team">
+      <div class="layer-container">
+        <section class="ui-layer">
+          <div class="ui-layer__head">
+            <div class="ui-layer-header">
+              <h2 class="ui-layer-header__title">권한 그룹</h2>
+              <!-- 2021.10.18 : add : 닫기 버튼 추가 -->
+              <button type="button" class="ui-button ui-layer-header__close" data-role="layerClose">
+                <span class="for-a11y">레이어 닫기</span>
+              </button>
+              <!-- //2021.10.18 : add : 닫기 버튼 추가 -->
+            </div>
+          </div>
+          <div class="ui-layer__body">
+            <div class="ui-layer__body-inner">
+              <div class="form-flex">
+                <div class="form-flex-cell flex--1">
+                  <div class="ui-select-block">
+                    <select class="ui-select" id="select" title="그룹 롤" >
+                      <option value="선택 1">선택</option>
+                      <option value="선택 2">30개씩 보기</option>
+                      <option value="선택 3">50개씩 보기</option>
+                      <option value="선택 4">100개씩 보기</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-flex-cell">
+                    <button type="button" class="ui-button ui-basic-button ui-basic-button--normal" id="templateFormAdd4" onclick="myfunction()">추가</button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+<!--------------------------------------------------------->
+
+
+    <div class="window-popup window-popup--regist-situation-work-diary js-ui-tab-panel popup-border-bottom-none popup-body-title popup-body-div">
+      <form action="">
+
+        <section class="search-bar search-bar--popup search-bar--width-230 box-shadow--none background-white ui-scroller ui-scroller2" style="border:1px solid #dfe5eb; height: 300px ; overflow: auto;" >
+          <div  class="window-popup__body p-0"   > 
+            <ul class="group-ul" id="view">
+             
+            </ul>
+          </div>       
+        </section>
+
+
+        <div class="form-flex align-flex-end justify-content-end mat-10">
+          <div class="form-flex-cell  ">
+            <button type="button" class="ui-button ui-basic-button ui-basic-button--normal button__min--65" id="del">삭제</button>
+          </div>
+          
+          <div class="form-flex-cell">
+            <button type="submit" class="ui-button ui-basic-button ui-basic-button--save button__min--65">저장</button>
+          </div>
+        </div>
+
+          
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+        
+        </section>
+      </div>
+    </div>
+    <!-- //layer: 권한 그룹 선택 -->
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      function myfunction() {
+
+        var x = document.getElementById("select").value;
+
+        document.getElementById("view").innerHTML += `
+        <li><a>${x}</a></li>`;
+
+        $('.group-ul li').click(function(){
+          const $this = $(this);
+            $('.group-ul li').removeClass('sel');
+            $this.addClass('sel');
+        });
+
+        $("#del").click(function() {
+                             
+            //체크된 행이 없을 경우.
+            
+            $('.group-ul li.sel').remove();
+        });
+
+      }
+
+      $(function () {
+          uiJSLayer.open('layer-select-crime-prevention-team'); // 퍼블리셔 테스트 소스 입니다.
+        });
+    
+   </script>
+
+   
+   <!-- //script -->
+    <!-- //script -->
+  </body>
+</html>

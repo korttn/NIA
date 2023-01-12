@@ -1,0 +1,65 @@
+/* reset style */
+.ui-button,
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-button-play,
+.swiper-button-pause {
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.ui-button[type='submit'],
+.swiper-button-next[type='submit'],
+.swiper-button-prev[type='submit'],
+.swiper-button-play[type='submit'],
+.swiper-button-pause[type='submit'] {
+  filter: chroma(color=#000000);
+}
+
+.ui-button::-moz-focus-inner,
+.swiper-button-next::-moz-focus-inner,
+.swiper-button-prev::-moz-focus-inner,
+.swiper-button-play::-moz-focus-inner,
+.swiper-button-pause::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+.ui-button[disabled],
+.swiper-button-next[disabled],
+.swiper-button-prev[disabled],
+.swiper-button-play[disabled],
+.swiper-button-pause[disabled] {
+  cursor: default;
+  opacity: 1;
+}
+
+@-moz-document url-prefix() {
+  select {
+    text-indent: -2px;
+  }
+}
+
+.ui-radio,
+.ui-checkbox {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+}
+
+.ui-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}

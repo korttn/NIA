@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <!-- <link type="text/css" rel="stylesheet" href="./assets/lib/jquery/jquery-ui.min.css" /> -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  
+  <body>
+    <a href="" data-layer-open="layer-dashboard-setting">대시보드 편집</a>
+
+    <!-- layer: 대시보드 편집 -->
+    <div class="layer-wrap layer-dashboard-setting" data-layer="layer-dashboard-setting">
+        <div class="layer-container">
+
+            
+            <!-- DD : data-initial 값에 현재 저장 되어 있는 카드 순서를 넣어주세요. (콤마로 구분) -->
+            <section class="dashboard-setting flex-column ui-layer" data-initial="value1, value2, value3, value4, value5, value6, value7, value8, value9, value10, value11, value12, value13, value14, value15, value16, value17, value18, value19">
+                <div class="ui-layer__head background-white">
+                    <div class="ui-layer-header">
+                        <h2 class="ui-layer-header__title">대시보드 편집</h2>
+                        <button type="button" class="ui-button ui-layer-header__close" data-role="layerClose">
+                        <span class="for-a11y">레이어 닫기</span>
+                        </button>
+                    </div>
+                </div>
+              <div class="dashboard-setting__inner d-flex">
+                  <div class="dashboard-setting__view">
+                    <div class="dashboard-setting__head mb-0">
+                      <h2 class="dashboard-setting__head-title">위젯 위치 편집 <span class="color-lightblue font-weight-medium">패널을 드래그 앤 드롭하여 위치를 편집하세요.</span></h2>
+                    </div>
+                    <div class=" dashboard-setting__scroller">
+                      <div class="dashboard-preview">
+                        <!-- <div class="dashboard-preview__empty">
+                          <div class="dashboard-preview__empty-text">
+                            우측의 패널을<br />
+                            순서대로 체크해주세요.
+                          </div>
+                        </div> -->
+                        <div class="dashboard-preview__inner grid"  >
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <section class="dashboard-setting__form">
+                    <!--
+                      DD :
+                      submit 시 .js-dashboard-setting-input 의 값을 받아 올 수 있습니다.
+                      DB에 전송 완료 되면 해당 값을 .dashboard-setting 의 data-initial 속성에 반영해주세요.
+                    -->
+                    <form action="" onsubmit="alert(this.array.value); return false;">
+                      <div class="dashboard-setting__head mb-0">
+                        <h3 class="dashboard-setting__head-title">사용 위젯 선택</h3>
+                      </div>
+                      <div class=" dashboard-setting__scroller">
+                        <!-- DD : .js-dashboard-setting-input 에 순서 값이 입력됩니다. name 값은 개발측에서 원하시는걸로 변경하여도 됩니다. -->
+                        <input type="hidden" class="js-dashboard-setting-input" name="array" />
+                        <div class="setting-checks">
+                          <!--
+                            DD :
+                            체크 된 체크박스의 value 값이 체크한 순서대로 .js-dashboard-setting-input 에 입력 됩니다.
+                            value 값은 개발측에서 원하시는걸로 변경하여도 됩니다.
+                          -->
+                          <ul class="setting-checks__list">
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting1" value="value1" data-type="type1" data-text="공지사항" checked disabled/>
+                                <label for="dashboardSetting1" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text color-black">공지사항(고정)</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+                            
+                            <li class="setting-checks__item">
+                                <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                  <input type="checkbox" class="ui-checkbox" id="dashboardSetting2" value="value2" data-type="type2" data-text="전자결재" checked disabled/>
+                                  <label for="dashboardSetting2" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text color-black">전자결재(고정)</span>
+                                  </label>
+                                </div>
+                              </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting3" value="value3" data-type="type3" data-text="관제 대상자" />
+                                <label for="dashboardSetting3" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">관제 대상자</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting4" value="value4" data-type="type4" data-text="전체 \n 업무 현황" />
+                                <label for="dashboardSetting4" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">전체 업무 현황</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting5" value="value5" data-type="type5" data-text="경보 상세 현황" />
+                                <label for="dashboardSetting5" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">경보 상세 현황</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting6" value="value6" data-type="type6" data-text="분리/부착 예정현황" />
+                                <label for="dashboardSetting6" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">분리/부착 예정현황</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting7" value="value7" data-type="type7" data-text="시간대별 \n 위반 현황" />
+                                <label for="dashboardSetting7" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">시간대별 위반 현황</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting8" value="value8" data-type="type8" data-text="범죄예방 경보 상세 현황" />
+                                <label for="dashboardSetting8" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">범죄예방 경보 상세 현황</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting9" value="value9" data-type="type9" data-text="미처리 \n경보 현황" />
+                                <label for="dashboardSetting9" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">미처리 경보 현황</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting10" value="value10" data-type="type10" data-text="재범 위험성 종합평가" />
+                                <label for="dashboardSetting10" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">재범 위험성 종합평가</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting11" value="value11" data-type="type11" data-text="CCTV 현황" />
+                                <label for="dashboardSetting11" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">CCTV 현황</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting12" value="value12" data-type="type12" data-text="평가정보\n(일탈, 급성) 결과" />
+                                <label for="dashboardSetting12" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">평가정보(일탈, 급성) 결과</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting13" value="value13" data-type="type13" data-text="종합평가\n입력 상태" />
+                                <label for="dashboardSetting13" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">종합평가 입력 상태</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+                            <li class="setting-checks__item ">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting14" value="value14" data-type="type14" data-text="장치현황" />
+                                <label for="dashboardSetting14" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">장치현황</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting15" value="value15" data-type="type15" data-text="날짜 및 시간" />
+                                <label for="dashboardSetting15" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">날짜 및 시간</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                              <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                <input type="checkbox" class="ui-checkbox" id="dashboardSetting16" value="value16" data-type="type16" data-text="관제센터\n담당자별\n권역배치" />
+                                <label for="dashboardSetting16" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                  <span class="ui-label__text">관제센터 담당자별 권역배치</span>
+                                  
+                                </label>
+                              </div>
+                            </li>
+                            
+                            <li class="setting-checks__item">
+                                <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                  <input type="checkbox" class="ui-checkbox" id="dashboardSetting17" value="value17" data-type="type17" data-text="업무일정표" />
+                                  <label for="dashboardSetting17" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">업무일정표</span>
+                                  </label>
+                                </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                                <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                    <input type="checkbox" class="ui-checkbox" id="dashboardSetting18" value="value18" data-type="type18" data-text="이동패턴" />
+                                    <label for="dashboardSetting18" class="ui-label">
+                                        <span class="ui-checkbox-object"></span>
+                                        <span class="ui-label__text">이동패턴</span>
+                                    </label>
+                                </div>
+                            </li>
+
+                            <li class="setting-checks__item">
+                                <div class="ui-checkbox-block ui-checkbox-block__width-15">
+                                    <input type="checkbox" class="ui-checkbox" id="dashboardSetting19" value="value19" data-type="type19" data-text="교정관제 대상자" />
+                                    <label for="dashboardSetting19" class="ui-label">
+                                        <span class="ui-checkbox-object"></span>
+                                        <span class="ui-label__text">교정관제 대상자</span>                                
+                                    </label>
+                                </div>
+                            </li>
+
+                              
+                          </ul>
+                        </div>
+                      </div>
+                      
+                    </form>
+                  </section>
+              </div>
+              <div class="board-bottom mt-0 px-20 py-10 border-top">
+                <div class="board-bottom__right">
+                  <div class="ui-buttons ui-buttons--right ui-buttons--auto">
+                    <ul class="ui-buttons__list">
+                      <li class="ui-buttons__item">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--width-65 ui-basic-button--quaternary" data-role="layerClose">취소</button>
+                      </li>
+                      <li class="ui-buttons__item">
+                        <button type="submit" class="ui-button ui-basic-button ui-basic-button--width-65">저장</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+    </div>
+    <!-- //layer: 대시보드 편집 -->
+
+    <!-- script -->
+
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    
+    <!-- <script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
+    <script src="https://unpkg.com/draggabilly@3/dist/draggabilly.pkgd.min.js"></script> -->
+
+    <!-- <script src="node_modules/gridstack/dist/gridstack-h5.js"></script>
+    <link href="node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet"/> -->
+
+    <!-- 2022.08.16 : add : 드래그앤 드롭 위한 스트립트 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <!-- 2022.08.16 : add : 드래그앤 드롭 위한 스트립트 추가 -->
+
+
+    <script type="text/javascript" src="./assets/js/ui-script_test.js"></script>
+    
+
+
+  </body>
+</html>

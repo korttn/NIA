@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+    <style>
+      .ui-board-table{height:525px; }
+      .sbgrid_trial_expired {
+        height: 525px;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">출국금지 등록</h1>
+          </div>
+          <!-- 2022.08.31 : del : radius-div, overflow-ini 클래스 삭제 -->
+          <div class="window-popup__body">
+            <!-- 2022.08.31 : del : ui-board-viewTable-radius--6, ui-board-viewTable--border 클래스 삭제 -->
+            <div class="board-detail-table ui-board-viewTable table-height-35">
+                <table style="margin-bottom:0;">
+                  <colgroup>
+                    <!-- 2021.10.22 : mod : 너비 값 클래스 방식으로 변경 -->
+                    <col style="width:15%;">
+                    <col>
+                    <col style="width:15%;">
+                    <col>
+                    <col style="width:15%;">
+                    <col>
+                    <!-- //2021.10.22 : mod : 너비 값 클래스 방식으로 변경 -->
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">사건번호<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td>
+                        <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="title">
+                        </div>
+                      </td>
+                      <th scope="row">국적<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td>
+                        <div class="ui-select-block ui-select-block">
+                          <select name="" id="" class="ui-select ">
+                            <option value="">선택</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                      <th scope="row">요청사유</th>
+                      <td>
+                        <div class="ui-select-block ui-select-block">
+                          <select name="" id="" class="ui-select ">
+                            <option value="">선택</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">성명<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                        <th scope="row">규제유형<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                        <td>
+                          <div class="ui-select-block ui-select-block">
+                            <select name="" id="" class="ui-select ">
+                              <option value="">선택</option>
+                              <option value=""></option>
+                              <option value=""></option>
+                            </select>
+                          </div>
+                        </td>
+                        <th scope="row">요청사유상세</th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">후단 주민번호<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                        <th scope="row">성별<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                        <td>
+                          <div class="ui-select-block ui-select-block">
+                            <select name="" id="" class="ui-select ">
+                              <option value="">선택</option>
+                              <option value=""></option>
+                              <option value=""></option>
+                            </select>
+                          </div>
+                        </td>
+                        <th scope="row">요청기관상세</th>
+                        <td>
+                            <div class="ui-select-block ui-select-block">
+                              <select name="" id="" class="ui-select ">
+                                <option value="">선택</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">여권번호</th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                        <th scope="row">여권만료일</th>
+                        <td>
+                          <div class="ui-input-block ui-input-block--date input-width-date width-full">
+                            <input type="text" class="ui-input js-datepicker" title="검찰 송치일자" value="2021-12-08">
+                          </div>
+                        </td>
+                        <th scope="row">요청부서</th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">국가신분번호</th>
+                        <td>
+                          <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="title">
+                          </div>
+                        </td>
+                        <th scope="row">주소미상</th>
+                        <td>
+                          <div class="ui-select-block ui-select-block">
+                            <select name="" id="" class="ui-select ">
+                              <option value="">선택</option>
+                              <option value=""></option>
+                              <option value=""></option>
+                            </select>
+                          </div>
+                        </td>
+                        <th scope="row">담당자</th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">우편번호</th>
+                        <td>
+                          <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="title">
+                          </div>
+                        </td>
+                        <th scope="row">기본주소</th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                        <th scope="row">전화번호</th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">상세주소</th>
+                        <td>
+                          <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="title">
+                          </div>
+                        </td>
+                        <th scope="row">생년월일<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                        <th scope="row">팩스번호</th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">요청기관</th>
+                        <td>
+                            <div class="ui-select-block ui-select-block">
+                              <select name="" id="" class="ui-select ">
+                                <option value="">선택</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+                        </td>
+                        <!-- 2022.08.26 : mod : 국제사유 -> 규제사유 -->
+                        <th scope="row">규제사유</th>
+                        <!-- 2022.08.26 : mod : 국제사유 -> 규제사유 -->
+                        <td>
+                            <div class="ui-select-block ui-select-block">
+                              <select name="" id="" class="ui-select ">
+                                <option value="">선택</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+                        </td>
+                        <th scope="row">입국출국동시저장</th>
+                        <td>
+                            <div class="ui-select-block ui-select-block">
+                              <select name="" id="" class="ui-select ">
+                                <option value="">선택</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">규제시작일<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                        <td>
+                          <div class="ui-input-block ui-input-block--date input-width-date width-full">
+                            <input type="text" class="ui-input js-datepicker" title="검찰 송치일자" value="2021-12-08">
+                          </div>
+                        </td>
+                        <th scope="row">만료예정일<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                        <td>
+                          <div class="ui-input-block ui-input-block--date input-width-date width-full">
+                            <input type="text" class="ui-input js-datepicker" title="검찰 송치일자" value="2021-12-08">
+                          </div>
+                        </td>
+                        <th scope="row">최초요청공문번호</th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">규제기간</th>
+                        <td>
+                            <div class="ui-select-block ui-select-block">
+                              <select name="" id="" class="ui-select ">
+                                <option value="">선택</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+                        </td>
+                        <th scope="row">요청문서번호</th>
+                        <td>
+                            <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="title">
+                            </div>
+                        </td>
+                        <th scope="row">발권시통보대상</th>
+                        <td>
+                            <div class="ui-select-block ui-select-block">
+                              <select name="" id="" class="ui-select ">
+                                <option value="">선택</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">통보후해제</th>
+                        <td>
+                            <div class="ui-select-block ui-select-block">
+                              <select name="" id="" class="ui-select ">
+                                <option value="">선택</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+                        </td>
+                        <th scope="row">요청일자</th>
+                        <td>
+                          <div class="ui-input-block ui-input-block--date input-width-date width-full">
+                            <input type="text" class="ui-input js-datepicker" title="검찰 송치일자" value="2021-12-08">
+                          </div>
+                        </td>
+                        <th scope="row">입국후출국금지기간</th>
+                        <td>
+                            <div class="ui-select-block ui-select-block">
+                              <select name="" id="" class="ui-select ">
+                                <option value="">선택</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">요청유형</th>
+                        <td>
+                            <div class="ui-select-block ui-select-block">
+                              <select name="" id="" class="ui-select ">
+                                <option value="">선택</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+                        </td>
+                        <th scope="row">통지여부</th>
+                        <td>
+                            <div class="ui-select-block ui-select-block">
+                              <select name="" id="" class="ui-select ">
+                                <option value="">선택</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+                        </td>
+                        <th scope="row">영장만료일</th>
+                        <td>
+                          <div class="ui-input-block ui-input-block--date input-width-date width-full">
+                            <input type="text" class="ui-input js-datepicker" title="검찰 송치일자" value="2021-12-08">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">참고내용</th>
+                        <td colspan="5">
+                          <div class="ui-input-block">
+                              <input type="text" class="ui-input" title="title">
+                          </div>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- 2022.08.31 : del : ui-board-viewTable-radius--6, ui-board-viewTable--border 클래스 삭제 -->
+
+          </div>
+          <!-- 2022.08.31 : del : radius-div, overflow-ini 클래스 삭제 -->
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button ui-basic-button--save button__min--65">저장</button>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script> -->
+  <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+  <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+  <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+  <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+  <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+  <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+
+  </body>
+</html>

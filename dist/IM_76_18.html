@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+
+
+    <!-- //style -->
+</head>
+
+<body>
+    <div id="wrap">
+        <div
+            class="window-popup window-popup--regist-situation-work-diary js-ui-tab-panel popup-border-bottom-none popup-body-title popup-body-div">
+            <form action="">
+
+                <div class="window-popup__head">
+                    <h1 class="window-popup__head-title">결재선 설정</h1>
+                </div>
+                <div class="window-popup__body pt-0">
+                    <div class="form-flex  align-items-stretch">
+                        <div class="form-flex-cell background-white px-20 pb-20 border-radius width-320">
+                            <div class="board-detail-table__title">직원 조회</div>
+                            <div class="form-flex">
+                                <div class="form-flex-cell flex">
+                                    <div class="ui-select-block">
+                                        <select class="ui-select" title="소속 기관">
+                                            <option value="">소속 기관</option>
+                                            <option value="">Option01</option>
+                                            <option value="">Option02</option>
+                                            <option value="">Option03</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-flex-cell">
+                                    <div class="header-search header-search--filter">
+                                        <div class="ui-input-block header-search__input input-width-small-tiny">
+                                            <input type="text" class="ui-input" title="" placeholder="이름">
+                                        </div>
+                                        <button type="button" class="ui-button header-search__submit">
+                                            <span class="for-a11y">검색</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ui-board-table mt-10 overflow-visible" id="boardGrid" style="height: 287px;">
+                            </div>
+
+
+                        </div>
+                        <div class="form-flex-cell background-white px-20 pb-20 ml-10 border-radius ">
+                            <div class="board-detail-table__title">설정</div>
+                            <div class="board-detail-table">
+                                <table class="ma-0 w-auto">
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                처리유형<span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="ui-radio-block pl-0">
+                                                    <input type="radio" class="ui-radio" name="ui-radio-type" id="radio1">
+                                                    <label for="radio1" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">검토</span>
+                                                    </label>
+                                                </div>
+                                                <div class="ui-radio-block pl-0">
+                                                    <input type="radio" class="ui-radio" name="ui-radio-type" id="radio2">
+                                                    <label for="radio2" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">결재</span>
+                                                    </label>
+                                                </div>
+                                                <div class="ui-radio-block pl-0">
+                                                    <input type="radio" class="ui-radio" name="ui-radio-type" id="radio3">
+                                                    <label for="radio3" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">전결</span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ui-buttons ui-buttons--right">
+                                <ul class="ui-buttons__list ">
+                                  <li class="ui-buttons__item">
+                                    <button type="button" class="ui-button ui-basic-button ui-basic-button--input">추가</button>
+                                  </li>
+                                </ul>
+                              </div>
+                        </div>
+                        <div class="form-flex-cell background-white ml-10 px-20 pb-20 ml-10 border-radius flex">
+                            <div class="board-detail-table__title">결재선</div>
+                            <div class="form-flex">
+                                <div class="form-flex-cell flex">
+                                    <div class="ui-select-block">
+                                        <select class="ui-select" title="자주 쓰는 결재선">
+                                            <option value="">자주 쓰는 결재선</option>
+                                            <option value="">Option01</option>
+                                            <option value="">Option02</option>
+                                            <option value="">Option03</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-flex-cell">
+                                    <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--senary">적용</button>
+                                </div>
+                                <div class="form-flex-cell">
+                                    <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                                </div>
+                            </div>
+
+                            <div class="mt-10">
+                                <div class="board-detail-table">
+                                    <table class="">
+                                        <colgroup>
+                                            <col style="width:90px;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>검토</th>
+                                                <td>
+                                                    <div class="payment-line__align">
+                                                        <div class="payment-line__align--item">
+                                                            <button type="button" class="payment-line__align--button moveUp"></button>
+                                                            <button type="button" class="payment-line__align--button moveDown"></button>
+
+                                                            <div class="payment-line__align--name">
+                                                                <span class="payment-line__align--text">박검토1</span>
+                                                                <button type="button" class="ui-button payment-line__align--name__delete">
+                                                                  <span class="for-a11y">제거</span>
+                                                                </button>
+                                                              </div>
+                                                        </div>
+                                                        <div class="payment-line__align--item">
+                                                            <button type="button" class="payment-line__align--button moveUp"></button>
+                                                            <button type="button" class="payment-line__align--button moveDown"></button>
+
+                                                            <div class="payment-line__align--name">
+                                                                <span class="payment-line__align--text">박검토2</span>
+                                                                <button type="button" class="ui-button payment-line__align--name__delete">
+                                                                  <span class="for-a11y">제거</span>
+                                                                </button>
+                                                              </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>결재</th>
+                                                <td>
+                                                    <div class="payment-line__align">
+                                                        <div class="payment-line__align--item first">
+                                                            <button type="button" class="payment-line__align--button moveUp"></button>
+                                                            <button type="button" class="payment-line__align--button moveDown"></button>
+                                                            <div class="payment-line__align--name">
+                                                                <span class="payment-line__align--text">박검토</span>
+                                                                <button type="button" class="ui-button payment-line__align--name__delete">
+                                                                  <span class="for-a11y">제거</span>
+                                                                </button>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-buttons ui-buttons--right mt-10">
+                    <ul class="ui-buttons__list ui-buttons__list--width-65">
+                      <li class="ui-buttons__item">
+                        <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                      </li>
+                      <li class="ui-buttons__item">
+                        <button type="submit" class="ui-button ui-basic-button ui-basic-button--save">적용</button>
+                      </li>
+                    </ul>
+                  </div>
+
+
+            </form>
+        </div>
+
+
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+        var datagrid;
+
+        // Data
+        var grid_data = [{
+                cell_1: '홍결재',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '박결재',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '최결재',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '임결',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '홍결재',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '중앙관제센터',
+                cell_3: '6',
+            },
+            {
+                cell_1: '1팀',
+                cell_2: '서울보호관찰소',
+                cell_3: '6',
+            },
+
+        ];
+
+        function createGrid() {
+            SBGridProperties.parentid = 'boardGrid';
+            SBGridProperties.id = 'datagrid';
+            SBGridProperties.jsonref = 'grid_data';
+            SBGridProperties.extendcol = 3;
+            SBGridProperties.fixedrowheight = '25';
+            SBGridProperties.rowheight = '25';
+            SBGridProperties.width = '100%';
+            SBGridProperties.height = '100%';
+            SBGridProperties.emptyrecords = '조회결과가 없습니다.';
+            SBGridProperties.emptyrecordsfontstyle = "font-size:12px;font-weight bold;";
+            SBGridProperties.columns = [{
+                    caption: ['선택'],
+                    ref: 'check',
+                    width: '46px',
+                    type: 'checkbox',
+                    sortable: false,
+                    style: 'text-align: center;',
+                    fixedstyle: 'text-align: center !important;',
+                },
+                {
+                    caption: ['이름'],
+                    ref: 'cell_1',
+                    width: '65px',
+                },
+                {
+                    caption: ['소속기관'],
+                    ref: 'cell_2',
+                    width: '105px',
+                },
+                {
+                    caption: ['직급'],
+                    ref: 'cell_3',
+                    width: '40px',
+                },
+            ];
+
+            datagrid = _SBGrid.create(SBGridProperties);
+            datagrid.bind('aftersort', function () {
+                SBCustomFunction.aftersort(datagrid);
+            });
+
+            //datagrid.setFixedcellcheckbox(0, 0);
+            datagrid.sortColumn(0, 'desc');
+            datagrid.sortingIcon();
+        }
+
+        $(function () {
+            createGrid();
+        });
+
+
+        $(function(){
+            //  2022.09.16 : add : 버튼 위아래 이동 스크립트 추가
+            $(".payment-line__align--item .moveUp").click(function () {
+                console.log("a")
+                var $tr = $(this).parent(".payment-line__align--item");
+                $tr.prev().before($tr);
+            });
+
+            $(".payment-line__align--item .moveDown").click(function () {
+                var $tr = $(this).parent(".payment-line__align--item");
+                $tr.next().after($tr);
+            });
+
+            
+        
+            $( '.payment-line__align' ).each( function() {
+                if ( $( '.payment-line__align--item', this ).length < 2 ) {
+
+                    $( this ).parent().parent().addClass( 'last' );
+                }
+            });
+
+
+            $(".payment-line__align--name__delete").click(function(){
+                $(this).closest(".payment-line__align--item").remove();
+
+                //2022.09.19 : mod : tr 까지 삭제
+                $( '.payment-line__align' ).each( function() {
+                    if ( $( '.payment-line__align--item', this ).length < 1 ) {
+                        $( this ).parent().parent().remove();
+                    }
+                });
+
+                
+            });
+
+            
+
+        })
+
+    </script>
+    <!-- //script -->
+</body>
+
+</html>

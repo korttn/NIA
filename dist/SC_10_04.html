@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+
+     
+    <!-- //style -->
+    <!-- 2022.08.25 : 해당 스타일 삭제 -->
+    <!-- <style>
+      .ui-board-table{height:633px; }
+      .sbgrid_trial_expired {
+        height: 540px;
+    } -->
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup page-contents">
+        <!-- 2021.09.27 : mod : form 태그 위치 변경 -->
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">경찰서공항 출입경보 조회</h1>
+          </div>
+
+          <div class="window-popup__body window-popup__body--set background-white radius-div overflow-ini">
+            <div class="survey-form survey-form--padding-0 board-detail-wrap border-gray border-radius">
+              <!-- 2021.10.18 : add : 참여 후 케이스 추가 -->
+              <!-- Case : 참여 후 -->
+
+              
+              <div class="board-detail-table td-border-right board-table-padding--1220 board-table-bold board-detail-table-layout-auto">
+                <form action="">
+                  <section class=" search-bar search-bar-lst search-bar-set">
+                    <h2 class="for-a11y">검색</h2>
+      
+                    <div class="search-bar__left flex-none">
+                      <div class="search-bar__row">
+                        
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-90">보호관찰소</dt>
+                          <dd class="search-bar__val">
+                            <div class="ui-select-block input-width-123">
+                              <select class="ui-select" title="보호관찰소">
+                                <option value="">전체</option>
+                                <option value="">Option01</option>
+                                <option value="">Option02</option>
+                                <option value="">Option03</option>
+                              </select>
+                            </div>
+                          </dd>
+                        </dl>
+
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key ">장소</dt>
+                          <dd class="search-bar__val">
+                            <div class="ui-check-list">
+                              <ul class="ui-check-list__list">
+                                <li class="ui-check-list__item">
+                                  <div class="ui-radio-block">
+                                    <input type="radio" class="ui-radio" name="time" id="time-1" checked="">
+                                    <label for="time-1" class="ui-label">
+                                      <span class="ui-radio-object"></span>
+                                      <span class="ui-label__text">경찰서</span>
+                                    </label>
+                                  </div>
+                                </li>
+                                <li class="ui-check-list__item">
+                                  <div class="ui-radio-block">
+                                    <input type="radio" class="ui-radio" name="time" id="time-2">
+                                    <label for="time-2" class="ui-label">
+                                      <span class="ui-radio-object"></span>
+                                      <span class="ui-label__text">공항/항만</span>
+                                    </label>
+                                  </div>
+                                </li>
+
+                              </ul>
+                            </div>
+                          </dd>
+                        </dl>
+    
+
+                      </div>
+    
+                      <div class="search-bar__row">
+                        
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key search-bar__key--width-90">일자</dt>
+                          <dd class="search-bar__val">
+                            <div class="form-flex form-flex-padding js-datepicker-range">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block ui-input-block--date input-width-date">
+                                  <input type="text" class="ui-input js-datepicker-range__min input-width-120" title="시작 날짜" value="2021-12-08">
+                                </div>
+                              </div>
+                          
+                            </div>
+                          </dd>
+                        </dl>
+
+                        <dl class="search-bar__item">
+                          <dt class="search-bar__key">피부착자</dt>
+                          <dd class="search-bar__val">
+                            <div class="header-search header-search--filter input-width-140">
+                              <div class="ui-input-block header-search__input">
+                                <input type="text" class="ui-input" title="피부착자" name="data_1_0">
+                              </div>
+                              <button type="button" class="ui-button header-search__submit">
+                                <span class="for-a11y">검색</span>
+                              </button>
+
+                            </div>
+
+                          </dd>
+                          <dd class="search-bar__val">
+                            <div class="ui-check-list">
+                              <ul class="ui-check-list__list">
+                                <li class="ui-check-list__item ui-check-list__item--line">
+                                  <div class="ui-checkbox-block">
+                                    <input type="checkbox" name="selectall" class="ui-checkbox" id="checkList1-1" onclick="selectAll(this)">
+                                    <label for="checkList1-1" class="ui-label">
+                                      <span class="ui-checkbox-object"></span>
+                                      <span class="ui-label__text">전체</span>
+                                    </label>
+                                  </div>
+                                </li>                              
+                              </ul>
+                            </div>
+                          </dd>
+                        </dl>
+                        
+    
+
+                      </div>
+                    </div>
+      
+                    <div class="search-bar__right align-item--flex-end">
+                      <!-- 2022.08.31 : mod : 초기화&조회 버튼 수정 -->
+                      <div class="ui-buttons ui-buttons--center">
+                        <ul class="ui-buttons__list d-flex flex-column ui-buttons__list--width-73">
+                          <li class="ui-buttons__item">
+                            <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">
+                              초기화
+                            </button>
+                          </li>
+                          <li class="ui-buttons__item mt-5 ml-0">
+                            <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">
+                              조회
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- //2022.08.31 : mod : 초기화&조회 버튼 수정 -->
+                    </div>
+                  </section>
+                </form>
+              </div>
+              <div class="board-detail-contents board-detail-contents--padding-0">
+     
+
+                <!-- 2022.08.25 : mod : 클래스 ui-board-table-td__padding 삭제, 스타일 height 추가 -->
+                  <div class="ui-board-table ui-board-table__set ui-board-table__weight--400 ui-board-table__align--left  sbgrid_PA mat-20" id="boardGrid" style="height: 276px;"></div>
+                 
+                  
+                  <div class="board-bottom board-bottom--list p-0-20-20">
+                    <div class="board-bottom__left">
+                      <p class="total-text">총<span class="total-text__count">123,124,124</span>건</p>
+                    </div>
+                    <div class="board-bottom__right">
+                      <div class="pagination">
+                        <button type="button" class="ui-basic-button ui-basic-button--quaternary button__min--65" onclick="closeTabClick()">닫기</button>     
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+
+    <script>
+      var datagrid;
+      // Data
+      var grid_data = [
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(야간) 18:00~09:00',
+          cell_5: '0',
+          cell_6: '0',
+
+        },
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(휴일) 09:00~09:00',
+          cell_5: '1',
+          cell_6: '2',
+
+        },
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(휴일) 09:00~09:00',
+          cell_5: '0',
+          cell_6: '1',
+
+        },
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(휴일) 09:00~09:00',
+          cell_5: '1',
+          cell_6: '0',
+
+        },
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(야간) 18:00~09:00',
+          cell_5: '1',
+          cell_6: '0',
+
+        },
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(야간) 18:00~09:00',
+          cell_5: '0',
+          cell_6: '1',
+
+        },
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(야간) 18:00~09:00',
+          cell_5: '0',
+          cell_6: '0',
+
+        },
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(야간) 18:00~09:00',
+          cell_5: '2',
+          cell_6: '0',
+
+        },
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(야간) 18:00~09:00',
+          cell_5: '1',
+          cell_6: '0',
+
+        },
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(휴일) 09:00~09:00',
+          cell_5: '0',
+          cell_6: '0',
+
+        },
+        {
+          cell_1: '1팀',
+          cell_2: '서울보호관찰소',
+          cell_3: '2018-01-11',
+          cell_4: '(휴일) 09:00~09:00',
+          cell_5: '0',
+          cell_6: '0',
+
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.fixedrowheight = '25'; // 2022.08.25 : add : 해당 속성 추가
+        SBGridProperties.rowheight = '25'; // 2022.08.25 : add : 해당 속성 추가
+        SBGridProperties.columns = [
+          {
+            caption: ['피부착자'],
+            ref: 'cell_1',
+            width: '16.6%',
+          },
+          {
+            caption: ['보호관찰소'],
+            ref: 'cell_3',
+            width: '16.6%',
+          },
+          {
+            caption: ['구분'],
+            ref: 'cell_4',
+            width: '16.6%',
+          },
+
+          {
+            caption: ['경보일시'],
+            ref: 'cell_6',
+            width: '16.6%',
+          },
+          {
+            caption: ['측위'],
+            ref: 'cell_7',
+            width: '16.6%',
+          },
+          {
+            caption: ['위치정보'],
+            ref: 'cell_8',
+            width: '16.6%',
+          },
+         
+        ];
+
+        datagrid = _SBGrid.create(SBGridProperties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+
+        datagrid.setFixedcellcheckbox(0, 0);
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+      /* 창 닫기 */
+      function closeTabClick() {
+            window.close();
+      }
+      /* //창 닫기 */
+
+
+      </script>
+      <!-- //script -->
+    
+  </body>
+</html>

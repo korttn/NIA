@@ -1,0 +1,217 @@
+/* #################### window popup style #################### */
+
+/* window-popup--device-assign */
+.window-popup--device-assign .board-tab-panel {
+    min-height: 180px;
+}
+
+/* window-popup--regist-situation-work-diary */
+.window-popup--regist-situation-work-diary .board-tab-panel {
+    min-height: 435px;
+}
+
+.window-popup--regist-situation-work-diary .board-tab-panel::after {
+    content: '';
+    display: table;
+}
+
+.window-popup--regist-situation-work-diary .board-detail-table {
+    border-bottom: 1px solid #dfe5eb;
+    margin-bottom: 10px;
+}
+
+.window-popup--regist-situation-work-diary .board-tab-panel__doc textarea.ui-input {
+    height: 395px;
+}
+
+/* window-popup--ai-work-schedule-management */
+.window-popup--ai-work-schedule-management .board-tab-panel {
+    min-height: 353px;
+}
+
+
+.window-popup__body .board-detail-table>table>tbody>tr>td {
+    /* height:34px !important; */
+    padding: 3px 10px;
+}
+
+.setting-board__row .ui-label__text {
+    flex: none;
+}
+
+/* 특별관제 팝업 */
+/* .search-bar--popup .search-bar__left {
+    flex: none;
+    width: 100%;
+} */
+
+.window-popup__body .search-bar__right .ui-buttons .ui-basic-button {
+    height: 28px;
+}
+
+.board-detail-table-hover tbody tr:hover td {
+    background: #ecf3fe;
+}
+
+/* .board-toast-wrap{
+  display: none;
+} */
+.window-popup__body .board-detail-table__title {
+    font-size: 14px;
+}
+
+.window-popup__body .board-tab-panel__foot {
+    border-top: 0;
+}
+
+.window-popup__body .board-tab-panel__foot .pagination-wrap {
+    background: #ffffff;
+}
+
+.ui-total {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.ui-total-num {
+    color: #4264d0;
+    font-weight: 600;
+}
+
+.window-popup .ui-basic-button--icon-search {
+    min-width: unset;
+    width: 60px;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/* 신호실종 팝업 */
+.search-bar--width-195 .search-bar__left {
+    width: 100%;
+}
+
+.search-bar--width-195 .setting-board {
+    background: #ffffff;
+}
+
+.search-bar--width-195 .search-bar__val,
+.search-bar--width-195 .form-flex-cell,
+.search-bar--width-195 .input-width-date-select {
+    width: 100%;
+}
+
+.search-bar__column .search-bar__item--flexible {
+    flex-direction: column;
+}
+
+.window-popup__body--row {
+    background: transparent;
+    box-shadow: none;
+}
+
+.window-popup__body--row .tile-layout {
+    height: 100%;
+}
+
+.search-bar--width-195 {
+    max-width: 192px;
+    height: 100%;
+}
+
+.window-popup__body--row .tile-layout__row {
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0px 0px 18px rgb(0 0 0 / 4%);
+}
+
+.window-popup__body--row .tile-layout__row.ui-scroller .search-bar--popup {
+    height: 100%;
+    padding: 20px 10px;
+    background: #ffffff;
+}
+
+.p-0 .window-popup__head {
+    padding: 20px 20px 10px 20px;
+    margin-bottom: 0;
+}
+
+.window-popup .popup-header-top .popup-header__inner {
+    padding: 5px 20px;
+    border-top: 1px solid #ced4db;
+    background: #f8f9fb;
+}
+
+.window-popup .popup-header-top .popup-header__inner .top-box {
+    margin-left: 0;
+}
+
+.window-popup .popup-header-top .popup-header__inner .top-box-item+.top-box-item {
+    margin-left: 20px;
+}
+
+.window-popup .popup-header-top .popup-header__inner .ui-check-list__item:nth-last-child(1){
+    border-bottom:0;
+}
+
+.window-popup .popup-header-top .popup-header__inner .ui-checkbox-object{
+    width:19px;
+    height:19px;
+}
+.window-popup .popup-header-top .popup-header__inner .ui-checkbox:checked+.ui-label .ui-checkbox-object{
+    background-position: center;
+}
+
+.window-popup .popup-header-top .popup-header__inner .ui-label__text{
+    width:auto;
+    color:#000000;
+}
+
+.window-popup__body--color-gray {
+    background: #eff2f7;
+}
+
+.window-popup.p-0 .board-detail-table>table>tbody>tr>td {
+    background: #ffffff;
+}
+
+.window-popup .ui-checkbox-object,
+.window-popup .ui-radio-object {
+    width: 15px;
+    height: 15px;
+}
+
+.window-popup .ui-radio-object::before {
+    width: 9px;
+    height: 9px;
+    margin: -4.5px 0 0 -4.5px;
+}
+
+/* .window-popup .ui-radio-block {
+    padding: 5px;
+} */
+
+.window-popup .ui-radio-block-wrap {
+    margin: -5px;
+}
+
+.window-popup__discription{
+    padding:5px 10px;
+    font-size: 12px;
+    line-height: 18px;
+    border: 1px solid #dfe5eb;
+    border-radius: 6px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.04);
+}
+
+.window-popup__foot{
+    margin-top: 10px;
+}
+
+/* 경보 임시보관 CS_IR_06_pop.html */
+.window-popup__body-with-button{
+    padding:10px 20px 20px 20px;
+}

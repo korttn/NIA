@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+
+     
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">발권차단정보 처리</h1>
+            <div class="people-head">
+                <div class="people-head__block">
+                  <div class="people-head__name">홍길동</div>
+                  <div class="people-head__hr"></div>
+                  <div class="people-head__sex">(남)</div>
+                  <div class="people-head__hr"></div>
+                  <div class="people-head__date">1952-05-21</div>
+                  <div class="people-head__hr"></div>
+                  <div class="people-head__number">
+                    <span class="people-head__key">사건번호</span>
+                    <span class="people-head__val">12-3456-7890-12345</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body window-popup__body--row">
+            <div class="tile-layout">
+              <div class="tile-layout__inner">
+    
+                <div class="tile-layout__row--width-250 p-0">
+                    <div class="board-detail-table">
+                        <table>
+                          <thead>
+                            <th class="p-10">집중관제정보</th>
+                          </thead>  
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="">
+                                  <div class="">
+                                    <div class="ui-check-list">
+                                      <ul class="ui-check-list__list p-30-0 ui-scroller" style="height:180px;">
+                                        <li class="mt-5">
+                                          <div class="ui-radio-block p-0">
+                                            <input type="radio" class="ui-radio" name="removalType" id="removalType1" checked="">
+                                            <label for="removalType1" class="ui-label">
+                                              <span class="ui-radio-object"></span>
+                                              <span class="ui-label__text">생활패턴 이탈</span>
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li class="mt-5">
+                                          <div class="ui-radio-block p-0">
+                                            <input type="radio" class="ui-radio" name="removalType" id="removalType2">
+                                            <label for="removalType2" class="ui-label">
+                                              <span class="ui-radio-object"></span>
+                                              <span class="ui-label__text">장시간 차량이동</span>
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li class="mt-5">
+                                            <div class="ui-radio-block p-0">
+                                              <input type="radio" class="ui-radio" name="removalType" id="removalType3">
+                                              <label for="removalType2" class="ui-label">
+                                                <span class="ui-radio-object"></span>
+                                                <span class="ui-label__text">위험장소 진입</span>
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li class="mt-5">
+                                            <div class="ui-radio-block p-0">
+                                              <input type="radio" class="ui-radio" name="removalType" id="removalType4">
+                                              <label for="removalType2" class="ui-label">
+                                                <span class="ui-radio-object"></span>
+                                                <span class="ui-label__text">심야외출 미귀가</span>
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li class="mt-5">
+                                            <div class="ui-radio-block p-0">
+                                              <input type="radio" class="ui-radio" name="removalType" id="removalType5">
+                                              <label for="removalType2" class="ui-label">
+                                                <span class="ui-radio-object"></span>
+                                                <span class="ui-label__text">성범죄 Hot-Spot 진입</span>
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li class="mt-5">
+                                            <div class="ui-radio-block p-0">
+                                              <input type="radio" class="ui-radio" name="removalType" id="removalType6">
+                                              <label for="removalType2" class="ui-label">
+                                                <span class="ui-radio-object"></span>
+                                                <span class="ui-label__text">피해자 접근금지</span>
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li class="mt-5">
+                                            <div class="ui-radio-block p-0">
+                                              <input type="radio" class="ui-radio" name="removalType" id="removalType7">
+                                              <label for="removalType2" class="ui-label">
+                                                <span class="ui-radio-object"></span>
+                                                <span class="ui-label__text">자해, 자살, 재범 등 예고</span>
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li class="mt-5">
+                                            <div class="ui-radio-block p-0">
+                                              <input type="radio" class="ui-radio" name="removalType" id="removalType8">
+                                              <label for="removalType2" class="ui-label">
+                                                <span class="ui-radio-object"></span>
+                                                <span class="ui-label__text">24시간 재택 측위</span>
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li class="mt-5">
+                                            <div class="ui-radio-block p-0">
+                                              <input type="radio" class="ui-radio" name="removalType" id="removalType9">
+                                              <label for="removalType2" class="ui-label">
+                                                <span class="ui-radio-object"></span>
+                                                <span class="ui-label__text">출입금지구역 인근지역반복 출입</span>
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li class="mt-5">
+                                            <div class="ui-radio-block p-0">
+                                              <input type="radio" class="ui-radio" name="removalType" id="removalType10">
+                                              <label for="removalType2" class="ui-label">
+                                                <span class="ui-radio-object"></span>
+                                                <span class="ui-label__text">훼손 의심</span>
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li class="mt-5">
+                                            <div class="ui-radio-block p-0">
+                                              <input type="radio" class="ui-radio" name="removalType" id="removalType11">
+                                              <label for="removalType2" class="ui-label">
+                                                <span class="ui-radio-object"></span>
+                                                <span class="ui-label__text">기타</span>
+                                              </label>
+                                            </div>
+                                          </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                  </div>
+                </div>
+    
+                <!-- 처리 일시, 처리 상태, 관제센터 처리내용 -->
+                <div class="tile-layout__row ml-20 box-shadow-none">
+                    <div class="board-detail-table--flex-item">
+                        <!-- 2022.08.29 : add : table-height-35 클래스 추가 -->
+                        <div class="board-detail-table board-detail-table--th-line border-detail-info-grid table-height-35">
+
+                            <table class="mb-0">
+                                <tbody>
+                                  <tr>
+                                    <th>처리일시</th>
+                                    <td>
+                                      <div class="form-block__inner">
+                                        <div class="form-block__cell">
+                                          <div class="form-flex">
+
+                                            <!-------220819처리 날짜 date 안뜨는 오류 수정-------->
+                                            <div class="form-flex-cell flex">
+                                              <div class="form-flex js-datepicker-range">
+                                                <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                  <div class="ui-input-block ui-input-block--date input-width-date">
+                                                    <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08" />
+                                                  </div>
+                                                </div>
+                                                <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                  <div class="ui-input-block input-width-date ui-input-block--time ui-input-block--time is-inputed">
+                                                    <input type="text" class="ui-input" title="" value="00:00" placeholder="--:--">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                
+                                    </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>처리상태</th>
+                                    <td>
+                                        <div class="ui-check-list">
+                                            <ul class="ui-check-list__list">
+                                              <li class="ui-check-list__item">
+                                                <div class="ui-radio-block">
+                                                  <input type="radio" class="ui-radio" name="radio3" id="radio3-1">
+                                                  <label for="radio3-1" class="ui-label">
+                                                    <span class="ui-radio-object"></span>
+                                                    <span class="ui-label__text">이상없음</span>
+                                                  </label>
+                                                </div>
+                                              </li>
+                                              <li class="ui-check-list__item">
+                                                <div class="ui-radio-block">
+                                                  <input type="radio" class="ui-radio" name="radio3" id="radio3-2" checked="">
+                                                  <label for="radio3-2" class="ui-label">
+                                                    <span class="ui-radio-object"></span>
+                                                    <span class="ui-label__text">보호관찰담당자 통보</span>
+                                                  </label>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="2">관제센터 처리내용</th>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                        <div class="ui-input-block">
+                                            <!-- 2021.10.18 : mod : input-height-mini -> input-height-small-medium 클래스값 변경 -->
+                                            <textarea class="ui-input input-height-small-medium" title="관제센터 처리내용"></textarea>
+                                        </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 2022.08.29 : add : table-height-35 클래스 추가 -->
+                      </div>
+                </div>
+                <!-- //처리 일시, 처리 상태, 관제센터 처리내용 -->
+    
+              </div>
+          </div>
+
+            
+    
+    
+          </div>
+        </form>
+
+
+
+        <div class="window-popup__foot boxsizing mt-0 pt-0">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                        <a href="" class="ui-basic-button ui-basic-button--quaternary">삭제</a>
+                    </li>
+                    <li class="ui-buttons__item">
+                        <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                    </li>
+                    <li class="ui-buttons__item">
+                        <button type="submit" class="ui-button ui-basic-button">저장</button>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+        <div class="window-popup__body window-popup__body--row">
+
+            <!-- 보호관찰소 처리 정보 -->
+            <div class="tile-layout__row mt-10">
+                <div class="board-detail-table--flex-item p-20">
+                    <div class="board-detail-table board-detail-table--th-line border-detail-info-grid">
+
+                      <div class="board-detail-table__title--with-button d-flex">
+                        <div class="board-detail-table__title mt-0">보호관찰소 처리 정보</div>
+                      </div>
+
+
+                      <div class="d-fle p-0 border-0">
+                        <div class="crime-facts-wrap ui-scroller" style="height:150px;">
+                            <div class="significant d-flex p-10">
+                                <ul class="width-50p">
+                                    <li>경보처리 구분 : 신속대응팀</li>
+                                    <li>경보발생 원인 : 기타</li>
+                                    <li>경보처리 방법 : 기타</li>
+                                    <li>공조기관 요청 : 해당없음</li>
+                                    <li>현장출동 도착시각 : 2022-03-01 00:00</li>
+                                    <li>현장출동시 피부착자 대면여부 : 피부차가 비대면</li>
+                                    <li>이관경보 복원시각 : 2022-03-01 00:00</li>
+                                    <li>처리시각 : 2022-03-01 00:00</li>
+                                    <li>조치내용 : 이동중 발생</li>
+                                    <li>전자장치 교체여부 : 교체 (재택)</li>
+                                </ul>
+
+
+                                <ul class="width-50p">
+                                    <li>보호관찰관 조치내용 
+                                        <div>조치내용이 출력됩니다. 조치내용이 출력됩니다. 조치내용이 출력됩니다. 조치내용이 출력됩니다.</div>
+                                    </li>
+                                    <li>기타
+                                        <div>기타 내용이 이곳에 출력되며 길어질 수 있습니다. 기타 내용이 이곳에 출력되며 길어질 수 있습니다.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //보호관찰소 처리 정보 -->
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/timepicker.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+
+    <script type="text/javascript">
+        var datagrid;
+  
+        // Data
+        var grid_data = [
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '김담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '박담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '최담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '오담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '박담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '최담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '오담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '박담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '최담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '오담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '김담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '박담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '최담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '오담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '김담당',
+          },
+          {
+            cell_1: '2022-06-20 00:00:00',
+            cell_2: '박담당',
+          },
+        ];
+  
+        function createGrid() {
+          SBGridProperties.parentid = 'boardGrid';
+          SBGridProperties.id = 'datagrid';
+          SBGridProperties.jsonref = 'grid_data';
+          SBGridProperties.columns = [
+            {
+              caption: ['등록일시'],
+              ref: 'cell_1',
+              width: '70%',
+            },
+            {
+              caption: ['등록자'],
+              ref: 'cell_2',
+              width: '30%',
+            },
+          ];
+          datagrid = _SBGrid.create(SBGridProperties);
+          // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : start
+          datagrid.bind('aftersort', function () {
+            SBCustomFunction.aftersort(datagrid);
+          });
+          // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : end
+          datagrid.sortColumn(0, 'desc');
+          datagrid.sortingIcon();
+        }
+  
+        $(function () {
+          createGrid();
+        });
+      </script>
+    <!-- //script -->
+    <script>
+      // 220811 timepick 적용
+      $(document).ready(function () {
+          $(".ui-input-block--time input").timepicker({
+                timeFormat: "%H:%i",
+          });
+      });
+    </script>
+    <script>
+      // 220811 timepick 적용
+      $(document).ready(function () {
+        $(".ui-input-block--time input").timepicker({
+          timeFormat: "%H:%i",
+        });
+        $(".ui-input-block--time-small input").timepicker({
+          timeFormat: "%H시",
+        });
+      });
+    </script>
+  </body>
+</html>

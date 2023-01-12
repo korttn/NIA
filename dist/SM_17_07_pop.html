@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+   
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">준수사항</h1>
+            <div class="form-flex">
+                <!--자동완성-->
+                  <div class="form-block__cell control control-search">
+                    <div class="form-flex">
+                      <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time search">
+                        <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                          <input type="text" class="ui-input js-datepicker-range__min is-active" title="" value="홍길동">
+                          <div class="time-table">
+                            <div class="time-table--hour">
+                              <div class="time-table--button ui-scroller">
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" class="ui-button header-search__submit">
+                          <span class="for-a11y">검색</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                <!--//자동완성-->
+
+                <div class="people-head">
+                    <div class="people-head__block">
+                    <div class="people-head__sex people-head__sex--man">
+                        <span class="for-a11y">(남)</span>
+                    </div>
+                    <div class="people-head__sex people-head__sex--woman">
+                        <span class="for-a11y">(여)</span>
+                    </div>
+                    <div class="people-head__info">남</div>
+                    <div class="people-head__hr"></div>
+                    <div class="people-head__birth">1952-05-21</div>
+                    <div class="people-head__hr"></div>
+                    <div class="people-head__number">
+                        <span class="people-head__key">사건번호</span>
+                        <span class="people-head__val">12-3456-7890-12345</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body window-popup-border-radius  attach">
+           <!-- 프로필 -->
+           <div class="tile-layout__cell tile-layout__cell--profile situation-management-profile" style="height: 720px;">
+            <div class="tile-layout__contents">
+              <section class="board-detail-wrap border-radius">
+
+                <div class="profile">
+                  <div class="profile__info">
+                    <div class="board-detail-table board-detail-table--th-line">
+                      <!-- 상세 프로필 -->
+                      <div class="tile-layout__cell">
+                        <div class="tile-layout__contents">
+                          <!-- 2021.10.22 : mod : js-situation-management-tab 클래스 값 추가 -->
+                          <div class="board-detail-wrap js-ui-tab-panel js-situation-management-tab">
+                            <div class="board-tab">
+                              <ul class="board-tab__list">
+                                <li class="board-tab__item">
+                                  <a href="" class="board-tab__link"
+                                    data-tab-open="situationManagement2-1">요약정보</a>
+                                </li>
+                                <li class="board-tab__item">
+                                    <a href="" class="board-tab__link "
+                                      data-tab-open="situationManagement2-2">외출제한 기간설정</a>
+                                  </li>
+                                <li class="board-tab__item ">
+                                  <a href="" class="board-tab__link is-active"
+                                    data-tab-open="situationManagement2-3">출입금지 구역설정</a>
+                                </li>
+                                <li class="board-tab__item">
+                                    <a href="" class="board-tab__link"
+                                      data-tab-open="situationManagement2-4">접근금지 구역설정</a>
+                                </li>
+                                <li class="board-tab__item">
+                                <a href="" class="board-tab__link"
+                                    data-tab-open="situationManagement2-5">주거지 제한설정</a>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 요약정보-->
+                            <div class="board-tab-panel board-tab-panel--last" data-tab="situationManagement2-1" role="tabpanel" >
+                              <div class="board-content p-10-20-20-20">
+                                <div class="board-detail-table">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <th>외출제한 기간</th>
+                                          <td>
+                                            <div class="form-flex form-flex--align-top">
+                                              <div class="form-flex-cell form-flex-cell--flexible">
+                                                <div class="align-top-with-input p-0 font-color-gray">설정된 사항이 없습니다.</div>
+                                              </div>
+                                              <div class="form-flex-cell form-flex-cell--button">
+                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary line-height-18">설정</a>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>출입금지 구역</th>
+                                          <td>
+                                            <div class="form-flex">
+                                              <div class="form-flex-cell form-flex-cell--flexible">
+                                                <div class="align-top-with-input p-0 font-color-gray">설정된 사항이 없습니다.</div>
+                                              </div>
+                                              <div class="form-flex-cell form-flex-cell--button">
+                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary line-height-18">설정</a>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>접근금지 구역</th>
+                                          <td>
+                                            <div class="form-flex">
+                                              <div class="form-flex-cell form-flex-cell--flexible">
+                                                <div class="align-top-with-input p-0 font-color-gray">설정된 사항이 없습니다.</div>
+                                              </div>
+                                              <div class="form-flex-cell form-flex-cell--button">
+                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary line-height-18">설정</a>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>주거지 제한</th>
+                                          <td>
+                                            <div class="form-flex">
+                                              <div class="form-flex-cell form-flex-cell--flexible">
+                                                보호관찰소장에게 신고한 거주지의 주소 지관할시군구로 제한
+                                              </div>
+                                              <div class="form-flex-cell form-flex-cell--button">
+                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary line-height-18">설정</a>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>특정범죄 교육이수</th>
+                                          <td>성폭력범죄치료프로그램을 40시간 이수 할 것</td>
+                                        </tr>
+                                        <tr>
+                                          <th>음주제한</th>
+                                          <td>
+                                            <div class="align-top-with-input p-0 font-color-gray">설정된 사항이 없습니다.</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>위치추적기타</th>
+                                          <td>
+                                            <div class="align-top-with-input p-0 font-color-gray">설정된 사항이 없습니다.</div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                              </div>
+                            </div>
+                            <!-- //요약정보 -->
+
+                            <!-- 외출제한 기간설정 -->
+                                <div class="board-tab-panel board-tab-panel--last" data-tab="situationManagement2-2" role="tabpanel">
+                                    <div class="window-popup__body p-20">
+                                        <div class="board-detail-table">
+                                          <table>
+                                            <colgroup>
+                                                <col style="width:17%;">
+                                                <col>
+                                                <col style="width:17%;">
+                                                <col>
+                                              </colgroup>
+                                            <tbody>
+                                              <tr>
+                                                <th>기간</th>
+                                                <td colspan="3">
+                                                    <div class="form-flex js-datepicker-range">
+                                                        <div class="form-flex-cell">
+                                                          <div class="ui-input-block ui-input-block--date input-width-date is-inputed">
+                                                            <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08">
+                                                          </div>
+                                                        </div>
+                                                        <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                            <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                                                                <input type="text" class="ui-input" title="" value="00:00">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                                                        <div class="form-flex-cell">
+                                                          <div class="ui-input-block ui-input-block--date input-width-date is-inputed">
+                                                            <input type="text" class="ui-input js-datepicker-range__max" title="마지막 날짜" value="2021-12-10">
+                                                          </div>
+                                                        </div>
+                                                        <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                            <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                                                                <input type="text" class="ui-input" title="" value="00:00">
+                                                            </div>
+                                                        </div>
+                                                      </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>처분병과 외출금지 기간</th>
+                                                <td colspan="3">
+                                                    <div class="form-flex js-datepicker-range">
+                                                        <div class="form-flex-cell">
+                                                          <div class="ui-input-block ui-input-block--date input-width-date is-inputed">
+                                                            <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08">
+                                                          </div>
+                                                        </div>
+                                                        <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                            <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                                                                <input type="text" class="ui-input" title="" value="00:00">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                                                        <div class="form-flex-cell">
+                                                          <div class="ui-input-block ui-input-block--date input-width-date is-inputed">
+                                                            <input type="text" class="ui-input js-datepicker-range__max" title="마지막 날짜" value="2021-12-10">
+                                                          </div>
+                                                        </div>
+                                                        <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                            <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                                                                <input type="text" class="ui-input" title="" value="00:00">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-flex-cell form-flex-cell--date-medium">
+                                                            <a href="" class="ui-basic-button ui-basic-button--senary line-height-18 p-0-5 ">기간이력</a>
+                                                        </div>
+                                                      </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>집행유예시간</th>
+                                                <td>40초</td>
+                                                <th>재택위치지정</th>
+                                                <td>
+                                                    <div class="td-table">
+                                                        X : 129.13208074 / Y : 35.1616645
+                                                        <div class="ui-basic-button__wrap">
+                                                          <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-pin">재택위치지정</a>
+                                                        </div>
+                                                      </div>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                            
+                                        <div class="survey-hr survey-hr--height-20"></div>
+                            
+                                        <div class="tile-layout">
+                                          <div class="tile-layout__inner">
+                                            <div class="tile-layout__row tile-layout__row--week-time border-radius-0 ">
+                                              <!-- 일주일 테이블 -->
+                                              <div class="tile-layout__cell tile-layout__cell--week-time tile-layout__scroller ui-scroller">
+                                                <div class="board-detail-table board-detail-table--thead-line board-detail-table--vertical-line board-detail-table--tight">
+                                                  <table>
+                                                    <thead>
+                                                      <th></th>
+                                                      <th class="align-center">일</th>
+                                                      <th class="align-center">월</th>
+                                                      <th class="align-center">화</th>
+                                                      <th class="align-center">수</th>
+                                                      <th class="align-center">목</th>
+                                                      <th class="align-center">금</th>
+                                                      <th class="align-center">토</th>
+                                                    </thead>
+                                                    <tbody>
+                                                      <!-- 2021.12.24 : mod : 셀 컬러 표기 방법 변경 -->
+                                                      <tr>
+                                                        <td class="align-center">00</td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">01</td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">02</td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">03</td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">04</td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">05</td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 20%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 40%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 60%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 80%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">06</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">07</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">08</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">09</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">10</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">11</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">12</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">13</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">14</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">15</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">16</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">17</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">18</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">19</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">20</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">21</td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                        <td class="no-padding"></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">22</td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-center">23</td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                          <div class="cell-progress">
+                                                            <div class="cell-progress__active" style="height: 100%"></div>
+                                                          </div>
+                                                        </td>
+                                                      </tr>
+                                                      <!-- //2021.12.24 : mod : 셀 컬러 표기 방법 변경 -->
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                              </div>
+                                              <!-- //일주일 테이블 -->
+                                            </div>
+                                            <div class="tile-layout__row">
+                                              <!-- 데이터 입력 -->
+                                              <section class="search-bar">
+                                                <h2 class="for-a11y">검색</h2>
+                                                <div class="search-bar__left">
+                                                    <div class="search-bar__row">
+                                                        <dl class="search-bar__item flex">
+                                                            <dt class="search-bar__key">요일</dt>
+                                                            <dd class="search-bar__val">
+                                                                <ul class="ui-check-list__list m-0">
+                                                                    <li class="ui-check-list__item pl-0">
+                                                                      <div class="ui-checkbox-block">
+                                                                        <input type="checkbox" class="ui-checkbox" id="keyword1-1">
+                                                                        <label for="keyword1-1" class="ui-label">
+                                                                          <span class="ui-checkbox-object"></span>
+                                                                          <span class="ui-label__text">전체</span>
+                                                                        </label>
+                                                                      </div>
+                                                                    </li>
+                                                                    <li class="ui-check-list__item">
+                                                                      <div class="ui-checkbox-block">
+                                                                        <input type="checkbox" class="ui-checkbox" id="keyword1-2">
+                                                                        <label for="keyword1-2" class="ui-label">
+                                                                          <span class="ui-checkbox-object"></span>
+                                                                          <span class="ui-label__text">일</span>
+                                                                        </label>
+                                                                      </div>
+                                                                    </li>
+                                                                    <li class="ui-check-list__item">
+                                                                      <div class="ui-checkbox-block">
+                                                                        <input type="checkbox" class="ui-checkbox" id="keyword1-3">
+                                                                        <label for="keyword1-3" class="ui-label">
+                                                                          <span class="ui-checkbox-object"></span>
+                                                                          <span class="ui-label__text">월</span>
+                                                                        </label>
+                                                                      </div>
+                                                                    </li>
+                                                                    <li class="ui-check-list__item">
+                                                                      <div class="ui-checkbox-block">
+                                                                        <input type="checkbox" class="ui-checkbox" id="keyword1-4">
+                                                                        <label for="keyword1-4" class="ui-label">
+                                                                          <span class="ui-checkbox-object"></span>
+                                                                          <span class="ui-label__text">화</span>
+                                                                        </label>
+                                                                      </div>
+                                                                    </li>
+                                                                    <li class="ui-check-list__item">
+                                                                      <div class="ui-checkbox-block">
+                                                                        <input type="checkbox" class="ui-checkbox" id="keyword1-5">
+                                                                        <label for="keyword1-5" class="ui-label">
+                                                                          <span class="ui-checkbox-object"></span>
+                                                                          <span class="ui-label__text">수</span>
+                                                                        </label>
+                                                                      </div>
+                                                                    </li>
+                                                                    <li class="ui-check-list__item">
+                                                                      <div class="ui-checkbox-block">
+                                                                        <input type="checkbox" class="ui-checkbox" id="keyword1-6">
+                                                                        <label for="keyword1-6" class="ui-label">
+                                                                          <span class="ui-checkbox-object"></span>
+                                                                          <span class="ui-label__text">목</span>
+                                                                        </label>
+                                                                      </div>
+                                                                    </li>
+                                                                    <li class="ui-check-list__item">
+                                                                        <div class="ui-checkbox-block">
+                                                                          <input type="checkbox" class="ui-checkbox" id="keyword1-7">
+                                                                          <label for="keyword1-7" class="ui-label">
+                                                                            <span class="ui-checkbox-object"></span>
+                                                                            <span class="ui-label__text">금</span>
+                                                                          </label>
+                                                                        </div>
+                                                                      </li>
+                                                                      <li class="ui-check-list__item">
+                                                                        <div class="ui-checkbox-block">
+                                                                          <input type="checkbox" class="ui-checkbox" id="keyword1-8">
+                                                                          <label for="keyword1-8" class="ui-label">
+                                                                            <span class="ui-checkbox-object"></span>
+                                                                            <span class="ui-label__text">토</span>
+                                                                          </label>
+                                                                        </div>
+                                                                      </li>
+                                                                  </ul>
+                                                            </dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="search-bar__row">
+                                                        <dl class="search-bar__item flex">
+                                                            <dt class="search-bar__key">시간</dt>
+                                                            <dd class="search-bar__val">
+                                                                <div class="form-flex flex">
+                                                                    <div class="form-flex js-datepicker-range">
+                                                                        <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                                            <div class="ui-input-block input-width-date ui-input-block--time">
+                                                                                <input type="text" class="ui-input" title="" value="00:00">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-flex-cell form-flex-cell--date-hyphen">
+                                                                            -</div>
+                                                                        <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                                            <div class="ui-input-block input-width-date ui-input-block--time">
+                                                                                <input type="text" class="ui-input" title="" value="00:00">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="search-bar__row">
+                                                        <dl class="search-bar__item flex">
+                                                            <dt class="search-bar__key">제목</dt>
+                                                            <dd class="search-bar__val">
+                                                                <div class="ui-input-block ui-select-block--width-315">
+                                                                    <input type="text" class="ui-input" title="title">
+                                                                </div>
+                                                            </dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                                <div class="search-bar__right">
+                                                    <div class="ui-buttons ui-buttons--full">
+                                                        <ul class="ui-buttons__list ui-buttons__list--width-73 ui-buttons__list-column">
+                                                            <li class="ui-buttons__item">
+                                                                <button type="button" class="ui-button ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                                                            </li>
+                                                            <li class="ui-buttons__item mt-0">
+                                                                <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add">추가</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                </section>
+                                              <!-- //데이터 입력 -->
+                            
+                                                <!-- 데이터 목록 -->
+                                                    <div class="tile-layout__cell mt-20 border">
+                                                        <div class="ui-board-table ui-board-table--5-rows p-0-20-20-20" id="boardGrid1" style="height:300px;"></div>
+                                                    </div>
+                                                <!-- //데이터 목록 -->
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            <!-- //외출제한 기간설정 -->
+
+                            <!-- 출입금지 구역설정 -->
+                            <div class="board-tab-panel board-tab-panel--last" data-tab="situationManagement2-3" role="tabpanel">
+                                <form action="">
+                                    <section class="search-bar search-bar--fix-width-key-small board-tab-panel__under-search-bar search-bar-width-auto border-radius-0">
+                                      <h2 class="for-a11y">검색</h2>
+                                      <div class="search-bar__left">
+                                        <div class="search-bar__row">
+                                          
+                        
+                                          <dl class="search-bar__item">
+                                                <dt class="search-bar__key">지형 지물명</dt>
+                                                <dd class="search-bar__val">
+                                                    <div class="ui-input-block ui-select-block--width-130">
+                                                        <input type="text" class="ui-input" title="title">
+                                                    </div>
+                                                </dd>
+                                          </dl>
+
+                                          <dl class="search-bar__item">
+                                            <dt class="search-bar__key">도형</dt>
+                                            <dd class="search-bar__val">
+                                                <div class="form-flex">
+                                                    <div class="ui-select-block flex ui-select-block--width-130">
+                                                        <select class="ui-select" title="title">
+                                                            <option value="">선택</option>
+                                                            <option value="">외출금지</option>
+                                                            <option value="">출입금지</option>
+                                                            <option value="">접근금지</option>
+                                                        </select>
+                                                    </div>
+                      
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                      </div>
+                                        <div class="search-bar__row">
+                                            <dl class="search-bar__item">
+                                                <dt class="search-bar__key">주소</dt>
+                                                <dd class="search-bar__val">
+                                                    <div class="form-flex">
+                                                        <div class="ui-select-block flex ui-select-block--width-130">
+                                                            <select class="ui-select" title="title">
+                                                                <option value="">광역시도</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="ui-select-block flex ui-select-block--width-130 ml-5">
+                                                            <select class="ui-select" title="title">
+                                                                <option value="">시군구(전체)</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="ui-select-block flex ui-select-block--width-130 ml-5">
+                                                            <select class="ui-select" title="title">
+                                                                <option value="">읍면동(전체)</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <div class="ui-checkbox-block ml-5">
+                                                <input type="checkbox" class="ui-checkbox" id="alertStatusAction_a">
+                                                <label for="alertStatusAction_a" class="ui-label">
+                                                    <span class="ui-checkbox-object"></span>
+                                                    <span class="ui-label__text">구주소 등록본</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="search-bar__right">
+                                        <div class="ui-buttons ui-buttons--full">
+                                            <ul class="ui-buttons__list ui-buttons__list--width-73 ui-buttons__list-column d-flex">
+                                                <li class="ui-buttons__item">
+                                                    <button type="button" class="ui-button ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                                                </li>
+                                                <li class="ui-buttons__item mt-0">
+                                                    <button type="submit" class="ui-button ui-basic-button ui-basic-button--width-73 ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search ">조회</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </section>
+                                </form>
+
+                              <div class="board-content p-10-20-20-20">
+                                <div class="board-top pt-0">
+                                    <div class="board-top__left">
+                                      <div class="ui-buttons ui-buttons--left">
+                                        <ul class="ui-buttons__list">
+                                            <li class="ui-buttons__item">
+                                                <button type="button" class="ui-button ui-basic-button ui-basic-button--delete">삭제</button>
+                                            </li>
+                                            <li class="ui-buttons__item">
+                                              <a href="" class="ui-basic-button ui-basic-button--secondary">완충지역 일괄 변경</a>
+                                            </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="board-top__right">
+                                      <div class="ui-buttons ui-buttons--right">
+                                        <ul class="ui-buttons__list">
+                                            <li class="ui-buttons__item">
+                                                <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-red">설정중</a>
+                                            </li>
+                                            <li class="ui-buttons__item">
+                                                <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add-2">일괄등록</a>
+                                            </li>
+                                            <li class="ui-buttons__item">
+                                                <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add-2">일괄등록</a>
+                                            </li>
+                                            <li class="ui-buttons__item">
+                                                <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add width-80">등록요청</a>
+                                            </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                      
+                                  <div class="ui-board-table ui-board-table--5-rows justify-center" id="boardGrid2" style="height:300px"></div>
+                      
+                                  <div class="board-bottom board-bottom--list p-0-10-0-10 mat-0">
+                                    <div class="board-bottom__left">
+                                      <p class="total-text">Total&nbsp;&nbsp;<span class="total-text__count">123,124,124</span></p>
+                                    </div>
+                                    <div class="board-bottom__right">
+                                      <div class="pagination">
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled>
+                                          <span class="for-a11y">처음 페이지</span>
+                                        </button>
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled>
+                                          <span class="for-a11y">이전 페이지</span>
+                                        </button>
+                                        <div class="pagination__fraction">
+                                          <div class="pagination__fraction-currunt">
+                                            <div class="ui-input-block">
+                                              <input type="text" class="ui-input" title="현재 페이지" value="1" />
+                                            </div>
+                                          </div>
+                                          <div class="pagination__fraction-slash">/</div>
+                                          <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                                        </div>
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                                          <span class="for-a11y">다음 페이지</span>
+                                        </button>
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                                          <span class="for-a11y">마지막 페이지</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                <!-- 2021.11.19 : del : .board-tab-panel__body 제거
+                                  </div>
+                                -->
+                              </div>  
+                            </div>
+                            <!-- //출입금지 구역설정 -->
+
+
+                            <!-- 접근금지 구역설정 -->
+                            <div class="board-tab-panel board-tab-panel--last" data-tab="situationManagement2-4" role="tabpanel">
+                                <form action="">
+                                    <section class="search-bar search-bar--fix-width-key-small board-tab-panel__under-search-bar search-bar-width-auto border-radius-0">
+                                      <h2 class="for-a11y">검색</h2>
+                                      <div class="search-bar__left">
+                                        <div class="search-bar__row">
+                                          
+                        
+                                          <dl class="search-bar__item">
+                                                <dt class="search-bar__key">지형 지물명</dt>
+                                                <dd class="search-bar__val">
+                                                    <div class="ui-input-block ui-select-block--width-130">
+                                                        <input type="text" class="ui-input" title="title">
+                                                    </div>
+                                                </dd>
+                                          </dl>
+
+                                          <dl class="search-bar__item">
+                                            <dt class="search-bar__key">도형</dt>
+                                            <dd class="search-bar__val">
+                                                <div class="form-flex">
+                                                    <div class="ui-select-block flex ui-select-block--width-130">
+                                                        <select class="ui-select" title="title">
+                                                            <option value="">선택</option>
+                                                            <option value="">외출금지</option>
+                                                            <option value="">출입금지</option>
+                                                            <option value="">접근금지</option>
+                                                        </select>
+                                                    </div>
+                      
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                      </div>
+                                        <div class="search-bar__row">
+                                            <dl class="search-bar__item">
+                                                <dt class="search-bar__key">주소</dt>
+                                                <dd class="search-bar__val">
+                                                    <div class="form-flex">
+                                                        <div class="ui-select-block flex ui-select-block--width-130">
+                                                            <select class="ui-select" title="title">
+                                                                <option value="">광역시도</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="ui-select-block flex ui-select-block--width-130 ml-5">
+                                                            <select class="ui-select" title="title">
+                                                                <option value="">시군구(전체)</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="ui-select-block flex ui-select-block--width-130 ml-5">
+                                                            <select class="ui-select" title="title">
+                                                                <option value="">읍면동(전체)</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                      </div>
+                                      <div class="search-bar__right">
+                                        <div class="ui-buttons ui-buttons--full">
+                                            <ul class="ui-buttons__list ui-buttons__list--width-73 ui-buttons__list-column d-flex">
+                                                <li class="ui-buttons__item">
+                                                    <button type="button" class="ui-button ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                                                </li>
+                                                <li class="ui-buttons__item mt-0">
+                                                    <button type="submit" class="ui-button ui-basic-button ui-basic-button--width-73 ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search ">조회</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </section>
+                                </form>
+
+                              <div class="board-content p-10-20-20-20">
+                                <div class="board-top pt-0">
+                                    <div class="board-top__left">
+                                      <div class="ui-buttons ui-buttons--left">
+                                        <ul class="ui-buttons__list">
+                                            <li class="ui-buttons__item">
+                                                <button type="button" class="ui-button ui-basic-button ui-basic-button--delete">삭제</button>
+                                            </li>
+                                            <li class="ui-buttons__item">
+                                              <a href="" class="ui-basic-button ui-basic-button--secondary">완충지역 일괄 변경</a>
+                                            </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="board-top__right">
+                                      <div class="ui-buttons ui-buttons--right">
+                                        <ul class="ui-buttons__list">
+                                            <li class="ui-buttons__item">
+                                                <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-red">설정중</a>
+                                            </li>
+                                            <li class="ui-buttons__item">
+                                                <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add-2">미설정</a>
+                                            </li>
+                                            <li class="ui-buttons__item">
+                                                <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add-2">일괄등록</a>
+                                            </li>
+                                            <li class="ui-buttons__item">
+                                                <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add-2">개별등록</a>
+                                            </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                      
+                                  <div class="ui-board-table ui-board-table--5-rows justify-center" id="boardGrid3" style="height:300px"></div>
+                      
+                                  <div class="board-bottom board-bottom--list p-0-10-0-10 mat-0">
+                                    <div class="board-bottom__left">
+                                      <p class="total-text">Total&nbsp;&nbsp;<span class="total-text__count">123,124,124</span></p>
+                                    </div>
+                                    <div class="board-bottom__right">
+                                      <div class="pagination">
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled>
+                                          <span class="for-a11y">처음 페이지</span>
+                                        </button>
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled>
+                                          <span class="for-a11y">이전 페이지</span>
+                                        </button>
+                                        <div class="pagination__fraction">
+                                          <div class="pagination__fraction-currunt">
+                                            <div class="ui-input-block">
+                                              <input type="text" class="ui-input" title="현재 페이지" value="1" />
+                                            </div>
+                                          </div>
+                                          <div class="pagination__fraction-slash">/</div>
+                                          <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                                        </div>
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                                          <span class="for-a11y">다음 페이지</span>
+                                        </button>
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                                          <span class="for-a11y">마지막 페이지</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                <!-- 2021.11.19 : del : .board-tab-panel__body 제거
+                                  </div>
+                                -->
+                              </div>  
+                            </div>
+                            <!-- //접근금지 구역설정 -->
+
+                            <!-- 주거지 구역설정 -->
+                            <div class="board-tab-panel board-tab-panel--last" data-tab="situationManagement2-5" role="tabpanel">
+                                <form action="">
+                                    <section class="search-bar search-bar--fix-width-key-small board-tab-panel__under-search-bar search-bar-width-auto border-radius-0">
+                                      <h2 class="for-a11y">검색</h2>
+                                      <div class="search-bar__left">
+                                        <div class="search-bar__row">
+                                            <dl class="search-bar__item">
+                                                <dt class="search-bar__key">주소</dt>
+                                                <dd class="search-bar__val">
+                                                    <div class="form-flex">
+                                                        <div class="ui-select-block flex ui-select-block--width-130">
+                                                            <select class="ui-select" title="title">
+                                                                <option value="">광역시도</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="ui-select-block flex ui-select-block--width-130 ml-5">
+                                                            <select class="ui-select" title="title">
+                                                                <option value="">시군구(전체)</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="ui-select-block flex ui-select-block--width-130 ml-5">
+                                                            <select class="ui-select" title="title">
+                                                                <option value="">읍면동(전체)</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="search-bar__row">
+                                          
+                        
+                                          <dl class="search-bar__item">
+                                                <dt class="search-bar__key">완충지역</dt>
+                                                <dd class="search-bar__val">
+                                                    <div class="ui-input-block">
+                                                        <input type="text" value="" class="ui-input width-130 display-inline-block"> <span style="font-size:12px;">m</span>
+                                                    </div>
+                                                </dd>
+                                          </dl>
+                                      </div>
+                                        
+                                      </div>
+                                      <div class="search-bar__right">
+                                        <div class="ui-buttons ui-buttons--full">
+                                            <ul class="ui-buttons__list ui-buttons__list--width-73 ui-buttons__list-column d-flex">
+                                                <li class="ui-buttons__item">
+                                                    <button type="button" class="ui-button ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                                                </li>
+                                                <li class="ui-buttons__item mt-0">
+                                                    <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add width-80">추가</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </section>
+                                </form>
+
+                              <div class="board-content p-10-20-20-20">
+                                <div class="board-top pt-0">
+                                    <div class="board-top__left">
+                                      <div class="ui-buttons ui-buttons--left">
+                                        <ul class="ui-buttons__list">
+                                            <li class="ui-buttons__item">
+                                                <button type="button" class="ui-button ui-basic-button ui-basic-button--delete">삭제</button>
+                                            </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="board-top__right">
+                                      <div class="ui-buttons ui-buttons--right">
+                                        <ul class="ui-buttons__list">
+                                            <li class="ui-buttons__item">
+                                                <button class="ui-basic-button">체류지 체한구역 설정</button>
+                                            </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                      
+                                  <div class="ui-board-table ui-board-table--5-rows justify-center" id="boardGrid4" style="height:300px"></div>
+                      
+                                  <div class="board-bottom board-bottom--list p-0-10-0-10 mat-0">
+                                    <div class="board-bottom__left">
+                                      <p class="total-text">Total&nbsp;&nbsp;<span class="total-text__count">123,124,124</span></p>
+                                    </div>
+                                    <div class="board-bottom__right">
+                                      <div class="pagination">
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled>
+                                          <span class="for-a11y">처음 페이지</span>
+                                        </button>
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled>
+                                          <span class="for-a11y">이전 페이지</span>
+                                        </button>
+                                        <div class="pagination__fraction">
+                                          <div class="pagination__fraction-currunt">
+                                            <div class="ui-input-block">
+                                              <input type="text" class="ui-input" title="현재 페이지" value="1" />
+                                            </div>
+                                          </div>
+                                          <div class="pagination__fraction-slash">/</div>
+                                          <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                                        </div>
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                                          <span class="for-a11y">다음 페이지</span>
+                                        </button>
+                                        <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                                          <span class="for-a11y">마지막 페이지</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                <!-- 2021.11.19 : del : .board-tab-panel__body 제거
+                                  </div>
+                                -->
+                              </div>  
+                            </div>
+                            <!-- //주거지 구역설정 -->
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //상세 프로필 -->
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <!-- //프로필 -->
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/timepicker.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+        var datagrid;
+        var SBGrideProperties = {};
+        // Data
+        var grid_data1 = [
+            {
+              id: '10',
+              cell_1: '경보ID',
+              cell_2: '2021-08-15 12:30:24',
+              cell_3: '기타정보',
+              cell_4: '재택감독장치 Hotkey 조회 결과',
+              cell_5: '홍길동',
+            },
+            {
+              id: '9',
+              cell_1: '경보ID',
+              cell_2: '2021-08-15 12:30:24',
+              cell_3: '기타정보',
+              cell_4: '',
+              cell_5: '홍길동',
+            },
+            {
+              id: '8',
+              cell_1: '경보ID',
+              cell_2: '2021-08-15 12:30:24',
+              cell_3: '기타정보',
+              cell_4: '',
+              cell_5: '홍길동',
+            },
+            {
+              id: '7',
+              cell_1: '경보ID',
+              cell_2: '2021-08-15 12:30:24',
+              cell_3: '기타정보',
+              cell_4: '',
+              cell_5: '홍길동',
+            },
+            {
+              id: '6',
+              cell_1: '경보ID',
+              cell_2: '2021-08-15 12:30:24',
+              cell_3: '기타정보',
+              cell_4: '',
+              cell_5: '홍길동',
+            },
+            {
+              id: '5',
+              cell_1: '경보ID',
+              cell_2: '2021-08-15 12:30:24',
+              cell_3: '기타정보',
+              cell_4: '',
+              cell_5: '홍길동',
+            },
+            {
+              id: '4',
+              cell_1: '경보ID',
+              cell_2: '2021-08-15 12:30:24',
+              cell_3: '기타정보',
+              cell_4: '',
+              cell_5: '홍길동',
+            },
+            {
+              id: '3',
+              cell_1: '경보ID',
+              cell_2: '2021-08-15 12:30:24',
+              cell_3: '기타정보',
+              cell_4: '',
+              cell_5: '홍길동',
+            },
+            {
+              id: '2',
+              cell_1: '경보ID',
+              cell_2: '2021-08-15 12:30:24',
+              cell_3: '기타정보',
+              cell_4: '',
+              cell_5: '홍길동',
+            },
+            {
+              id: '1',
+              cell_1: '경보ID',
+              cell_2: '2021-08-15 12:30:24',
+              cell_3: '기타정보',
+              cell_4: '',
+              cell_5: '홍길동',
+            },
+          ];
+    
+        var grid_data2 = [{
+            id: '10',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '9',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '8',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '7',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '6',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '5',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '4',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '3',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '2',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '1',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+        ];
+        var grid_data3 = [{
+            id: '10',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '9',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '8',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '7',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '6',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '5',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '4',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '3',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '2',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '1',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+        ];
+        var grid_data4 = [{
+            id: '10',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '9',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '8',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '7',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '6',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '5',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '4',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '3',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '2',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+          {
+            id: '1',
+            cell_1: '경보ID',
+            cell_2: '항목명',
+            cell_3: '0.2',
+            cell_4: '0.2',
+            cell_5: '0.2',
+            cell_6: '0.2',
+            cell_7: '0.2',
+          },
+        ];
+    
+        function createGrid(properties, callback) {
+          var datagrid;
+          datagrid = _SBGrid.create(properties);
+          datagrid.bind('aftersort', function () {
+            SBCustomFunction.aftersort(datagrid);
+          });
+          callback(datagrid);
+        }
+    
+        var columns1 = [
+            {
+              caption: ['시간'],
+              ref: 'id',
+              width: '150px',
+              sortable: false,
+            },
+            {
+              caption: ['요일'],
+              ref: 'cell_1',
+              width: '250px',
+            },
+            {
+              caption: ['제목'],
+              ref: 'cell_2',
+              width: '220px',
+            },
+            {
+              caption: ['삭제'],
+              ref: 'cell_3',
+              width: '100px',
+              renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return '<span href="" class="ui-button ui-basic-button height--18 line--18 font--11 ui-basic-button--small ui-basic-button--quinary">삭제</span>';
+              },
+
+            },
+
+          ];
+    
+    
+        var columns2 = [{
+            caption: [''],
+            ref: 'check',
+            width: '45px',
+            type: 'checkbox',
+            sortable: false,
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+            typeinfo: {
+              fixedcellcheckbox: {
+                usemode: true,
+                rowindex: 0,
+                deletecaption: false
+              }
+            },
+          },
+          {
+            caption: ['행선지'],
+            ref: 'cell_1',
+            width: '60px',
+          },
+          {
+            caption: ['지도'],
+            ref: 'cell_2',
+            width: '100px',
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return '<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-pin line-height-18">위치</a>';
+            },
+          },
+          {
+            caption: ['주소'],
+            ref: 'cell_3',
+            width: '150px',
+          },
+          {
+            caption: ['반경'],
+            ref: 'cell_4',
+            width: '60px',
+          },
+          {
+            caption: ['완충지역'],
+            ref: 'cell_5',
+            width: '70px',
+          },
+          {
+            caption: ['도형구분'],
+            ref: 'cell_6',
+            width: '70px',
+          },
+          {
+            caption: ['등록일'],
+            ref: 'cell_7',
+            width: '100px',
+          },
+          {
+            caption: ['24시간 감시'],
+            ref: 'cell_8',
+            width: '80px',
+          },
+          {
+            caption: ['시작일'],
+            ref: 'cell_9',
+            width: '80px',
+          },
+          {
+            caption: ['종료일'],
+            ref: 'cell_10',
+            width: '80px',
+          },
+        ];
+        var columns3 = [{
+            caption: [''],
+            ref: 'check',
+            width: '45px',
+            type: 'checkbox',
+            sortable: false,
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+            typeinfo: {
+              fixedcellcheckbox: {
+                usemode: true,
+                rowindex: 0,
+                deletecaption: false
+              }
+            },
+          },
+          {
+            caption: ['행선지'],
+            ref: 'cell_1',
+            width: '60px',
+          },
+          {
+            caption: ['지도'],
+            ref: 'cell_2',
+            width: '100px',
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return '<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-pin line-height-18">위치</a>';
+            },
+          },
+          {
+            caption: ['주소'],
+            ref: 'cell_3',
+            width: '150px',
+          },
+          {
+            caption: ['반경'],
+            ref: 'cell_4',
+            width: '60px',
+          },
+          {
+            caption: ['완충지역'],
+            ref: 'cell_5',
+            width: '70px',
+          },
+          {
+            caption: ['도형구분'],
+            ref: 'cell_6',
+            width: '70px',
+          },
+          {
+            caption: ['등록일'],
+            ref: 'cell_7',
+            width: '100px',
+          },
+          {
+            caption: ['24시간 감시'],
+            ref: 'cell_8',
+            width: '80px',
+          },
+          {
+            caption: ['시작일'],
+            ref: 'cell_9',
+            width: '80px',
+          },
+          {
+            caption: ['종료일'],
+            ref: 'cell_10',
+            width: '80px',
+          },
+        ];
+        var columns4 = [{
+            caption: [''],
+            ref: 'check',
+            width: '45px',
+            type: 'checkbox',
+            sortable: false,
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+            typeinfo: {
+              fixedcellcheckbox: {
+                usemode: true,
+                rowindex: 0,
+                deletecaption: false
+              }
+            },
+          },
+          {
+            caption: ['광역시도'],
+            ref: 'id',
+            width: '150px',
+            sortable: false,
+          },
+          {
+            caption: ['시군구'],
+            ref: 'cell_1',
+            width: '150px',
+          },
+          {
+            caption: ['읍면동'],
+            ref: 'cell_2',
+            width: '150px',
+          },
+          {
+            caption: ['완충지역(m)'],
+            ref: 'cell_3',
+            width: '200px',
+          },
+          {
+            caption: ['비고)'],
+            ref: 'cell_4',
+            width: '140px',
+          },
+         
+        ];
+    
+        $(function () {
+            createGrid(
+              $.extend({}, SBGridProperties, {
+                id: 'datagrid1',
+                parentid: 'boardGrid1',
+                jsonref: 'grid_data1',
+                columns: columns1,
+                height : '100%',
+                width : '100%',
+                extendcol : 2,
+                rowheight : 35,
+                fixedrowheight : '25',
+                rowheight : '25',
+                emptyrecords : '등록된 정보가 없습니다.',
+                emptyrecordsfontstyle : "font-size:12px; font-weight bold" ,
+              }),
+              function (datagrid) {
+                datagrid.sortColumn(0, 'desc');
+                datagrid.sortingIcon();
+                $('#boardGrid1').data('grid', datagrid);
+              }
+            );
+            createGrid(
+              $.extend({}, SBGridProperties, {
+                id: 'datagrid2',
+                parentid: 'boardGrid2',
+                jsonref: 'grid_data2',
+                columns: columns2,
+                height : '100%',
+                width : '100%',
+                extendcol : 3,
+                rowheight : 35,
+                fixedrowheight : '25',
+                rowheight : '25',
+                emptyrecords : '조회 결과가 없습니다.',
+                emptyrecordsfontstyle : "font-size:12px; font-weight bold" ,
+              }),
+              function (datagrid) {
+                datagrid.sortColumn(0, 'desc');
+                datagrid.sortingIcon();
+                $('#boardGrid2').data('grid', datagrid); 
+              }
+            );
+            createGrid(
+              $.extend({}, SBGridProperties, {
+                id: 'datagrid3',
+                parentid: 'boardGrid3',
+                jsonref: 'grid_data3',
+                columns: columns3,
+                height : '100%',
+                width : '100%',
+                extendcol : 3,
+                rowheight : 35,
+                fixedrowheight : '25',
+                rowheight : '25',
+                emptyrecords : '조회 결과가 없습니다.',
+                emptyrecordsfontstyle : "font-size:12px; font-weight bold" ,
+              }),
+              function (datagrid) {
+                datagrid.sortColumn(0, 'desc');
+                datagrid.sortingIcon();
+                $('#boardGrid3').data('grid', datagrid); 
+              }
+            );
+            createGrid(
+              $.extend({}, SBGridProperties, {
+                id: 'datagrid4',
+                parentid: 'boardGrid4',
+                jsonref: 'grid_data4',
+                columns: columns4,
+                height : '100%',
+                width : '100%',
+                extendcol : 5,
+                rowheight : 35,
+                fixedrowheight : '25',
+                rowheight : '25',
+                emptyrecords : '조회 결과가 없습니다.',
+                emptyrecordsfontstyle : "font-size:12px; font-weight bold" ,
+              }),
+              function (datagrid) {
+                datagrid.sortColumn(0, 'desc');
+                datagrid.sortingIcon();
+                $('#boardGrid4').data('grid', datagrid); 
+              }
+            );
+    
+          // 탭 변경 시 그리드 리사이즈
+          $('.board-detail-wrap.js-ui-tab-panel').on('uiTabPanelChange', function () {
+            var $this = $(this);
+            var $activePanel = $this.find('.board-tab-panel.js-tabpanel-opened');
+            var grid = $activePanel.find('.ui-board-table').data('grid');
+    
+            if (grid) {
+              grid.resize();
+            }
+          });
+
+       
+    
+          // Chart
+          var chartData = [{
+              date: '2020/08/01',
+              value_1: 17,
+              value_2: 37,
+              value_3: 6,
+              value_4: 40,
+              value_5: 36,
+              value_6: 26,
+            },
+            {
+              date: '2020/08/02',
+              value_1: 47,
+              value_2: 44,
+              value_3: 10,
+              value_4: 32,
+              value_5: 0,
+              value_6: 36,
+            },
+            {
+              date: '2020/08/03',
+              value_1: 39,
+              value_2: 1,
+              value_3: 1,
+              value_4: 19,
+              value_5: 19,
+              value_6: 47,
+            },
+            {
+              date: '2020/08/04',
+              value_1: 11,
+              value_2: 12,
+              value_3: 4,
+              value_4: 50,
+              value_5: 15,
+              value_6: 50,
+            },
+            {
+              date: '2020/08/05',
+              value_1: 23,
+              value_2: 24,
+              value_3: 27,
+              value_4: 10,
+              value_5: 15,
+              value_6: 47,
+            },
+            {
+              date: '2020/08/06',
+              value_1: 29,
+              value_2: 7,
+              value_3: 36,
+              value_4: 2,
+              value_5: 2,
+              value_6: 15,
+            },
+            {
+              date: '2020/08/07',
+              value_1: 32,
+              value_2: 37,
+              value_3: 44,
+              value_4: 38,
+              value_5: 41,
+              value_6: 39,
+            },
+            {
+              date: '2020/08/08',
+              value_1: 31,
+              value_2: 15,
+              value_3: 10,
+              value_4: 46,
+              value_5: 49,
+              value_6: 18,
+            },
+            {
+              date: '2020/08/09',
+              value_1: 47,
+              value_2: 23,
+              value_3: 25,
+              value_4: 39,
+              value_5: 15,
+              value_6: 49,
+            },
+            {
+              date: '2020/08/10',
+              value_1: 18,
+              value_2: 10,
+              value_3: 40,
+              value_4: 41,
+              value_5: 6,
+              value_6: 30,
+            },
+            {
+              date: '2020/08/11',
+              value_1: 46,
+              value_2: 7,
+              value_3: 17,
+              value_4: 29,
+              value_5: 18,
+              value_6: 11,
+            },
+            {
+              date: '2020/08/12',
+              value_1: 40,
+              value_2: 47,
+              value_3: 50,
+              value_4: 41,
+              value_5: 41,
+              value_6: 37,
+            },
+            {
+              date: '2020/08/13',
+              value_1: 38,
+              value_2: 26,
+              value_3: 11,
+              value_4: 37,
+              value_5: 6,
+              value_6: 41,
+            },
+          ];
+    
+          AmCharts.makeChart('chartArea', {
+            type: 'serial',
+            dataProvider: chartData,
+            categoryField: 'date',
+            categoryAxis: {
+              axisAlpha: 1,
+              axisColor: '#d8d8d8',
+              gridAlpha: 1,
+              gridColor: '#e5e5e5',
+              labelRotation: 25,
+            },
+            valueAxes: [{
+              minimum: 0,
+              maximum: 70,
+              axisAlpha: 1,
+              axisColor: '#d8d8d8',
+              gridAlpha: 1,
+              gridColor: '#e5e5e5',
+            }, ],
+            colors: ['#8067dc', '#30b59c', '#ffc36d', '#2d8877', '#4abce8', '#4264d0'],
+            fontSize: 12,
+            color: '#3c4043',
+            fontFamily: '"SpoqaHanSansNeo", "맑은고딕", "Malgun Gothic", "돋움", Dotum, "Apple Gothic", sans-serif',
+            marginTop: 35,
+            marginBottom: 40,
+            marginRight: 40,
+            marginLeft: 65,
+            autoMargins: false,
+            chartCursor: {
+              enabled: true,
+              cursorColor: '#000',
+            },
+            legend: {
+              color: '#8a8c8e',
+              markerType: 'circle',
+              markerSize: 8,
+              align: 'center',
+              valueText: '',
+              valueWidth: 0,
+              verticalGap: 0,
+              equalWidths: false,
+              horizontalGap: 10,
+              autoMargins: false,
+              marginTop: 15,
+              marginBottom: 30,
+              marginLeft: -20,
+            },
+            graphs: [{
+                title: '총합',
+                valueField: 'value_1',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '급성(주간)',
+                valueField: 'value_2',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '급성(일탈)',
+                valueField: 'value_3',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '급성(당일)',
+                valueField: 'value_4',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '만성',
+                valueField: 'value_5',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '정적',
+                valueField: 'value_6',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+            ],
+          });
+        });
+      </script>
+    <!-- //script -->
+    <script>
+      // 220811 timepick 적용
+      $(document).ready(function () {
+          $(".ui-input-block--time input").timepicker({
+                timeFormat: "%H:%i",
+          });
+      });
+    </script>
+  </body>
+</html>

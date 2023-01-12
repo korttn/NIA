@@ -1,0 +1,2381 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="layout-wrap">
+            <!-- fix top area -->
+            <div class="fix-top-wrap">
+                <!-- header -->
+                <header class="header">
+                    <!-- GNB -->
+                    <nav class="gnb">
+                        <div class="gnb__meun-click">
+                            <!-- 220620 click 시 gnb 에 class active 추가되고, 메뉴 펼쳐짐 -->
+                            <div class="gnb__meun-click--icon"></div>
+                            <p>메뉴</p>
+                            <h2 class="for-a11y">Global Navigation Bar</h2>
+                        </div>
+                        <div class="gnb__meun-wrap">
+                            <div class="gnb__scroller">
+                                <ul class="gnb__list">
+                                    <!-- 하위 메뉴 있을시에 is-depth2 클래스 값 추가 -->
+                                    <li class="gnb__item gnb__item--1 is-depth2" data-gnb="대시보드">
+                                        <a href="" class="gnb__link">대시보드</a>
+                                        <section class="gnb-depth__section" data-gnb-contents="대시보드">
+                                            <h3 class="gnb-depth__title gnb-depth__title--1">대시보드</h3>
+                                            <ul class="gnb-depth__list">
+                                                <li class="gnb-depth__item">
+                                                    <!-- 하위 메뉴 있을시에 is-depth3 클래스 값 추가 -->
+                                                    <div class="gnb-depth__head is-depth3">
+                                                        <a href="" class="gnb-depth__link">대시보드 메뉴 1</a>
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <h4 class="gnb-depth__sub__title" data-gnb-contents="대시보드 메뉴 1">
+                                                            대시보드 메뉴 1</h4>
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">대시보드 메뉴 1 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">대시보드 메뉴 1 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="gnb-depth__item">
+                                                    <div class="gnb-depth__head">
+                                                        <a href="" class="gnb-depth__link">대시보드 메뉴 2</a>
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <h4 class="gnb-depth__sub__title" data-gnb-contents="대시보드 메뉴 2">
+                                                            대시보드 메뉴 2</h4>
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">대시보드 메뉴 2 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">대시보드 메뉴 2 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </li>
+
+                                    <li class="gnb__item gnb__item--2 is-depth2" data-gnb="피부착자">
+                                        <a href="" class="gnb__link">피부착자</a>
+                                        <section class="gnb-depth__section" data-gnb-contents="피부착자">
+                                            <h3 class="gnb-depth__title gnb-depth__title--2">피부착자</h3>
+                                            <ul class="gnb-depth__list">
+                                                <li class="gnb-depth__item">
+                                                    <div class="gnb-depth__head">
+                                                        <a href="" class="gnb-depth__link">피부착자 메뉴 1</a>
+
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <h4 class="gnb-depth__sub__title" data-gnb-contents="피부착자 메뉴 1">
+                                                            피부착자 메뉴 1</h4>
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">피부착자 메뉴 1 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">피부착자 메뉴 1 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="gnb-depth__item">
+                                                    <div class="gnb-depth__head">
+                                                        <a href="" class="gnb-depth__link">피부착자 메뉴 2</a>
+
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <h4 class="gnb-depth__sub__title" data-gnb-contents="피부착자 메뉴 2">
+                                                            피부착자 메뉴 2</h4>
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">피부착자 메뉴 2 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">피부착자 메뉴 2 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+
+                                    </li>
+                                    <li class="gnb__item gnb__item--3 is-depth2" data-gnb="상황관리">
+                                        <a href="" class="gnb__link">상황관리</a>
+                                        <section class="gnb-depth__section" data-gnb-contents="상황관리">
+                                            <h3 class="gnb-depth__title gnb-depth__title--3">상황관리</h3>
+                                            <ul class="gnb-depth__list">
+                                                <li class="gnb-depth__item">
+                                                    <div class="gnb-depth__head">
+                                                        <a href="" class="gnb-depth__link">상황관리 메뉴 1</a>
+
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <h4 class="gnb-depth__sub__title" data-gnb-contents="상황관리 메뉴 1">
+                                                            상황관리 메뉴 1</h4>
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">상황관리 메뉴 1 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">상황관리 메뉴 1 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </li>
+                                    <li class="gnb__item gnb__item--4" data-gnb="집중관제">
+                                        <a href="" class="gnb__link">집중관제</a>
+                                        <section class="gnb-depth__section" data-gnb-contents="집중관제">
+                                            <h3 class="gnb-depth__title gnb-depth__title--4">집중관제</h3>
+                                            <ul class="gnb-depth__list">
+                                                <li class="gnb-depth__item">
+                                                    <div class="gnb-depth__head">
+                                                        <a href="" class="gnb-depth__link">집중관제 메뉴 1</a>
+
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">집중관제 메뉴 1 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">집중관제 메뉴 1 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </li>
+                                    <li class="gnb__item gnb__item--5" data-gnb="상황관제">
+                                        <a href="" class="gnb__link">상황관제</a>
+                                    </li>
+                                    <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                                    <li class="gnb__item gnb__item--6 is-active" data-gnb="범죄예방">
+                                        <a href="" class="gnb__link">범죄예방</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--7" data-gnb="AI보호관찰">
+                                        <a href="" class="gnb__link">AI보호관찰</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--8" data-gnb="정보관리">
+                                        <a href="" class="gnb__link">정보관리</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--9" data-gnb="게시판">
+                                        <a href="" class="gnb__link">게시판</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--10" data-gnb="시스템">
+                                        <a href="" class="gnb__link">시스템</a>
+                                    </li>
+                                    <!-- 2022.01.07 : add : 메뉴 추가 -->
+                                    <li class="gnb__item gnb__item--11" data-gnb="접근보호관리">
+                                        <a href="" class="gnb__link">접근보호 관리</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--12" data-gnb="전자 장치">
+                                        <a href="" class="gnb__link">전자 장치</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--13" data-gnb="모바일 Uguard">
+                                        <a href="" class="gnb__link">모바일 Uguard</a>
+                                    </li>
+                                    <!-- //2022.01.07 : add : 메뉴 추가 -->
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- //GNB -->
+
+
+
+                    <h1 class="header__logo">
+                        <a href="" class="header__logo-link">
+                            <span class="for-a11y">법무부 - u Guard</span>
+                        </a>
+                    </h1>
+
+                    <!-- 2021.09.27 : add : 헤더 메뉴 추가 -->
+                    <nav class="header__nav">
+                        <h2 class="for-a11y">주요 메뉴</h2>
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="" class="header__nav-link">관제현황</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="" class="header__nav-link">상황관제</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="" class="header__nav-link">지도관제</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="" class="header__nav-link is-dropdown">현황/지원<i></i></a>
+                                <!-- 메가 메뉴를 2단 구조로 재배치 위해 class에 is-dropdown 추가  -->
+                                <div class="nav__dropdown-menu">
+                                    <div class="nav__dropdown-box">
+                                        <h5 class="nav__dropdown__title">현황</h5>
+                                        <ul class="nav__dropdown-item">
+                                            <li><a href="" class="nav__dropdown-link">경보현황</a></li>
+                                            <li><a href="" class="nav__dropdown-link">경보통계</a></li>
+                                            <li><a href="" class="nav__dropdown-link">CCTV 현황</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav__dropdown-box">
+                                        <h5 class="nav__dropdown__title">지원</h5>
+                                        <ul class="nav__dropdown-item">
+                                            <li><a href="" class="nav__dropdown-link">원격지원</a></li>
+                                            <li><a href="" class="nav__dropdown-link">시스템 문의 게시판</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- 2021.09.27 : add : 헤더 메뉴 추가 -->
+
+                    <div class="header__right">
+                        <div class="header-number">
+                            <p>시스템 문의 : 02-3407-6748</p>
+                        </div>
+
+                        <div class="header-search">
+                            <form action="">
+                                <div class="ui-input-block header-search__input">
+                                    <input type="text" class="ui-input" title="피부착자 검색" placeholder="피부착자 검색" />
+                                </div>
+                                <button type="submit" class="ui-button header-search__submit">
+                                    <span class="for-a11y">검색</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <p class="header__hello"><strong>홍길동</strong>님</p>
+
+
+                        <div class="header-dropdown header-dropdown--my js-ui-dropdown">
+                            <!-- 2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__tooltip"><span>내 정보</span></div>
+                            <!-- //2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__head">
+                                <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                                    <span class="for-a11y">
+                                        마이 메뉴
+                                        <span class="open-text">열기</span>
+                                        <span class="close-text">닫기</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="header-dropdown__layer js-ui-dropdown__layer">
+                                <section class="header-dropdown__contents">
+                                    <div class="header-dropdown__contents-head">
+                                        <h2 class="for-a11y">마이 메뉴</h2>
+                                        <p class="header-dropdown__name">시스템 관리자</p>
+                                        <p class="header-dropdown__latest-date">
+                                            최근 접속
+                                            <em>2021-07-16 14:53:20</em>
+                                        </p>
+                                    </div>
+                                    <div class="header-dropdown__body ui-scroller">
+                                        <div class="header-dropdown__body-inner">
+                                            <ul class="header-my">
+                                                <li class="header-my__item header-my__item--profile">
+                                                    <a href="" class="header-my__link">나의 정보</a>
+                                                </li>
+                                                <li class="header-my__item header-my__item--password">
+                                                    <a href="" class="header-my__link">비밀번호 변경</a>
+                                                </li>
+                                                <li class="header-my__item header-my__item--logout">
+                                                    <a href="" class="header-my__link">로그아웃</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="header-dropdown header-dropdown--alarm js-ui-dropdown">
+                            <!-- 2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__tooltip"><span>알림</span></div>
+                            <!-- //2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__head">
+                                <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                                    <span class="for-a11y">
+                                        알림 센터
+                                        <span class="open-text">열기</span>
+                                        <span class="close-text">닫기</span>
+                                    </span>
+                                    <span class="header-dropdown__count">10</span>
+                                </button>
+                            </div>
+                            <div class="header-dropdown__layer js-ui-dropdown__layer">
+                                <section class="header-dropdown__contents">
+                                    <div class="header-dropdown__contents-head">
+                                        <h2 class="header-dropdown__title">알림센터</h2>
+                                    </div>
+                                    <div class="header-dropdown__body ui-scroller">
+                                        <div class="header-dropdown__body-inner">
+                                            <!-- Case : 내용 없을 때 -->
+                                            <div class="header-dropdown__empty">
+                                                <p class="header-dropdown__empty-text">새로운 알림이 없습니다.</p>
+                                            </div>
+                                            <!-- //Case : 내용 없을 때 -->
+
+                                            <!-- Case : 내용 있을 때 -->
+                                            <ul class="header-alarm">
+                                                <li class="header-alarm__item">
+                                                    <div class="header-alarm__block">
+                                                        <div class="header-alarm__title">홍길동 면담정보</div>
+                                                        <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요
+                                                        </div>
+                                                        <div class="header-alarm__date">2021-07-30 00:00</div>
+                                                    </div>
+                                                    <button type="button" class="ui-button header-alarm__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-alarm__item">
+                                                    <div class="header-alarm__block">
+                                                        <div class="header-alarm__title">위하여 미묘한 구하지 그와 위하여서. 같지 이상은
+                                                            소금이라 방황하여도, 만천하의 것은 보라.</div>
+                                                        <div class="header-alarm__discription">위하여 미묘한 구하지 그와 위하여서. 같지
+                                                            이상은 소금이라 방황하여도, 만천하의 것은 보라.
+                                                        </div>
+                                                        <div class="header-alarm__date">2021-07-30 00:00</div>
+                                                    </div>
+                                                    <button type="button" class="ui-button header-alarm__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-alarm__item">
+                                                    <div class="header-alarm__block">
+                                                        <div class="header-alarm__title">홍길동 면담정보</div>
+                                                        <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요
+                                                        </div>
+                                                        <div class="header-alarm__date">2021-07-30 00:00</div>
+                                                    </div>
+                                                    <button type="button" class="ui-button header-alarm__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-alarm__item">
+                                                    <div class="header-alarm__block">
+                                                        <div class="header-alarm__title">홍길동 면담정보</div>
+                                                        <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요
+                                                        </div>
+                                                        <div class="header-alarm__date">2021-07-30 00:00</div>
+                                                    </div>
+                                                    <button type="button" class="ui-button header-alarm__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-alarm__item">
+                                                    <div class="header-alarm__block">
+                                                        <div class="header-alarm__title">홍길동 면담정보</div>
+                                                        <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요
+                                                        </div>
+                                                        <div class="header-alarm__date">2021-07-30 00:00</div>
+                                                    </div>
+                                                    <button type="button" class="ui-button header-alarm__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <!-- //Case : 내용 있을 때 -->
+                                        </div>
+                                    </div>
+                                    <div class="header-dropdown__foot">
+                                        <div class="header-dropdown__foot-left">
+                                            <button type="button"
+                                                class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">전체삭제</button>
+                                        </div>
+                                        <div class="header-dropdown__foot-right">
+                                            <a href=""
+                                                class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-alarm">알림설정</a>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="header-dropdown header-dropdown--bookmark js-ui-dropdown">
+                            <!-- 2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__tooltip"><span>즐겨찾기</span></div>
+                            <!-- //2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__head">
+                                <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                                    <span class="for-a11y">
+                                        즐겨찾기 메뉴
+                                        <span class="open-text">열기</span>
+                                        <span class="close-text">닫기</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="header-dropdown__layer js-ui-dropdown__layer">
+                                <section class="header-dropdown__contents">
+                                    <div class="header-dropdown__contents-head">
+                                        <h2 class="header-dropdown__title">즐겨찾기 메뉴</h2>
+                                    </div>
+                                    <div class="header-dropdown__body ui-scroller">
+                                        <div class="header-dropdown__body-inner">
+                                            <!-- Case : 내용 없을 때 -->
+                                            <div class="header-dropdown__empty">
+                                                <p class="header-dropdown__empty-text">등록된 즐겨찾기가 없습니다.</p>
+                                            </div>
+                                            <!-- //Case : 내용 없을 때 -->
+
+                                            <!-- Case : 내용 있을 때 -->
+                                            <ul class="header-bookmark">
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">Dashboard</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">피부착자 관리</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">전자장치 사용기간 현황</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">배터리 상태</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">전자장치 이관 현황 (중앙)</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">전자장치 수령 확인</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">주변기기 입고관리</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">충전팩/젠더 이관</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">충전팩/젠더 수령</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">충전팩/젠더 현황</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <!-- //Case : 내용 있을 때 -->
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <div class="header-dropdown header-dropdown--menusearch js-ui-dropdown">
+                            <!-- 2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__tooltip"><span>메뉴 검색</span></div>
+                            <!-- //2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__head">
+                                <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                                    <span class="for-a11y">
+                                        메뉴 검색
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- //header -->
+            </div>
+            <!-- //fix top area -->
+
+
+            <div class="contents-wrap">
+                <!-- 2021.09.27 : add : 히스토리 탭 추가 -->
+                <!-- History Tab -->
+                <nav class="history-tab">
+                    <h2 class="for-a11y">History Tab</h2>
+                    <div class="history-tab__scroller">
+                        <ul class="history-tab__list">
+                            <li class="history-tab__item history-tab__item--home">
+                                <div class="history-tab__block">
+                                    <a href="" class="history-tab__link">
+                                        <span class="for-a11y">홈</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                            <li class="history-tab__item is-active">
+                                <div class="history-tab__block">
+                                    <a href="" class="history-tab__link">대상자 현황 조회</a>
+                                    <button type="button" class="ui-button history-tab__delete">
+                                        <span class="for-a11y">삭제</span>
+                                    </button>
+                                </div>
+                            </li>
+
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="history-tab__arrow">
+                        <button type="button" class="ui-button history-tab__prev" disabled>
+                            <span class="for-a11y">이전</span>
+                        </button>
+                        <button type="button" class="ui-button history-tab__next">
+                            <span class="for-a11y">다음</span>
+                        </button>
+                    </div>
+                </nav>
+                <!-- //History Tab -->
+                <!-- //2021.09.27 : add : 히스토리 탭 추가 -->
+
+                <div class="page-contents">
+                    <div class="page-head">
+
+                        <div class="page-head__left">
+                            <div class="page-head__location">
+                                <span class="page-head__location__item"><i
+                                        class="icon-location__item--home"></i>HOME</span>
+                                <span class="page-head__location__arrow"></span>
+                                <div class="ui-select-block">
+                                    <select class="ui-select" title="title">
+                                        <option value="-1" disabled="" selected="">정보관리</option>
+                                        <option value="">option 1</option>
+                                        <option value="">option 2</option>
+                                        <option value="">option 3</option>
+                                        <option value="">option 4</option>
+                                        <option value="">option 5</option>
+                                    </select>
+                                </div>
+                                <span class="page-head__location__arrow"></span>
+                                <div class="ui-select-block">
+                                    <select class="ui-select" title="title">
+                                        <option value="-1" disabled="" selected="">인원</option>
+                                        <option value="">option 1</option>
+                                        <option value="">option 2</option>
+                                        <option value="">option 3</option>
+                                        <option value="">option 4</option>
+                                        <option value="">option 5</option>
+                                    </select>
+                                </div>
+                                <span class="page-head__location__arrow"></span>
+                                <div class="ui-select-block">
+                                    <select class="ui-select" title="title">
+                                        <option value="-1" disabled="" selected="">대상자 현황1</option>
+                                        <option value="">option 1</option>
+                                        <option value="">option 2</option>
+                                        <option value="">option 3</option>
+                                        <option value="">option 4</option>
+                                        <option value="">option 5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+
+                            <button type="button"
+                                class="ui-button ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-bookmark js-toggle-active  page-head__add-bookmark font--12 ma-0">
+                                즐겨찾기&nbsp;<span class="off-text">등록</span><span class="on-text">해제</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tile-layout">
+                        <div class="tile-layout__inner">
+                            <div class="tile-layout__row tile-layout__row--color-white">
+
+                                <div class="tile-layout__cell">
+                                    <div class="tile-layout__contents p-20">
+                                        <h2 class="ui-layer-header__title mb-10">결재문서 등록</h2>
+                                        <div class="board-detail-table board-detail-table--height-35">
+                                            <table class="mb-0">
+                                                <colgroup>
+                                                    <col style="width:130px;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">유형</th>
+                                                        <td>
+                                                            <div class="ui-select-block input-width-275">
+                                                                <select class="ui-select" title="처리상태">
+                                                                    <option value="">선택</option>
+                                                                    <option value="" data-select-tab="spcEnroll">특별관제 등록
+                                                                        요청</option>
+                                                                    <option value="" data-select-tab="spcDelete">특별관제 삭제
+                                                                        요청</option>
+                                                                    <option value="" data-select-tab="noDeparture">출국 금지
+                                                                        요청</option>
+                                                                    <option value="" data-select-tab="protectHelp">보호관찰
+                                                                        공조 요청</option>
+                                                                    <option value=""
+                                                                        data-select-tab="protectHelpCancle">보호관찰 공조 취소
+                                                                        요청</option>
+                                                                    <option value="" data-select-tab="situationWork">
+                                                                        상황근무일지 승인 요청</option>
+                                                                    <option value="" data-select-tab="receiveDataDel">
+                                                                        수신자료 폐기 요청</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                        <!-- 2022.08.26 : 직접선택시 비활성화->활성화 위한 data-area-disabled-target="" ,data-area-disabled="" 추가 -->
+                                        <div data-select-tab-panel="spcEnroll">
+                                            <div
+                                                class="board-detail-table board-detail-table--height-35 ml-0 mt-minus-1">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">제목</th>
+                                                            <td>
+                                                                <div class="form-flex">
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--flexible flex-none">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--width-400 color-black is-disabled">
+                                                                            <input type="text" class="ui-input "
+                                                                                value="특별관제 등록 요청" title="title"
+                                                                                placeholder="placeholder" data-area-disabled-target="spcEnrollDisabled" disabled="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-flex-cell">
+                                                                        <div class="ui-checkbox-block">
+                                                                            <input type="checkbox" class="ui-checkbox"
+                                                                                id="formFlexCheckbox1" data-area-disabled="spcEnrollDisabled">
+                                                                            <label for="formFlexCheckbox1"
+                                                                                class="ui-label">
+                                                                                <span class="ui-checkbox-object"></span>
+                                                                                <span class="ui-label__text">직접 입력</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">대상자</th>
+                                                            <td>
+                                                                <div
+                                                                    class="header-search header-search--filter input-width-large">
+                                                                    <div class="ui-input-block header-search__input">
+                                                                        <input type="text" class="ui-input" title=""
+                                                                            placeholder="">
+                                                                    </div>
+                                                                    <button type="button"
+                                                                        class="ui-button header-search__submit">
+                                                                        <span class="for-a11y">검색</span>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">사건번호</th>
+                                                            <td>12-1234-1324-12345</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">요청기간</th>
+                                                            <td>
+                                                                <div class="form-flex js-datepicker-range">
+                                                                    <div class="form-flex-cell">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--date input-width-date">
+                                                                            <input type="text"
+                                                                                class="ui-input js-datepicker-range__min"
+                                                                                title="시작 날짜" value="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--date-hyphen">
+                                                                        -</div>
+                                                                    <div class="form-flex-cell">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--date input-width-date">
+                                                                            <input type="text"
+                                                                                class="ui-input js-datepicker-range__max"
+                                                                                title="마지막 날짜" value="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">요청사유</th>
+                                                            <td>
+                                                                <div class="ui-input-block ui-input-height-123">
+                                                                    <textarea name="" id=""></textarea>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">요청내용</th>
+                                                            <td>
+                                                                <div class="ui-input-block ui-input-height-123">
+                                                                    <textarea name="" id=""></textarea>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">기타</th>
+                                                            <td>
+                                                                <div class="ui-input-block ui-input-height-87">
+                                                                    <textarea name="" id=""></textarea>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">근거</th>
+                                                            <td>
+                                                                <div class="ui-input-block ui-input-height-87">
+                                                                    <textarea name="" id=""></textarea>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">사유</th>
+                                                            <td>
+                                                                <div class="ui-input-block ui-input-height-87">
+                                                                    <textarea name="" id=""></textarea>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">첨부파일</th>
+                                                            <td>
+                                                                <!-- 2021.09.17 : mod : <div class="board-detail-table__form"> 제거 -->
+                                                                <div class="form-row pb-0 form-row-margin--0">
+                                                                    <div
+                                                                        class="form-flex form-flex--medium file-search">
+                                                                        <div class="form-flex-cell">
+                                                                            <div class="ui-file-input">
+                                                                                <div class="ui-file-input__inner">
+                                                                                    <input type="file"
+                                                                                        class="ui-file-input__input del-file-visible"
+                                                                                        id="file">
+                                                                                    <label for="file"
+                                                                                        class="ui-file-input__label del-file">찾아보기</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="form-flex-cell form-flex-cell--flexible ml-10">
+                                                                            <p class="basic-text color-gray"><span
+                                                                                    class="font-size--12">※ </span>개별 파일
+                                                                                용량
+                                                                                최대
+                                                                                5MB, 최대 5개 까지 지원</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-row pb-0 form-row-margin--0 pt-5">
+                                                                    <div class="files">
+                                                                        <ul class="files__list files__list--wrap">
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">2.3MB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">결재선</th>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <button type="button"
+                                                                        class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">설정</button>
+                                                                    <div class="payment-line">
+                                                                        <div class="payment-line__item">검토 1 : 박검토</div>
+                                                                        <div class="payment-line__item">검토 2 : 최검토</div>
+                                                                        <div class="payment-line__item">결재 : 임결재</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div data-select-tab-panel="spcDelete">
+                                            <div
+                                                class="board-detail-table board-detail-table--height-35 ml-0 mt-minus-1">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">제목</th>
+                                                            <td>
+                                                                <div class="form-flex">
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--flexible flex-none">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--width-400 color-black is-disabled">
+                                                                            <input type="text" class="ui-input" value="특별관제 삭제 요청" title="title" placeholder="placeholder" data-area-disabled-target="spcDeleteDisabled" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-flex-cell">
+                                                                        <div class="ui-checkbox-block">
+                                                                            <input type="checkbox" class="ui-checkbox" id="formFlexCheckbox2" data-area-disabled="spcDeleteDisabled">
+                                                                            <label for="formFlexCheckbox2"
+                                                                                class="ui-label" >
+                                                                                <span class="ui-checkbox-object"></span>
+                                                                                <span class="ui-label__text">직접 입력</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">대상자</th>
+                                                            <td>
+                                                                <div class="ui-select-block input-width-160">
+                                                                    <select class="ui-select" title="처리상태">
+                                                                        <option value="">선택</option>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">사건번호</th>
+                                                            <td>12-1234-1324-12345</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">삭제사유</th>
+                                                            <td>
+                                                                <div class="ui-input-block ui-input-height-123">
+                                                                    <textarea name="" id=""></textarea>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">첨부파일</th>
+                                                            <td>
+                                                                <!-- 2021.09.17 : mod : <div class="board-detail-table__form"> 제거 -->
+                                                                <div class="form-row pb-0 form-row-margin--0">
+                                                                    <div
+                                                                        class="form-flex form-flex--medium file-search">
+                                                                        <div class="form-flex-cell">
+                                                                            <div class="ui-file-input">
+                                                                                <div class="ui-file-input__inner">
+                                                                                    <input type="file"
+                                                                                        class="ui-file-input__input del-file-visible"
+                                                                                        id="file">
+                                                                                    <label for="file"
+                                                                                        class="ui-file-input__label del-file">찾아보기</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="form-flex-cell form-flex-cell--flexible ml-10">
+                                                                            <p class="basic-text color-gray"><span
+                                                                                    class="font-size--12">※ </span>개별 파일
+                                                                                용량
+                                                                                최대
+                                                                                5MB, 최대 5개 까지 지원</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-row pb-0 form-row-margin--0 pt-5">
+                                                                    <div class="files">
+                                                                        <ul class="files__list files__list--wrap">
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">2.3MB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">결재선</th>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <button type="button"
+                                                                        class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">설정</button>
+                                                                    <div class="payment-line">
+                                                                        <div class="payment-line__item">결재 : 임결재</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div data-select-tab-panel="noDeparture">
+                                            <div
+                                                class="board-detail-table board-detail-table--height-35 ml-0 mt-minus-1">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">제목</th>
+                                                            <td>
+                                                                <div class="form-flex">
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--flexible flex-none">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--width-400 color-black is-disabled">
+                                                                            <input type="text" class="ui-input "
+                                                                                value="출국 금지 요청" title="title"
+                                                                                placeholder="placeholder" data-area-disabled-target="noDepartureDisabled" disabled="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-flex-cell">
+                                                                        <div class="ui-checkbox-block">
+                                                                            <input type="checkbox" class="ui-checkbox" id="formFlexCheckbox4" data-area-disabled="noDepartureDisabled">
+                                                                            <label for="formFlexCheckbox4"
+                                                                                class="ui-label" >
+                                                                                <span class="ui-checkbox-object"></span>
+                                                                                <span class="ui-label__text">직접 입력</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <!-- 2022.08.22 : del : 빈 tr,td 삭제 -->
+                                                        <!-- 2022.08.22 : mod : 파일 양식 추가 및 파일 찾아보기 변경 -->
+                                                        <tr>
+                                                            <th scope="row">출국금지 요청자</th>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <button type="button" class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">파일양식</button>
+                                                                    <p class="basic-text ml-10 color-gray">※ 반드시 다운로드한 <span class="font-weight-medium">파일양식</span>으로 등록을 진행해주세요.</p>
+                                                                  </div>
+                                                                <div class="form-row mt-5">
+                                                                  <div class="ui-file-input ui-file-input--text ">
+                                                                    <div class="ui-file-input__inner">
+                                                                      <input type="file" class="ui-file-input__input " id="file" data-file-watch="file">
+                                                                      <div class="ui-input ui-file-input__watch ui-input--width-400 flex-none" data-file-watch-target="file"></div>
+                                                                      <label for="file" class="ui-file-input__label ui-file-input__label2">찾아보기</label>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                                
+                                                              </td>
+                                                        </tr>
+                                                        <!-- //2022.08.22 : mod : 파일 양식 추가 및 파일 찾아보기 변경 -->
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                            <!-- 2022.08.22 : add : 출국금지 요청자 추가 -->
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <div class="board-detail-table__title">출국금지 요청자</div>
+                                                
+                                                <div class="ui-board-table" id="noDepartureGrid1" style="height:401px"></div>
+                                            </div>
+                                            <!-- //2022.08.22 : add : 출국금지 요청자 추가 -->
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">결재선</th>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <button type="button"
+                                                                        class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">설정</button>
+                                                                    <div class="payment-line">
+                                                                        <div class="payment-line__item">결재 : 임결재</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div data-select-tab-panel="protectHelp">
+                                            <div
+                                                class="board-detail-table board-detail-table--height-35 ml-0 mt-minus-1">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">제목</th>
+                                                            <td>
+                                                                <div class="form-flex">
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--flexible flex-none">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--width-400 color-black is-disabled">
+                                                                            <input type="text" class="ui-input "
+                                                                                value="보호관찰 공조 요청" title="title"
+                                                                                placeholder="placeholder" data-area-disabled-target="protectHelpDisabled" disabled="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-flex-cell">
+                                                                        <div class="ui-checkbox-block">
+                                                                            <input type="checkbox" class="ui-checkbox"
+                                                                                id="formFlexCheckbox5" data-area-disabled="protectHelpDisabled">
+                                                                            <label for="formFlexCheckbox5"
+                                                                                class="ui-label" >
+                                                                                <span class="ui-checkbox-object"></span>
+                                                                                <span class="ui-label__text">직접 입력</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">대상자</th>
+                                                            <td>
+                                                                <div
+                                                                    class="header-search header-search--filter input-width-large">
+                                                                    <div class="ui-input-block header-search__input">
+                                                                        <input type="text" class="ui-input" title=""
+                                                                            placeholder="">
+                                                                    </div>
+                                                                    <button type="button"
+                                                                        class="ui-button header-search__submit">
+                                                                        <span class="for-a11y">검색</span>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">사건번호</th>
+                                                            <td>12-1234-1324-12345</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">공조 기간</th>
+                                                            <td>
+                                                                <div class="form-flex js-datepicker-range">
+                                                                    <div class="form-flex-cell">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--date input-width-date is-inputed">
+                                                                            <input type="text"
+                                                                                class="ui-input js-datepicker-range__min"
+                                                                                title="시작 날짜" value="2021-12-08">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                                        <!-- 220810 timepick 수정 -->
+                                                                        <div
+                                                                            class="ui-input-block input-width-date ui-input-block--time ui-input-block--time-small">
+                                                                            <input type="text" class="ui-input" title=""
+                                                                                value="00시">
+
+                                                                        </div>
+                                                                        <!-- //220810 timepick 수정 -->
+                                                                    </div>
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--date-hyphen">
+                                                                        -</div>
+                                                                    <div class="form-flex-cell">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--date input-width-date ">
+                                                                            <input type="text"
+                                                                                class="ui-input js-datepicker-range__max"
+                                                                                title="마지막 날짜" value="2021-12-10">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                                        <!-- 220810 timepick 수정 -->
+                                                                        <div
+                                                                            class="ui-input-block input-width-date ui-input-block--time ui-input-block--time-small">
+                                                                            <input type="text" class="ui-input" title=""
+                                                                                value="00시">
+                                                                        </div>
+                                                                        <!-- //220810 timepick 수정 -->
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">공조 기관</th>
+                                                            <td>
+                                                                <button type="button"
+                                                                    class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--senary helpAgency-itemPlus">추가</button>
+                                                                <div class="form-flex mt-5 helpAgency-item">
+                                                                    <div class="form-flex-cell">
+                                                                        <div class="ui-select-block input-width-160">
+                                                                            <select class="ui-select" title="처리상태">
+                                                                                <option value="">선택</option>
+                                                                                <option value=""></option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-flex-cell">
+                                                                        <button type="button"
+                                                                            class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--normal helpAgency-itemMinus">삭제</button>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">요청 사항</th>
+                                                            <td>
+                                                                <div class="ui-input-block ui-input-height-123">
+                                                                    <textarea name="" id=""></textarea>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">첨부파일</th>
+                                                            <td>
+                                                                <!-- 2021.09.17 : mod : <div class="board-detail-table__form"> 제거 -->
+                                                                <div class="form-row pb-0 form-row-margin--0">
+                                                                    <div
+                                                                        class="form-flex form-flex--medium file-search">
+                                                                        <div class="form-flex-cell">
+                                                                            <div class="ui-file-input">
+                                                                                <div class="ui-file-input__inner">
+                                                                                    <input type="file"
+                                                                                        class="ui-file-input__input del-file-visible"
+                                                                                        id="file">
+                                                                                    <label for="file"
+                                                                                        class="ui-file-input__label del-file">찾아보기</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="form-flex-cell form-flex-cell--flexible ml-10">
+                                                                            <p class="basic-text color-gray"><span
+                                                                                    class="font-size--12">※ </span>개별 파일
+                                                                                용량
+                                                                                최대
+                                                                                5MB, 최대 5개 까지 지원</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-row pb-0 form-row-margin--0 pt-5">
+                                                                    <div class="files">
+                                                                        <ul class="files__list files__list--wrap">
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">2.3MB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">결재선</th>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <button type="button"
+                                                                        class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">설정</button>
+                                                                    <div class="payment-line">
+                                                                        <div class="payment-line__item">결재 : 임결재</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div data-select-tab-panel="protectHelpCancle">
+                                            <div
+                                                class="board-detail-table board-detail-table--height-35 ml-0 mt-minus-1">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">제목</th>
+                                                            <td>
+                                                                
+                                                                <div class="form-flex">
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--flexible flex-none">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--width-400 color-black is-disabled">
+                                                                            <input type="text" class="ui-input "
+                                                                                value="보호관찰 공조 취소 요청" title="title"
+                                                                                placeholder="placeholder" data-area-disabled-target="protectHelpCancleDisabled" disabled="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-flex-cell">
+                                                                        <div class="ui-checkbox-block">
+                                                                            <input type="checkbox" class="ui-checkbox"
+                                                                                id="formFlexCheckboxPro" data-area-disabled="protectHelpCancleDisabled">
+                                                                            <label for="formFlexCheckboxPro"
+                                                                                class="ui-label">
+                                                                                <span class="ui-checkbox-object"></span>
+                                                                                <span class="ui-label__text">직접 입력</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">대상자</th>
+                                                            <td>
+                                                                <div class="ui-select-block input-width-160">
+                                                                    <select class="ui-select" title="처리상태">
+                                                                        <option value="">선택</option>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">사건번호</th>
+                                                            <td>12-1234-1324-12345</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">공조 기간</th>
+                                                            <td>
+                                                                <div class="ui-select-block input-width-large">
+                                                                    <select class="ui-select" title="처리상태">
+                                                                        <option value="">2022-07-01 00:00 ~ 2022-07-31
+                                                                            00:00</option>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">공조 기관</th>
+                                                            <td>의정부, 대구상주</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">첨부파일</th>
+                                                            <td>
+                                                                <!-- 2021.09.17 : mod : <div class="board-detail-table__form"> 제거 -->
+                                                                <div class="form-row pb-0 form-row-margin--0">
+                                                                    <div
+                                                                        class="form-flex form-flex--medium file-search">
+                                                                        <div class="form-flex-cell">
+                                                                            <div class="ui-file-input">
+                                                                                <div class="ui-file-input__inner">
+                                                                                    <input type="file"
+                                                                                        class="ui-file-input__input del-file-visible"
+                                                                                        id="file">
+                                                                                    <label for="file"
+                                                                                        class="ui-file-input__label del-file">찾아보기</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="form-flex-cell form-flex-cell--flexible ml-10">
+                                                                            <p class="basic-text color-gray"><span
+                                                                                    class="font-size--12">※ </span>개별 파일
+                                                                                용량
+                                                                                최대
+                                                                                5MB, 최대 5개 까지 지원</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-row pb-0 form-row-margin--0 pt-5">
+                                                                    <div class="files">
+                                                                        <ul class="files__list files__list--wrap">
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">2.3MB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">결재선</th>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <button type="button"
+                                                                        class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">설정</button>
+                                                                    <div class="payment-line">
+                                                                        <div class="payment-line__item">결재 : 임결재</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div data-select-tab-panel="situationWork">
+                                            <div
+                                                class="board-detail-table board-detail-table--height-35 ml-0 mt-minus-1">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">제목</th>
+                                                            <td>
+                                                                <div class="form-flex">
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--flexible flex-none">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--width-400 color-black is-disabled">
+                                                                            <input type="text" class="ui-input "
+                                                                                value="상황근무일지 승인 요청" title="title"
+                                                                                placeholder="placeholder" data-area-disabled-target="situationWorkDisabled" disabled="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-flex-cell">
+                                                                        <div class="ui-checkbox-block">
+                                                                            <input type="checkbox" class="ui-checkbox"
+                                                                                id="formFlexCheckboxSitu" data-area-disabled="situationWorkDisabled">
+                                                                            <label for="formFlexCheckboxSitu"
+                                                                                class="ui-label">
+                                                                                <span class="ui-checkbox-object"></span>
+                                                                                <span class="ui-label__text">직접 입력</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">상황근무일지</th>
+                                                            <td>
+                                                                <button type="button"
+                                                                    class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">선택</button>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <div class="board-detail-table__title">근무자 정보</div>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">근무 시작일</th>
+                                                            <td>2022-08-10(수)</td>
+                                                            <th scope="row">근무 시간</th>
+                                                            <td>주간 (09:00~18:00)</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <div class="board-detail-table__title">근무자 현황</div>
+                                                <table>
+                                                    <thead>
+                                                        <th scope="row">근무조</th>
+                                                        <th scope="row">보호관찰소</th>
+                                                        <th scope="row">성명</th>
+                                                        <th scope="row">직급</th>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1팀</td>
+                                                            <td>서울보호관찰소</td>
+                                                            <td>홍직원</td>
+                                                            <td>5급</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1팀</td>
+                                                            <td>서울보호관찰소</td>
+                                                            <td>박직원</td>
+                                                            <td>7급</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <div class="board-detail-table__title">경보 발생 현황</div>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">즉시이관 건 수</th>
+                                                            <td>1건</td>
+                                                            <th scope="row">단순이관 건 수</th>
+                                                            <td>1건</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <!-- 경보처리 출동 현황 -->
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <div class="board-detail-table__title">경보처리 출동 현황</div>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">대상자</th>
+                                                            <td>홍길동</td>
+                                                            <th scope="row">경보명</th>
+                                                            <td>출입금지 위반</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">경보 구분</th>
+                                                            <td>주의경보</td>
+                                                            <th scope="row">처리 방식</th>
+                                                            <td>출동</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">이관 일시</th>
+                                                            <td>2022-08-10 00:00</td>
+                                                            <th scope="row">처리 일시</th>
+                                                            <td>2022-08-10 00:00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">처리 내용</th>
+                                                            <td colspan="3">보호관찰조치내용이 이곳에 표시됩니다. 보호관찰조치내용이 이곳에 표시됩니다.
+                                                                보호관찰조치내용이 이곳에 표시됩니다. 보호관찰조치내용이 이곳에 표시됩니다. 보호관찰조치내용이 이곳에
+                                                                표시됩니다. 보호관찰조치내용이 이곳에 표시됩니다. 보호관찰조치내용이 이곳에 표시됩니다.
+                                                                보호관찰조치내용이 이곳에 표시됩니다.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">대상자</th>
+                                                            <td>홍길동</td>
+                                                            <th scope="row">경보명</th>
+                                                            <td>출입금지 위반</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">경보 구분</th>
+                                                            <td>주의경보</td>
+                                                            <th scope="row">처리 방식</td>
+                                                            <td>출동</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">이관 일시</th>
+                                                            <td>2022-08-10 00:00</td>
+                                                            <th scope="row">처리 일시</th>
+                                                            <td>2022-08-10 00:00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">처리 내용</th>
+                                                            <td colspan="3">보호관찰조치내용이 이곳에 표시됩니다. 보호관찰조치내용이 이곳에 표시됩니다.
+                                                                보호관찰조치내용이 이곳에 표시됩니다. 보호관찰조치내용이 이곳에 표시됩니다. 보호관찰조치내용이 이곳에
+                                                                표시됩니다. 보호관찰조치내용이 이곳에 표시됩니다. 보호관찰조치내용이 이곳에 표시됩니다.
+                                                                보호관찰조치내용이 이곳에 표시됩니다.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="4" class="align-center">경보처리 출동 내역이 없습니다.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //경보처리 출동 현황 -->
+
+                                            <!-- 재범예방 등을 위한 상시 현재지 출장 현황 -->
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <div class="board-detail-table__title">재범예방 등을 위한 상시 현재지 출장 현황</div>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">대상자</th>
+                                                            <td>홍길동</td>
+                                                            <th scope="row">출장일시 및 장소</th>
+                                                            <td>2022-08-10 00:00, 한강공원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">면담 내용</th>
+                                                            <td colspan="3">면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">대상자</th>
+                                                            <td>홍길동</td>
+                                                            <th scope="row">출장일시 및 장소</th>
+                                                            <td>2022-08-10 00:00, 한강공원</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">면담 내용</th>
+                                                            <td colspan="3">면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다. 면담 내용이 이곳에 표시됩니다.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="4" class="align-center">현재지 출장 내역이 없습니다.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //재범예방 등을 위한 상시 현재지 출장 현황 -->
+
+                                            <!-- 특이 대상자(24:00 이후 배회자 포함) 조치 현황 -->
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <div class="board-detail-table__title">특이 대상자(24:00 이후 배회자 포함) 조치 현황</div>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">대상자</th>
+                                                            <td>홍길동</td>
+                                                            <th scope="row">점검 일시</th>
+                                                            <td>2022-08-10 00:00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">조치 사항</th>
+                                                            <td colspan="3">조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">대상자</th>
+                                                            <td>홍길동</td>
+                                                            <th scope="row">점검 일시</th>
+                                                            <td>2022-08-10 00:00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">조치 사항</th>
+                                                            <td colspan="3">조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다. 조치사항이 이곳에 표시됩니다.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="4" class="align-center">특이 대상자 조치 내역이 없습니다.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //특이 대상자(24:00 이후 배회자 포함) 조치 현황 -->
+
+                                            <!-- 특이사항 -->
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <div class="board-detail-table__title">특이사항</div>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">특이사항</th>
+                                                            <td>특이사항이 이곳에 표시됩니다. 특이사항이 이곳에 표시됩니다. 특이사항이 이곳에 표시됩니다. 특이사항이 이곳에 표시됩니다. 특이사항이 이곳에 표시됩니다. 특이사항이 이곳에 표시됩니다. 특이사항이 이곳에 표시됩니다. 특이사항이 이곳에 표시됩니다.
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //특이사항 -->
+
+
+                                            <!-- 첨부파일 -->
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">첨부파일</th>
+                                                            <td>
+                                                                <!-- 2021.09.17 : mod : <div class="board-detail-table__form"> 제거 -->
+                                                                <div class="form-row pb-0 form-row-margin--0">
+                                                                    <div
+                                                                        class="form-flex form-flex--medium file-search">
+                                                                        <div class="form-flex-cell">
+                                                                            <div class="ui-file-input">
+                                                                                <div class="ui-file-input__inner">
+                                                                                    <input type="file"
+                                                                                        class="ui-file-input__input del-file-visible"
+                                                                                        id="file">
+                                                                                    <label for="file"
+                                                                                        class="ui-file-input__label del-file">찾아보기</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="form-flex-cell form-flex-cell--flexible ml-10">
+                                                                            <p class="basic-text color-gray"><span
+                                                                                    class="font-size--12">※ </span>개별 파일
+                                                                                용량
+                                                                                최대
+                                                                                5MB, 최대 5개 까지 지원</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-row pb-0 form-row-margin--0 pt-5">
+                                                                    <div class="files">
+                                                                        <ul class="files__list files__list--wrap">
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+            
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">2.3MB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            
+                                            <!-- 첨부파일 -->
+
+
+
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">결재선</th>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <button type="button"
+                                                                        class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">설정</button>
+                                                                    <div class="payment-line">
+                                                                        <div class="payment-line__item">결재 : 임결재</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div data-select-tab-panel="receiveDataDel">
+                                            <div
+                                                class="board-detail-table board-detail-table--height-35 ml-0 mt-minus-1">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">제목</th>
+                                                            <td>
+                                                                <div class="form-flex">
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--flexible flex-none">
+                                                                        <div
+                                                                            class="ui-input-block ui-input-block--width-400 color-black is-disabled">
+                                                                            <input type="text" class="ui-input "
+                                                                                value="수신자료 폐기 요청" title="title"
+                                                                                placeholder="placeholder" data-area-disabled-target="receiveDataDelDisabled" disabled="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-flex-cell">
+                                                                        <div class="ui-checkbox-block">
+                                                                            <input type="checkbox" class="ui-checkbox"
+                                                                                id="formFlexCheckboxDataDel" data-area-disabled="receiveDataDelDisabled">
+                                                                            <label for="formFlexCheckboxDataDel"
+                                                                                class="ui-label">
+                                                                                <span class="ui-checkbox-object"></span>
+                                                                                <span class="ui-label__text">직접 입력</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">수신자료 폐기 대상자</th>
+                                                            <td>
+                                                                <button type="button"
+                                                                    class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">선택</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">이름</th>
+                                                            <td>홍길동</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">주민등록번호</th>
+                                                            <td>123456-1234567</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">사건번호</th>
+                                                            <td>12-1234-1324-12345</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">위치추적 기간</th>
+                                                            <td>2015-03-30 ~ 2015-11-12</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">보호관찰소</th>
+                                                            <td>인천</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">첨부파일</th>
+                                                            <td>
+                                                                <!-- 2021.09.17 : mod : <div class="board-detail-table__form"> 제거 -->
+                                                                <div class="form-row pb-0 form-row-margin--0">
+                                                                    <div
+                                                                        class="form-flex form-flex--medium file-search">
+                                                                        <div class="form-flex-cell">
+                                                                            <div class="ui-file-input">
+                                                                                <div class="ui-file-input__inner">
+                                                                                    <input type="file"
+                                                                                        class="ui-file-input__input del-file-visible"
+                                                                                        id="file">
+                                                                                    <label for="file"
+                                                                                        class="ui-file-input__label del-file">찾아보기</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="form-flex-cell form-flex-cell--flexible ml-10">
+                                                                            <p class="basic-text color-gray"><span
+                                                                                    class="font-size--12">※ </span>개별 파일
+                                                                                용량
+                                                                                최대
+                                                                                5MB, 최대 5개 까지 지원</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-row pb-0 form-row-margin--0 pt-5">
+                                                                    <div class="files">
+                                                                        <ul class="files__list files__list--wrap">
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+            
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">2.3MB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li
+                                                                                class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                                <div
+                                                                                    class="files__block files__block--download del-down files__block--set">
+                                                                                    <span
+                                                                                        class="files__name files__name--set">abcd1234.xls</span>
+                                                                                    <span
+                                                                                        class="files__size">624KB</span>
+                                                                                    <button type="button"
+                                                                                        class="ui-button files__delete">
+                                                                                        <span class="for-a11y">제거</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+
+
+
+                                            <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                                <table class="mb-0">
+                                                    <colgroup>
+                                                        <col style="width:130px;">
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">결재선</th>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <button type="button"
+                                                                        class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">설정</button>
+                                                                    <div class="payment-line">
+                                                                        <div class="payment-line__item">결재 : 임결재</div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!-- //2022.08.26 : 직접선택시 비활성화->활성화 위한 data-area-disabled-target="" ,data-area-disabled="" 추가 -->
+
+
+                                        <div class="ui-buttons ui-buttons--right mt-10">
+                                            <ul class="ui-buttons__list ">
+                                                <li class="ui-buttons__item ui-basic-button--width-65">
+                                                    <a href=""
+                                                        class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                                                </li>
+                                                <li class="ui-buttons__item">
+                                                    <button type="submit"
+                                                        class="ui-button ui-basic-button ui-basic-button--save ui-basic-button--width-65">보관하기</button>
+                                                </li>
+                                                <li class="ui-buttons__item">
+                                                    <button type="submit"
+                                                        class="ui-button ui-basic-button ui-basic-button--save ui-basic-button--width-65">상신하기</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- //컨텐츠 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- script -->
+        <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+        <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+        <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+        <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/jquery/jquery.js"></script>
+        <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/timepicker.js"></script>
+        <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+        <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+        <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+        <script type="text/javascript" src="./assets/lib/isotope/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+
+
+        <!-- 2022.08.22 : add : 출국금지 요청자 그리드 추가 -->
+        <script type="text/javascript">
+            // Data
+            var grid_data1 = [{
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '검토1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '검토1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '결재1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '타 기관 1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '결재1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '타 기관 1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '결재1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '타 기관 1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '결재1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '타 기관 1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '결재1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '타 기관 1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '결재1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+                {
+                    cell_1: '12-1234-1234-12345',
+                    cell_2: '홍길동',
+                    cell_3: '결재1234567',
+                    cell_4: '2022-08-01',
+                    cell_5: '2022-12-05',
+                },
+            ];
+
+
+            function createGrid(properties, callback) {
+                var datagrid;
+                datagrid = _SBGrid.create(properties);
+                datagrid.bind('aftersort', function () {
+                    SBCustomFunction.aftersort(datagrid);
+                });
+                callback(datagrid);
+            }
+
+            var columns1 = [{
+                    caption: ['사건번호'],
+                    ref: 'cell_1',
+                    width: '20%',
+                },
+                {
+                    caption: ['성명'],
+                    ref: 'cell_2',
+                    width: '20%',
+                },
+                {
+                    caption: ['후단주민번호'],
+                    ref: 'cell_3',
+                    width: '20%',
+                },
+                {
+                    caption: ['규제시작일'],
+                    ref: 'cell_4',
+                    width: '20%',
+                },
+                {
+                    caption: ['만료예정일'],
+                    ref: 'cell_4',
+                    width: '20%',
+                },
+            ];
+   
+
+
+            $(function () {
+                createGrid(
+                    $.extend({}, SBGridProperties, {
+                        id: 'noDepartureGrid1',
+                        parentid: 'noDepartureGrid1',
+                        jsonref: 'grid_data1',
+                        extendcol: 3,
+                        fixedrowheight: '25',
+                        rowheight: '25',
+                        width: '100%',
+                        height: '100%',
+                        emptyrecords: '조회 결과가 없습니다.',
+                        columns: columns1,
+                    }),
+                    function (datagrid) {
+                        // datagrid.sortColumn(0, 'desc');
+                        datagrid.sortingIcon();
+                        $('#noDepartureGrid1').data('grid', datagrid);
+                    }
+                );
+                
+            });
+
+            
+            // 탭 변경 시 그리드 리사이즈
+            $('.ui-select').on('change.selectTab', function (e) {
+                var $this = $(this);
+                var grid = $this.find('.ui-board-table').data('grid');
+
+                console.log("a")
+
+                if (grid) {
+                    grid.resize();
+                }
+                setTimeout(function() {
+                    //var $activePanel = $('.board-tab-panel.js-tabpanel-opened');
+                    var grid = $('.ui-board-table').data('grid'); 
+                    if (grid) {
+                    grid.resize();
+                    }
+                }, 50);
+
+                //e.stopPropagation();
+            });
+        </script>
+        <!-- //script -->
+        <!-- //2022.08.22 : add : 출국금지 요청자 그리드 추가 -->
+
+        <script type="text/javascript">
+            // 2022.08.31 : mod : timepicker 적용
+            $(document).ready(function () {
+                
+                $(".ui-input-block--time-small input").timepicker({
+                timeFormat: "%H시",
+                });
+            });
+        </script>
+        <!-- //script -->
+</body>
+
+</html>

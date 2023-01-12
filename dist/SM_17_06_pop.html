@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">준수사항 – 등록요청 </h1>
+          <div class="form-flex">
+            <!--자동완성-->
+              <div class="form-block__cell control control-search">
+                <div class="form-flex">
+                  <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time search">
+                    <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                      <input type="text" class="ui-input js-datepicker-range__min is-active" title="" value="홍길동">
+                      <div class="time-table">
+                        <div class="time-table--hour">
+                          <div class="time-table--button ui-scroller">
+                              <button type="button">홍길동 | 남 | 1952-03-17</button>
+                              <button type="button">홍길배 | 남 | 1980-05-30</button>
+                              <button type="button">홍길선 | 남 | 1967-04-13</button>
+                              <button type="button">홍길순 | 남 | 1977-12-12</button>
+                              <button type="button">홍길천 | 남 | 1977-12-12</button>
+                              <button type="button">홍길동 | 남 | 1952-03-17</button>
+                              <button type="button">홍길배 | 남 | 1980-05-30</button>
+                              <button type="button">홍길선 | 남 | 1967-04-13</button>
+                              <button type="button">홍길순 | 남 | 1977-12-12</button>
+                              <button type="button">홍길천 | 남 | 1977-12-12</button>
+                              <button type="button">홍길동 | 남 | 1952-03-17</button>
+                              <button type="button">홍길배 | 남 | 1980-05-30</button>
+                              <button type="button">홍길선 | 남 | 1967-04-13</button>
+                              <button type="button">홍길순 | 남 | 1977-12-12</button>
+                              <button type="button">홍길천 | 남 | 1977-12-12</button>
+                              <button type="button">홍길동 | 남 | 1952-03-17</button>
+                              <button type="button">홍길배 | 남 | 1980-05-30</button>
+                              <button type="button">홍길선 | 남 | 1967-04-13</button>
+                              <button type="button">홍길순 | 남 | 1977-12-12</button>
+                              <button type="button">홍길천 | 남 | 1977-12-12</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button type="button" class="ui-button header-search__submit">
+                      <span class="for-a11y">검색</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            <!--//자동완성-->
+            <div class="people-head">
+                <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                    <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                    <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__info">남</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__birth">1952-05-21</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                    <span class="people-head__key">사건번호</span>
+                    <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-popup__body">
+
+          <!-- 2022.08.29 : del : 클래스 border-gray radius-6 overflow-hid 삭제 -->
+            <div class="survey-form survey-form--padding-0 board-detail-wrap  table-td--padding-3-10">
+              <!-- 2021.10.18 : add : 참여 후 케이스 추가 -->
+              <!-- Case : 참여 후 -->
+              <div class="board-detail-table td-border-right board-table-padding--1220 board-detail-table-layout-auto">
+          
+                <table class="mb-0 border-none">
+                  <!-- 2021.10.18 : mod : 클래스값 변경 및 tbody 분리 -->
+                  <tbody class="js-datepicker-range">
+                    <tr>
+                      <th>구분</th>
+                      <td>
+                        출입금지구역
+                      </td>
+                      <th>시작일<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td>
+                          <div class="form-flex js-datepicker-range">
+                              <div class="form-flex-cell">
+                                  <div class="ui-input-block ui-input-block--date input-width-date">
+                                  <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08">
+                                  </div>
+                              </div>
+                          </div>    
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>완충지역</th>
+                      <td>
+                          <div class="form-flex width-130">
+                              <div class="ui-select-block flex ui-select-block--width-130">
+                                  <select class="ui-select" title="title">
+                                      <option value="">전체</option>
+                                  </select>
+                              </div>
+                              <span class="ml-5">m</span>
+                          </div>
+                      </td>
+                      <th>종료일<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td>
+                          <div class="form-flex js-datepicker-range">
+                              <div class="form-flex-cell">
+                                  <div class="ui-input-block ui-input-block--date input-width-date">
+                                  <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08">
+                                  </div>
+                              </div>
+                          </div>    
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>광역시도</th>
+                      <td>
+                          <div class="form-flex width-130">
+                              <div class="ui-select-block flex ui-select-block--width-130">
+                                  <select class="ui-select" title="title">
+                                      <option value="">전체</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </td>
+                      <th>선택</th>
+                      <td>
+                          <ul class="ui-check-list__list m-0">
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="keyword1-2">
+                                  <label for="keyword1-2" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">어린이보호구역</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="keyword1-3">
+                                  <label for="keyword1-3" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">중학교</span>
+                                  </label>
+                                </div>
+                              </li>
+                              <li class="ui-check-list__item">
+                                <div class="ui-checkbox-block">
+                                  <input type="checkbox" class="ui-checkbox" id="keyword1-4">
+                                  <label for="keyword1-4" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label__text">고등학교</span>
+                                  </label>
+                                </div>
+                              </li>
+                            </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>비고<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                      <td colspan="3">
+                          <div class="ui-input-block">
+                              <textarea class="ui-input input-height-small" title="상세사유"></textarea>
+                          </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                  
+              </div>
+
+            </div>
+            <div class="tile-layout">
+                <div class="report-history">
+                    
+
+                    <!-- 2022.08.29 : del : 클래스 boxsizing 삭제 -->
+                    <div class="window-popup__foot">
+                        <div class="window-popup__foot__right">
+                          <div class="ui-buttons ui-buttons--right">
+                            <ul class="ui-buttons__list">
+                              <li class="ui-buttons__item">
+                                <a href="" class="ui-basic-button ui-basic-button--icon ui-basic-button--icon-add width-100">등록요청</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+
+
+                    <div class="board-detail-table__title--with-button d-flex">
+                        <div class="board-detail-table__title board-detail-table__title--flex">
+                          <div class="board-detail-table__title font-size-12">요청 목록</div>         
+                        </div>
+                    </div>
+
+                    <div class="window-popup__foot boxsizing mt-0 pt-0">
+                        <div class="window-popup__foot__left">
+                          <div class="ui-buttons ui-buttons--left">
+                            <ul class="ui-buttons__list">
+                              <li class="ui-buttons__item">
+                                <a href="" class="ui-basic-button ui-basic-button--quaternary">요청취소</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 2021.10.18 : mod : ui-board-table--multi-4-rows -> ui-board-table--5-rows 클래스 값 변경 -->
+                    <!-- 목록 -->
+                    <div class="tile-layout__cell mt-10">
+
+                        <!-- 2022.08.29 : mod : style="height: 191px;" 추가  -->
+                        <div class="ui-board-table ui-board-table--select ui-board-table--4-rows p-20" id="boardGrid" style="height: 191px;"></div>
+
+                    </div>
+                    <div class="window-popup__foot boxsizing mt-0">
+                        <div class="window-popup__foot__right">
+                          <div class="ui-buttons ui-buttons--right">
+                            <ul class="ui-buttons__list">
+                              <li class="ui-buttons__item">
+                                <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    <!-- //목록 -->
+                </div>    
+            </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+
+      // Data
+      var grid_data = [
+        {
+          cell_1: '부산광역시',
+          cell_2: 'Y',
+          cell_3: 'Y',
+          cell_4: 'N',
+          cell_5: '홍담당',
+          cell_6: '대기',
+          cell_7: '2022-06-22',
+        },
+        {
+          cell_1: '서울특별시',
+          cell_2: 'Y',
+          cell_3: 'Y',
+          cell_4: 'N',
+          cell_5: '홍담당',
+          cell_6: '대기',
+          cell_7: '2022-06-22',
+        },
+        {
+          cell_1: '서울특별시',
+          cell_2: 'Y',
+          cell_3: 'Y',
+          cell_4: 'N',
+          cell_5: '홍담당',
+          cell_6: '대기',
+          cell_7: '2022-06-22',
+        },
+        {
+          cell_1: '서울특별시',
+          cell_2: 'Y',
+          cell_3: 'Y',
+          cell_4: 'N',
+          cell_5: '홍담당',
+          cell_6: '대기',
+          cell_7: '2022-06-22',
+        },
+        {
+          cell_1: '서울특별시',
+          cell_2: 'Y',
+          cell_3: 'Y',
+          cell_4: 'N',
+          cell_5: '홍담당',
+          cell_6: '대기',
+          cell_7: '2022-06-22',
+        },
+        {
+          cell_1: '서울특별시',
+          cell_2: 'Y',
+          cell_3: 'Y',
+          cell_4: 'N',
+          cell_5: '홍담당',
+          cell_6: '대기',
+          cell_7: '2022-06-22',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.width = '100%';
+        SBGridProperties.height = '100%';
+        SBGridProperties.extendcol = 7; 
+        SBGridProperties.rowheight = 35; 
+        SBGridProperties.fixedrowheight = '25';
+        SBGridProperties.rowheight = '25'; 
+        SBGridProperties.emptyrecords = '조회결과가 없습니다.';
+        SBGridProperties.emptyrecordsfontstyle = "font-size:12px;font-weight bold;"; 
+        // SBGridProperties.ellipsis = false; // 2021.10.22 : del : 속성 제거
+        SBGridProperties.columns = [
+          {
+            caption: [''],
+            ref: 'check',
+            width: '45px',
+            type: 'checkbox',
+            sortable: false,
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+          {
+            caption: ['광역시도'],
+            ref: 'cell_1',
+            width: '120px',
+          },
+          {
+            caption: ['어린이보호구역'],
+            ref: 'cell_2',
+            width: '120px',
+          },
+          {
+            caption: ['중학교'],
+            ref: 'cell_3',
+            width: '120px',
+          },
+          {
+            caption: ['고등학교'],
+            ref: 'cell_4',
+            width: '120px',
+          },
+          {
+            caption: ['요청자'],
+            ref: 'cell_5',
+            width: '120px',
+          },
+          {
+            caption: ['완료여부'],
+            ref: 'cell_6',
+            width: '120px',
+          },
+          {
+            caption: ['작업예정일'],
+            ref: 'cell_7',
+            width: '120px',
+          },
+          
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+
+        datagrid.setFixedcellcheckbox(0, 0);
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- //script -->
+  </body>
+</html>

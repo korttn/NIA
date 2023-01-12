@@ -1,0 +1,46 @@
+.my-timepicker-div{
+  position: absolute;
+  z-index: 5;
+  max-width: 107px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .21);
+}
+
+.my-timepicker-div div{
+  /* reset the negative margin caused by class="row" */
+  margin: 0rem;
+}
+.my-timepicker-div option{
+  cursor: pointer;
+}
+.my-timepicker-div option:hover{
+  background: #4264d0; 
+  color:#ffffff;
+}
+.ui-input-block--time-small .time-table__min,
+.ui-input-block--time-small .min-select,
+.ui-input-block--time-small .my-timepicker-div::before{
+  display: none;
+}
+.ui-input-block--time-small .my-timepicker-div{
+  width: 65px !important;
+}
+.ui-input-block--time-small .ui-input{
+  padding-right: 29px;
+}
+/* 
+.my-timepicker-div option:disabled{
+  color: #bbb;
+  font-style: italic;
+}
+
+.my-timepicker-div span{
+  padding-right: 0.1rem;
+  padding-left: 0.1rem;
+}
+
+.my-timepicker-div .ampm-button{
+  width: 3rem;
+  height: 3rem;
+} */

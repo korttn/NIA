@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+
+     
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">전자장치 사진 등록 이력</h1>
+            <div class="form-flex">
+              <!--자동완성-->
+                <div class="form-block__cell control control-search">
+                  <div class="form-flex">
+                    <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time search">
+                      <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                        <input type="text" class="ui-input js-datepicker-range__min is-active" title="" value="홍길동">
+                        <div class="time-table">
+                          <div class="time-table--hour">
+                            <div class="time-table--button ui-scroller">
+                                <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                <button type="button">홍길천 | 남 | 1977-12-12</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button type="button" class="ui-button header-search__submit">
+                        <span class="for-a11y">검색</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              <!--//자동완성-->
+              <div class="people-head">
+                  <div class="people-head__block">
+                  <div class="people-head__sex people-head__sex--man">
+                      <span class="for-a11y">(남)</span>
+                  </div>
+                  <div class="people-head__sex people-head__sex--woman">
+                      <span class="for-a11y">(여)</span>
+                  </div>
+                  <div class="people-head__info">남</div>
+                  <div class="people-head__hr"></div>
+                  <div class="people-head__birth">1952-05-21</div>
+                  <div class="people-head__hr"></div>
+                  <div class="people-head__number">
+                      <span class="people-head__key">사건번호</span>
+                      <span class="people-head__val">12-3456-7890-12345</span>
+                  </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+
+          <div class="window-popup__body window-popup__body--row">
+         
+
+            <div class="tile-layout">
+              <div class="tile-layout__inner">
+                <div class="tile-layout__inner">
+                
+                  <div class="tile-layout__row--width-790  background-color--none box-shadow--none">
+                    <form action="">
+
+                      <!-- 2022.08.30 : mod : .ui-scroller style="height: 370px;" 삭제, .p-0 추가 -->
+                      <section class="search-bar search-bar--popup search-bar--width-230 box-shadow--none background-white p-0">
+                          <!-- 2022.08.30 : add : 스타일 width:100%; 추가 -->
+                          <div class="ui-board-table ui-board-table__weight--400" id="boardGrid" style="width:100%; height:370px;"></div>
+      
+                      </section>
+                    </form>
+                    <!-- 2022.08.30 : mod : .p-10-10-0-10 삭제, .px-10 추가 -->
+                    <div class="board-bottom board-bottom--set board-bottom--list px-10">
+                      <div class="board-bottom__left mat-0 flex--1">
+                        <p class="total-text">총<span class="total-text__count">123,124,124</span>건</p>
+                      </div>
+                      <div class="board-bottom__right mat-0">
+                        <div class="pagination">
+                          <button type="button" class="ui-button pagination__arrow pagination__arrow--start board-pagination__arrow--start" disabled="">
+                            <span class="for-a11y">처음 페이지</span>
+                          </button>
+                          <button type="button" class="ui-button pagination__arrow pagination__arrow--prev board-pagination__arrow--prev" disabled="">
+                            <span class="for-a11y">이전 페이지</span>
+                          </button>
+                          <div class="pagination__fraction">
+                            <div class="pagination__fraction-currunt">
+                              <div class="ui-input-block">
+                                <input type="text" class="ui-input" title="현재 페이지" value="1">
+                              </div>
+                            </div>
+                            <div class="pagination__fraction-slash">/</div>
+                            <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                          </div>
+                          <button type="button" class="ui-button pagination__arrow pagination__arrow--next board-pagination__arrow--next">
+                            <span class="for-a11y">다음 페이지</span>
+                          </button>
+                          <button type="button" class="ui-button pagination__arrow pagination__arrow--end board-pagination__arrow--end">
+                            <span class="for-a11y">마지막 페이지</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <!-- 신호실종 내역 -->
+                 
+                  <!-- //신호실종 내역 -->
+                  
+      
+                </div>
+             
+    
+                <!-- 일일감독 소견 -->
+                <div class="tile-layout__row ml-20">
+                  <div class="p-20">
+                      <div class="board-detail-table__title--with-button d-flex align-flex-center">
+                        <div class="board-detail-table__title mt-0 ">사진</div>
+                        <div class="ui-buttons--left ml-auto">
+                          <ul class=" ui-buttons__list ui-buttons__list--width-65">
+                            <li class="ui-buttons__item">
+                              <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--icon ui-basic-button--icon-add ui-basic-button--nonary button__min--57">등록</a>
+                            </li>
+                         
+                          </ul>
+                        </div>
+                      </div>
+                      
+                      <div class="board-detail-table--flex">
+                     
+                        <!-- 마지막 table 에서 width 값 다름 class에 board-detail-table--flex-item__last 추가해주세요 -->
+                        <div class="board-detail-table--flex-item">
+
+                          <div class="image-frame no-frame-white">
+                            <!-- DD : 이미지 에러시 .profile-image 에 is-error 클래스값 추가 -->
+                            <div class="test-guide-swiper sm-4-swiper p-0" id="testGuideSwiper1">
+                              <ul class="test-guide-swiper__list">
+                                <li class="test-guide-swiper__item">
+                                    <!-- 2022.09.14 : add : image-ratio-auto 클래스 추가 -->
+                                    <div class="profile-image profile-image2 up-load radius-3 image-ratio-auto">
+                                      <img src="./assets/images/_dummy/profile .png" alt="" class="profile-image__img vehicle-image__img"
+                                      onerror="this.parentNode.className += ' is-error';" />
+                                    </div>
+
+                                    <div class="empty--text">
+                                      등록된 이미지가 없습니다.
+                                    </div>
+
+                                  </a>
+                                </li>
+
+                              </ul>
+                            </div>
+
+          
+                          </div>
+
+                       </div>
+                </div>
+                <!-- //일일감독 소견 -->
+    
+              </div>
+            </div>
+    
+    
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+
+    <script type="text/javascript">
+        var datagrid;
+  
+        // Data
+        var grid_data = [
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            ccell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            cell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+          {
+            ccell_1: '부착장치(‘18년)',
+            cell_2: '01-0000-0000',
+          },
+        ];
+  
+        function createGrid() {
+          SBGridProperties.parentid = 'boardGrid';
+          SBGridProperties.id = 'datagrid';
+          SBGridProperties.jsonref = 'grid_data';
+          SBGridProperties.width = '100%';
+          SBGridProperties.height = '100%';
+          SBGridProperties.extendcol = 1; 
+          SBGridProperties.rowheight = 25;  //2022.08.30 : mod : 값 수정
+          SBGridProperties.fixedrowheight = '25';
+          SBGridProperties.emptyrecords = '조회결과가 없습니다.';
+          SBGridProperties.emptyrecordsfontstyle = "font-size:12px;font-weight bold;"; 
+          SBGridProperties.columns = [
+            {
+              caption: ['장치구분'],
+              ref: 'cell_1',
+              width: '16.6%',
+            },
+            {
+              caption: ['장치ID '], //2022.10.07 : mod : 오타 수정
+              ref: 'cell_2',
+              width: '16.6%',
+            },
+            {
+              caption: ['부착/분리'],
+              ref: 'cell_3',
+              width: '16.6%',
+            },
+            {
+              caption: ['장치부착일'],
+              ref: 'cell_4',
+              width: '16.6%',
+            },
+            {
+              caption: ['이미지등록일'], //2022.08.30 : mod : 오타 수정
+              ref: 'cell_5',
+              width: '16.6%',
+            },
+            {
+              caption: ['비고'],
+              ref: 'cell_6',
+              width: '16.6%',
+            },
+
+          ];
+          datagrid = _SBGrid.create(SBGridProperties);
+          // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : start
+          datagrid.bind('aftersort', function () {
+            SBCustomFunction.aftersort(datagrid);
+          });
+          // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : end
+          datagrid.sortColumn(0, 'desc');
+          datagrid.sortingIcon();
+          
+        }
+        
+       
+          
+        $(function () {
+          createGrid();
+
+        });
+
+
+
+     
+
+      </script>
+    <!-- //script -->
+  </body>
+</html>

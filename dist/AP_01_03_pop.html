@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">SMS 발송</h1>
+          </div>
+
+          <div class="window-popup__body border-gray overflow-hid">
+            <div class="board-detail-table">
+              <table class="border-none ma-0">
+                <tbody>
+                  <tr>
+                    <th>보내는 사람
+                      <span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                    </th>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="ui-input-block header-search__input input-width-270">
+                            <input type="text" class="ui-input" title="보내는 사람" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell--medium">
+                          <div class="basic-text color-gray">(-)은 제외하고 11자리 입력,</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>받는 사람
+                      <span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                    </th>
+                    <td>
+                      <div class="form-flex">
+                        <div class="form-flex-cell">
+                          <div class="ui-input-block header-search__input input-width-270">
+                            <input type="text" class="ui-input" title="받는 사람" value="" />
+                          </div>
+                        </div>
+                        <div class="form-flex-cell--medium">
+                          <div class="basic-text color-gray">(예 010-1234-1234 ▶ 01012341234)</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>문자내용
+                      <span class="ui-require"><span class="for-a11y">(필수)</span></span>
+                    </th>
+                    <td>
+                      <div class="form-row">
+                        <div class="ui-input-block">
+                          <textarea class="ui-input input-height-76 radius-3" title="조치사항" data-text-count="#discriptionCount1"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-row p-10-0-7-0 ma-0">
+                        <!-- 2022.09.01 : mod : 0자/최대 90자 → 글자수 최대 90Byte -->
+                        <div class="basic-text color-gray align-right">글자수 최대 90Byte</div>
+                        <!-- 2022.09.01 : mod : 0자/최대 90자 → 글자수 최대 90Byte -->
+                      </div>
+                    </td>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary button__min--65">취소</a>
+                  </li>
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button ui-basic-button--save button__min--65">발송</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

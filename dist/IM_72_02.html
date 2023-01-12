@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="window-popup">
+            <form action="">
+                <div class="window-popup__head">
+                    <h1 class="window-popup__head-title">보고서 조회</h1>
+                </div>
+
+                <div class="window-popup__body">
+                    <form action="">
+                        <section class="search-bar search-bar--popup border-bottom px-20">
+                            <h2 class="for-a11y">검색</h2>
+                            <div class="search-bar__left form-flex-cell--fix">
+                                <div class="search-bar__row form-flex-cell--fix">
+                                    <dl class="search-bar__item">
+                                        <dt class="search-bar__key">보호관찰소</dt>
+                                        <dd class="search-bar__val">
+                                            <div class="form-flex">
+                                                <div class="form-flex-cell">
+                                                    <div class="ui-select-block input-width-140">
+                                                        <select class="ui-select" title="보호관찰소">
+                                                            <option value="">중앙그룹</option>
+                                                            <option value="">option 2</option>
+                                                            <option value="">option 3</option>
+                                                            <option value="">option 4</option>
+                                                            <option value="">option 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="search-bar__item">
+                                        <dt class="search-bar__key">사용자</dt>
+                                        <dd class="search-bar__val">
+                                            <div class="form-flex">
+                                                <div class="form-flex-cell">
+                                                    <div class="ui-input-block input-width-140">
+                                                        <input type="text" class="ui-input" title="사용자" value="김희주">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </dd>
+                                    </dl>
+                                    <dl class="search-bar__item">
+                                        <dt class="search-bar__key">ID</dt>
+                                        <dd class="search-bar__val">
+                                            <div class="form-flex">
+                                                <div class="form-flex-cell">
+                                                    <div class="ui-input-block input-width-140">
+                                                        <input type="text" class="ui-input" title="ID" value="122123">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="search-bar__row mt-10">
+                                    <div class="form-flex-cell form-flex-cell--date-medium color-blue">전담보호관찰관, 무도실무관만
+                                        조회됩니다.</div>
+                                </div>
+                            </div>
+                            <div class="search-bar__right ml-auto mr-0">
+                                <!-- 2022.08.30 : add : 클래스 mb-auto 추가 -->
+                                <div class="ui-buttons ui-buttons--center mb-auto">
+                                    <ul class="ui-buttons__list">
+                                        <li class="ui-buttons__item">
+                                            <button type="submit"
+                                                class="ui-button ui-basic-button ui-basic-button--width-61 ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search ">조회</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+                    <div class="p-20 background-white border-radius--bottom">
+                        <div class="form-flex">
+                            <div class="form-flex-cell" style="flex: 0 1 303px;">
+                                <div class="ui-board-table" id="boardGrid1"style="width: 100%; height:285px;"></div>
+                            </div>
+                            <div class="form-flex-cell flex ml-10">
+                                <div class="ui-board-table" id="boardGrid2" style="width: 100%; height:285px;"></div>
+                            </div>
+                        </div>
+
+
+
+                        <ul class="ui-buttons__list mt-10 justify-content-end">
+                            <li class="ui-buttons__item ui-buttons__list--width-65">
+                                <a href="" class="ui-basic-button">선택</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+                <!-- <div class="window-popup__foot background-white mt-0 pb-20 px-20">
+                    <div class="window-popup__foot__right">
+                        <div class="ui-buttons ui-buttons--right">
+                            <ul class="ui-buttons__list">
+                                <li class="ui-buttons__item">
+                                    <a href="" class="ui-basic-button ui-basic-button--quaternary">닫기</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+            </form>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+
+    <script type="text/javascript">
+        // Data
+        var grid_data1 = [{
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+            {
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+            {
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+            {
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+            {
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+            {
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+            {
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+            {
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+            {
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+            {
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+            {
+                cell_1: '중앙관제센터',
+                cell_2: '강모모',
+                cell_3: '123123',
+            },
+        ];
+
+        var grid_data2 = [{
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+            {
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+            {
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+            {
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+            {
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+            {
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+            {
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+            {
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+            {
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+            {
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+            {
+                cell_1: '집중관제',
+                cell_2: '특별관제',
+                cell_3: '홍길동',
+                cell_4: '',
+            },
+        ];
+
+
+        function createGrid(properties, callback) {
+            var datagrid;
+            datagrid = _SBGrid.create(properties);
+            datagrid.bind('aftersort', function () {
+                SBCustomFunction.aftersort(datagrid);
+            });
+            callback(datagrid);
+        }
+
+        var columns1 = [{
+                caption: ['보호관찰소'],
+                ref: 'cell_1',
+                width: '119px',
+            },
+            {
+                caption: ['사용자'],
+                ref: 'cell_2',
+                width: '85px',
+            },
+            {
+                caption: ['사용자ID'],
+                ref: 'cell_3',
+                width: '95px',
+            },
+        ];
+
+        var columns2 = [{
+                caption: ['선택'],
+                type: 'radio',
+                ref: 'radio1',
+                width: '50px',
+                style: 'text-align:center',
+				sortable: false,
+            },
+            {
+                caption: ['보고서 제목'],
+                ref: 'cell_2',
+                width: '225px',
+            },
+            {
+                caption: ['생성일시'],
+                ref: 'cell_3',
+                width: '130px',
+            },
+            {
+                caption: ['삭제'],
+                ref: 'cell_4',
+				sortable: false,
+                width: '55px',
+                renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+                    return strValue +
+                    //ui-board-table__button sbgrid_common 삭제, ui-basic-button--width-auto 추가
+                        '<button type="button" class="ui-button ui-basic-button ui-basic-button--height-18 ui-basic-button--quinary ui-basic-button--icon ui-basic-button--width-auto">삭제</button>';
+                }
+            },
+        ];
+
+
+
+
+        $(function () {
+            createGrid(
+                $.extend({}, SBGridProperties, {
+                    id: 'datagrid1',
+                    parentid: 'boardGrid1',
+                    jsonref: 'grid_data1',
+                    columns: columns1,
+					extendcol: 0,
+					fixedrowheight: '25',
+					rowheight: '25',
+					width: '100%',
+					height: '100%',
+					emptyrecords: '조회 결과가 없습니다.',
+                }),
+                function (datagrid) {
+                    datagrid.sortColumn(0, 'desc');
+                    datagrid.sortingIcon();
+                    $('#boardGrid1').data('grid', datagrid);
+                }
+            );
+            createGrid(
+                $.extend({}, SBGridProperties, {
+                    id: 'datagrid2',
+                    parentid: 'boardGrid2',
+                    jsonref: 'grid_data2',
+                    columns: columns2,
+					extendcol: 1,
+					fixedrowheight: '25',
+					rowheight: '25',
+					width: '100%',
+					height: '100%',
+					emptyrecords: '조회 결과가 없습니다.',
+                }),
+                function (datagrid) {
+                    datagrid.sortColumn(0, 'desc');
+                    datagrid.sortingIcon();
+                    $('#boardGrid2').data('grid', datagrid);
+                }
+            );
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+
+     
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">청구전조사서관리</h1>
+            <div class="form-flex">
+                <!--자동완성-->
+                  <div class="form-block__cell control control-search">
+                    <div class="form-flex">
+                      <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time search">
+                        <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                          <input type="text" class="ui-input js-datepicker-range__min is-active" title="" value="홍길동">
+                          <div class="time-table">
+                            <div class="time-table--hour">
+                              <div class="time-table--button ui-scroller">
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" class="ui-button header-search__submit">
+                          <span class="for-a11y">검색</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                <!--//자동완성-->
+
+                <div class="people-head">
+                    <div class="people-head__block">
+                    <div class="people-head__sex people-head__sex--man">
+                        <span class="for-a11y">(남)</span>
+                    </div>
+                    <div class="people-head__sex people-head__sex--woman">
+                        <span class="for-a11y">(여)</span>
+                    </div>
+                    <div class="people-head__info">남</div>
+                    <div class="people-head__hr"></div>
+                    <div class="people-head__birth">1952-05-21</div>
+                    <div class="people-head__hr"></div>
+                    <div class="people-head__number">
+                        <span class="people-head__key">사건번호</span>
+                        <span class="people-head__val">12-3456-7890-12345</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body window-popup__body--row">
+            <div class="tile-layout">
+              <div class="tile-layout__inner">
+    
+                <div class="tile-layout__row--width-250 border-radius p-0">
+                  <form action="">
+                    <section class="search-bar search-bar--popup search-bar--width-230 background-white ui-scroller  border-radius" style="height: 660px;">
+                        <div class="ui-board-table" id="boardGrid" style="height:660px;"></div>
+    
+                    </section>
+                  </form>
+                  <!-- 2021.10.08 : mod : search-bar__right--bottom 클래스 값 추가 -->
+                  <div class="pagination-wrap flex-column align-items-center bg-white height-auto">
+                    <div class="total">
+                      총 <span>2,521</span>건
+                    </div>
+                    <div class="pagination pagination--foot">
+                      <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled="">
+                        <span class="for-a11y">처음 페이지</span>
+                      </button>
+                      <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled="">
+                        <span class="for-a11y">이전 페이지</span>
+                      </button>
+                      <div class="pagination__fraction pagination__fraction--small">
+                        <div class="pagination__fraction-currunt">
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="현재 페이지" value="1">
+                          </div>
+                        </div>
+                        <div class="pagination__fraction-slash">/</div>
+                        <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                      </div>
+                      <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                        <span class="for-a11y">다음 페이지</span>
+                      </button>
+                      <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                        <span class="for-a11y">마지막 페이지</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- content-right -->
+                <div class="tile-layout__row ml-20">
+                  <div class="p-20">
+                    <div class="board-detail-table__title--with-button d-flex">
+                        <div class="board-detail-table__title mt-0">상세 정보</div>
+                        <div class="ui-basic-button__wrap ml-10">
+                            <a href="" class="ui-basic-button ui-basic-button--senary height-18">조사서 전문 다운로드</a>
+                        </div>
+                        <div class="ui-buttons--left ml-auto">
+                            <ul class=" ui-buttons__list ui-buttons__list--width-65">
+                                <li class="ui-buttons__item">
+                                  <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--icon ui-basic-button--icon-add ui-basic-button--nonary button__min--57">등록</a>
+                                </li>
+                                <li class="ui-buttons__item">
+                                  <button type="button" class="ui-button ui-basic-button ui-basic-button--normal">삭제</button>
+                                </li>
+                              </ul>
+                        </div>
+                    </div>
+                      
+                    <div class="board-detail-table--flex-item">
+                        <div class="window-popup__body pt-0">
+                            <div class="board-detail-table">
+                              <table class="mb-0">
+                                <colgroup>
+                                    <col  style="width:25%;">
+                                    <col>
+                                    <col  style="width:25%;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <!-- 2021.10.18 : mod : 클래스값 변경 및 tbody 분리 -->
+                                <tbody class="js-datepicker-range">
+                                  <tr>
+                                    <th>주민번호</th>
+                                    <td>000000-0000000</td>
+                                    <th>조사 당시 나이</th>
+                                    <td>28</td>
+                                  </tr>
+                                  <tr>
+                                    <th>문서제목</th>
+                                    <td>청구전조사서</td>
+                                    <th>문서작성일</th>
+                                    <td>2022-05-05</td>
+                                  </tr>
+                                  <tr>
+                                    <th>죄명</th>
+                                    <td>강도 강간</td>
+                                    <th>사건번호</th>
+                                    <td>2014형제11350호</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+
+
+                            <!-- Tab -->
+                            <div class="tile-layout__cell pt-10">
+                                <div class="tile-layout__contents">
+                                <!-- 2021.10.22 : mod : js-situation-management-tab 클래스 값 추가 -->
+                                <div class="board-detail-wrap js-ui-tab-panel js-situation-management-tab">
+                                    <div class="board-tab">
+                                    <ul class="board-tab__list">
+                                        <li class="board-tab__item">
+                                        <a href="" class="board-tab__link"
+                                            data-tab-open="situationManagement2-1">청구전조사서</a>
+                                        </li>
+                                        <li class="board-tab__item">
+                                            <a href="" class="board-tab__link"
+                                            data-tab-open="situationManagement2-2">KSORAS</a>
+                                        </li>
+                                        <li class="board-tab__item">
+                                        <a href="" class="board-tab__link"
+                                            data-tab-open="situationManagement2-3">PCLR</a>
+                                        </li>
+                                    </ul>
+                                    </div>
+
+                                    
+
+                                    <!-- 청구전조사서-->
+                                    <div class="board-tab-panel pt-10" data-tab="situationManagement2-1"  >
+                                        <div class="board-detail-table board-detail-table--th-line">
+                                            <div class="board-detail-table__title--with-button d-flex" style="align-items:flex-end;">
+                                                <div class="board-detail-table__title font-size-12 mt-0">조사서 결과</div>
+                                                <div class="ui-buttons--left ml-auto">
+                                                    <ul class=" ui-buttons__list ui-buttons__list--width-65">
+                                                        <li class="ui-buttons__item">
+                                                            <button type="button" class="ui-button ui-basic-button ui-basic-button--blue-line">저장</button>
+                                                        </li>
+                                                      </ul>
+                                                </div>
+                                            </div>
+
+                                            <table class="mb-0">
+                                                <colgroup>
+                                                    <col  style="width:25%;">
+                                                    <col>
+                                                    <col  style="width:25%;">
+                                                    <col>
+                                                  </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>대인관계정보</th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th>일탈성적관심여부</th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>과거성범죄이력</th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th>알코올사용장애검사점수</th>
+                                                        <td>
+                                                            <div class="ui-input-block">
+                                                                <input type="text" class="ui-input" title="title">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>정신질환경험있음</th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                피해자관계
+                                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-eye new-eye height-18 line-height-18 sbgrid_commonn eye-small-logo">보기</a>
+                                                            </div>
+                                                           
+                                                        </th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>인지능력문제여부</th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th>성매매경험여부</th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>약물경험여부</th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th><div class="color-red">보호처분이력</div></th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>직업정보</th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                가족의 관심
+                                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-eye new-eye height-18 line-height-18 sbgrid_commonn eye-small-logo">보기</a>
+                                                            </div>
+                                                        </th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>결혼지속여부</th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                동거인정보
+                                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-eye new-eye height-18 line-height-18 sbgrid_commonn eye-small-logo">보기</a>
+                                                            </div>
+                                                           
+                                                        </th>
+                                                        <td>
+                                                            <div class="ui-input-block">
+                                                                <input type="text" class="ui-input" title="title">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                범행인정여부
+                                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-eye new-eye height-18 line-height-18 sbgrid_commonn eye-small-logo">보기</a>
+                                                            </div>
+                                                        </th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                <div class="color-red">범행동기</div>
+                                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-eye new-eye height-18 line-height-18 sbgrid_commonn eye-small-logo">보기</a>
+                                                            </div>
+                                                        </th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                범행날짜
+                                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-eye new-eye height-18 line-height-18 sbgrid_commonn eye-small-logo">보기</a>
+                                                            </div>
+                                                        </th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                범행시각
+                                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-eye new-eye height-18 line-height-18 sbgrid_commonn eye-small-logo">보기</a>
+                                                            </div>
+                                                           
+                                                        </th>
+                                                        <td>
+                                                            <div class="ui-input-block">
+                                                                <input type="text" class="ui-input" title="title">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                <div class="color-red">범행장소</div>
+                                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-eye new-eye height-18 line-height-18 sbgrid_commonn eye-small-logo">보기</a>
+                                                            </div>
+                                                        </th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                범행공범여부
+                                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-eye new-eye height-18 line-height-18 sbgrid_commonn eye-small-logo">보기</a>
+                                                            </div>
+                                                           
+                                                        </th>
+                                                        <td>
+                                                            <div class="ui-input-block">
+                                                                <input type="text" class="ui-input" title="title">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                <div class="color-red">법행음주여부</div>
+                                                            </div>
+                                                        </th>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <th>
+                                                            <div class="td-table jc-sb">
+                                                                범행도구
+                                                                <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--denary ui-basic-button--icon ui-basic-button--icon-eye new-eye height-18 line-height-18 sbgrid_commonn eye-small-logo">보기</a>
+                                                            </div>
+                                                           
+                                                        </th>
+                                                        <td>
+                                                            <div class="ui-input-block">
+                                                                <input type="text" class="ui-input" title="title">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>피해자장애정보</th>
+                                                        <td colspan="3">
+                                                            <div class="form-flex width-30_5p">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>KSORAS</th>
+                                                        <td>
+                                                            총점 : 12점
+                                                        </td>
+                                                        <th>PCLR</th>
+                                                        <td>
+                                                            총점  :
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                
+                
+                                        </div>
+                                    </div>
+                                    <!-- //청구전조사서 -->
+
+                                    <!-- KSORAS -->
+                                    <div class="board-tab-panel pt-10  js-tabpanel-opened" data-tab="situationManagement2-2" >
+                                        <div class="board-detail-table board-detail-table--th-line">
+                                            <div class="board-detail-table__title--with-button d-flex" style="align-items:flex-end;">
+                                                <div class="board-detail-table__title font-size-12 mt-0">KSORAS 결과</div>
+                                                <div class="ui-buttons--left ml-auto">
+                                                    <ul class=" ui-buttons__list ui-buttons__list--width-65">
+                                                        <li class="ui-buttons__item">
+                                                            <button type="button" class="ui-button ui-basic-button ui-basic-button--blue-line">저장</button>
+                                                        </li>
+                                                      </ul>
+                                                </div>
+                                            </div>
+
+                                            <table class="mb-0">
+                                                <colgroup>
+                                                    <col style="width:10%;">
+                                                    <col style="width:30%;">
+                                                    <col style="width:30%;">
+                                                    <col style="width:30%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>번호</th>
+                                                        <th>위험요인</th>
+                                                        <th>코드</th>
+                                                        <th>점수</th>
+                                                    </tr>    
+                                                </thead> 
+                                                <tbody>
+                                                    <tr>
+                                                        <th>1</th>
+                                                        <td>피검사자의 나이(만)</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title" placeholder="20~40세 미만">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2</th>
+                                                        <td>혼인관계</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>3</th>
+                                                        <td>최초 경찰 입건나이(만)</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>4</th>
+                                                        <td>본 범죄의 유형</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>5</th>
+                                                        <td>이전 성범죄 횟수</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>6</th>
+                                                        <td>폭력 범죄 횟수</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>7</th>
+                                                        <td>총 시설 수용기간</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>8</th>
+                                                        <td>본 범행 피해자 나이</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title" placeholder="20~40세 미만">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>9</th>
+                                                        <td>본 범행 피해자와의 관계</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>10</th>
+                                                        <td>본 범행 피해자의 성별</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>11</th>
+                                                        <td>본 범행 피해자의 수</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>12</th>
+                                                        <td>본 범행의 범죄자와 피해자의 나이차</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>13</th>
+                                                        <td>본 범행의 현저한 폭력 사용</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>14</th>
+                                                        <td>수용기간 동안의 문제행동 여부</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>15</th>
+                                                        <td>본 범행에 대한 책임 수용</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th colspan="3" class="ta-c">위험성 점수 합계</th>
+                                                        <td>
+                                                            <div class="color-red">2</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th colspan="3" class="ta-c">성범죄 재범 위험성 수준</th>
+                                                        <td>
+                                                            <div class="color-red">낮음</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                
+                                            <table class="mb-10">
+                                                <colgroup>
+                                                    <col  style="width:25%;">
+                                                    <col  style="width:25%;">
+                                                    <col  style="width:25%;">
+                                                    <col  style="width:25%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr style="border-bottom:1px solid #dfe5eb;">
+                                                        <th>위험성 수준</th>
+                                                        <th>낮음</th>
+                                                        <th>중간</th>
+                                                        <th>높음</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>점수분포</th>
+                                                        <td>0~6</td>
+                                                        <td>7~12</td>
+                                                        <td>13~29</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                
+                                        </div>
+                                    </div>
+                                    <!-- //KSORAS -->
+
+                                    <!-- PCLR -->
+                                    <div class="board-tab-panel board-tab-panel--last pt-10" data-tab="situationManagement2-3" >
+                                        <div class="board-detail-table board-detail-table--th-line">
+                                            <div class="board-detail-table__title--with-button d-flex" style="align-items:flex-end;">
+                                                <div class="board-detail-table__title font-size-12 mt-0">PCLR 결과</div>
+                                                <div class="ui-buttons--left ml-auto">
+                                                    <ul class=" ui-buttons__list ui-buttons__list--width-65">
+                                                        <li class="ui-buttons__item">
+                                                            <button type="button" class="ui-button ui-basic-button ui-basic-button--blue-line">저장</button>
+                                                        </li>
+                                                      </ul>
+                                                </div>
+                                            </div>
+
+                                            <table class="mb-0">
+                                                <colgroup>
+                                                    <col style="width:12%;">
+                                                    <col style="width:7%;">
+                                                    <col style="width:31%;">
+                                                    <col style="width:25%;">
+                                                    <col style="width:25%;"> 
+                                                </colgroup>
+                                                <thead>
+                                                    <tr style="border-bottom:1px solid #dfe5eb;">
+                                                        <th colspan="2">번호</th>
+                                                        <th>위험요인</th>
+                                                        <th>코드</th>
+                                                        <th>점수</th>
+                                                    </tr>    
+                                                </thead> 
+                                                <tbody>
+                                                    <tr>
+                                                        <th rowspan="4">대인관계</th>
+                                                        <th>1</th>
+                                                        <td>입심좋음/피상적 매력</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title" placeholder="20~40세 미만">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2</th>
+                                                        <td>과도한 자존감</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title" placeholder="20~40세 미만">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>4</th>
+                                                        <td>병적인 거짓말 </td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>5</th>
+                                                        <td>남을 잘 속임/조종함 </td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="4">정서성</th>
+                                                        <th>6</th>
+                                                        <td>후회 혹은 죄책감의 결여</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>7</th>
+                                                        <td>얕은 감정 </td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>8</th>
+                                                        <td>냉담/공감 능력의 결여</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title" placeholder="20~40세 미만">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>16</th>
+                                                        <td>자신의 행동에 대한 책임감 못 느낌</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="5">생활양식</th>
+                                                        <th>3</th>
+                                                        <td>자극욕구/쉽게 지루해 함</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>9</th>
+                                                        <td>기생적인 생활방식</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>13</th>
+                                                        <td>현실적이고 장기적인 목표 부재</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>14</th>
+                                                        <td>충동성</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>15</th>
+                                                        <td>무책임성</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="5">반사회성</th>
+                                                        <th>10</th>
+                                                        <td>행동통제력 부족</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>12</th>
+                                                        <td>어릴 때 문제행동</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>18</th>
+                                                        <td>청소년 비행</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>19</th>
+                                                        <td>조건부 석방 혹은 유예의 취소소년 비행</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>20</th>
+                                                        <td>다양한 범죄력</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2">미포함</th>
+                                                        <th>11</th>
+                                                        <td>문란한 성생활</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>17</th>
+                                                        <td>여러 번의 혼인관계</td>
+                                                        <td>
+                                                            <div class="form-flex">
+                                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                                    <select class="ui-select" title="title">
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th colspan="4" class="ta-c">위험성 점수 합계</th>
+                                                        <td>
+                                                            <div class="color-red">2</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th colspan="4" class="ta-c">성범죄 재범 위험성 수준</th>
+                                                        <td>
+                                                            <div class="color-red">낮음</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                
+                                            <table class="mb-10">
+                                                <colgroup>
+                                                    <col  style="width:25%;">
+                                                    <col  style="width:25%;">
+                                                    <col  style="width:25%;">
+                                                    <col  style="width:25%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr style="border-bottom:1px solid #dfe5eb;">
+                                                        <th>위험성 수준</th>
+                                                        <th>낮음</th>
+                                                        <th>중간</th>
+                                                        <th>높음</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>점수분포</th>
+                                                        <td>0~6</td>
+                                                        <td>7~12</td>
+                                                        <td>13~29</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                
+                                        </div> 
+                                    </div>
+                                    <!-- //PCLR -->
+
+                                </div>
+                                </div>
+                            </div>
+                            <!-- //Tab -->
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //content-right -->
+    
+              </div>
+            </div>
+    
+    
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+
+    <script type="text/javascript">
+        var datagrid;
+  
+        // Data
+        var grid_data = [
+         {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+         },
+         {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+
+         {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+            {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+          {
+            cell_1: '00-0000-0000-0000',
+            cell_2: '2022-05-05',
+          },
+        ];
+  
+        function createGrid() {
+          SBGridProperties.parentid = 'boardGrid';
+          SBGridProperties.id = 'datagrid';
+          SBGridProperties.jsonref = 'grid_data';
+          SBGridProperties.fixedrowheight = '25'; //2022.08.12 : add : 속성 추가
+          SBGridProperties.rowheight = '25'; //2022.08.12 : add : 속성 추가
+          SBGridProperties.columns = [
+            {
+              caption: ['접수번호'],
+              ref: 'cell_1',
+              width: '60%',
+            },
+            {
+              caption: ['문서작성일'],
+              ref: 'cell_2',
+              width: '40%',
+            },
+          ];
+          datagrid = _SBGrid.create(SBGridProperties);
+          // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : start
+          datagrid.bind('aftersort', function () {
+            SBCustomFunction.aftersort(datagrid);
+          });
+          // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : end
+          datagrid.sortColumn(0, 'desc');
+          datagrid.sortingIcon();
+        }
+  
+        $(function () {
+          createGrid();
+        });
+
+        // 2022.08.29 : add : ksoras 탭 포커스 스크립트 추가
+        $(function(){
+            $('.js-ui-tab-panel').uiTabPanel('open', 'situationManagement2-2');
+        })
+      </script>
+    <!-- //script -->
+  </body>
+</html>

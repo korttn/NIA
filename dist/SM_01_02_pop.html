@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/jquery/jquery-ui.min.css"></link>
+	<link rel="stylesheet" href="/resources/demos/style.css">
+    
+
+
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">관제 특이사항</h1>
+          <div class="form-flex">
+            <!-- 2022.08.26 : add : 자동완성 부분 추가 -->
+            <!--자동완성-->
+              <div class="form-block__cell control control-search">
+                <div class="form-flex">
+                  <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time search">
+                    <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                      <input type="text" class="ui-input js-datepicker-range__min is-active" title="" value="홍길동">
+                      <div class="time-table">
+                        <div class="time-table--hour">
+                          <div class="time-table--button ui-scroller">
+                              <button type="button">홍길동 | 남 | 1952-03-17</button>
+                              <button type="button">홍길배 | 남 | 1980-05-30</button>
+                              <button type="button">홍길선 | 남 | 1967-04-13</button>
+                              <button type="button">홍길순 | 남 | 1977-12-12</button>
+                              <button type="button">홍길천 | 남 | 1977-12-12</button>
+                              <button type="button">홍길동 | 남 | 1952-03-17</button>
+                              <button type="button">홍길배 | 남 | 1980-05-30</button>
+                              <button type="button">홍길선 | 남 | 1967-04-13</button>
+                              <button type="button">홍길순 | 남 | 1977-12-12</button>
+                              <button type="button">홍길천 | 남 | 1977-12-12</button>
+                              <button type="button">홍길동 | 남 | 1952-03-17</button>
+                              <button type="button">홍길배 | 남 | 1980-05-30</button>
+                              <button type="button">홍길선 | 남 | 1967-04-13</button>
+                              <button type="button">홍길순 | 남 | 1977-12-12</button>
+                              <button type="button">홍길천 | 남 | 1977-12-12</button>
+                              <button type="button">홍길동 | 남 | 1952-03-17</button>
+                              <button type="button">홍길배 | 남 | 1980-05-30</button>
+                              <button type="button">홍길선 | 남 | 1967-04-13</button>
+                              <button type="button">홍길순 | 남 | 1977-12-12</button>
+                              <button type="button">홍길천 | 남 | 1977-12-12</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button type="button" class="ui-button header-search__submit">
+                      <span class="for-a11y">검색</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            <!--//자동완성-->
+            <!-- 2022.08.26 : add : 자동완성 부분 추가 -->
+            <div class="people-head">
+                <div class="people-head__block">
+                <div class="people-head__sex people-head__sex--man">
+                    <span class="for-a11y">(남)</span>
+                </div>
+                <div class="people-head__sex people-head__sex--woman">
+                    <span class="for-a11y">(여)</span>
+                </div>
+                <div class="people-head__info">남</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__birth">1952-05-21</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                    <span class="people-head__key">사건번호</span>
+                    <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        
+        <div class="simplebar-mask twoLetters">
+          <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+            <div class="simplebar-content-wrapper" style="height: auto; overflow: hidden;">
+              <div class="simplebar-content" style="padding: 0px;">
+                <ul class="ui-dropdown__list">
+                  <li class="ui-dropdown__item">
+                    <a href="" class="ui-dropdown__link">피부착자 이름을 두 글자 이상 입력하여 검색해 주세요.</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="window-popup__body">
+          <div class="ui-board-table ui-board-table--5-rows" id="boardGrid" style="height:280px"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- script -->
+    <!-- <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script> -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-ui.js"></script>
+    <script type="text/javascript">
+      var datagrid;
+      var SBGridProperties={};
+
+      // Data
+      var grid_data = [
+        {
+          id: '10',
+          cell_1: '내용 50자 전체 출력',
+          cell_2: '2021-09-23 13:35:01',
+          cell_3: '홍길동',
+        },
+        {
+          id: '9',
+          cell_1: '내용 50자 전체 출력',
+          cell_2: '2021-09-23 13:35:01',
+          cell_3: '홍길동',
+        },
+        {
+          id: '8',
+          cell_1: '내용 50자 전체 출력',
+          cell_2: '2021-09-23 13:35:01',
+          cell_3: '홍길동',
+        },
+        {
+          id: '7',
+          cell_1: '내용 50자 전체 출력',
+          cell_2: '2021-09-23 13:35:01',
+          cell_3: '홍길동',
+        },
+        {
+          id: '6',
+          cell_1: '내용 50자 전체 출력',
+          cell_2: '2021-09-23 13:35:01',
+          cell_3: '홍길동',
+        },
+        {
+          id: '5',
+          cell_1: '내용 50자 전체 출력',
+          cell_2: '2021-09-23 13:35:01',
+          cell_3: '홍길동',
+        },
+        {
+          id: '4',
+          cell_1: '내용 50자 전체 출력',
+          cell_2: '2021-09-23 13:35:01',
+          cell_3: '홍길동',
+        },
+        {
+          id: '3',
+          cell_1: '내용 50자 전체 출력',
+          cell_2: '2021-09-23 13:35:01',
+          cell_3: '홍길동',
+        },
+        {
+          id: '2',
+          cell_1: '내용 50자 전체 출력',
+          cell_2: '2021-09-23 13:35:01',
+          cell_3: '홍길동',
+        },
+        {
+          id: '1',
+          cell_1: '내용 50자 전체 출력',
+          cell_2: '2021-09-23 13:35:01',
+          cell_3: '홍길동',
+        },
+      ];
+
+      function createGrid() {
+        SBGridProperties.parentid = 'boardGrid';
+        SBGridProperties.id = 'datagrid';
+        SBGridProperties.jsonref = 'grid_data';
+        SBGridProperties.width = '100%';
+        SBGridProperties.height = '100%';
+        SBGridProperties.extendcol = 1; 
+        SBGridProperties.rowheight = 35; 
+        SBGridProperties.fixedrowheight = '25';
+        SBGridProperties.rowheight = '25'; 
+        SBGridProperties.emptyrecords = '조회결과가 없습니다.';
+        SBGridProperties.emptyrecordsfontstyle = "font-size:12px;font-weight bold;"; 
+        SBGridProperties.columns = [
+          {
+            caption: [''],
+            ref: 'check',
+            width: '40px',
+            type: 'checkbox',
+            sortable: false,
+            style: 'text-align: center;',
+            fixedstyle: 'text-align: center !important;',
+          },
+          {
+            caption: ['내용'],
+            ref: 'cell_1',
+            width: '420px',
+            renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+              return '<a href="" class="ui-board-table__link">' + strValue + '</a>';
+            },
+          },
+          {
+            caption: ['등록일시'],
+            ref: 'cell_2',
+            width: '150px',
+          },
+          {
+            caption: ['등록자'],
+            ref: 'cell_3',
+            width: '100px',
+          },
+        ];
+        datagrid = _SBGrid.create(SBGridProperties);
+        datagrid.bind('aftersort', function () {
+          SBCustomFunction.aftersort(datagrid);
+        });
+        datagrid.setFixedcellcheckbox(0, 0);
+        datagrid.sortColumn(0, 'desc');
+        datagrid.sortingIcon();
+      }
+
+      $(function () {
+        createGrid();
+      });
+    </script>
+    <!-- 20220817 자동완성 키보드 수정 -->
+    <script>
+      $( function() {
+        var availableTags = [
+          "김길동 | 남 | 1952-03-17",
+          "김길배 | 여 | 1980-05-30",
+          "김길선 | 남 | 1967-04-13",
+          "김길천 | 남 | 1977-12-12",
+          "박길동 | 남 | 1952-03-17",
+          "박길배 | 남 | 1980-05-30",
+          "박길선 | 남 | 1967-04-13",
+          "박길천 | 남 | 1977-12-12",
+          "이길동 | 남 | 1952-03-17",
+          "이길배 | 남 | 1980-05-30",
+          "이길선 | 남 | 1977-12-12",
+          "이길천 | 남 | 1977-12-12",
+          "홍길동 | 남 | 1952-03-17",
+          "홍길배 | 남 | 1980-05-30",
+          "홍길선 | 남 | 1967-04-13",
+          "홍길천 | 남 | 1977-12-12",
+          "홍길순 | 남 | 1952-03-17",
+          "홍길철 | 남 | 1980-05-30",
+          "홍길자 | 남 | 1967-04-13",
+          "홍길숙 | 남 | 1977-12-12"
+        ];
+        $( "#tags" ).autocomplete({
+          source: availableTags,
+          select: function(event, ui) {
+          console.log(ui.item);
+          },
+          focus: function(event, ui) {
+          return false; 
+          }
+        });
+
+
+      });
+
+    </script>
+    <!-- //script -->
+
+  </body>
+</html>

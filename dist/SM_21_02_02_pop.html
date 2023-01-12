@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+
+     
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">발권차단정보 처리</h1>
+            <div class="people-head">
+                <div class="people-head__block">
+                  <div class="people-head__name">홍길동</div>
+                  <div class="people-head__hr"></div>
+                  <div class="people-head__sex">(남)</div>
+                  <div class="people-head__hr"></div>
+                  <div class="people-head__date">1952-05-21</div>
+                  <div class="people-head__hr"></div>
+                  <div class="people-head__number">
+                    <span class="people-head__key">사건번호</span>
+                    <span class="people-head__val">12-3456-7890-12345</span>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body window-popup__body--row">
+            <!-- 관제센터 처리 정보 -->
+            <div class="tile-layout__row mt-10">
+                <div class="board-detail-table--flex-item p-20 ">
+                    <div class="board-detail-table board-detail-table--th-line border-detail-info-grid">
+
+                        <div class="board-detail-table__title--with-button d-flex">
+                            <div class="board-detail-table__title mt-0">관제센터 처리 정보</div>
+                        </div>
+
+
+                        <div class="d-fle p-0 border-0">
+                        <div class="crime-facts-wrap ui-scroller" style="height:130px;">
+                            <div class="significant d-flex p-10">
+                                <ul class="width-50p">
+                                    <li>접종관제 정보 : 성범죄 Hot-spot 진입</li>
+                                    <li>처리일시 : 2022-07-21 15:30 </li>
+                                    <li>처리 상태 :  처리상태 : 보호관찰담당자 통보</li>
+                                </ul>
+
+
+                                <div class="width-50p">
+                                    경보 발생 시, 대구광역시 동구 불로동 1159에서 G 측위<br/>
+                                    부착장치 22%<br/>
+                                    00:00 피부착자 휴대전화로 통화, 경보 사실을 고지결과 "" 라고 답변함<br/>
+                                    피부착자 주거지에서 약 4km 거리임<br/>
+                                    인근에 새솔어린이집, 쑥쑥어린이집 등이 위치함<br/>
+                                    담당직원 홍길동에게 상황 전파 및 이관 조치함
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //관제센터 처리 정보 -->
+
+
+            <!-- 경보 처리-->
+            <div class="tile-layout__row mt-10 ml-0">
+                <div class="board-detail-table--flex-item p-20">
+                    <div class="board-detail-table board-detail-table--th-line border-detail-info-grid">
+
+                        <div class="board-detail-table__title--with-button d-flex">
+                            <div class="board-detail-table__title mt-0">경보 처리</div>
+                        </div>
+
+
+                        <div class="board-detail-table--flex">
+                            <div class="board-detail-table--flex-item">
+                              <div class="board-detail-table board-detail-table--th-line">
+                                <div class="board-detail-table__title font-size-12 mt-0">보호관찰소 처리 정보</div>
+                                <table class="ma-0">
+                                    <colgroup>
+                                      <col style="width:130px;"/>
+                                    </colgroup>
+                                    <tbody>
+                                      <tr>
+                                        <th>경보처리 구분</th>
+                                        <td>
+                                            <div class="ui-check-list">
+                                                <ul class="ui-check-list__list">
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio3" id="radio3-1" >
+                                                      <label for="radio3-1" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">전담직원</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio3" id="radio3-2">
+                                                      <label for="radio3-2" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">신속대응팀</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>경보발생 원인</th>
+                                        <td>
+                                            <div class="ui-check-list">
+                                                <ul class="ui-check-list__list">
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio1" id="radio1-1" >
+                                                      <label for="radio1-1" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">과실</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio1" id="radio1-2" >
+                                                      <label for="radio1-2" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">고의</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio1" id="radio1-3" >
+                                                      <label for="radio1-3" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">기타</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>경보처리 원인</th>
+                                        <td>
+                                            <div class="ui-check-list">
+                                                <ul class="ui-check-list__list">
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio2" id="radio2-1" >
+                                                      <label for="radio2-1" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">전화지도</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio2" id="radio2-2" >
+                                                      <label for="radio2-2" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">출석지도</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio2" id="radio2-3" >
+                                                      <label for="radio2-3" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">현장출동</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio2" id="radio2-4" >
+                                                      <label for="radio2-4" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">기타</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>공조기관 요청</th>
+                                        <td>
+                                            <div class="ui-check-list">
+                                                <ul class="ui-check-list__list">
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio4" id="radio4-1" >
+                                                      <label for="radio4-1" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">요청</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio4" id="radio4-2" >
+                                                      <label for="radio4-2" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">해당없음</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>현장출동 도착시각</th>
+                                        <td>
+                                          <div class="form-block__inner">
+                                            <div class="form-block__cell">
+                                              <div class="form-flex">
+
+                                                <!-------220819처리 날짜 date 안뜨는 오류 수정-------->
+                                                <div class="form-flex-cell flex">
+                                                  <div class="form-flex js-datepicker-range">
+                                                    <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+
+
+                                                      <div class="ui-input-block ui-input-block--date input-width-date">
+                                                        <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08" />
+                                                      </div>
+
+                                                    </div>
+
+                                                    <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                      <div class="ui-input-block input-width-date ui-input-block--time ui-input-block--time is-inputed">
+                                                        <input type="text" class="ui-input" title="" value="00:00" placeholder="--:--">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+
+                                             
+                    
+                                              </div>
+                                            </div>
+                    
+                                          </div>
+
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>현장출동시 피부착자 대면여부</th>
+                                        <td>
+                                            <div class="ui-check-list">
+                                                <ul class="ui-check-list__list">
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio5" id="radio5-1" >
+                                                      <label for="radio5-1" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">피부착자 대면</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio5" id="radio5-2" >
+                                                      <label for="radio5-2" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">피부착자 비대면</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>이관경보 복원시각</th>
+                                        <td>
+                                          <div class="form-block__inner">
+                                            <div class="form-block__cell">
+                                              <div class="form-flex">
+
+                                                <!-------220819처리 날짜 date 안뜨는 오류 수정-------->
+                                                <div class="form-flex-cell flex">
+                                                  <div class="form-flex js-datepicker-range">
+                                                    <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+
+
+                                                      <div class="ui-input-block ui-input-block--date input-width-date">
+                                                        <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08" />
+                                                      </div>
+
+                                                    </div>
+
+                                                    <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                      <div class="ui-input-block input-width-date ui-input-block--time ui-input-block--time is-inputed">
+                                                        <input type="text" class="ui-input" title="" value="00:00" placeholder="--:--">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+
+                                             
+                    
+                                              </div>
+                                            </div>
+                    
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>처리시각</th>
+                                        <td>
+                                          <div class="form-block__inner">
+                                            <div class="form-block__cell">
+                                              <div class="form-flex">
+                                                <!-------220819처리 날짜 date 안뜨는 오류 수정-------->
+                                                <div class="form-flex-cell flex">
+                                                  <div class="form-flex js-datepicker-range">
+                                                    <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                      <div class="ui-input-block ui-input-block--date input-width-date">
+                                                        <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08" />
+                                                      </div>
+                                                    </div>
+                                                    <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                      <div class="ui-input-block input-width-date ui-input-block--time ui-input-block--time is-inputed">
+                                                        <input type="text" class="ui-input" title="" value="00:00" placeholder="--:--">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>조치내용</th>
+                                        <td>
+                                            <div class="ui-check-list">
+                                                <ul class="ui-check-list__list">
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio6" id="radio6-1" >
+                                                      <label for="radio6-1" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">P측위오차</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio6" id="radio6-2" >
+                                                      <label for="radio6-2" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">이동중 발생</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio6" id="radio6-3" >
+                                                      <label for="radio6-3" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">측위복원</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item p-0">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio6" id="radio6-4" >
+                                                      <label for="radio6-4" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">복원</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>전자장치 교체여부</th>
+                                        <td>
+                                            <div class="ui-check-list">
+                                                <ul class="ui-check-list__list">
+                                                  <li class="ui-check-list__item">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio7" id="radio7-1" >
+                                                      <label for="radio7-1" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">교체</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item">
+                                                    <div class="ui-radio-block">
+                                                      <input type="radio" class="ui-radio" name="radio7" id="radio7-2" >
+                                                      <label for="radio7-2" class="ui-label">
+                                                        <span class="ui-radio-object"></span>
+                                                        <span class="ui-label__text">해당없음</span>
+                                                      </label>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                       
+                                                <ul class="ui-check-list__list">
+                                                  <li class="ui-check-list__item">
+                                                    <div class="ui-checkbox-block ml-5">
+                                                        <input type="checkbox" class="ui-checkbox" id="alertStatusAction_a">
+                                                        <label for="alertStatusAction_a" class="ui-label">
+                                                            <span class="ui-checkbox-object"></span>
+                                                            <span class="ui-label__text">부착</span>
+                                                        </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item">
+                                                    <div class="ui-checkbox-block ml-5">
+                                                        <input type="checkbox" class="ui-checkbox" id="alertStatusAction_b">
+                                                        <label for="alertStatusAction_b" class="ui-label">
+                                                            <span class="ui-checkbox-object"></span>
+                                                            <span class="ui-label__text">휴대</span>
+                                                        </label>
+                                                    </div>
+                                                  </li>
+                                                  <li class="ui-check-list__item">
+                                                    <div class="ui-checkbox-block ml-5">
+                                                        <input type="checkbox" class="ui-checkbox" id="alertStatusAction_c">
+                                                        <label for="alertStatusAction_c" class="ui-label">
+                                                            <span class="ui-checkbox-object"></span>
+                                                            <span class="ui-label__text">재택</span>
+                                                        </label>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+
+                                                
+
+
+                                            </div>
+                                        </td>
+                                      </tr>
+
+
+
+                                    </tbody>
+                                </table>
+                                <!-----220819 누락으로 인한 추가---->
+                                <div class="board-bottom">
+                                  <div class="board-bottom__left ma-0">
+                                    <!-- 2021.10.18 : mod : ui-buttons--center -> ui-buttons--right 클래스 값 변경 -->
+                                    <div class="ui-buttons ui-buttons--left">
+                                      <ul class="ui-buttons__list">
+            
+                                        <li class="ui-buttons__item ">
+                                          <button type="button" class="ui-button ui-basic-button  ui-basic-button--quinary button__min--65">경보처리 입력항목 선택기준</button>
+                                        </li>
+            
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+    
+                              </div>
+                            </div>
+                            <!-- 마지막 table 에서 width 값 다름 class에 board-detail-table--flex-item__last 추가해주세요 -->
+                            <div class="board-detail-table--flex-item board-detail-table--flex-item__last">
+    
+                              <div class="board-detail-table board-detail-table--th-line ">
+                                <div class="board-detail-table__title board-detail-table__title--flex">
+                                  <div class="board-detail-table__title font-size-12 mt-0">보호관찰 조치내용</div>
+                                </div>
+
+                                <textarea class="ui-input input-height-large" title="보호관찰 조치내용"></textarea>
+
+                                <div class="board-detail-table__title board-detail-table__title--flex mt-10">
+                                    <div class="board-detail-table__title font-size-12 mt-0">기타</div>
+                                </div>
+                                  
+                                <textarea class="ui-input input-height-small-large" title="기타"></textarea>
+                              </div>
+                            </div>
+    
+                            <!-- 조회된 결과가 없을 때
+                                <div class="empty-data">
+                                    좌측 목록에서 조회하고자 하는 항목을 선택해 주십시오.<br/>
+                                    아직 등록된 정보가 없을 경우, 이용하실 수 없습니다.
+    
+                                </div> 
+                            -->
+
+                          </div>
+                          
+                    </div>
+              
+                    
+
+                </div>
+            </div>
+            <!-- //경보 처리-->
+
+          </div>
+          <!-----220819 mt-1을 mt-0으로 수정-->
+          <div class="window-popup__foot boxsizing mt-0">
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                    <li class="ui-buttons__item">
+                        <a href="" class="ui-basic-button ui-basic-button--quaternary">삭제</a>
+                    </li>
+                    <li class="ui-buttons__item">
+                        <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                    </li>
+                    <li class="ui-buttons__item">
+                        <button type="submit" class="ui-button ui-basic-button">저장</button>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    
+          </div>
+        </form>
+       
+
+
+      </div>
+    </div>
+
+
+    
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <!-- <script type="text/javascript" src="./dist/assets/lib/datetimepicker/timepicker.js"></script> -->
+    <script type="text/javascript" src="./assets/lib/datetimepicker/timepicker.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+    <script>
+      // 220811 timepick 적용
+      $(document).ready(function () {
+        $(".ui-input-block--time input").timepicker({
+          timeFormat: "%H:%i",
+        });
+        $(".ui-input-block--time-small input").timepicker({
+          timeFormat: "%H시",
+        });
+      });
+    </script>
+  </body>
+</html>

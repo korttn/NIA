@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>법무부 - UGUARD</title>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+  <!-- //favicon -->
+
+  <!-- style -->
+  <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+  <link type="text/css" rel="stylesheet" href="./assets/css/sm.css" />
+  <!-- //style -->
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="window-popup">
+      <div class="window-popup__head">
+        <h1 class="window-popup__head-title">부정장소 진입</h1>
+      </div>
+
+
+
+
+
+
+      <div class="window-popup__body">
+        <form action="">
+          <section class="search-bar search-bar--popup border-bottom px-20">
+            <h2 class="for-a11y">검색</h2>
+            <div class="search-bar__left form-flex-cell--fix">
+              <div class="search-bar__row form-flex-cell--fix">
+                <dl class="search-bar__item">
+                  <dt class="search-bar__key">집중관제 그룹</dt>
+                  <dd class="search-bar__val">
+                    <div class="ui-select-block input-width-140">
+                      <select class="ui-select" title="집중관제 그룹">
+                        <option value="">관제 그룹1</option>
+                        <option value="">option 2</option>
+                        <option value="">option 3</option>
+                        <option value="">option 4</option>
+                        <option value="">option 5</option>
+                      </select>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="search-bar__item">
+                  <dt class="search-bar__key">자동갱신</dt>
+                  <dd class="search-bar__val">
+                    <!-- 2021.10.18 : mod : 구조 수정 및 "초" 텍스트 셀렉트 밖으로 이동 -->
+                    <div class="form-flex">
+                      <div class="form-flex-cell">
+                        <div class="ui-select-block input-width-date-select input-width-140">
+                          <select class="ui-select" title="자동갱신">
+                            <option value="">20초</option>
+                            <option value="">option 2</option>
+                            <option value="">option 3</option>
+                            <option value="">option 4</option>
+                            <option value="">option 5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <!-- <div class="form-flex-cell">초</div> -->
+                    </div>
+                    <!-- //2021.10.18 : mod : 구조 수정 및 "초" 텍스트 셀렉트 밖으로 이동 -->
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="search-bar__right ml-auto mr-0">
+              <div class="ui-buttons ui-buttons--center">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <button type="submit"
+                      class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search button-width-73">조회</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </form>
+        <div class="p-20 background-white border-radius--bottom">
+          <div class="ui-board-table ui-board-table--tight ui-board-table--6-rows border-radius-0" id="boardGrid" style="height: 390px;"></div>
+          <!-- <div class="ui-board-table">
+            <div class="board-detail-table">
+              <div class="board-detail-table--flex">
+                <div class="board-detail-table--flex-item">
+                  <div
+                    class="board-detail-table board-detail-table--th-line board-detail-table-layout-auto board-detail-table-hover">
+                    <table>
+                      <colgroup>
+                        <col style="width:auto">
+                        <col style="width:auto">
+                        <col style="width:auto">
+                        <col style="width:auto">
+                        <col style="width:auto">
+                        <col style="width:11.1%">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>피부착자</th>
+                          <th>등급</th>
+                          <th>경보일시</th>
+                          <th>경보내용</th>
+                          <th>보호관찰소</th>
+                          <th>보관</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>홍길동</td>
+                          <td>집중-Ⅱ</td>
+                          <td>2022-06-1500:00:00</td>
+                          <td>출입금지위반</td>
+                          <td>서울남부</td>
+                          <td>
+                            <a href=""
+                              class="ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-keep">보관</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="6" class="text-center">조회결과가 없습니다.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- 기존소스 -->
+        <!-- <div class="ui-board-table ui-board-table--tight ui-board-table--6-rows" id="boardGrid"></div> -->
+        <!-- //기존소스 -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- script -->
+  <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+  <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+  <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+  <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+  <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+  <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+  <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+  <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+  <script type="text/javascript">
+    var datagrid;
+
+    // Data
+    var grid_data = [{
+        id: '10',
+        name: '홍길동',
+        date: 'YYYY-MM-DD HH:MM:SS',
+        group: '중앙그룹',
+        area: '서울보호관찰소',
+        description: '부착 파워오프',
+        move: '',
+      },
+      {
+        id: '9',
+        name: '홍길동',
+        date: 'YYYY-MM-DD HH:MM:SS',
+        group: '대전그룹',
+        area: '서울보호관찰소',
+        description: '부착 파워오프',
+        move: '',
+      },
+      {
+        id: '8',
+        name: '홍길동',
+        date: 'YYYY-MM-DD HH:MM:SS',
+        group: '중앙그룹',
+        area: '서울보호관찰소',
+        description: '부착 파워오프',
+        move: '',
+      },
+      {
+        id: '7',
+        name: '홍길동',
+        date: 'YYYY-MM-DD HH:MM:SS',
+        group: '중앙그룹',
+        area: '서울보호관찰소',
+        description: '부착 파워오프',
+        move: '',
+      },
+      {
+        id: '6',
+        name: '홍길동',
+        date: 'YYYY-MM-DD HH:MM:SS',
+        group: '중앙그룹',
+        area: '서울보호관찰소',
+        description: '부착 파워오프',
+        move: '',
+      },
+      {
+        id: '5',
+        name: '홍길동',
+        date: 'YYYY-MM-DD HH:MM:SS',
+        group: '중앙그룹',
+        area: '서울보호관찰소',
+        description: '부착 파워오프',
+        move: '',
+      },
+      {
+        id: '4',
+        name: '홍길동',
+        date: 'YYYY-MM-DD HH:MM:SS',
+        group: '중앙그룹',
+        area: '서울보호관찰소',
+        description: '부착 파워오프',
+        move: '',
+      },
+      {
+        id: '3',
+        name: '홍길동',
+        date: 'YYYY-MM-DD HH:MM:SS',
+        group: '중앙그룹',
+        area: '서울보호관찰소',
+        description: '부착 파워오프',
+        move: '',
+      },
+      {
+        id: '2',
+        name: '홍길동',
+        date: 'YYYY-MM-DD HH:MM:SS',
+        group: '중앙그룹',
+        area: '서울보호관찰소',
+        description: '부착 파워오프',
+        move: '',
+      },
+      {
+        id: '1',
+        name: '홍길동',
+        date: 'YYYY-MM-DD HH:MM:SS',
+        group: '중앙그룹',
+        area: '서울보호관찰소',
+        description: '부착 파워오프',
+        move: '',
+      },
+    ];
+
+    function createGrid() {
+      SBGridProperties.parentid = 'boardGrid';
+      SBGridProperties.id = 'datagrid';
+      SBGridProperties.jsonref = 'grid_data';
+	  SBGridProperties.extendcol = 3;
+      SBGridProperties.columns = [{
+          caption: ['피부착자'],
+          ref: 'name',
+          width: '90px',
+          // sortable: true,
+        },
+        {
+          caption: ['그룹'],
+          ref: 'group',
+          width: '70px',
+        },
+        {
+          caption: ['경보일시'],
+          ref: 'date',
+          width: '180px',
+        },
+        {
+          caption: ['경보내용'],
+          ref: 'description',
+          width: '156px',
+        },
+        
+        {
+          caption: ['보호관찰소'],
+          ref: 'area',
+          width: '120px',
+        },
+        
+        {
+          caption: ['위치조회'],
+          ref: 'move',
+          width: '80px',
+          renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+            return '<button class="ui-basic-button ui-basic-button--width-auto ui-basic-button--height-18 ui-basic-button--senary">위치보기</button>';
+          },
+        },
+      ];
+
+	SBGridProperties.extendcol = 3;
+	SBGridProperties.fixedrowheight = '25';
+	SBGridProperties.rowheight = 25;
+	SBGridProperties.width = '100%';
+	SBGridProperties.height = '100%';
+	SBGridProperties.emptyrecords = '조회 결과가 없습니다.';
+      datagrid = _SBGrid.create(SBGridProperties);
+      // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : start
+      datagrid.bind('aftersort', function () {
+        SBCustomFunction.aftersort(datagrid);
+      });
+      // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : end
+      datagrid.sortColumn(0, 'desc');
+      datagrid.sortingIcon();
+    }
+
+		SBGridProperties.extendcol = 10;
+		SBGridProperties.rowheight = 25;
+		SBGridProperties.width = '100%';
+		SBGridProperties.height = '100%';
+
+    $(function () {
+      createGrid();
+    });
+  </script>
+  <!-- //script -->
+</body>
+
+</html>

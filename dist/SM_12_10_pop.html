@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">전자장치 관리</h1>
+            <div class="form-flex">
+                <!--자동완성-->
+                  <div class="form-block__cell control control-search">
+                    <div class="form-flex">
+                      <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time search">
+                        <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                          <input type="text" class="ui-input js-datepicker-range__min is-active" title="" value="홍길동">
+                          <div class="time-table">
+                            <div class="time-table--hour">
+                              <div class="time-table--button ui-scroller">
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button type="button" class="ui-button header-search__submit">
+                          <span class="for-a11y">검색</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                <!--//자동완성-->
+                <div class="people-head">
+                    <div class="people-head__block">
+                    <div class="people-head__sex people-head__sex--man">
+                        <span class="for-a11y">(남)</span>
+                    </div>
+                    <div class="people-head__sex people-head__sex--woman">
+                        <span class="for-a11y">(여)</span>
+                    </div>
+                    <div class="people-head__info">남</div>
+                    <div class="people-head__hr"></div>
+                    <div class="people-head__birth">1952-05-21</div>
+                    <div class="people-head__hr"></div>
+                    <div class="people-head__number">
+                        <span class="people-head__key">사건번호</span>
+                        <span class="people-head__val">12-3456-7890-12345</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+     
+          <div class="window-popup__body window-popup__body__padding--10 radius-div overflow-ini">
+            <div class="survey-form survey-form--padding-0 board-detail-wrap border-gray border-radius">
+              <!-- 2021.10.18 : add : 참여 후 케이스 추가 -->
+              <!-- Case : 참여 후 -->
+              <div class="board-detail-table td-border-right board-table-padding--1220 board-detail-table-layout-auto">
+          
+                <table class="border-none ma-0">
+                    <colgroup>
+                      <col style="width:23%;" />
+                      <col style="width:25%;" />
+                      <col style="width:23%;" />
+                      <col style="width:29%;" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>부착/분리 상태</th>
+                        <td>
+                          <div class="ui-select-block ui-select-block--disabled input-width-135 background-white">
+                            <select class="ui-select" title="title">
+                              <option value="-1" disabled="" selected="">40</option>
+                              <option value="">option 1</option>
+                              <option value="">option 2</option>
+                              <option value="">option 3</option>
+                              <option value="">option 4</option>
+                              <option value="">option 5</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>E-STAY 충전팩</th>
+                        <td>
+                          <div class="form-flex">
+                            <div class="form-flex-cell">
+                              <div class="ui-select-block input-width-135">
+                                <select class="ui-select" title="장소">
+                                  <option value="">기본</option>
+                                  <option value="">추가</option>
+                                </select>
+                              </div>
+                            </div>
+                            <!-------부착 장치 개수 device-number 클래스 따로 설정------>
+                            <div class="form-flex-cell">
+                              <span class="device-message device-number">(5)</span>
+                            </div>
+
+                          </div>
+                        </td>
+                        <th>전자장치 배정일시</th>
+                        <td>
+                            <div class="td-table">
+                                2022-01-11 14:01
+                                <div class="ui-basic-button__wrap">
+                                  <a href="" class="
+                                  ui-basic-button ui-basic-button--small ui-basic-button--icon ui-basic-button--blue-line
+                                   ui-basic-button--icon ui-basic-button--width-auto">장치배정</a>
+                                </div>
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>E-STAY 착용장치</th>
+                        <td>
+                          270196
+                        </td>
+                        <th>E-STAY 부착장치 번호</th>
+                        <td>
+                          012-2058-1417
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>E-STAY 재택장치</th>
+                        <td>
+                          170333
+                        </td>
+                        <th>E-STAY 재택장치 번호</th>
+                        <td>
+                          012-2082-7085
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>환경설정</th>
+                        <td colspan="3">
+                          E-Stay 착용장치: 설정완료, E-Stay 재택장치: 설정완료
+                        </td>
+                      </tr>
+    
+                    </tbody>
+                </table>
+
+                  
+              </div>
+
+            </div>
+
+            <div class="board-detail-table--flex">
+
+                <div class="board-detail-table--flex-item">
+                  <div class="board-detail-table board-detail-table--th-line border-detail-info-grid background-color--none border-none padding-0 mt-10">
+    
+                    <div class="board-detail-table__title--with-button d-flex">
+    
+                      <div class="ui-buttons--left ml-auto">
+                        <ul class=" ui-buttons__list ui-buttons__list--width-65">
+                            <li class="ui-buttons__item">
+                                <a href="" class="ui-button ui-basic-button ui-basic-button--green ui-basic-button--width-auto">부착/분리</a>
+                              </li>
+                              <li class="ui-buttons__item">
+                                <button type="button" class="ui-button ui-basic-button ui-basic-button--normal ui-basic-button--width-auto">상태정보</button>
+                              </li>
+                              <li class="ui-buttons__item">
+                                  <button type="button" class="ui-button ui-basic-button ui-basic-button--normal ui-basic-button--width-auto">환경설정</button>
+                              </li>
+                        </ul>
+                      </div>
+                    </div>
+    
+                  </div>
+    
+                </div>
+            </div>
+
+
+
+            <div class="board-detail-table--flex">
+
+                <div class="board-detail-table--flex-item">
+                  <div class="board-detail-table board-detail-table--th-line border-detail-info-grid background-color--none border-none  p-10-0-0-0 sm-12-pt-10">
+                    
+
+                    <div class="board-detail-table__title--with-button d-flex">
+                      <div class="board-detail-table__title board-detail-table__title--flex">
+                        <div class="board-detail-table__title font-size-12">환경설정</div>         
+                      </div>
+    
+                      <div class="ui-buttons--left ml-auto">
+                          <ul class=" ui-buttons__list ui-buttons__list--width-65">
+
+                            <li class="ui-buttons__item">
+                              <button type="button" class="ui-button ui-basic-button ui-basic-button--normal ui-basic-button--width-auto">초기화</button>
+                            </li>
+
+                          </ul>
+                      </div>
+                    </div>
+
+           
+                  </div>
+    
+                </div>
+            </div>
+
+            <div class="survey-form survey-form--padding-0 board-detail-wrap border-gray border-radius table-td--padding-3-10">
+                <!-- 2021.10.18 : add : 참여 후 케이스 추가 -->
+                <!-- Case : 참여 후 -->
+                <div class="board-detail-table td-border-right">
+            
+                  <table class="border-none ma-0">
+                      <colgroup>
+                        <col style="width:25%;" />
+                        <col style="width:25%;" />
+                        <col style="width:25%;" />
+                      </colgroup>
+                      <tbody>
+                        
+                        <tr>
+                          <th>구분</th>
+                          <th>E-STAY 부착장치(부착중)</th>
+                          <th>E-STAY 재택장치(설치)</th>
+                        </tr>
+                        <tr>
+                          <th>장치 ID</th>
+                          <td>A10705A10705(E-STAY)</td>
+                          <td>B00969(E-STAY)</td>
+                        </tr>
+                        <tr>
+                          <th>MDN</th>
+                          <td>01238015404</td>
+                          <td>0127000429</td>
+                        </tr>
+                        <tr>
+                          <th>소속기관</th>
+                          <td>서울보호관찰소</td>
+                          <td>서울보호관찰소</td>
+                        </tr>
+                        <tr>
+                          <th>보고주기(위치)</th>
+                          <td colspan="2">
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                  <div class="ui-input-block is-inputed input-width-118">
+                                      <input type="text" class="ui-input" title="title" placeholder="4">
+                                  </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                  분
+                              </div>
+                              <div class="form-flex-cell mal-10">
+                                <p class="basic-text font-color-gray">※ 1~1440분까지 입력 가능합니다.</p>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>장시간 통신주기</th>
+                          <td colspan="2">
+
+                            <div class="ui-select-block input-width-118">
+                              <select class="ui-select" title="">
+                                <option value="">40</option>
+                                <option value=""></option>
+                              </select>
+                            </div>
+
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <th>감응거리</th>
+                          <td colspan="2">
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-select-block input-width-118">
+                                  <select class="ui-select" title="">
+                                    <option value="">5</option>
+                                    <option value=""></option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="form-flex-cell">
+                                단계
+                              </div>
+                            </div>
+                          </td>
+                          
+                        </tr>
+
+
+
+                        <tr>
+                          <th>Hotkey1</th>
+                          <td>
+                          </td>
+                          <td>
+                            <div class="">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block is-inputed">
+                                  <input type="text" class="ui-input" title="title" placeholder="00000000000">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+                        </tr>
+
+                        <tr>
+                          <th>측위 On/Off</th>
+                          <td colspan="2">
+                            <div class="form-flex">
+                              <div class="form-flex-cell ">
+                                <div class="ui-check-list">
+                                  <ul class="ui-check-list__list">
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-radio-block">
+                                        <input type="radio" class="ui-radio" name="removalType2" id="removalType3" checked="">
+                                        <label for="removalType3" class="ui-label">
+                                          <span class="ui-radio-object"></span>
+                                          <span class="ui-label__text">사용</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                    <li class="ui-check-list__item">
+                                      <div class="ui-radio-block">
+                                        <input type="radio" class="ui-radio" name="removalType2" id="removalType4">
+                                        <label for="removalType4" class="ui-label">
+                                          <span class="ui-radio-object"></span>
+                                          <span class="ui-label__text">미사용</span>
+                                        </label>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                <div class="ui-basic-button__wrap">
+                                  <div class="td-table">
+                                    <div class="ui-basic-button__wrap">
+                                      <button type="button" class="ui-basic-button ui-basic-button--quinary line-height-18 padding-0-5">적용</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+
+
+                        </tr>
+
+                        <tr>
+                          <th>이탈 감지 민감도</th>
+                          <td colspan="2">
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                  <div class="ui-input-block is-inputed input-width-118">
+                                      <input type="text" class="ui-input" title="title" placeholder="4">
+                                  </div>
+                              </div>
+
+                              <div class="form-flex-cell mal-10">
+                                <p class="basic-text font-color-gray">*1~1440분까지 입력 가능합니다.</p>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th>무작동 감지 시간</th>
+                          <td colspan="2">
+                            <div class="form-flex">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block is-inputed input-width-118">
+                                  <input type="text" class="ui-input" title="title" placeholder="20">
+                              </div>
+                              </div>
+                              <div class="form-flex-cell">
+                                  분
+                              </div>
+                              <div class="form-flex-cell mal-10">
+                                <p class="basic-text font-color-gray">*20~60분까지 설정 가능합니다.</p>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <th>사유</th>
+                          <td colspan="2">
+                            <div class="">
+                              <div class="form-flex-cell">
+                                <div class="ui-input-block is-disabled">
+                                  <input type="text" class="ui-input ui-input2  input-height-mini" title="" placeholder="">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+      
+                      </tbody>
+                  </table>
+  
+                 
+                    
+                </div>
+                
+                
+              </div>
+
+              <div class="bottom-buttons bottom-buttons--set mat-20">
+                <ul class="bottom-buttons__list">
+                  <li class="bottom-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button">E-STAY 착용장치 리셋</button>
+                  </li>
+                  <li class="bottom-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button">재택장치 리셋</button>
+                  </li>
+
+                  <li class="bottom-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button">E-STAY 착용장치 전원 OFF</button>
+                  </li>
+                  <li class="bottom-buttons__item">
+                    <button type="button" class="ui-button ui-basic-button">재택장치전원 OFF</button>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="notice-box notice-box--bottom">
+  
+                  <div class="board-detail-table--flex">
+
+                    <div class="board-detail-table--flex-item">
+                      <div class="board-detail-table board-detail-table--th-line border-detail-info-grid background-color--none border-none p-0">
+        
+                        <div class="board-detail-table__title--with-button ma-0">
+                          <!--- 명령어를 실행 했을 경우  ----->
+                          <div class="important color-red"><span style="width:80%;font-size:12px; margin-right:5px;">ⓘ</span>장치 설정이 대기중입니다. 잠시만 기다려 주십시오! 대기 시간은 <span class="wait_count">OO</span>초 입니다.</div>
+                          <!--- //명령어를 실행 했을 경우  ----->
+                          <div class="important"><span style="width:80%;font-size:12px; margin-right:5px;">ⓘ</span>환경설정 저장 시 성공 메시지를 확인하실 때까지 창을 닫지 마십시오. 성공할 때까지 
+                            재시도 하시기 바랍니다.</div>
+
+                        </div>
+        
+                      </div>
+        
+                    </div>
+                </div>
+  
+              </div>
+          </div>
+
+          
+
+            <div class="window-popup__foot mat-0">
+                <div class="board-detail-table--flex">
+
+                  <div class="board-detail-table--flex-item">
+                    <div class="board-detail-table board-detail-table--th-line border-detail-info-grid background-color--none border-none p-10-0-10-0">
+      
+                      <div class="board-detail-table__title--with-button d-flex align-flex-between">
+                        <div class="ui-buttons--left">
+                          <ul class="ui-buttons__list">
+                            <li class="ui-buttons__item">
+                              <button type="submit" class="ui-button ui-basic-button ui-basic-button--normal">재시도</button>
+                            </li>
+                            <li class="ui-buttons__item">
+                              <button type="submit" class="ui-button ui-basic-button ui-basic-button--normal">측위요청</button>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="ui-buttons--right">
+                          <ul class="ui-buttons__list">
+                            <li class="ui-buttons__item">
+                              <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                            </li>
+                            <li class="ui-buttons__item">
+                              <button type="submit" class="ui-button ui-basic-button">저장</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+              </div>
+            </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>

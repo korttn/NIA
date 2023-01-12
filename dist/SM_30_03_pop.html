@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+   
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">주소검색</h1>
+            
+          </div>
+
+          <div class="window-popup__body window-popup-border-radius  attach">
+           <!-- 프로필 -->
+           <div class="tile-layout__cell tile-layout__cell--profile situation-management-profile">
+            <div class="tile-layout__contents">
+              <section class="board-detail-wrap border-radius">
+
+                <div class="profile">
+                  <div class="profile__info">
+                    <div class="board-detail-table board-detail-table--th-line">
+                      <!-- 상세 프로필 -->
+                      <div class="tile-layout__cell">
+                        <div class="tile-layout__contents">
+                          <!-- 2021.10.22 : mod : js-situation-management-tab 클래스 값 추가 -->
+                          <div class="board-detail-wrap js-ui-tab-panel js-situation-management-tab">
+                            <div class="board-tab">
+                              <ul class="board-tab__list">
+                                <li class="board-tab__item">
+                                  <a href="" class="board-tab__link"
+                                    data-tab-open="situationManagement2-1">도로명</a>
+                                </li>
+                                <li class="board-tab__item">
+                                    <a href="" class="board-tab__link "
+                                      data-tab-open="situationManagement2-2">지번 주소</a>
+                                  </li>
+
+                              </ul>
+                            </div>
+
+                            <!-- 도로명-->
+                            <div class="board-tab-panel board-tab-panel--last" data-tab="situationManagement2-1" role="tabpanel" >
+                              <form action="">
+                                <section class="search-bar search-bar--fix-width-key-small board-tab-panel__under-search-bar search-bar-width-auto border-radius-0">
+                                  <h2 class="for-a11y">검색</h2>
+                                  <div class="search-bar__left">
+                                    <div class="search-bar__row">
+                                      
+                    
+                                      <dl class="search-bar__item">
+                                        <dt class="search-bar__key">광역시도</dt>
+                                        <dd class="search-bar__val">
+                                            <div class="form-flex">
+                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                    <select class="ui-select" title="title">
+                                                        <option value="">전체</option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                  
+                                            </div>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="search-bar__item">
+                                      <dt class="search-bar__key">시군구</dt>
+                                      <dd class="search-bar__val">
+                                          <div class="form-flex">
+                                              <div class="ui-select-block flex ui-select-block--width-130">
+                                                  <select class="ui-select" title="title">
+                                                      <option value="">전체</option>
+                                                      <option value=""></option>
+                                                      <option value=""></option>
+                                                      <option value=""></option>
+                                                  </select>
+                                              </div>
+                
+                                          </div>
+                                      </dd>
+                                    </dl>
+
+                                    <dl class="search-bar__item ">
+                                      <dt class="search-bar__key">도로검색</dt>
+                                      <dd class="search-bar__val">
+                                        <div class="header-search header-search--filter">
+                                          <div class="ui-input-block header-search__input ui-input-block--width-160">
+                                            <input type="text" class="ui-input" title="도로검색">
+                                          </div>
+                                          <button type="button" class="ui-button header-search__submit">
+                                            <span class="for-a11y">검색</span>
+                                          </button>
+                                        </div>
+                                      </dd>
+                                    </dl>
+
+
+                                  </div>
+                                    <div class="search-bar__row">
+                                      <dl class="search-bar__item">
+                                        <dt class="search-bar__key">도로명</dt>
+                                        <dd class="search-bar__val">
+                                            <div class="form-flex">
+                                                <div class="ui-select-block flex input-width-160">
+                                                    <select class="ui-select" title="title" required>
+                                                        <option value="" selected>도로검색후 선택하세요</option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                  
+                                            </div>
+                                        </dd>
+                                      </dl>
+                                      
+                                      
+                                      <dl class="search-bar__item">
+                                        <dt class="search-bar__key">건물번지</dt>
+                                        <dd class="search-bar__val">
+
+                                          <div class="form-flex js-datepicker-range">
+                                            <div class="form-flex-cell">
+                                              <div class="ui-input-block input-width-small-mini">
+                                                <input type="text" class="ui-input" title="건물번지">
+                                              </div>
+                                            </div>
+                                            <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                                            <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                              <div class="ui-input-block input-width-small-mini">
+                                                <input type="text" class="ui-input" title="건물번지">
+                                              </div>
+                                            </div>
+                                            
+                                        </div>
+
+                                        </dd>
+                                      </dl>
+
+                                      
+
+
+
+                                    </div>
+                                  </div>
+                                  <div class="search-bar__right">
+                                    <div class="ui-buttons">
+                                      <ul class="ui-buttons__list ui-buttons__list--column">
+                                        <li class="ui-buttons__item">
+                                          <button type="button"
+                                            class="ui-button ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset input-width--76">초기화</button>
+                                        </li>
+                                        <li class="ui-buttons__item">
+                                          <button type="submit"
+                                            class="ui-button ui-basic-button ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search input-width--76">조회</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </section>
+                              </form>
+
+                              <div class="board-content p-20-20-0-20">
+
+                                <!-- 2022.08.30 : mod : style="height:276px" 추가 -->
+                                  <div class="ui-board-table ui-board-table--5-rows justify-center" id="boardGrid1" style="height:276px"></div>
+                                <!-- //2022.08.30 : mod : style="height:276px" 추가 -->
+                      
+                              </div>
+                            </div>
+                            <!-- //도로명 -->
+
+                            <!-- 지번주소-->
+                            <div class="board-tab-panel board-tab-panel--last" data-tab="situationManagement2-2" role="tabpanel" >
+                              <form action="">
+                                <section class="search-bar search-bar--fix-width-key-small board-tab-panel__under-search-bar search-bar-width-auto border-radius-0">
+                                  <h2 class="for-a11y">검색</h2>
+                                  <div class="search-bar__left">
+                                    <div class="search-bar__row">
+                                      
+                    
+                                      <dl class="search-bar__item">
+                                        <dt class="search-bar__key">광역시도</dt>
+                                        <dd class="search-bar__val">
+                                            <div class="form-flex">
+                                                <div class="ui-select-block flex ui-select-block--width-130">
+                                                    <select class="ui-select" title="title">
+                                                        <option value="">전체</option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                  
+                                            </div>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="search-bar__item">
+                                      <dt class="search-bar__key">시군구</dt>
+                                      <dd class="search-bar__val">
+                                          <div class="form-flex">
+                                              <div class="ui-select-block flex ui-select-block--width-130">
+                                                  <select class="ui-select" title="title">
+                                                      <option value="">전체</option>
+                                                      <option value=""></option>
+                                                      <option value=""></option>
+                                                      <option value=""></option>
+                                                  </select>
+                                              </div>
+                
+                                          </div>
+                                      </dd>
+                                    </dl>
+                                    <!-- 2022.08.30 : mod : 도로검색 -> 읍면명 콤보박스로 교체 -->
+                                    <dl class="search-bar__item ">
+                                      <dt class="search-bar__key">읍면명</dt>
+                                      <dd class="search-bar__val">
+                                        <div class="form-flex">
+                                          <div class="ui-select-block flex ui-select-block--width-130">
+                                              <select class="ui-select" title="title">
+                                                  <option value="">전체</option>
+                                                  <option value=""></option>
+                                                  <option value=""></option>
+                                                  <option value=""></option>
+                                              </select>
+                                          </div>
+            
+                                      </div>
+                                      </dd>
+                                    </dl>
+                                    <!-- 2022.08.30 : mod : 도로검색 -> 읍면명 콤보박스로 교체 -->
+
+                                  </div>
+                                    <div class="search-bar__row">
+
+                                      
+                                      
+                                      <dl class="search-bar__item">
+                                        <dt class="search-bar__key">번지</dt>
+                                        <dd class="search-bar__val">
+
+                                          <div class="form-flex js-datepicker-range">
+                                            <div class="form-flex-cell">
+                                              <div class="ui-input-block input-width-small-mini">
+                                                <input type="text" class="ui-input" title="번지">
+                                              </div>
+                                            </div>
+                                            <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+                                            <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                              <div class="ui-input-block input-width-small-mini">
+                                                <input type="text" class="ui-input" title="번지">
+                                              </div>
+                                            </div>
+                                            
+                                        </div>
+
+                                        </dd>
+                                      </dl>
+
+                                      
+
+
+
+                                    </div>
+                                  </div>
+                                  <div class="search-bar__right">
+                                    <div class="ui-buttons">
+                                      <ul class="ui-buttons__list ui-buttons__list--column">
+                                        <li class="ui-buttons__item">
+                                          <button type="button"
+                                            class="ui-button ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset input-width--76">초기화</button>
+                                        </li>
+                                        <li class="ui-buttons__item">
+                                          <button type="submit"
+                                            class="ui-button ui-basic-button ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search input-width--76">조회</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </section>
+                              </form>
+
+                              <div class="board-content p-10-20-20-20">
+
+                                <!-- 2022.08.30 : mod : height 값 수정 -->
+                                  <div class="ui-board-table ui-board-table--5-rows justify-center" id="boardGrid2" style="height:276px"></div>
+                                <!-- 2022.08.30 : mod : height 값 수정 -->
+                      
+                              </div>
+                            </div>
+                            <!-- //지번주소 -->
+
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //상세 프로필 -->
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <!-- //프로필 -->
+          </div>
+          <!-- 2022.08.30 : add : window-popup__foot 추가 -->
+          <div class="window-popup__foot mat-0">
+            <div class="board-detail-table--flex">
+
+              <div class="board-detail-table--flex-item">
+                <div class="board-detail-table board-detail-table--th-line  background-color--none border-none">
+  
+                  <div class="board-detail-table d-flex">
+      
+  
+                    <div class="ui-buttons--left ml-auto ml-30  p-0-20-20-20">
+                      <ul class="ui-buttons__list">
+                        <li class="ui-buttons__item">
+                          <a href="" class="ui-basic-button ui-basic-button--quaternary">닫기</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+  
+                </div>
+  
+              </div>
+          </div>
+          </div>
+          <!-- 2022.08.30 : add : window-popup__foot 추가 -->
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/timepicker.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script type="text/javascript">
+        var datagrid;
+        var SBGrideProperties = {};
+        // Data
+        var grid_data1 = [
+          {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+
+          ];
+    
+        var grid_data2 = [
+        {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+            {
+              cell_1: '1',
+              cell_2: '서울특별시 성동구 성수동 2가 277-37',
+              cell_3: '서울특별시 성동구 아차산로 15길 10',
+            },
+          
+        ];
+      
+    
+        function createGrid(properties, callback) {
+          var datagrid;
+          datagrid = _SBGrid.create(properties);
+          datagrid.bind('aftersort', function () {
+            SBCustomFunction.aftersort(datagrid);
+          });
+          callback(datagrid);
+        }
+    
+        var columns1 = [
+            {
+              caption: ['번호'],
+              ref: 'cell_1',
+              width: '10%',
+              sortable: false,
+            },
+            {
+              caption: ['지번 주소'],
+              ref: 'cell_2',
+              width: '50%',
+            },
+            {
+              caption: ['도로명 주소'],
+              ref: 'cell_3',
+              width: '50%',
+            },
+
+
+
+
+          ];
+    
+    
+        var columns2 = [
+          {
+              caption: ['번호'],
+              ref: 'cell_1',
+              width: '10%',
+              sortable: false,
+            },
+            {
+              caption: ['지번 주소'],
+              ref: 'cell_2',
+              width: '50%',
+            },
+            {
+              caption: ['도로명 주소'],
+              ref: 'cell_3',
+              width: '50%',
+            },
+
+        ];
+       
+    
+        $(function () {
+            createGrid(
+              $.extend({}, SBGridProperties, {
+                id: 'datagrid1',
+                parentid: 'boardGrid1',
+                jsonref: 'grid_data1',
+                columns: columns1,
+                height : '100%',
+                width : '100%',
+                rowheight : 35,
+                fixedrowheight : '25',
+                rowheight : '25',
+                emptyrecords : '조회 결과가 없습니다.',
+                emptyrecordsfontstyle : "font-size:12px; font-weight bold" ,
+              }),
+              function (datagrid) {
+                datagrid.sortColumn(0, 'desc');
+                datagrid.sortingIcon();
+                $('#boardGrid1').data('grid', datagrid);
+              }
+            );
+            createGrid(
+              $.extend({}, SBGridProperties, {
+                id: 'datagrid2',
+                parentid: 'boardGrid2',
+                jsonref: 'grid_data2',
+                columns: columns2,
+                height : '100%',
+                width : '100%',
+                rowheight : 35,
+                fixedrowheight : '25',
+                rowheight : '25',
+                emptyrecords : '조회 결과가 없습니다.',
+                emptyrecordsfontstyle : "font-size:12px; font-weight bold" ,
+              }),
+              function (datagrid) {
+                datagrid.sortColumn(0, 'desc');
+                datagrid.sortingIcon();
+                $('#boardGrid2').data('grid', datagrid); 
+              }
+            );
+           
+    
+          // 탭 변경 시 그리드 리사이즈
+          $('.board-detail-wrap.js-ui-tab-panel').on('uiTabPanelChange', function () {
+            var $this = $(this);
+            var $activePanel = $this.find('.board-tab-panel.js-tabpanel-opened');
+            var grid = $activePanel.find('.ui-board-table').data('grid');
+    
+            if (grid) {
+              grid.resize();
+            }
+          });
+
+       
+    
+          // Chart
+          var chartData = [{
+              date: '2020/08/01',
+              value_1: 17,
+              value_2: 37,
+              value_3: 6,
+              value_4: 40,
+              value_5: 36,
+              value_6: 26,
+            },
+            {
+              date: '2020/08/02',
+              value_1: 47,
+              value_2: 44,
+              value_3: 10,
+              value_4: 32,
+              value_5: 0,
+              value_6: 36,
+            },
+            {
+              date: '2020/08/03',
+              value_1: 39,
+              value_2: 1,
+              value_3: 1,
+              value_4: 19,
+              value_5: 19,
+              value_6: 47,
+            },
+            {
+              date: '2020/08/04',
+              value_1: 11,
+              value_2: 12,
+              value_3: 4,
+              value_4: 50,
+              value_5: 15,
+              value_6: 50,
+            },
+            {
+              date: '2020/08/05',
+              value_1: 23,
+              value_2: 24,
+              value_3: 27,
+              value_4: 10,
+              value_5: 15,
+              value_6: 47,
+            },
+            {
+              date: '2020/08/06',
+              value_1: 29,
+              value_2: 7,
+              value_3: 36,
+              value_4: 2,
+              value_5: 2,
+              value_6: 15,
+            },
+            {
+              date: '2020/08/07',
+              value_1: 32,
+              value_2: 37,
+              value_3: 44,
+              value_4: 38,
+              value_5: 41,
+              value_6: 39,
+            },
+            {
+              date: '2020/08/08',
+              value_1: 31,
+              value_2: 15,
+              value_3: 10,
+              value_4: 46,
+              value_5: 49,
+              value_6: 18,
+            },
+            {
+              date: '2020/08/09',
+              value_1: 47,
+              value_2: 23,
+              value_3: 25,
+              value_4: 39,
+              value_5: 15,
+              value_6: 49,
+            },
+            {
+              date: '2020/08/10',
+              value_1: 18,
+              value_2: 10,
+              value_3: 40,
+              value_4: 41,
+              value_5: 6,
+              value_6: 30,
+            },
+            {
+              date: '2020/08/11',
+              value_1: 46,
+              value_2: 7,
+              value_3: 17,
+              value_4: 29,
+              value_5: 18,
+              value_6: 11,
+            },
+            {
+              date: '2020/08/12',
+              value_1: 40,
+              value_2: 47,
+              value_3: 50,
+              value_4: 41,
+              value_5: 41,
+              value_6: 37,
+            },
+            {
+              date: '2020/08/13',
+              value_1: 38,
+              value_2: 26,
+              value_3: 11,
+              value_4: 37,
+              value_5: 6,
+              value_6: 41,
+            },
+          ];
+    
+          AmCharts.makeChart('chartArea', {
+            type: 'serial',
+            dataProvider: chartData,
+            categoryField: 'date',
+            categoryAxis: {
+              axisAlpha: 1,
+              axisColor: '#d8d8d8',
+              gridAlpha: 1,
+              gridColor: '#e5e5e5',
+              labelRotation: 25,
+            },
+            valueAxes: [{
+              minimum: 0,
+              maximum: 70,
+              axisAlpha: 1,
+              axisColor: '#d8d8d8',
+              gridAlpha: 1,
+              gridColor: '#e5e5e5',
+            }, ],
+            colors: ['#8067dc', '#30b59c', '#ffc36d', '#2d8877', '#4abce8', '#4264d0'],
+            fontSize: 12,
+            color: '#3c4043',
+            fontFamily: '"SpoqaHanSansNeo", "맑은고딕", "Malgun Gothic", "돋움", Dotum, "Apple Gothic", sans-serif',
+            marginTop: 35,
+            marginBottom: 40,
+            marginRight: 40,
+            marginLeft: 65,
+            autoMargins: false,
+            chartCursor: {
+              enabled: true,
+              cursorColor: '#000',
+            },
+            legend: {
+              color: '#8a8c8e',
+              markerType: 'circle',
+              markerSize: 8,
+              align: 'center',
+              valueText: '',
+              valueWidth: 0,
+              verticalGap: 0,
+              equalWidths: false,
+              horizontalGap: 10,
+              autoMargins: false,
+              marginTop: 15,
+              marginBottom: 30,
+              marginLeft: -20,
+            },
+            graphs: [{
+                title: '총합',
+                valueField: 'value_1',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '급성(주간)',
+                valueField: 'value_2',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '급성(일탈)',
+                valueField: 'value_3',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '급성(당일)',
+                valueField: 'value_4',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '만성',
+                valueField: 'value_5',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+              {
+                title: '정적',
+                valueField: 'value_6',
+                bullet: 'round',
+                balloonText: '[[category]] [[title]] : [[value]]',
+                lineThickness: 1.5,
+              },
+            ],
+          });
+        });
+      </script>
+    <!-- //script -->
+    <script>
+      // 220811 timepick 적용
+      $(document).ready(function () {
+          $(".ui-input-block--time input").timepicker({
+                timeFormat: "%H:%i",
+          });
+      });
+    </script>
+  </body>
+</html>

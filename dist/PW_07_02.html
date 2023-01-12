@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+    <style>
+      .ui-board-table{height:525px; }
+      .sbgrid_trial_expired {
+        height: 525px;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <!-- 2022.10.12 : mod : 타이틀 오타 수정 -->
+            <h1 class="window-popup__head-title">감독진행 피부착자 파일 업로드</h1>
+          </div>
+
+          <div class="window-popup__body radius-div overflow-ini">
+            <div class="board-detail-table ui-board-table-td__padding board-detail-wrap border-gray border-radius">
+              <table class="mab-0">
+                <colgroup>
+                  <col class="board-detail-table__title-width-small" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>첨부파일</th>
+                    <td>
+                      <div class="form-row">
+                        <div class="ui-file-input ui-file-input--text">
+                          <div class="ui-file-input__inner">
+                            <input type="file" class="ui-file-input__input" id="file" data-file-watch="file" />
+                            <div class="ui-input ui-file-input__watch" data-file-watch-target="file"></div>
+                            <label for="file" class="ui-file-input__label">파일선택</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row p-10-0-0-0 ma-0">
+                        <p class="basic-text basic-text--black">hwp 파일만 등록하십시오.</br>
+                          파일용량은 <span class="color-orange">10MB</span>를 초과하실 수 없습니다.
+                        </p>
+                        <p class="basic-text color-orange">
+                          업로드 시 기존파일이 삭제 된 후 업로드가 됩니다.
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+         
+
+          </div>
+
+          <div class="window-popup__foot">
+            <div class="window-popup__foot__left">
+              <div class="ui-buttons ui-buttons--left">
+                <ul class="ui-buttons__list">
+                  <!-- 2022.09.05 : add : 기존 파일 삭제 버튼 추가 -->
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">기존 파일 삭제</a>
+                  </li>
+                  <!-- 2022.09.05 : add : 기존 파일 삭제 버튼 추가 -->
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--secondary">기존 파일 다운로드</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="window-popup__foot__right">
+              <div class="ui-buttons ui-buttons--right">
+                <ul class="ui-buttons__list">
+                  <li class="ui-buttons__item">
+                    <a href="" class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                  </li>
+
+                  <li class="ui-buttons__item">
+                    <button type="submit" class="ui-button ui-basic-button ui-basic-button--save button__min--65">저장</button>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <script>
+    var datagrid;
+    var SBGridProperties = {};
+    // Data
+    var grid_data = [{
+        id: '15',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '14',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '13',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '12',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '11',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '10',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '9',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '8',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '7',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '6',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '5',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '4',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '3',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '2',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+      {
+        id: '1',
+        cell_1:'',
+        cell_2:'',
+        cell_3:'',
+        cell_4:'',
+
+      },
+    ];
+
+    function createGrid() {
+      SBGridProperties.parentid = 'boardGrid';
+      SBGridProperties.id = 'datagrid';
+      SBGridProperties.jsonref = 'grid_data';
+      SBGridProperties.extendcol = 1;
+      SBGridProperties.rowheight = 25;
+      SBGridProperties.width = '100%';
+      SBGridProperties.height = '100%';
+      SBGridProperties.emptyrecords = '조회결과가 없습니다.';
+      SBGridProperties.emptyrecordsfontstyle = "font-size:12px;font-weight bold;"; 
+      SBGridProperties.columns = [{
+          caption: ['번호'],
+          ref: 'id',
+          width: '90px',
+          sortable: false,
+        },
+
+        {
+          caption: ['장치 ID'],
+          ref: 'cell_1',
+          width: '500px',
+          renderer: function (objGrid, nRow, nCol, strValue, objRowData) {
+            return '<a href="" class="ui-board-table__link">' + strValue + '</a>';
+          },
+        },
+        {
+          caption: ['CODE'],
+          ref: 'cell_2',
+          width: '120px',
+        },
+        {
+          caption: ['이관관찰소'],
+          ref: 'cell_3',
+          width: '120px',
+        },
+        {
+          caption: ['CODE'],
+          ref: 'cell_4',
+          width: '120px',
+        },
+        {
+          caption: ['수령관찰소'],
+          ref: 'cell_5',
+          width: '120px',
+        },
+       
+
+        
+        
+      ];
+      datagrid = _SBGrid.create(SBGridProperties);
+      // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : start
+      datagrid.bind('aftersort', function () {
+        SBCustomFunction.aftersort(datagrid);
+      });
+      // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : end
+      datagrid.sortColumn(4, 'desc');
+      datagrid.sortingIcon();
+    }
+
+    $(function () {
+      createGrid();
+    });
+  </script>
+  <!-- //script -->
+
+  </body>
+</html>

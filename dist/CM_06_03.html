@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>상황관제</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=1024" />
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+	<link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+	<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+	<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+	<link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+	<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" /><!-- 2022.08.25 : add : 스타일 추가 -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/GIS.css" />
+    <!-- //style -->
+</head>
+
+<body class="header_on subPanel_on">
+
+
+
+
+    <!-- 2022.08.31 : del : 클래스 popup 삭제 -->
+    <div class="subPanelmapView ">
+
+
+        <!-- mapView -->
+        <div id="mapView">
+            <div id="localInfo">
+                <div class="current-location__inner">
+                    <ul class="current-location__detail">
+                        <li class="current-location-step current-location-step1">
+                            <!-- 2022.09.08 레이어 방식 변경 -->
+                            <a href="" class="current-location-step-click toggle-layer__click popup ">인천광역시</a>
+                            <div class="toggle-layer toggle-layer__bottom" style="display: none">
+                                <div class="toggle-layer__inner">
+                                    <div class="toggle-layer__title">
+                                        <span class="is-active">시/도</span><span>시/군/구</span><span>읍/면/동</span>
+                                    </div>
+                                    <div class="toggle-layer__body">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>서울시</td>
+                                                    <td>경기도</td>
+                                                    <td>인천시</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>부산시</td>
+                                                    <td>대전시</td>
+                                                    <td>대구시</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>울산시</td>
+                                                    <td>세종시</td>
+                                                    <td>광주시</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>강원도</td>
+                                                    <td>충청북도</td>
+                                                    <td>충청남도</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>경상북도</td>
+                                                    <td>경상남도</td>
+                                                    <td>전라북도</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>전라남도</td>
+                                                    <td>제주도</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //2022.09.08 레이어 방식 변경 -->
+                        </li>
+                        <li class="current-location-step current-location-step2">
+                            <!-- 2022.09.08 레이어 방식 변경 -->
+                            <a href="" class="current-location-step-click toggle-layer__click popup">남동구</a>
+                            <div class="toggle-layer toggle-layer__bottom" style="display:none;">
+                                <div class="toggle-layer__inner">
+                                    <div class="toggle-layer__title">
+                                        <span>시/도</span><span class="is-active">시/군/구</span><span>읍/면/동</span>
+                                    </div>
+                                    <div class="toggle-layer__body">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>창원시<br>마산합포구</td>
+                                                    <td>경기도 안산시</td>
+                                                    <td>인천시</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>부산시</td>
+                                                    <td>대전시</td>
+                                                    <td>대구시</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>울산시</td>
+                                                    <td>세종시</td>
+                                                    <td>광주시</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>강원도</td>
+                                                    <td>충청북도</td>
+                                                    <td>충청남도</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>경상북도</td>
+                                                    <td>경상남도</td>
+                                                    <td>전라북도</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>전라남도</td>
+                                                    <td>제주도</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>전라남도</td>
+                                                    <td>제주도</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- //2022.09.08 레이어 방식 변경 -->
+                            </div>
+                        </li>
+                        <li class="current-location-step current-location-step3">
+                            <!-- 2022.09.08 레이어 방식 변경 -->
+                            <a href="" class="current-location-step-click toggle-layer__click popup">간석동</a>
+                            <div class="toggle-layer toggle-layer__bottom" style="display:none;">
+                                <div class="toggle-layer__inner">
+                                    <div class="toggle-layer__title">
+                                        <span>시/도</span><span>시/군/구</span><span class="is-active">읍/면/동</span>
+                                    </div>
+                                    <div class="toggle-layer__body">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>구산면 구복리</td>
+                                                    <td>구산면 구복리</td>
+                                                    <td>구산면 구복리</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>부산시</td>
+                                                    <td>대전시</td>
+                                                    <td>대구시</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>울산시</td>
+                                                    <td>세종시</td>
+                                                    <td>광주시</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>강원도</td>
+                                                    <td>충청북도</td>
+                                                    <td>충청남도</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>경상북도</td>
+                                                    <td>경상남도</td>
+                                                    <td>전라북도</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>전라남도</td>
+                                                    <td>제주도</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- //2022.09.08 레이어 방식 변경 -->
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button type="button" class="ui-button ui-basic-button ui-basic-button-location-move">이동</button>
+                </div>
+            </div>
+
+            <div id="mapZoom"> <!-- 2022.10.24 : add : 축척 추가 -->
+                <button class="zoomIn" type="button">확대</button>
+                <div id="mapSlider"></div>
+                <button class="zoomOut" type="button">축소</button>
+            </div>
+
+            <div id="mapContainer">
+
+                <!-- 지도 이미지 영역 -->
+                <img src="./assets/images/_dummy/map.png" alt="" style="width:100%; height:100%;" />
+                <!-- //지도 이미지 영역 -->
+
+                <!-- 마커 -->
+                <!-- 2022.11.09 : add : marker-dialog 클래스 추가 -->
+                <div class="marker-realtime__wrap marker-dialog">
+                    <div style="position: absolute; z-index: 15; left: 593px; top: 340px;" class="pin-color--red">
+                        <div class="marker-realtime marker-realtime__pink">
+                            <a href="#none" class="marker-realtime__link">
+                                <div class="marker-realtime__header">
+                                    <span class="marker-realtime__header--left">집중Ⅲ</span>
+                                    <span class="marker-realtime__header--right">H</span>
+                                </div>
+                                <div class="marker-realtime__body">
+                                    신창원
+                                </div>
+                                <div class="marker-realtime__bottom">
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="marker-realtime__wrap marker-dialog">
+                    <div style="position: absolute; z-index: 15; left: 700px; top: 410px;" class="pin-color--pink">
+                        <div class="marker-realtime marker-realtime__pink marker-realtime__line">
+                            <a href="#none" class="marker-realtime__link">
+                                <div class="marker-realtime__header">
+                                    <span class="marker-realtime__header--left">안전</span>
+                                    <span class="marker-realtime__header--right"></span>
+                                </div>
+                                <div class="marker-realtime__body">
+                                    피해자
+                                </div>
+                                <div class="marker-realtime__bottom">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 고위험 육각별 :: 고축척일때 그린  -->
+                <div class="marker-realtime__wrap high-scale">
+                    <!-- 클릭시 class에 is-active 추가해주세요 -->
+                    <div style="position: absolute; z-index: 15; left: 600px; top: 610px;">
+                        <div class="marker-realtime marker-realtime__pink">
+                            <a href="#none" class="marker-realtime__link">
+                                <div class="marker-realtime__header">
+                                    <span class="marker-realtime__header--left">집중Ⅲ</span>
+                                    <span class="marker-realtime__header--right">H</span>
+                                </div>
+                                <div class="marker-realtime__body">
+                                    신창원
+                                </div>
+                                <div class="marker-realtime__bottom">
+                                    P
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- //고위험 육각별 ::고축척일때 그린 -->
+
+
+               
+
+               <!-- 마커 빗금 -->
+                <div class="marker-realtime__wrap high-scale">
+                    <div style="position: absolute; z-index: 15; left: 630px; top: 610px;">
+                        <div class="marker-realtime marker-realtime__pink marker-realtime__line">
+                            
+                                <div class="marker-realtime__header">
+                                    <span class="marker-realtime__header--left">집중Ⅲ</span>
+                                    <span class="marker-realtime__header--right">H</span>
+                                </div>
+                                <div class="marker-realtime__body">
+                                    박홍길동
+                                </div>
+                                <div class="marker-realtime__bottom">
+                                    P
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- //마커 빗금 -->
+
+                <div class="marker-realtime__wrap max-scale">
+                    <div style="position: absolute; z-index: 15; left: 660px; top: 610px;">
+                        <div class="marker-realtime marker-realtime__pink">
+                            
+                                <div class="marker-realtime__header">
+                                    <span class="marker-realtime__header--left">집중Ⅲ</span>
+                                    
+                                </div>
+                                <div class="marker-realtime__body">
+                                    박홍길동
+                                </div>
+                                <div class="marker-realtime__bottom">
+                                </div>
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 최고축척 마커 빗금 -->
+                <div class="marker-realtime__wrap max-scale">
+                    <div style="position: absolute; z-index: 15; left: 680px; top: 610px;">
+                        <div class="marker-realtime marker-realtime__pink marker-realtime__line">
+                            
+                                <div class="marker-realtime__header">
+                                    <span class="marker-realtime__header--left">집중Ⅲ</span>
+                                    
+                                </div>
+                                <div class="marker-realtime__body">
+                                    박홍길동
+                                </div>
+                                <div class="marker-realtime__bottom">
+                                </div>
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- //최고축척 마커 빗금 -->
+
+       
+
+
+                <!-- 마커 -->
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <!--// mapView -->
+
+     
+
+
+
+    </div>
+
+        <!-- right-menu -->
+        <div class="right-manu">
+          <div id="viewMode">
+              <div class="box">
+                  <button type="button" class="on map-type__button map-type__button--normal">일반</button>
+                  <button type="button" class="off map-type__button map-type__button--earth">위성</button>
+              </div>
+          </div>
+  
+          <ul id="etcMenu">
+              <li class="whole map-type__button map-type__button--whole"><a href="#none" class=""><span
+                          class="icon ico-whole"></span>전국</a></li>
+          </ul>
+  
+          <ul id="hideMenu">
+              <li class="hide map-type__button map-type__button--hide"><a href="#popup-hide" class="popup"><span
+                          class="icon ico-hide"></span>숨김</a></li>
+          </ul>
+  
+          <!-- 2022.09.08 : 지물변경 버튼 추가 -->
+          <ul id="landmark-change">
+              <li class="change map-type__button map-type__button--change"><a href="#popup-change" class="popup"><span
+                          class="icon ico-change"></span>지물변경</a></li>
+          </ul>
+          <!-- //2022.09.08 : 지물변경 버튼 추가 -->
+  
+          <ul id="toolMenuWrap">
+              <li class="tool map-type__button map-type__button--tool"><a class="" href="#none">
+                      <span class="icon ico-tool"></span>도구</a>
+              </li>
+              <li id="toolMenuLi">
+                  <ul id="toolMenu">
+                      <!-- 2022.10.07 : mod : 레이어 삭제 및 순서 변경, map-type__empty 클래스 추가-->
+                      
+                      <li class="distance map-type__button map-type__button--distance">
+                          <a href="#none"><span class="icon ico-distance"></span>거리</a>
+                      </li>
+  
+                      <li class="move map-type__button map-type__button--move">
+                          <a href="#none"><span class="icon ico-move"></span>이동</a>
+                      </li>
+                      
+                      
+                      <li class="property map-type__button map-type__button--property"><a class="popup"
+                          href="#popup-property"><span class="icon ico-property"></span>장소속성</a></li>
+                      
+  
+                      <li class="radius map-type__button map-type__button--radius">
+                          <a href="#none"><span class="icon ico-radius"></span>면적</a>
+                      </li>
+  
+                      <li class="landmark map-type__button map-type__button--landmark"><a class="popup"
+                          href="#popup-landmark"><span class="icon ico-landmark"></span>지물표시</a></li>
+  
+                      <li class="print map-type__button map-type__button--print"><a href="#none" class="popup"><span
+                          class="icon ico-print"></span>인쇄</a></li>
+                      
+                   
+                      <li class="save map-type__button map-type__button--save"><a href="#none" class="popup"><span
+                                  class="icon ico-save"></span>저장</a></li>
+                      
+                      
+                      <li class="save map-type__button map-type__empty"></li> 
+  
+  
+                      <li class="tool-close-li">
+                          <div class="tool-close"><button type="button" class="button-tool-close">도구접기</button></div>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+          <!-- <ul id="settingMenu">
+              <li class="setting map-type__button"><a href="#none"><span class="icon ico-setting"></span>초기설정</a></li>
+          </ul> -->
+  
+      </div>
+      <!-- //right-menu -->
+  
+
+
+    <!-- header pupup layer -->
+
+
+    <!-- 위치선택 -->
+    <div id="popup-localInfoStep1" class="ui-widget ui-widget-bottom" title="위치선택">
+        <div class="toggle-layer__title">
+            <span class="is-active">시/도</span><span>시/군/구</span><span>읍/면/동</span>
+        </div>
+        <div class="toggle-layer__body">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>서울시</td>
+                        <td>경기도</td>
+                        <td>인천시</td>
+                    </tr>
+                    <tr>
+                        <td>부산시</td>
+                        <td>대전시</td>
+                        <td>대구시</td>
+                    </tr>
+                    <tr>
+                        <td>울산시</td>
+                        <td>세종시</td>
+                        <td>광주시</td>
+                    </tr>
+                    <tr>
+                        <td>강원도</td>
+                        <td>충청북도</td>
+                        <td>충청남도</td>
+                    </tr>
+                    <tr>
+                        <td>경상북도</td>
+                        <td>경상남도</td>
+                        <td>전라북도</td>
+                    </tr>
+                    <tr>
+                        <td>전라남도</td>
+                        <td>제주도</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--// 위치선택 -->
+
+    <!-- 위치선택 -->
+    <div id="popup-localInfoStep2" class="ui-widget ui-widget-bottom" title="위치선택">
+        <div class="toggle-layer__title">
+            <span>시/도</span><span class="is-active">시/군/구</span><span>읍/면/동</span>
+        </div>
+        <div class="toggle-layer__body">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>서울시</td>
+                        <td>경기도</td>
+                        <td>인천시</td>
+                    </tr>
+                    <tr>
+                        <td>부산시</td>
+                        <td>대전시</td>
+                        <td>대구시</td>
+                    </tr>
+                    <tr>
+                        <td>울산시</td>
+                        <td>세종시</td>
+                        <td>광주시</td>
+                    </tr>
+                    <tr>
+                        <td>강원도</td>
+                        <td>충청북도</td>
+                        <td>충청남도</td>
+                    </tr>
+                    <tr>
+                        <td>경상북도</td>
+                        <td>경상남도</td>
+                        <td>전라북도</td>
+                    </tr>
+                    <tr>
+                        <td>전라남도</td>
+                        <td>제주도</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--// 위치선택 -->
+
+    <!-- 위치선택 -->
+    <div id="popup-localInfoStep3" class="ui-widget ui-widget-bottom" title="위치선택">
+        <div class="toggle-layer__title">
+            <span>시/도</span><span>시/군/구</span><span class="is-active">읍/면/동</span>
+        </div>
+        <div class="toggle-layer__body">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>서울시</td>
+                        <td>경기도</td>
+                        <td>인천시</td>
+                    </tr>
+                    <tr>
+                        <td>부산시</td>
+                        <td>대전시</td>
+                        <td>대구시</td>
+                    </tr>
+                    <tr>
+                        <td>울산시</td>
+                        <td>세종시</td>
+                        <td>광주시</td>
+                    </tr>
+                    <tr>
+                        <td>강원도</td>
+                        <td>충청북도</td>
+                        <td>충청남도</td>
+                    </tr>
+                    <tr>
+                        <td>경상북도</td>
+                        <td>경상남도</td>
+                        <td>전라북도</td>
+                    </tr>
+                    <tr>
+                        <td>전라남도</td>
+                        <td>제주도</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--// 위치선택 -->
+
+
+    <!-- 피해자 정보 -->
+    <!-- 2022.11.03 : add : ui-widget-badpeople 클래스 추가(뒤 배경 변경 시 필요)
+        2022.11.09 : add : 피해자 정보 레이어 추가 
+    회색 변경 시 : .ui-dialog .ui-widget-people (ui-widget-badpeople  클래스 제거 해주세요)-->
+    <div class="ui-dialog display--none">
+        <div class="ui-widget ui-widget-people height--full ui-widget-fixed " title="피부착자 찾기" >
+            <div class="ui-widget-people__inner height--auto">
+                <div class="profile">
+                    <div class="profile__info-close">
+                        <button type="button" class="close-button"></button>
+                    </div>
+                    <div class="profile__photo">
+                        <div class="profile__photo__watch  watch-status--pink">
+                            <!--
+                            <div class="profile__photo__watch watch-status--blue">집중II</div>
+                            <div class="profile__photo__watch watch-status--blue">집중III</div>
+                            <div class="profile__photo__watch watch-status--blue">집중IV</div>
+                            <div class="profile__photo__watch watch-status--red">전담관리</div>
+                            <div class="profile__photo__watch watch-status--gray">가해제</div>
+                            <div class="profile__photo__watch watch-status--pink">안전</div>
+                            -->
+                            <div class="profile-image-wrap">
+                                <!-- DD : 이미지 에러시 .profile-image 에 is-error 클래스값 추가 -->
+                                <a href="" class="profile-image is-error">
+                                    <img src="./assets/images/_dummy/profile .png" alt="" class="profile-image__img vehicle-image__img"
+                                        onerror="this.parentNode.className += ' is-error';">
+                                </a>
+                            </div>
+                            <div class="watch-status">안전</div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="profile__info">
+                        <div class="profile__info__inner">
+                            <div class="profile__info-title">
+                                <h3 class="profile__info-title__name">피해자</h3>
+                            </div>
+                            <div class="people__name-sub">(남) 1952-06-12</div>
+                            <div class="people-battery-wrap">
+                                <!-- 
+                            class 구분 
+                            0~20%미만 :: .percent-under__10, 
+                            20%이상~40%미만 :: .percent-under__30,
+                            40%이상~60%미만 :: .percent-under__50, 
+                            60%이상~80%미만 :: .percent-under__70, 
+                            80%이상~ :: .percent-under__90
+                            -->
+                                <div class="people-battery">
+                                    <div class="people-battery__inner percent-under__10">
+
+                                        <div class="people-battery__line">
+                                            <span></span>
+                                        </div>
+                                        <div class="people-battery__percent ">10%</div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="p-0-10-20-10">
+                    <div class="table-list">
+                        <!-- div class="no-data">
+                            <p>데이터가 없습니다.</p>
+                        </div -->
+                        <table>
+                            <!-- 2022.08.11 col width값 추가 -->
+                            <colgroup>
+                                <col style="width:90px">
+                            </colgroup>
+                            <!-- //2022.08.11 col width값 추가 -->
+                            <tbody>
+                                
+                                <tr>
+                                    <th>연락처</th>
+                                    <td>010-0000-0000</td>
+                                </tr>
+                                <tr>
+                                    <th>장치 ID</th>
+                                    <td>123456</td>
+                                </tr>
+                                <!-- 2022.11.03 : add : 장치 유형 추가 -->
+                                <tr>
+                                    <th>장치 유형</th>
+                                    <td>부착장치(’20년)</td>
+                                </tr>
+                                <tr>
+                                    <th>측위</th>
+                                    <td> <span class="ui-badge ui-badge-positioning">H</span>2022-01-01 00:00:00
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>측위 주기</th>
+                                    <td>20분</td>
+                                </tr>
+
+                                <tr>
+                                    <th>현위치(신)</th>
+                                    <td>서울특별시동대문구 한천로 123</td>
+                                </tr>
+                                <tr>
+                                    <th>현위치(구)</th>
+                                    <td>서울특별시동대문구 휘경동00</td>
+                                </tr>
+                                <tr>
+                                    <th>특이사항</th>
+                                    <td>특이사항 내용이 입력된 경우 이곳에 출력됩니다.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <table class="mat-20">
+                            <!-- 2022.08.11 col width값 추가 -->
+                            <colgroup>
+                                <col style="width:90px">
+                            </colgroup>
+                            <!-- //2022.08.11 col width값 추가 -->
+                            <tbody>
+                                
+                                
+                                <tr>
+                                    <th>SMS 발송</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="ui-input-block is-inputed">
+                                            <textarea class="ui-input input-height-small-regular" title="title"></textarea>
+                                        </div>
+
+                                        <div class="ui-buttons ui-buttons--right mat-10 mab-7">
+                                            <ul class="ui-buttons__list">
+                                                <li class="ui-buttons__item">
+                                                    <button type="button" class="ui-button ui-basic-button ui-basic-button--width-auto ui-basic-button--normal ui-basic-button--height-18">취소</button>                                                </li>
+                                                <li class="ui-buttons__item">
+                                                    <button type="button" class="ui-button ui-basic-button ui-basic-button--width-auto ui-basic-button--senary ui-basic-button--height-18">발송</button>                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- //피해자 정보 -->
+    
+
+    </body>
+
+
+
+
+    <!-- jquery -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/timepicker.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/tableHeadFixer.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+
+    <script>
+        // 220811 timepick 적용
+        $(document).ready(function () {
+            $(".ui-input-block--time input").timepicker({
+                  timeFormat: "%H:%i",
+            });
+            $(".ui-input-block--time-small input").timepicker({
+              timeFormat: "%H시",
+            });
+            //2022.11.09 : add : 클릭한 핀 피해자 정보 출력 관련 스크립트 추가
+            $(".marker-dialog").click(function(){
+                $(".ui-dialog").removeClass("display--none");
+            });
+
+            $(".close-button").click(function(){
+                $(".ui-dialog").addClass("display--none");
+            });
+
+        });
+
+        //2022.08.31 : add : 설정 초기화 스크립트 추가
+        $(function(){
+            $(".resetFilter").click(function(){
+                var resetFilterList = $('.areaSetting .ui-radio-block').find("input[type='radio']");
+                resetFilterList.prop("checked", false);
+            })
+        })
+
+
+
+    </script>
+
+
+
+
+</html>

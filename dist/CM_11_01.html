@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>법무부 - u Guard</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/jquery.timepicker.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- 2021.10.18 : mod : .layout-wrap 에 layout-wrap--large 클래스 값 제거 -->
+        <div class="layout-wrap">
+
+            <div class="popup-header popup-header-top">
+                <div class="popup-header__inner">
+
+                    <div class="display-flex align-items-center">
+
+                        <div class="menutype">
+                            <div class="menutype__inner">
+                                <div class="board-detail-wrap js-ui-tab-panel js-situation-management-tab"
+                                    role="tablist">
+                                    <div class="board-tab">
+                                        <ul class="board-tab__list">
+                                            <li class="board-tab__item">
+                                                <a href="" class="board-tab__link js-tabpanel-active">수동관제</a>
+                                                <!-- 비활성화 상태일때 js-tabpanel-disabled로 바꿔주세요 -->
+                                            </li>
+                                            <li class="board-tab__item">
+                                                <a href="" class="board-tab__link">AI자동관제</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="top-box">
+                            <div class="top-box__inner">
+                                <div class="top-box-item">
+                                    <div class="top-box__title">
+                                        타이머
+                                    </div>
+                                    <div class="top-box__content">
+                                        <dd class="setting-board__val">
+                                            <div class="form-flex">
+                                                <div class="form-flex-cell">
+                                                    <div class="ui-input-block input-width-mini">
+                                                        <input type="number" class="ui-input" title="타이머 시간" value="20"
+                                                            pattern="\d*">
+                                                    </div>
+                                                </div>
+                                                <div class="form-flex-cell">초</div>
+                                                <div class="form-flex-cell form-flex-cell--button">
+                                                    <button type="button"
+                                                        class="ui-button ui-basic-button ui-basic-button--small">적용</button>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </div>
+                                </div>
+                                <div class="top-box-item">
+                                    <div class="top-box__title">
+                                        고위험관제
+                                    </div>
+                                    <div class="top-box__content ul-tooltip-parent">
+                                        고위험 중앙그룹, 고위험 대전1그룹...
+                                        <div class="ul-tooltip">
+                                            고위험 중앙그룹, 고위험 대전1그룹, 고위험 대전2그룹
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="top-box-item">
+                                    <div class="top-box__title">
+                                        그룹 및 권역
+                                    </div>
+                                    <div class="top-box__content ul-tooltip-parent">
+                                        중앙그룹[전체], 대전그룹[5명] 8권역 9권역...
+                                        <div class="ul-tooltip">
+                                            중앙그룹[전체] <br> 대전그룹[5명]<br> 8권역<br> 9권역<br> 10권역
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="top-box-item">
+                                    <div class="top-box__title">
+                                        보호관찰소
+                                    </div>
+                                    <div class="top-box__content ul-tooltip-parent">
+                                        논산,부산...
+                                        <div class="ul-tooltip">
+                                            논산 <br> 부산<br>상주<br>서산
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="ml-auto d-flex">
+                            <ul class="ui-buttons__list">
+                                <li class="ui-buttons__item">
+                                    <a href=""
+                                        class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-new-window">관제설정</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="contents-wrap">
+                <!-- 2021.10.18 : mod : .page-content 에 page-contents--control-screen 클래스값 제거 -->
+                <div class="page-contents">
+
+                    <div class="page-header__2 d-flex align-items-center">
+
+                        <div class="ui-linktab mr_50">
+                            <div class="ui-linktab__inner">
+                                <ul>
+                                    <li><a href="">실시간 경보현황</a></li>
+                                    <li class="is-active"><a href="">경보 이력</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul class="ui-buttons__list">
+                            <li class="ui-buttons__item">
+                                <a href=""
+                                    class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-new-window">특별관제</a>
+                            </li>
+                            <li class="ui-buttons__item">
+                                <a href=""
+                                    class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-new-window">부정장소</a>
+                            </li>
+                            <li class="ui-buttons__item">
+                                <a href=""
+                                    class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-new-window">신호실종</a>
+                            </li>
+                            <li class="ui-buttons__item">
+                                <a href=""
+                                    class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-new-window">임시보관</a>
+                            </li>
+                        </ul>
+
+                        <div class="ui-check-list ml-auto">
+                            <ul class="ui-check-list__list">
+                                <li class="ui-check-list__item">
+                                    <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="checkList1-1">
+                                        <label for="checkList1-1" class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">내용 잠금</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="ui-check-list__item">
+                                    <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="checkList1-2">
+                                        <label for="checkList1-2" class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">음소거</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="ui-check-list__item">
+                                    <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="checkList1-3">
+                                        <label for="checkList1-3" class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">GIS 잠금</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="ui-check-list__item">
+                                    <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="checkList1-4">
+                                        <label for="checkList1-4" class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">생활패턴 포함</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="ui-check-list__item">
+                                    <div class="ui-checkbox-block">
+                                        <input type="checkbox" class="ui-checkbox" id="checkList1-5">
+                                        <label for="checkList1-5" class="ui-label">
+                                            <span class="ui-checkbox-object"></span>
+                                            <span class="ui-label__text">테스트 사용자</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ui-button">
+                            <ul class="ui-buttons__list">
+                                <li class="ui-buttons__item">
+                                    <button type="button"
+                                        class="ui-button ui-basic-button ui-basic-button--auto ui-basic-button--secondary">새로고침</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="tile-layout">
+                        <div class="tile-layout__inner align-items-stretch">
+
+                            <div class="tile-layout__row background-white">
+                                <div class="tile-layout__cell">
+                                    <!-- 2022.10.11 : add: 클래스 radius-6 추가 -->
+                                    <section class="board-detail-wrap radius-6">
+
+                                        <form action="">
+                                            <section class="search-bar border-bottom">
+                                                <h2 class="for-a11y">검색</h2>
+                                                <div class="search-bar__left">
+                                                    <div class="search-bar__row">
+                                                        <dl class="search-bar__item">
+                                                            <dt class="search-bar__key">경보구분</dt>
+                                                            <!-- 2022.11.01 : mod: select box로 변경 -->
+                                                            <dd class="search-bar__val">
+                                                                <div class="form-flex">
+                                                                    <div class="ui-select-block flex ui-select-block--width-123">
+                                                                        <select class="ui-select" title="title">
+                                                                            <option value="">위험경보</option>
+                                                                            <option value="">주의경보</option>
+                                                                            <option value="">참조경보</option>
+                                                                            <option value="">기타정보</option>
+                                                                            <option value="">집중관제정보</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="search-bar__item search-bar__item--flexible">
+                                                            <dt class="search-bar__key">경보내용</dt>
+                                                            <dd class="search-bar__val">
+                                                                <div class="form-flex">
+                                                                    <div
+                                                                        class="ui-select-block ui-select-block--width-160">
+                                                                        <select class="ui-select" title="title">
+                                                                            <option value="">전체</option>
+                                                                            <option value="">option 2</option>
+                                                                            <option value="">option 3</option>
+                                                                            <option value="">option 4</option>
+                                                                            <option value="">option 5</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="search-bar__row">
+                                                        <dl class="search-bar__item flex">
+                                                            <dt class="search-bar__key">발생일시</dt>
+                                                            <dd class="search-bar__val flex">
+                                                                <div class="form-flex flex">
+                                                                    <div class="form-flex js-datepicker-range">
+                                                                        <div class="form-flex-cell">
+                                                                            <div
+                                                                                class="ui-input-block ui-input-block--date input-width-date">
+                                                                                <input type="text"
+                                                                                    class="ui-input js-datepicker-range__min"
+                                                                                    title="시작 날짜" value="2021-12-08">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                                            <div
+                                                                                class="ui-input-block input-width-date ui-input-block--time">
+                                                                                <input type="text" class="ui-input"
+                                                                                    title="" value="00:00">
+
+                                                                            </div>
+
+                                                                        </div>
+
+
+
+                                                                        <div
+                                                                            class="form-flex-cell form-flex-cell--date-hyphen">
+                                                                            -</div>
+                                                                        <div class="form-flex-cell">
+                                                                            <div
+                                                                                class="ui-input-block ui-input-block--date input-width-date">
+                                                                                <input type="text"
+                                                                                    class="ui-input js-datepicker-range__max"
+                                                                                    title="마지막 날짜" value="2021-12-10">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time">
+                                                                            <div
+                                                                                class="ui-input-block input-width-date ui-input-block--time">
+                                                                                <input type="text" class="ui-input"
+                                                                                    title="" value="00:00">
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                        <!-- 2022.08.31 : del : 검색 조건 중, 최근경보 삭제 -->
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="search-bar__row">
+                                                        <dl class="search-bar__item">
+                                                            <dt class="search-bar__key">처리상태</dt>
+                                                            <dd class="search-bar__val">
+                                                                <div class="form-flex">
+                                                                    <div
+                                                                        class="ui-select-block flex ui-select-block--width-123">
+                                                                        <select class="ui-select" title="title">
+                                                                            <option value="">종료</option>
+                                                                            <option value="">option 2</option>
+                                                                            <option value="">option 3</option>
+                                                                            <option value="">option 4</option>
+                                                                            <option value="">option 5</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="search-bar__item">
+                                                            <dt class="search-bar__key">피부착자</dt>
+                                                            <dd class="search-bar__val">
+                                                              <div
+                                                                class="header-search header-search--filter"
+                                                              >
+                                                                <div
+                                                                  class="ui-input-block header-search__input input-width-120"
+                                                                >
+                                                                  <input
+                                                                    type="text"
+                                                                    class="ui-input"
+                                                                    title=""
+                                                                    placeholder=""
+                                                                  />
+                                                                </div>
+                                                                <button
+                                                                  type="button"
+                                                                  class="ui-button header-search__submit"
+                                                                >
+                                                                  <span class="for-a11y">검색</span>
+                                                                </button>
+                                                              </div>
+                                                            </dd>
+                                                        </dl>
+                                                        <dl class="search-bar__item">
+                                                            <dt class="search-bar__key">처리자</dt>
+                                                            <dd class="search-bar__val">
+                                                                <div class="ui-radio-block d-flex">
+                                                                    <input type="radio" class="ui-radio" id="radio1">
+                                                                    <label for="radio1" class="ui-label">
+                                                                      <span class="ui-radio-object"></span>
+                                                                      <span class="ui-label__text">집행자</span>
+                                                                    </label>
+
+                                                                    <input type="radio" class="ui-radio" id="radio2" checked="">
+                                                                    <label for="radio2" class="ui-label  mal-10">
+                                                                      <span class="ui-radio-object"></span>
+                                                                      <span class="ui-label__text">이관처리자</span>
+                                                                    </label>
+                                                                    
+                                                                <div
+                                                                  class="ui-input-block header-search__input input-width-120 mal-10"
+                                                                >
+                                                                  <input
+                                                                    type="text"
+                                                                    class="ui-input"
+                                                                    title=""
+                                                                    placeholder=""
+                                                                  />
+                                                                </div>
+                                                                <button
+                                                                  type="button"
+                                                                  class="ui-button header-search__submit"
+                                                                >
+                                                                  <span class="for-a11y">검색</span>
+                                                                </button>
+                                                              
+                                                                  </div>
+                                                            </dd>
+                                                            <dd class="search-bar__val">
+                                                              
+                                                            </dd>
+                                                          </dl>
+                                                    </div>
+                                                </div>
+                                                <div class="search-bar__right">
+                                                    <div class="ui-buttons ui-buttons--full">
+                                                        <ul
+                                                            class="ui-buttons__list ui-buttons__list--width-73 ui-buttons__list-column">
+                                                            <li class="ui-buttons__item">
+                                                                <button type="button"
+                                                                    class="ui-button ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                                                            </li>
+                                                            <li class="ui-buttons__item">
+                                                                <button type="submit"
+                                                                    class="ui-button ui-basic-button ui-basic-button--width-73 ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search ">조회</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </form>
+
+
+
+                                        <div class="board-content">
+                                            <div class="mb-10">
+                                                <div class="d-flex align-items-end">
+                                                    <ul class="ui-buttons__list ui-buttons__list-left">
+                                                        <li class="ui-buttons__item">
+                                                            <button type="button"
+                                                                class="ui-button ui-basic-button ui-basic-button--auto ui-basic-button--secondary">다운로드</button>
+                                                        </li>
+                                                        <li class="ui-buttons__item">
+                                                            <a href=""
+                                                                class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-new-window">경보처리</a>
+                                                        </li>
+                                                        <li class="ui-buttons__item">
+                                                            <a href=""
+                                                                class="ui-basic-button ui-basic-button--width-auto ui-basic-button--quinary">인쇄</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="total-count ml-auto">
+                                                        위반누적횟수 <span class="total-count-num">33</span> (위험 <span
+                                                            class="total-count-num">30</span> / 주의 <span
+                                                            class="total-count-num">3</span>)
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="ui-board-table" id="boardGrid" style="height: 500px;"></div>
+
+                                            <!-- <div
+                                                class="board-detail-table board-detail-table-layout-auto board-detail-table--th-line board-detail-table--th--bottom-line board-detail-table--padding-medium board-detail-table--hover">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width:45px;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>선택</th>
+                                                            <th>피부착자</th>
+                                                            <th>경보일시</th>
+                                                            <th>경보구분</th>
+                                                            <th>경보내용</th>
+                                                            <th>처리상태</th>
+                                                            <th>집행자</th>
+                                                            <th>소견</th>
+                                                            <th>이관처리자</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div
+                                                                    class="ui-checkbox-block text-center ui-checkbox-block__width-15 p-0">
+                                                                    <input type="checkbox" class="ui-checkbox"
+                                                                        id="checkbox1">
+                                                                    <label for="checkbox1" class="ui-label">
+                                                                        <span class="ui-checkbox-object"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </td>
+                                                            <td>홍길동</td>
+                                                            <td>2022-05-19 00:00:00</td>
+                                                            <td>위험경보</td>
+                                                            <td>출입금지위반</td>
+                                                            <td>종료</td>
+                                                            <td>홍모모</td>
+                                                            <td>준수</td>
+                                                            <td>박모모</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div> -->
+
+                                            <div class="board-bottom board-bottom--tab-panel border-none px-10">
+                                                <div class="board-bottom__left">
+                                                    <p class="total-text">총<span
+                                                            class="total-text__count">123,124,124</span>건
+                                                    </p>
+                                                </div>
+                                                <div class="board-bottom__right">
+                                                    <div class="pagination">
+                                                        <button type="button"
+                                                            class="ui-button pagination__arrow pagination__arrow--start"
+                                                            disabled="">
+                                                            <span class="for-a11y">처음 페이지</span>
+                                                        </button>
+                                                        <button type="button"
+                                                            class="ui-button pagination__arrow pagination__arrow--prev"
+                                                            disabled="">
+                                                            <span class="for-a11y">이전 페이지</span>
+                                                        </button>
+                                                        <div class="pagination__fraction">
+                                                            <div class="pagination__fraction-currunt">
+                                                                <div class="ui-input-block">
+                                                                    <input type="text" class="ui-input" title="현재 페이지"
+                                                                        value="1">
+                                                                </div>
+                                                            </div>
+                                                            <div class="pagination__fraction-slash">/</div>
+                                                            <div class="pagination__fraction-total" title="전체 페이지 수">128
+                                                            </div>
+                                                        </div>
+                                                        <button type="button"
+                                                            class="ui-button pagination__arrow pagination__arrow--next">
+                                                            <span class="for-a11y">다음 페이지</span>
+                                                        </button>
+                                                        <button type="button"
+                                                            class="ui-button pagination__arrow pagination__arrow--end">
+                                                            <span class="for-a11y">마지막 페이지</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </section>
+                                </div>
+                            </div>
+
+
+                            <!-- 경보처리 정보 -->
+                            <div class="tile-layout__row tile-layout__fix--width-673 background-white flex-none ">
+                                <div class="tile-layout__cell">
+
+                                    <!-- 경보 선택 전 -->
+                                    <div class="p-20  no-data--alarm" style="display: none;">
+                                        경보를 선택하시면, 처리 내역을 확인하실 수 있습니다.
+                                    </div>
+                                    <!-- //경보 선택 전 -->
+
+                                    <!-- 경보 선택 후 -->
+                                    <div class="p-20  ">
+                                        <div class="title--with-button">
+                                            <div class="title-14">경보처리 정보</div>
+                                            <div class="ui-buttons--left ml-auto">
+                                                <ul class=" ui-buttons__list ui-buttons__list--width-65">
+                                                    <li class="ui-buttons__item">
+                                                        <button type="button"
+                                                            class="ui-button ui-basic-button ui-basic-button--senary">수정</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="tile-layout__inner">
+                                            <div
+                                                class="tile-layout__row tile-layout__fix box-shadow-none border-radius-0">
+
+                                                <div class="board-detail-table__title--with-button d-flex">
+                                                    <div class="board-detail-table__title mt-0">경보처리목록</div>
+                                                </div>
+                                                <div
+                                                    class="tile-layout__row ui-scroller tile-layout__row--width-202 border-radius-0">
+                                                    <div class="alarm-handling-wrap ui-scroller" style="height: 595px;">
+                                                        <ul class="alarm-handling-list">
+                                                            <li class="alarm-handling-item">
+                                                                <p class="alarm-handling-item__type">주의 | 출입금지위반</p>
+                                                                <p class="alarm-handling-item__time">2022-06-15 00:00:00
+                                                                </p>
+                                                                <p class="alarm-handling-item__status">종료</p>
+                                                            </li>
+                                                            <li class="alarm-handling-item">
+                                                                <p class="alarm-handling-item__type">주의 | 출입금지위반</p>
+                                                                <p class="alarm-handling-item__time">2022-06-15 00:00:00
+                                                                </p>
+                                                                <p class="alarm-handling-item__status">종료</p>
+                                                            </li>
+                                                            <li class="alarm-handling-item">
+                                                                <p class="alarm-handling-item__type">주의 | 출입금지위반</p>
+                                                                <p class="alarm-handling-item__time">2022-06-15 00:00:00
+                                                                </p>
+                                                                <p class="alarm-handling-item__status">종료</p>
+                                                            </li>
+                                                            <li class="alarm-handling-item">
+                                                                <p class="alarm-handling-item__type">주의 | 출입금지위반</p>
+                                                                <p class="alarm-handling-item__time">2022-06-15 00:00:00
+                                                                </p>
+                                                                <p class="alarm-handling-item__status">종료</p>
+                                                            </li>
+                                                            <li class="alarm-handling-item">
+                                                                <p class="alarm-handling-item__type">주의 | 출입금지위반</p>
+                                                                <p class="alarm-handling-item__time">2022-06-15 00:00:00
+                                                                </p>
+                                                                <p class="alarm-handling-item__status">종료</p>
+                                                            </li>
+                                                            <li class="alarm-handling-item">
+                                                                <p class="alarm-handling-item__type">주의 | 출입금지위반</p>
+                                                                <p class="alarm-handling-item__time">2022-06-15 00:00:00
+                                                                </p>
+                                                                <p class="alarm-handling-item__status">종료</p>
+                                                            </li>
+                                                            <li class="alarm-handling-item">
+                                                                <p class="alarm-handling-item__type">주의 | 출입금지위반</p>
+                                                                <p class="alarm-handling-item__time">2022-06-15 00:00:00
+                                                                </p>
+                                                                <p class="alarm-handling-item__status">종료</p>
+                                                            </li>
+                                                            <li class="alarm-handling-item">
+                                                                <p class="alarm-handling-item__type">주의 | 출입금지위반</p>
+                                                                <p class="alarm-handling-item__time">2022-06-15 00:00:00
+                                                                </p>
+                                                                <p class="alarm-handling-item__status">종료</p>
+                                                            </li>
+                                                            <li class="alarm-handling-item">
+                                                                <p class="alarm-handling-item__type">주의 | 출입금지위반</p>
+                                                                <p class="alarm-handling-item__time">2022-06-15 00:00:00
+                                                                </p>
+                                                                <p class="alarm-handling-item__status">종료</p>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tile-layout__row box-shadow-none ml-20">
+                                                <div class="tile-layout__row-content">
+                                                    <div class="board-detail-table__title mt-0">관제센터 처리 정보</div>
+                                                    <div class="dot-list">
+                                                        <ul class="dot-list__list">
+                                                            <li class="dot-list__item">이행일시 : 2022-07-01 00:00</li>
+                                                            <li class="dot-list__item">처리상태 : 보호관찰담당자 이관</li>
+                                                            <li class="dot-list__item">이관일시 : 2022-07-01 00:00</li>
+                                                            <li class="dot-list__item">경찰출동여부 : 출동</li>
+                                                            <li class="dot-list__item">경찰출동 최초요청시각 : 2022-07-01 00:00
+                                                            </li>
+                                                            <li class="dot-list__item">경찰 현장 도착시각 : 2022-07-01 00:00
+                                                            </li>
+                                                            <li class="dot-list__item">조치내용 <br>
+                                                                <div class="dot-list__item-content">
+                                                                    경보 발생 시, 대구광역시 동구 불로동 1159에서 G 측위 <br>
+                                                                    부착장치 22%<br>
+                                                                    00:00 피부착자 휴대전화로 통화, 경보 사실을 고지결과 "" 라고 답변함<br>
+                                                                    피부착자 주거지에서 약 4km 거리임<br>
+                                                                    인근에 새솔어린이집, 쑥쑥어린이집 등이 위치함<br>
+                                                                    담당직원 홍길동에게 상황 전파 및 이관 조치함<br>
+                                                                </div>
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tile-layout__row-content">
+                                                    <div class="board-detail-table__title">보호관찰소 처리 정보</div>
+                                                    <div class="dot-list">
+                                                        <ul class="dot-list__list">
+                                                            <li class="dot-list__item">경보처리 구분 : 전담직원</li>
+                                                            <li class="dot-list__item">경보발생 원인 : 과실</li>
+                                                            <li class="dot-list__item">경보처리 방법 : 전화지도</li>
+                                                            <li class="dot-list__item">공조기관 요청 : 요청</li>
+                                                            <li class="dot-list__item">현장출동 도착시각 : 2022-07-01 00:00</li>
+                                                            <li class="dot-list__item">이관경보 복원시각 : 2022-07-01 00:00</li>
+                                                            <li class="dot-list__item">처리시각 : 2022-07-01 00:00</li>
+                                                            <li class="dot-list__item">초지내용 : 이동중 발생</li>
+                                                            <li class="dot-list__item">전자장치 교체여부 : 교체 (부착)</li>
+                                                            <li class="dot-list__item">소견 : 위반</li>
+                                                            <li class="dot-list__item">조치내용
+                                                                <div class="dot-list__item-content">보호관찰관이 입력한 조치내용이
+                                                                    출력됩니다. 보호관찰관이 입력한 조치
+                                                                    내용이 출력됩니다. </div>
+                                                            </li>
+                                                            <li class="dot-list__item">기타
+                                                                <div class="dot-list__item-content">보호관찰관이 입력한 조치내용이
+                                                                    출력됩니다. 보호관찰관이 입력한 조치
+                                                                    내용이 출력됩니다. </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 경보 선택 후 -->
+
+                                </div>
+
+                            </div>
+                            <!-- //경보처리 정보 -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- script -->
+        <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+        <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+        <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+        <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/timepicker.js"></script>
+        <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+        <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+        <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+        <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+        <script type="text/javascript">
+            var datagrid;
+            var SBGridProperties = {};
+            // Data
+            // Data
+            /*2022.10.26 : mod : 이관 구분 추가, 크기 단위 변경 */
+            var grid_data = [{
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+                {
+                    cell_1: '홍길동',
+                    cell_2: '2022-05-19 00:00:00',
+                    cell_3: '위험경보',
+                    cell_4: '출입금지위반',
+                    cell_5: '종료',
+                    cell_6: '상황통보',
+                    cell_7: '홍모모',
+                    cell_8: '준수',
+                    cell_9: '박모모',
+                },
+            ];
+
+            function createGrid() {
+                SBGridProperties.parentid = 'boardGrid';
+                SBGridProperties.id = 'datagrid';
+                SBGridProperties.jsonref = 'grid_data';
+                SBGridProperties.extendcol = 4;
+                SBGridProperties.fixedrowheight = '25';
+                SBGridProperties.rowheight = 25;
+                SBGridProperties.width = '100%';
+                SBGridProperties.height = '100%';
+                SBGridProperties.emptyrecords = '조회 결과가 없습니다.';
+                SBGridProperties.columns = [{
+                        caption: ['선택'],
+                        ref: 'check',
+                        width: '5%',
+                        type: 'checkbox',
+                        sortable: false,
+                        style: 'text-align: center;',
+                        fixedstyle: 'text-align: left !important;',
+                    },
+                    {
+                        caption: ['피부착자'],
+                        ref: 'cell_1',
+                        width: '10%',
+                    },
+                    {
+                        caption: ['경보일시'],
+                        ref: 'cell_2',
+                        width: '16%',
+                    },
+                    {
+                        caption: ['경보구분'],
+                        ref: 'cell_3',
+                        width: '10%',
+                    },
+                    {
+                        caption: ['경보내용'],
+                        ref: 'cell_4',
+                        width: '16%',
+                    },
+                    {
+                        caption: ['처리상태'],
+                        ref: 'cell_5',
+                        width: '16%',
+                    },
+                    {
+                        caption: ['이관구분'],
+                        ref: 'cell_6',
+                        width: '10%',
+                    },
+                    {
+                        caption: ['집행자'],
+                        ref: 'cell_7',
+                        width: '10%',
+                    },
+                    {
+                        caption: ['소견'],
+                        ref: 'cell_8',
+                        width: '9%',
+                    },
+                    {
+                        caption: ['이관처리자'],
+                        ref: 'cell_9',
+                        width: '12%',
+                    },
+                ];
+                datagrid = _SBGrid.create(SBGridProperties);
+                datagrid.bind('aftersort', function () {
+                    SBCustomFunction.aftersort(datagrid);
+                });
+                //datagrid.setFixedcellcheckbox(0, 0);
+                datagrid.sortColumn(0, 'desc');
+                datagrid.sortingIcon();
+            }
+
+            $(function () {
+                createGrid();
+            });
+        </script>
+
+        <script>
+            // 220811 timepick 적용
+            $(document).ready(function () {
+                $(".ui-input-block--time input").timepicker({
+                    timeFormat: "%H:%i",
+                });
+            });
+        </script>
+        <!-- //script -->
+</body>
+
+</html>

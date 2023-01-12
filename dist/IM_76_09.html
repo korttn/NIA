@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="layout-wrap">
+            <!-- fix top area -->
+            <div class="fix-top-wrap">
+                <!-- header -->
+                <header class="header">
+                    <!-- GNB -->
+                    <nav class="gnb">
+                        <div class="gnb__meun-click">
+                            <!-- 220620 click 시 gnb 에 class active 추가되고, 메뉴 펼쳐짐 -->
+                            <div class="gnb__meun-click--icon"></div>
+                            <p>메뉴</p>
+                            <h2 class="for-a11y">Global Navigation Bar</h2>
+                        </div>
+                        <div class="gnb__meun-wrap">
+                            <div class="gnb__scroller">
+                                <ul class="gnb__list">
+                                    <!-- 하위 메뉴 있을시에 is-depth2 클래스 값 추가 -->
+                                    <li class="gnb__item gnb__item--1 is-depth2" data-gnb="대시보드">
+                                        <a href="" class="gnb__link">대시보드</a>
+                                        <section class="gnb-depth__section" data-gnb-contents="대시보드">
+                                            <h3 class="gnb-depth__title gnb-depth__title--1">대시보드</h3>
+                                            <ul class="gnb-depth__list">
+                                                <li class="gnb-depth__item">
+                                                    <!-- 하위 메뉴 있을시에 is-depth3 클래스 값 추가 -->
+                                                    <div class="gnb-depth__head is-depth3">
+                                                        <a href="" class="gnb-depth__link">대시보드 메뉴 1</a>
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <h4 class="gnb-depth__sub__title" data-gnb-contents="대시보드 메뉴 1">
+                                                            대시보드 메뉴 1</h4>
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">대시보드 메뉴 1 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">대시보드 메뉴 1 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="gnb-depth__item">
+                                                    <div class="gnb-depth__head">
+                                                        <a href="" class="gnb-depth__link">대시보드 메뉴 2</a>
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <h4 class="gnb-depth__sub__title" data-gnb-contents="대시보드 메뉴 2">
+                                                            대시보드 메뉴 2</h4>
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">대시보드 메뉴 2 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">대시보드 메뉴 2 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </li>
+
+                                    <li class="gnb__item gnb__item--2 is-depth2" data-gnb="피부착자">
+                                        <a href="" class="gnb__link">피부착자</a>
+                                        <section class="gnb-depth__section" data-gnb-contents="피부착자">
+                                            <h3 class="gnb-depth__title gnb-depth__title--2">피부착자</h3>
+                                            <ul class="gnb-depth__list">
+                                                <li class="gnb-depth__item">
+                                                    <div class="gnb-depth__head">
+                                                        <a href="" class="gnb-depth__link">피부착자 메뉴 1</a>
+
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <h4 class="gnb-depth__sub__title" data-gnb-contents="피부착자 메뉴 1">
+                                                            피부착자 메뉴 1</h4>
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">피부착자 메뉴 1 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">피부착자 메뉴 1 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="gnb-depth__item">
+                                                    <div class="gnb-depth__head">
+                                                        <a href="" class="gnb-depth__link">피부착자 메뉴 2</a>
+
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <h4 class="gnb-depth__sub__title" data-gnb-contents="피부착자 메뉴 2">
+                                                            피부착자 메뉴 2</h4>
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">피부착자 메뉴 2 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">피부착자 메뉴 2 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+
+                                    </li>
+                                    <li class="gnb__item gnb__item--3 is-depth2" data-gnb="상황관리">
+                                        <a href="" class="gnb__link">상황관리</a>
+                                        <section class="gnb-depth__section" data-gnb-contents="상황관리">
+                                            <h3 class="gnb-depth__title gnb-depth__title--3">상황관리</h3>
+                                            <ul class="gnb-depth__list">
+                                                <li class="gnb-depth__item">
+                                                    <div class="gnb-depth__head">
+                                                        <a href="" class="gnb-depth__link">상황관리 메뉴 1</a>
+
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <h4 class="gnb-depth__sub__title" data-gnb-contents="상황관리 메뉴 1">
+                                                            상황관리 메뉴 1</h4>
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">상황관리 메뉴 1 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">상황관리 메뉴 1 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </li>
+                                    <li class="gnb__item gnb__item--4" data-gnb="집중관제">
+                                        <a href="" class="gnb__link">집중관제</a>
+                                        <section class="gnb-depth__section" data-gnb-contents="집중관제">
+                                            <h3 class="gnb-depth__title gnb-depth__title--4">집중관제</h3>
+                                            <ul class="gnb-depth__list">
+                                                <li class="gnb-depth__item">
+                                                    <div class="gnb-depth__head">
+                                                        <a href="" class="gnb-depth__link">집중관제 메뉴 1</a>
+
+                                                    </div>
+                                                    <div class="gnb-depth__sub">
+                                                        <ul class="gnb-depth__sub-list">
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">집중관제 메뉴 1 - 1</a>
+                                                            </li>
+                                                            <li class="gnb-depth__sub-item">
+                                                                <a href="" class="gnb-depth__sub-link">집중관제 메뉴 1 - 2</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </li>
+                                    <li class="gnb__item gnb__item--5" data-gnb="상황관제">
+                                        <a href="" class="gnb__link">상황관제</a>
+                                    </li>
+                                    <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                                    <li class="gnb__item gnb__item--6 is-active" data-gnb="범죄예방">
+                                        <a href="" class="gnb__link">범죄예방</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--7" data-gnb="AI보호관찰">
+                                        <a href="" class="gnb__link">AI보호관찰</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--8" data-gnb="정보관리">
+                                        <a href="" class="gnb__link">정보관리</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--9" data-gnb="게시판">
+                                        <a href="" class="gnb__link">게시판</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--10" data-gnb="시스템">
+                                        <a href="" class="gnb__link">시스템</a>
+                                    </li>
+                                    <!-- 2022.01.07 : add : 메뉴 추가 -->
+                                    <li class="gnb__item gnb__item--11" data-gnb="접근보호관리">
+                                        <a href="" class="gnb__link">접근보호 관리</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--12" data-gnb="전자 장치">
+                                        <a href="" class="gnb__link">전자 장치</a>
+                                    </li>
+                                    <li class="gnb__item gnb__item--13" data-gnb="모바일 Uguard">
+                                        <a href="" class="gnb__link">모바일 Uguard</a>
+                                    </li>
+                                    <!-- //2022.01.07 : add : 메뉴 추가 -->
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- //GNB -->
+
+
+
+                    <h1 class="header__logo">
+                        <a href="" class="header__logo-link">
+                            <span class="for-a11y">법무부 - u Guard</span>
+                        </a>
+                    </h1>
+
+                    <!-- 2021.09.27 : add : 헤더 메뉴 추가 -->
+                    <nav class="header__nav">
+                        <h2 class="for-a11y">주요 메뉴</h2>
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="" class="header__nav-link">관제현황</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="" class="header__nav-link">상황관제</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="" class="header__nav-link">지도관제</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="" class="header__nav-link is-dropdown">현황/지원<i></i></a>
+                                <!-- 메가 메뉴를 2단 구조로 재배치 위해 class에 is-dropdown 추가  -->
+                                <div class="nav__dropdown-menu">
+                                    <div class="nav__dropdown-box">
+                                        <h5 class="nav__dropdown__title">현황</h5>
+                                        <ul class="nav__dropdown-item">
+                                            <li><a href="" class="nav__dropdown-link">경보현황</a></li>
+                                            <li><a href="" class="nav__dropdown-link">경보통계</a></li>
+                                            <li><a href="" class="nav__dropdown-link">CCTV 현황</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav__dropdown-box">
+                                        <h5 class="nav__dropdown__title">지원</h5>
+                                        <ul class="nav__dropdown-item">
+                                            <li><a href="" class="nav__dropdown-link">원격지원</a></li>
+                                            <li><a href="" class="nav__dropdown-link">시스템 문의 게시판</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- 2021.09.27 : add : 헤더 메뉴 추가 -->
+
+                    <div class="header__right">
+                        <div class="header-number">
+                            <p>시스템 문의 : 02-3407-6748</p>
+                        </div>
+
+                        <div class="header-search">
+                            <form action="">
+                                <div class="ui-input-block header-search__input">
+                                    <input type="text" class="ui-input" title="피부착자 검색" placeholder="피부착자 검색" />
+                                </div>
+                                <button type="submit" class="ui-button header-search__submit">
+                                    <span class="for-a11y">검색</span>
+                                </button>
+                            </form>
+                        </div>
+
+                        <p class="header__hello"><strong>홍길동</strong>님</p>
+
+
+                        <div class="header-dropdown header-dropdown--my js-ui-dropdown">
+                            <!-- 2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__tooltip"><span>내 정보</span></div>
+                            <!-- //2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__head">
+                                <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                                    <span class="for-a11y">
+                                        마이 메뉴
+                                        <span class="open-text">열기</span>
+                                        <span class="close-text">닫기</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="header-dropdown__layer js-ui-dropdown__layer">
+                                <section class="header-dropdown__contents">
+                                    <div class="header-dropdown__contents-head">
+                                        <h2 class="for-a11y">마이 메뉴</h2>
+                                        <p class="header-dropdown__name">시스템 관리자</p>
+                                        <p class="header-dropdown__latest-date">
+                                            최근 접속
+                                            <em>2021-07-16 14:53:20</em>
+                                        </p>
+                                    </div>
+                                    <div class="header-dropdown__body ui-scroller">
+                                        <div class="header-dropdown__body-inner">
+                                            <ul class="header-my">
+                                                <li class="header-my__item header-my__item--profile">
+                                                    <a href="" class="header-my__link">나의 정보</a>
+                                                </li>
+                                                <li class="header-my__item header-my__item--password">
+                                                    <a href="" class="header-my__link">비밀번호 변경</a>
+                                                </li>
+                                                <li class="header-my__item header-my__item--logout">
+                                                    <a href="" class="header-my__link">로그아웃</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="header-dropdown header-dropdown--alarm js-ui-dropdown">
+                            <!-- 2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__tooltip"><span>알림</span></div>
+                            <!-- //2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__head">
+                                <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                                    <span class="for-a11y">
+                                        알림 센터
+                                        <span class="open-text">열기</span>
+                                        <span class="close-text">닫기</span>
+                                    </span>
+                                    <span class="header-dropdown__count">10</span>
+                                </button>
+                            </div>
+                            <div class="header-dropdown__layer js-ui-dropdown__layer">
+                                <section class="header-dropdown__contents">
+                                    <div class="header-dropdown__contents-head">
+                                        <h2 class="header-dropdown__title">알림센터</h2>
+                                    </div>
+                                    <div class="header-dropdown__body ui-scroller">
+                                        <div class="header-dropdown__body-inner">
+                                            <!-- Case : 내용 없을 때 -->
+                                            <div class="header-dropdown__empty">
+                                                <p class="header-dropdown__empty-text">새로운 알림이 없습니다.</p>
+                                            </div>
+                                            <!-- //Case : 내용 없을 때 -->
+
+                                            <!-- Case : 내용 있을 때 -->
+                                            <ul class="header-alarm">
+                                                <li class="header-alarm__item">
+                                                    <div class="header-alarm__block">
+                                                        <div class="header-alarm__title">홍길동 면담정보</div>
+                                                        <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요
+                                                        </div>
+                                                        <div class="header-alarm__date">2021-07-30 00:00</div>
+                                                    </div>
+                                                    <button type="button" class="ui-button header-alarm__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-alarm__item">
+                                                    <div class="header-alarm__block">
+                                                        <div class="header-alarm__title">위하여 미묘한 구하지 그와 위하여서. 같지 이상은
+                                                            소금이라 방황하여도, 만천하의 것은 보라.</div>
+                                                        <div class="header-alarm__discription">위하여 미묘한 구하지 그와 위하여서. 같지
+                                                            이상은 소금이라 방황하여도, 만천하의 것은 보라.
+                                                        </div>
+                                                        <div class="header-alarm__date">2021-07-30 00:00</div>
+                                                    </div>
+                                                    <button type="button" class="ui-button header-alarm__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-alarm__item">
+                                                    <div class="header-alarm__block">
+                                                        <div class="header-alarm__title">홍길동 면담정보</div>
+                                                        <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요
+                                                        </div>
+                                                        <div class="header-alarm__date">2021-07-30 00:00</div>
+                                                    </div>
+                                                    <button type="button" class="ui-button header-alarm__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-alarm__item">
+                                                    <div class="header-alarm__block">
+                                                        <div class="header-alarm__title">홍길동 면담정보</div>
+                                                        <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요
+                                                        </div>
+                                                        <div class="header-alarm__date">2021-07-30 00:00</div>
+                                                    </div>
+                                                    <button type="button" class="ui-button header-alarm__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-alarm__item">
+                                                    <div class="header-alarm__block">
+                                                        <div class="header-alarm__title">홍길동 면담정보</div>
+                                                        <div class="header-alarm__discription">이번달 면담 3회 중, 1회 실행 필요
+                                                        </div>
+                                                        <div class="header-alarm__date">2021-07-30 00:00</div>
+                                                    </div>
+                                                    <button type="button" class="ui-button header-alarm__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <!-- //Case : 내용 있을 때 -->
+                                        </div>
+                                    </div>
+                                    <div class="header-dropdown__foot">
+                                        <div class="header-dropdown__foot-left">
+                                            <button type="button"
+                                                class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">전체삭제</button>
+                                        </div>
+                                        <div class="header-dropdown__foot-right">
+                                            <a href=""
+                                                class="ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-alarm">알림설정</a>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="header-dropdown header-dropdown--bookmark js-ui-dropdown">
+                            <!-- 2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__tooltip"><span>즐겨찾기</span></div>
+                            <!-- //2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__head">
+                                <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                                    <span class="for-a11y">
+                                        즐겨찾기 메뉴
+                                        <span class="open-text">열기</span>
+                                        <span class="close-text">닫기</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="header-dropdown__layer js-ui-dropdown__layer">
+                                <section class="header-dropdown__contents">
+                                    <div class="header-dropdown__contents-head">
+                                        <h2 class="header-dropdown__title">즐겨찾기 메뉴</h2>
+                                    </div>
+                                    <div class="header-dropdown__body ui-scroller">
+                                        <div class="header-dropdown__body-inner">
+                                            <!-- Case : 내용 없을 때 -->
+                                            <div class="header-dropdown__empty">
+                                                <p class="header-dropdown__empty-text">등록된 즐겨찾기가 없습니다.</p>
+                                            </div>
+                                            <!-- //Case : 내용 없을 때 -->
+
+                                            <!-- Case : 내용 있을 때 -->
+                                            <ul class="header-bookmark">
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">Dashboard</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">피부착자 관리</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">전자장치 사용기간 현황</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">배터리 상태</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">전자장치 이관 현황 (중앙)</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">전자장치 수령 확인</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">주변기기 입고관리</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">충전팩/젠더 이관</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">충전팩/젠더 수령</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                                <li class="header-bookmark__item">
+                                                    <a href="" class="header-bookmark__link">충전팩/젠더 현황</a>
+                                                    <button type="button" class="ui-button header-bookmark__delete">
+                                                        <span class="for-a11y">삭제</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <!-- //Case : 내용 있을 때 -->
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <div class="header-dropdown header-dropdown--menusearch js-ui-dropdown">
+                            <!-- 2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__tooltip"><span>메뉴 검색</span></div>
+                            <!-- //2022.06.21 : add : 툴팁 추가 -->
+                            <div class="header-dropdown__head">
+                                <button type="button" class="ui-button header-dropdown__opener js-ui-dropdown__opener">
+                                    <span class="for-a11y">
+                                        메뉴 검색
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- //header -->
+            </div>
+            <!-- //fix top area -->
+
+
+            <div class="contents-wrap">
+                <!-- 2021.09.27 : add : 히스토리 탭 추가 -->
+                <!-- History Tab -->
+                <nav class="history-tab">
+                    <h2 class="for-a11y">History Tab</h2>
+                    <div class="history-tab__scroller">
+                        <ul class="history-tab__list">
+                            <li class="history-tab__item history-tab__item--home">
+                                <div class="history-tab__block">
+                                    <a href="" class="history-tab__link">
+                                        <span class="for-a11y">홈</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+                            <li class="history-tab__item is-active">
+                                <div class="history-tab__block">
+                                    <a href="" class="history-tab__link">대상자 현황 조회</a>
+                                    <button type="button" class="ui-button history-tab__delete">
+                                        <span class="for-a11y">삭제</span>
+                                    </button>
+                                </div>
+                            </li>
+
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="history-tab__arrow">
+                        <button type="button" class="ui-button history-tab__prev" disabled>
+                            <span class="for-a11y">이전</span>
+                        </button>
+                        <button type="button" class="ui-button history-tab__next">
+                            <span class="for-a11y">다음</span>
+                        </button>
+                    </div>
+                </nav>
+                <!-- //History Tab -->
+                <!-- //2021.09.27 : add : 히스토리 탭 추가 -->
+
+                <div class="page-contents">
+                    <div class="page-head">
+
+                        <div class="page-head__left">
+                            <div class="page-head__location">
+                                <span class="page-head__location__item"><i
+                                        class="icon-location__item--home"></i>HOME</span>
+                                <span class="page-head__location__arrow"></span>
+                                <div class="ui-select-block">
+                                    <select class="ui-select" title="title">
+                                        <option value="-1" disabled="" selected="">정보관리</option>
+                                        <option value="">option 1</option>
+                                        <option value="">option 2</option>
+                                        <option value="">option 3</option>
+                                        <option value="">option 4</option>
+                                        <option value="">option 5</option>
+                                    </select>
+                                </div>
+                                <span class="page-head__location__arrow"></span>
+                                <div class="ui-select-block">
+                                    <select class="ui-select" title="title">
+                                        <option value="-1" disabled="" selected="">인원</option>
+                                        <option value="">option 1</option>
+                                        <option value="">option 2</option>
+                                        <option value="">option 3</option>
+                                        <option value="">option 4</option>
+                                        <option value="">option 5</option>
+                                    </select>
+                                </div>
+                                <span class="page-head__location__arrow"></span>
+                                <div class="ui-select-block">
+                                    <select class="ui-select" title="title">
+                                        <option value="-1" disabled="" selected="">대상자 현황1</option>
+                                        <option value="">option 1</option>
+                                        <option value="">option 2</option>
+                                        <option value="">option 3</option>
+                                        <option value="">option 4</option>
+                                        <option value="">option 5</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+
+                            <button type="button"
+                                class="ui-button ui-basic-button ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-bookmark js-toggle-active  page-head__add-bookmark font--12 ma-0">
+                                즐겨찾기&nbsp;<span class="off-text">등록</span><span class="on-text">해제</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="tile-layout">
+                        
+                        <div class="tile-layout__inner">
+
+                            <div class="tile-layout__row tile-layout__row--color-white">
+                                
+                                <div class="tile-layout__cell">
+                                    <div class="tile-layout__contents p-20">
+                                        <h2 class="ui-layer-header__title mb-10">결재문서 수정</h2>
+                                        <div class="board-detail-table board-detail-table--height-35">
+                                            <table class="mb-0">
+                                                <colgroup>
+                                                    <col style="width:130px;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>유형</th>
+                                                        <td>특별관제 등록 요청</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>제목</th>
+                                                        <td>
+                                                            <div class="form-flex">
+
+                                                                <!-- 2022.08.31 : mod : 집접 입력 체크시 활성 위한 data-area-disabled 추가 -->
+                                                                <div class="form-flex-cell form-flex-cell--flexible flex-none">
+                                                                    <div class="ui-input-block ui-input-block--width-400 color-black">
+                                                                        <input type="text" class="ui-input " value="홍길동 특별관제 등록 요청 (2022-05-01~2025-04-01)"
+                                                                            title="title" placeholder="placeholder" data-area-disabled-target="formFlexCheckbox1" disabled>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-flex-cell">
+                                                                    <div class="ui-checkbox-block">
+                                                                        <input type="checkbox" class="ui-checkbox"
+                                                                            id="formFlexCheckbox1" data-area-disabled="formFlexCheckbox1">
+                                                                        <label for="formFlexCheckbox1" class="ui-label">
+                                                                            <span class="ui-checkbox-object"></span>
+                                                                            <span class="ui-label__text">직접 입력</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- //2022.08.31 : mod : 집접 입력 체크시 활성 위한 data-area-disabled 추가 -->
+
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>이름</th>
+                                                        <td>
+                                                            <div
+                                                                class="header-search header-search--filter input-width-large">
+                                                                <div class="ui-input-block header-search__input">
+                                                                    <input type="text" class="ui-input" title=""
+                                                                        placeholder="">
+                                                                </div>
+                                                                <button type="button"
+                                                                    class="ui-button header-search__submit">
+                                                                    <span class="for-a11y">검색</span>
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>사건번호</th>
+                                                        <td>12-1234-1324-12345</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>요청기간</th>
+                                                        <td>
+                                                            <div class="form-flex js-datepicker-range">
+                                                                <div class="form-flex-cell">
+                                                                    <div
+                                                                        class="ui-input-block ui-input-block--date input-width-date">
+                                                                        <input type="text"
+                                                                            class="ui-input js-datepicker-range__min"
+                                                                            title="시작 날짜" value="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-flex-cell form-flex-cell--date-hyphen">
+                                                                    -</div>
+                                                                <div class="form-flex-cell">
+                                                                    <div
+                                                                        class="ui-input-block ui-input-block--date input-width-date">
+                                                                        <input type="text"
+                                                                            class="ui-input js-datepicker-range__max"
+                                                                            title="마지막 날짜" value="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>요청사유</th>
+                                                        <td>
+                                                            <div class="ui-input-block ui-input-height-123">
+                                                                <textarea name="" id="">- 피부착자는 소급형기종료 대상자로 부착명령 5년을 선고받아 2017. 8. 31.부터 청주보호관찰소에서 전자감독을 받고 있는 자임
+- 2022. 4. 25. 생업의 이유로 인천광역시 연수구 연수동 소재로 주거지를 이전하였고, 현재 피부착자는 인천광역시 연수구 송도동 201-2 삼성바이오로직스 공사 건설현장에서 배관 용접 조수로 근무를 하고 있음
+- 공장 건설현장 내부에서 작업을 하면 전자장치 신호실종이 자주 발생함
+- 06시~18시 생업에 종사하면서 불가피하게 발생하는 경보로 예외적인 경보 처리가 필요함
+                                                                </textarea>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>요청내용</th>
+                                                        <td>
+                                                            <div class="ui-input-block ui-input-height-123">
+                                                                <textarea name=""
+                                                                    id="">- 경보 발생 시, 피부착자가 광역시 연수구 송도동 201-2 삼성바이오로직스 공장 현장에 측위 확인이 되어 생업에 종사하는 것으로 파악될 경우 보호관찰소 신속대응팀 또는 전담직원의 요청사항으로 예외적인 준수 처리 요망</textarea>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>기타</th>
+                                                        <td>
+                                                            <div class="ui-input-block ui-input-height-87">
+                                                                <textarea name="" id=""></textarea>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>근거</th>
+                                                        <td>
+                                                            <div class="ui-input-block ui-input-height-87">
+                                                                <textarea name="" id=""></textarea>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>사유</th>
+                                                        <td>
+                                                            <div class="ui-input-block ui-input-height-87">
+                                                                <textarea name="" id=""></textarea>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>첨부파일</th>
+                                                        <td>
+                                                            <!-- 2021.09.17 : mod : <div class="board-detail-table__form"> 제거 -->
+                                                            <div class="form-row pb-0 form-row-margin--0">
+                                                                <div class="form-flex form-flex--medium file-search">
+                                                                    <div class="form-flex-cell">
+                                                                        <div class="ui-file-input">
+                                                                            <div class="ui-file-input__inner">
+                                                                                <input type="file"
+                                                                                    class="ui-file-input__input del-file-visible"
+                                                                                    id="file">
+                                                                                <label for="file"
+                                                                                    class="ui-file-input__label del-file">찾아보기</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="form-flex-cell form-flex-cell--flexible ml-10">
+                                                                        <p class="basic-text color-gray"><span
+                                                                                class="font-size--12">※ </span>개별 파일 용량
+                                                                            최대
+                                                                            5MB, 최대 5개 까지 지원</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row pb-0 form-row-margin--0 pt-5">
+                                                                <div class="files">
+                                                                    <ul class="files__list files__list--wrap">
+                                                                        <li
+                                                                            class="files__item border-gray files__item--set files__item--set-width-auto">
+
+                                                                            <div
+                                                                                class="files__block files__block--download del-down files__block--set">
+                                                                                <span
+                                                                                    class="files__name files__name--set">abcd1234.xls</span>
+                                                                                <span class="files__size">2.3MB</span>
+                                                                                <button type="button"
+                                                                                    class="ui-button files__delete">
+                                                                                    <span class="for-a11y">제거</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li
+                                                                            class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                            <div
+                                                                                class="files__block files__block--download del-down files__block--set">
+                                                                                <span
+                                                                                    class="files__name files__name--set">abcd1234.xls</span>
+                                                                                <span class="files__size">624KB</span>
+                                                                                <button type="button"
+                                                                                    class="ui-button files__delete">
+                                                                                    <span class="for-a11y">제거</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li
+                                                                            class="files__item border-gray files__item--set files__item--set-width-auto">
+                                                                            <div
+                                                                                class="files__block files__block--download del-down files__block--set">
+                                                                                <span
+                                                                                    class="files__name files__name--set">abcd1234.xls</span>
+                                                                                <span class="files__size">624KB</span>
+                                                                                <button type="button"
+                                                                                    class="ui-button files__delete">
+                                                                                    <span class="for-a11y">제거</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                        <div class="board-detail-table board-detail-table--height-35 ml-0 mt-20">
+                                            <table class="mb-0">
+                                                <colgroup>
+                                                    <col style="width:130px;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>결재선</th>
+                                                        <td>
+                                                            <div class="d-flex">
+                                                                <button type="button"
+                                                                    class="ui-button ui-basic-button ui-basic-button--medium ui-basic-button--width-65 ui-basic-button--secondary">설정</button>
+                                                                <div class="payment-line">
+                                                                    <div class="payment-line__item">검토 1 : 박검토</div>
+                                                                    <div class="payment-line__item">검토 2 : 최검토</div>
+                                                                    <div class="payment-line__item">결재 : 임결재</div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                        <div class="ui-buttons ui-buttons--right mt-10">
+                                            <ul class="ui-buttons__list ">
+                                                <li class="ui-buttons__item ui-basic-button--width-65">
+                                                    <a href=""
+                                                        class="ui-basic-button ui-basic-button--quaternary">취소</a>
+                                                </li>
+                                                <li class="ui-buttons__item">
+                                                    <button type="submit"
+                                                        class="ui-button ui-basic-button ui-basic-button--save ui-basic-button--width-65">저장</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- //컨텐츠 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- script -->
+        <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+        <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+        <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+        <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/jquery/jquery.js"></script>
+        <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+        <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+        <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+        <script type="text/javascript" src="./assets/lib/isotope/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+
+        <script type="text/javascript">
+            // Data
+            var grid_data1 = [{
+                    cell_1: '2022-06-02 00:00',
+                    cell_2: '김상산',
+                    cell_3: '상신',
+                    cell_4: '-',
+                },
+                {
+                    cell_1: '2022-06-02 00:00',
+                    cell_2: '박검토',
+                    cell_3: '수정',
+                    cell_4: '-',
+                },
+                {
+                    cell_1: '2022-06-02 00:00',
+                    cell_2: '박검토',
+                    cell_3: '검토승인',
+                    cell_4: '수정 항목 : 요청기간, 근거',
+                },
+                {
+                    cell_1: '2022-06-02 00:00',
+                    cell_2: '박검토',
+                    cell_3: '검토승인',
+                    cell_4: '-',
+                },
+                {
+                    cell_1: '2022-06-02 00:00',
+                    cell_2: '박검토',
+                    cell_3: '결재반려',
+                    cell_4: '반려 사유 : 반려 사유가 출력됩니다.',
+                },
+                {
+                    cell_1: '2022-06-02 00:00',
+                    cell_2: '박검토',
+                    cell_3: '타 기관 전달',
+                    cell_4: '수신 기관 : 중앙관제센터, 담장자 : 김중앙',
+                },
+            ];
+
+
+            function createGrid(properties, callback) {
+                var datagrid;
+                datagrid = _SBGrid.create(properties);
+                datagrid.bind('aftersort', function () {
+                    SBCustomFunction.aftersort(datagrid);
+                });
+                callback(datagrid);
+            }
+
+            var columns1 = [{
+                    caption: ['처리 일시'],
+                    ref: 'cell_1',
+                    width: '275px',
+                },
+                {
+                    caption: ['처리자'],
+                    ref: 'cell_2',
+                    width: '215px',
+                },
+                {
+                    caption: ['처리 내용'],
+                    ref: 'cell_3',
+                    width: '232px',
+                },
+                {
+                    caption: ['처리 상세 정보'],
+                    ref: 'cell_4',
+                    width: '780px',
+                },
+            ];
+
+
+            $(function () {
+                createGrid(
+                    $.extend({}, SBGridProperties, {
+                        id: 'docProcessHistoryGrid1',
+                        parentid: 'docProcessHistoryGrid1',
+                        jsonref: 'grid_data1',
+                        extendcol: 3,
+                        fixedrowheight: '25',
+                        rowheight: '25',
+                        width: '100%',
+                        height: '100%',
+                        emptyrecords: '조회 결과가 없습니다.',
+                        columns: columns1,
+                    }),
+                    function (datagrid) {
+                        // datagrid.sortColumn(0, 'desc');
+                        datagrid.sortingIcon();
+                        $('#docProcessHistoryGrid1').data('grid', datagrid);
+                    }
+                );
+            });
+
+
+            // 탭 변경 시 그리드 리사이즈
+            $('.board-tab-panel').on('uiTabPanelChange', function (e) {
+                var $this = $(this);
+                var grid = $this.find('.ui-board-table').data('grid');
+
+                if (grid) {
+                    grid.resize();
+                }
+
+                e.stopPropagation();
+            });
+        </script>
+        <!-- //script -->
+</body>
+
+</html>

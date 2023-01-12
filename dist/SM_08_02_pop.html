@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head">
+            <h1 class="window-popup__head-title">야간 귀가지도 설정</h1>
+            <div class="people-head">
+              <div class="people-head__block">
+                <div class="people-head__sex">(남)</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__date">1952-05-21</div>
+                <div class="people-head__hr"></div>
+                <div class="people-head__number">
+                  <span class="people-head__key">사건번호</span>
+                  <span class="people-head__val">12-3456-7890-12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body window-popup__body--row">
+            <div class="tile-layout">
+              <div class="tile-layout__inner">
+                <!-- 2022.12.21 : mod : width-350 클래스 값 추가, tile-layout__row--width-250 클래스 삭제 -->
+                <div class="width-350 border-radius p-0">
+                  <form action="">
+                    <section class="search-bar search-bar--popup search-bar--width-230 background-white ui-scroller  border-radius" style="height: 300px;">
+                        <div class="ui-board-table ui-board-table__weight--400" id="boardGrid" style="height:300px;"></div>
+    
+                    </section>
+                  </form>
+                  <!-- 2021.10.08 : mod : search-bar__right--bottom 클래스 값 추가 -->
+                  <div class="pagination-wrap flex-column align-items-center bg-white height-auto">
+                    <div class="total">
+                      총 <span>2,521</span>건
+                    </div>
+                    <div class="pagination pagination--foot">
+                      <button type="button" class="ui-button pagination__arrow pagination__arrow--start" disabled="">
+                        <span class="for-a11y">처음 페이지</span>
+                      </button>
+                      <button type="button" class="ui-button pagination__arrow pagination__arrow--prev" disabled="">
+                        <span class="for-a11y">이전 페이지</span>
+                      </button>
+                      <div class="pagination__fraction pagination__fraction--small">
+                        <div class="pagination__fraction-currunt">
+                          <div class="ui-input-block">
+                            <input type="text" class="ui-input" title="현재 페이지" value="1">
+                          </div>
+                        </div>
+                        <div class="pagination__fraction-slash">/</div>
+                        <div class="pagination__fraction-total" title="전체 페이지 수">128</div>
+                      </div>
+                      <button type="button" class="ui-button pagination__arrow pagination__arrow--next">
+                        <span class="for-a11y">다음 페이지</span>
+                      </button>
+                      <button type="button" class="ui-button pagination__arrow pagination__arrow--end">
+                        <span class="for-a11y">마지막 페이지</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- 신호실종 내역 -->
+                <div class="tile-layout__row ml-20">
+                  <div class="p-20">
+                    <div class="board-detail-table__title--with-button d-flex">
+                        <!-- 2022.08.29 : mod : 상세정보 -> 야간 귀가지도 등록  -->
+                        <div class="board-detail-table__title mt-0">야간 귀가지도 등록</div>
+                        <!-- 2022.08.29 : mod : 상세정보 -> 야간 귀가지도 등록  -->
+                        <div class="ui-buttons--left ml-auto">
+                              <ul class=" ui-buttons__list ui-buttons__list--width-65">
+                                <li class="ui-buttons__item">
+                                  <button type="button" class="ui-button ui-basic-button ui-basic-button--normal">취소</button>
+                                </li>
+                                <li class="ui-buttons__item">
+                                    <button type="button" class="ui-button ui-basic-button ui-basic-button--blue-line">저장</button>
+                                </li>
+                              </ul>
+                            </div>
+                      </div>
+                      
+                    <div class="board-detail-table--flex-item">
+                        <div class="window-popup__body pt-0">
+                            
+                            <div class="board-detail-table">
+                              <!-- 2022.08.29 : add : table-only-height-35 클래스 추가 -->
+                              <table class="mb-0 table-only-height-35">
+                                <!-- 2021.10.18 : mod : 클래스값 변경 및 tbody 분리 -->
+                                <tbody>
+                                  <tr>
+                                    <th>시작일<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                    <td>
+                                      <div class="form-flex-cell js-datepicker-range">
+                                        <div class="ui-input-block ui-input-block--date input-width-date">
+                                          <input type="text" class="ui-input js-datepicker-range__min input-width-120" title="시작 날짜" value="2021-12-08">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>종료일<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                    <td>
+                                        <div class="form-flex flex">
+                                            <div class="form-flex js-datepicker-range">
+                                                <div class="form-flex-cell">
+                                                    <div class="ui-input-block ui-input-block--date input-width-date">
+                                                        <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>설정시간</th>
+                                    <td>00~05</td>
+                                  </tr>
+                                  <tr>
+                                    <th>비고</th>
+                                    <td>
+                                      <div class="ui-input-block">
+                                        <!-- 2021.10.29 : mod : input-height-mini -> input-height-small-medium 클래스 값 변경 -->
+                                        <textarea class="ui-input input-height-small-medium" title="비고"></textarea>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <!-- 2022.08.29 : add : table-only-height-35 클래스 추가 -->
+                            </div>
+                            
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //신호실종 내역 -->
+    
+              </div>
+            </div>
+    
+    
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+
+    <script type="text/javascript">
+        var datagrid;
+  
+        // Data
+        var grid_data = [
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'Y',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+          {
+            cell_1: '2022-06-20~2027-01-24',
+            cell_2: '00~05',
+            cell_3: 'N',
+          },
+        ];
+  
+        function createGrid() {
+          SBGridProperties.parentid = 'boardGrid';
+          SBGridProperties.id = 'datagrid';
+          SBGridProperties.jsonref = 'grid_data';
+          SBGridProperties.width = '100%';
+          SBGridProperties.height = '100%';
+          SBGridProperties.extendcol = 0; 
+          SBGridProperties.rowheight = 35; 
+          SBGridProperties.fixedrowheight = '25';
+          SBGridProperties.rowheight = '25'; 
+          SBGridProperties.emptyrecords = '조회결과가 없습니다.';
+          SBGridProperties.emptyrecordsfontstyle = "font-size:12px;font-weight bold;"; 
+          SBGridProperties.columns = [
+            {
+              caption: ['기간'],
+              ref: 'cell_1',
+              width: '55%',
+            },
+            {
+              caption: ['설정시간'],
+              ref: 'cell_2',
+              width: '22.5%',
+            },
+            {
+              caption: ['사용여부'],
+              ref: 'cell_3',
+              width: '22.5%',
+            },
+          ];
+          datagrid = _SBGrid.create(SBGridProperties);
+          // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : start
+          datagrid.bind('aftersort', function () {
+            SBCustomFunction.aftersort(datagrid);
+          });
+          // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : end
+          datagrid.sortColumn(0, 'desc');
+          datagrid.sortingIcon();
+        }
+  
+        $(function () {
+          createGrid();
+        });
+      </script>
+    <!-- //script -->
+  </body>
+</html>

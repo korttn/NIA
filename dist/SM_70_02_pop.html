@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+
+     
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <form action="">
+          <div class="window-popup__head d-flex">
+            <h1 class="window-popup__head-title">관제상황 조회</h1>
+            <div class="form-flex">
+                <!--자동완성-->
+                  <div class="form-block__cell control control-search">
+                    <div class="form-flex">
+                      <div class="form-flex-cell form-flex-cell--date-medium form-flex-cell--time search">
+                        <div class="ui-input-block input-width-date ui-input-block--time is-inputed">
+                          <input type="text" class="ui-input js-datepicker-range__min is-active" title="" value="홍길동">
+                          <div class="time-table">
+                            <div class="time-table--hour">
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길동 | 남 | 1952-03-17</button>
+                                  <button type="button">홍길배 | 남 | 1980-05-30</button>
+                                  <button type="button">홍길선 | 남 | 1967-04-13</button>
+                                  <button type="button">홍길순 | 남 | 1977-12-12</button>
+                                  <button type="button">홍길천 | 남 | 1977-12-12</button>
+                             
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" class="ui-button header-search__submit">
+                          <span class="for-a11y">검색</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                <!--//자동완성-->
+
+                <div class="people-head">
+                    <div class="people-head__block">
+                    <div class="people-head__sex people-head__sex--man">
+                        <span class="for-a11y">(남)</span>
+                    </div>
+                    <div class="people-head__sex people-head__sex--woman">
+                        <span class="for-a11y">(여)</span>
+                    </div>
+                    <div class="people-head__info">남</div>
+                    <div class="people-head__hr"></div>
+                    <div class="people-head__birth">1952-05-21</div>
+                    <div class="people-head__hr"></div>
+                    <div class="people-head__number">
+                        <span class="people-head__key">사건번호</span>
+                        <span class="people-head__val">12-3456-7890-12345</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="window-popup__body window-popup__body--row">
+            <form action="">
+              <section class="search-bar search-bar--popup search-bar-bottom1">
+                <h2 class="for-a11y">검색</h2>
+                <div class="search-bar__left">
+                  <div class="search-bar__row">
+
+                    <dl class="search-bar__item">
+                      <dt class="search-bar__key">조회일</dt>
+                      <dd class="search-bar__val">
+                        <div class="ui-select-block input-width-small-mini">
+                          <select class="ui-select" title="조회일">
+                            <option value="">전체</option>
+                            <option value="">Option01</option>
+                            <option value="">Option02</option>
+                            <option value="">Option03</option>
+                          </select>
+                        </div>
+                      </dd>
+                      <dd class="search-bar__val mal-4">      
+                          <div class="ui-input-block ui-input-block--date input-width-date">
+                              <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08" disabled="">
+                          </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="search-bar__right">
+                  <div class="ui-buttons ui-buttons--center">
+                    <ul class="ui-buttons__list">
+                      <li class="ui-buttons__item">
+                        <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                      </li>
+                      <li class="ui-buttons__item">
+                        <button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </form>
+            <div class="tile-layout">
+              
+              <div class="tile-layout__inner background-white radius-bottom p-20"><!-- 2022.08.12 p-20 추가 -->
+                
+                <div class="tile-layout__row background-color--none box-shadow--none"><!-- 2022.08.12 class p-20 삭제 -->
+                  <form action="">
+                    <section class="search-bar search-bar--popup search-bar--width-230 box-shadow--none background-white p-0"><!-- 2022.08.12 p-0 추가 -->
+
+                      <!-- 2022.08.30 : mod : 높이 값 수정 -->
+                      <div class="ui-board-table ui-board-table__weight--400" id="boardGrid" style="width:100%; height:326px;"></div><!-- 2022.08.12 높이값 수정 -->
+    
+                    </section>
+                  </form>
+                  <!-- 2021.10.08 : mod : search-bar__right--bottom 클래스 값 추가 -->
+
+                </div>
+    
+                <!-- 신호실종 내역 -->
+                <div class="tile-layout__row border-gray radius-0 background-color--none box-shadow--none ml-20"><!-- 2022.08.12 class ma-20-20-20-0 삭제 ml-20 추가 -->
+                  <div class="p-10">
+                    <div class="board-detail-table__title--with-button d-flex align-flex-center">
+                      <div class="board-detail-table__title mat-0">상세 정보</div>
+                      <div class="ui-buttons--left ml-auto">
+                        <ul class=" ui-buttons__list ui-buttons__list--width-65">
+                          <li class="ui-buttons__item">
+                            <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--icon ui-basic-button--icon-add ui-basic-button--nonary button__min--57">등록</a>
+                          </li>
+                          <li class="ui-buttons__item">
+                            <button type="button" class="ui-button ui-basic-button ui-basic-button--normal">삭제</button>
+                          </li>
+                          <li class="ui-buttons__item">
+                            <button type="button" class="ui-button ui-basic-button ui-basic-button--senary">수정</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                      
+                    <div class="board-detail-table--flex-item">
+                        <div class="window-popup__body pt-0">
+                            <div class="board-detail-table">
+                              <table class="mb-0">
+                                <!-- 2021.10.18 : mod : 클래스값 변경 및 tbody 분리 -->
+                                <tbody class="js-datepicker-range">
+                                  <tr>
+                                    <th>집행상황</th>
+                                    <td>
+                                        관제상황
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>등록일시</th>
+                                    <td>
+                                        홈담당
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>등록자</th>
+                                    <td>김담당</td>
+                                  </tr>
+                                  <tr>
+                                    <th>확인자</th>
+                                    <td>
+                                      2022-01-12 18:35:01
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <table class="mb-0">
+                                <!-- 2021.10.18 : mod : 클래스값 변경 및 tbody 분리 -->
+                                <tbody class="js-datepicker-range">
+                                  <tr>
+                                    <th class="height--100">집행내용</th>
+                                    <td>
+                                      2022.06.01. 08시 기준 24시간 상태정보 발생하지 않</br>
+                                      은자로, 지도감독시 참고요망(비재택)                                    
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>녹취파일</th>
+                                    <td>
+                                        <a href="" download="">파일명.확장자</a>
+                                    </td>
+                                  </tr>
+                                 
+                                </tbody>
+                              </table>
+                            </div>
+
+                            <!-- 2022.08.12 추가 표시할 내용이 없을 때 -->
+                            <div class="no-data--200 text-center" style="display: none">
+                              좌측 목록에서 조회하고자 하는 항목을 선택해 주십시오. <br>
+                              아직 등록된 정보가 없을 경우, 이용하실 수 없습니다
+
+                            </div>
+                            <!-- 표시할 내용이 없을 때 -->
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //신호실종 내역 -->
+    
+              </div>
+            </div>
+    
+    
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+
+    <script type="text/javascript">
+        var datagrid;
+  
+        // Data
+        var grid_data = [
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+          {
+            cell_1: '관제상황',
+            cell_2: '2022.06.01. 08시 기준 24시간 상태정보 발생하지…',
+            cell_3: '2022-01-12 18:35:01'
+          },
+        ];
+  
+        function createGrid() {
+          SBGridProperties.parentid = 'boardGrid';
+          SBGridProperties.id = 'datagrid';
+          SBGridProperties.jsonref = 'grid_data';
+          SBGridProperties.width = '100%';
+          SBGridProperties.height = '100%';
+          SBGridProperties.extendcol = 1; 
+          SBGridProperties.rowheight = 25; //2022.08.12 수정
+          SBGridProperties.fixedrowheight = '25';
+          SBGridProperties.emptyrecords = '등록된 정보가 없습니다.';
+          SBGridProperties.emptyrecordsfontstyle = "font-size:12px;font-weight bold;"; 
+          SBGridProperties.columns = [
+            {
+              caption: ['집행상황'],
+              ref: 'cell_1',
+              width: '15%',
+            },
+            {
+              caption: ['집행내용'],
+              ref: 'cell_2',
+              width: '65%',
+            },
+            {
+              caption: ['등록 일시'],
+              ref: 'cell_3',
+              width: '20%',
+            },
+          ];
+          datagrid = _SBGrid.create(SBGridProperties);
+          // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : start
+          datagrid.bind('aftersort', function () {
+            SBCustomFunction.aftersort(datagrid);
+          });
+          // 2021.10.08 : add : 소팅 유무 클래스 값 추가 관련 : end
+          datagrid.sortColumn(0, 'desc');
+          datagrid.sortingIcon();
+        }
+  
+        $(function () {
+          createGrid();
+        });
+      </script>
+    <!-- //script -->
+  </body>
+</html>

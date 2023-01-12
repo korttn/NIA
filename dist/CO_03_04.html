@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>법무부 - UGUARD</title>
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+    <!-- //favicon -->
+
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/SBGrid/css/SBGrid_Default.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+    <!-- //style -->
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="window-popup">
+        <div class="window-popup__head">
+          <h1 class="window-popup__head-title">경보알림</h1>
+        </div>
+
+        <div class="window-popup__body">
+          <section class="search-bar border-radius-6">
+            <h2 class="for-a11y">검색</h2>
+            <div class="search-bar__left">
+                <div class="search-bar__row">
+                    <dl class="search-bar__item">
+                        <dt class="search-bar__key">경보명</dt>
+                        <dd class="setting-board__info-val">부착 장치 훼손</dd>
+                    </dl>
+                </div>
+            </div>
+            
+        </section>
+
+          
+
+          <div class="survey-hr survey-hr--height-20"></div>
+
+          <!-- 2022.09.06 : add : 클래스 background-lightgray border-radius-6 overflow-hidden 추가 -->
+          <div class="form-flex align-items-start background-lightgray border-radius-6 overflow-hidden">
+
+            <div class="form-flex-cell p-10"> 
+              <div class="profile">
+                <div class="profile__photo">
+                  <div class="profile-image-wrap">
+                    <!-- DD : 이미지 에러시 .profile-image 에 is-error 클래스값 추가 -->
+                    <!-- 2022.09.14 : add : image-ratio-auto 클래스 추가 -->
+                    <a href="" class="profile-image image-ratio-auto">
+                      <img src="./assets/images/_dummy/profile .png" alt="" class="profile-image__img vehicle-image__img"
+                        onerror="this.parentNode.className += ' is-error';">
+                    </a>
+                  </div>
+    
+                  <div class="watch-status watch-status--red">집중I급</div>
+                  <!--
+                  <div class="watch-status watch-status--blue">집중I</div>
+                  <div class="watch-status watch-status--gray">가해제</div>
+                  -->
+                </div>
+                
+              </div>
+            </div>
+
+            <!-- 2022.09.06 : mod : 클래스 ml-20 삭제, background-white p-20 추가 -->
+            <div class=" flex background-white p-20">
+              <div>
+                <div class="board-detail-head">
+                  <h3 class="board-detail-head__title">조치내용</h3>
+                </div>
+                <div class="profile__info">
+                  <div class="board-detail-table">
+                    <table>
+                      <colgroup>
+                        <col style="width:20%" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>피부착자</th>
+                          <td>홍길동</td>
+                        </tr>
+                        <tr>
+                          <th>주민번호</th>
+                          <td>111111-111111</td>
+                        </tr>
+                        
+                        <tr>
+                          <th>사건번호</th>
+                          <td>11-2222-3333-44444</td>
+                        </tr>
+
+                        <tr>
+                          <th>보호관찰소</th>
+                          <td>서울 보호관찰소</td>
+                        </tr>
+
+                        <tr>
+                          <th>보호관찰 담당관/자</th>
+                          <td>김모모(5)/유모모(8)</td>
+                        </tr>
+
+                       
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="board-detail-head">
+                  <h3 class="board-detail-head__title">경보 정보</h3>
+                </div>
+                <div class="profile__info">
+                  <div class="board-detail-table">
+                    <table>
+                      <colgroup>
+                        <col style="width:20%" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>경보발생일시</th>
+                          <td>2021-12-03 00:00:00</td>
+                        </tr>
+                        <tr>
+                          <th>이관일시</th>
+                          <td>2021-12-03 00:00</td>
+                        </tr>
+                        <tr>
+                          <th>소견</th>
+                          <td>위반</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="board-detail-head">
+                  <h3 class="board-detail-head__title">조치내용</h3>
+                </div>
+    
+                <!-- Case : 데이터 없을 때 -->
+                <div class="no-data no-data--200 border-gray" style="display:none">
+                  <div class="header-dropdown__empty">
+                    <p class="header-dropdown__empty-text header-dropdown__empty-text--no-icon">데이터가 없습니다.</p>
+                  </div>
+                </div>
+                <!-- //Case : 데이터 없을 때 -->
+    
+                <!-- Case : 데이터 있을 때 -->
+
+                <!-- 2022.09.06 : add : 클래스 ui-scroller 추가 -->
+                <div class="background-white border-gray input-height-large ui-scroller">
+                  <div class="board-detail-contents " >
+                    <div class="basic-text ">경보 발생 시, 대구광역시 동구 불로동 1159에서 G 측위
+                      부착장치 22%
+                      00:00 피부착자 휴대전화로 통화, 경보 사실을 고지결과 "" 라고 답변함
+                      피부착자 주거지에서 약 4km 거리임
+                      인근에 새솔어린이집, 쑥쑥어린이집 등이 위치함
+                      담당직원 홍길동에게 상황 전파 및 이관 조치함
+                      경보 발생 시, 대구광역시 동구 불로동 1159에서 G 측위
+부착장치 22%
+00:00 피부착자 휴대전화로 통화, 경보 사실을 고지결과 "" 라고 답변함
+피부착자 주거지에서 약 4km 거리임
+인근에 새솔어린이집, 쑥쑥어린이집 등이 위치함
+담당직원 홍길동에게 상황 전파 및 이관 조치함
+경보 발생 시, 대구광역시 동구 불로동 1159에서 G 측위
+부착장치 22%
+00:00 피부착자 휴대전화로 통화, 경보 사실을 고지결과 "" 라고 답변함
+피부착자 주거지에서 약 4km 거리임
+인근에 새솔어린이집, 쑥쑥어린이집 등이 위치함
+담당직원 홍길동에게 상황 전파 및 이관 조치함
+경보 발생 시, 대구광역시 동구 불로동 1159에서 G 측위
+부착장치 22%
+00:00 피부착자 휴대전화로 통화, 경보 사실을 고지결과 "" 라고 답변함
+피부착자 주거지에서 약 4km 거리임
+인근에 새솔어린이집, 쑥쑥어린이집 등이 위치함
+담당직원 홍길동에게 상황 전파 및 이관 조치함
+경보 발생 시, 대구광역시 동구 불로동 1159에서 G 측위
+부착장치 22%
+00:00 피부착자 휴대전화로 통화, 경보 사실을 고지결과 "" 라고 답변함
+피부착자 주거지에서 약 4km 거리임
+인근에 새솔어린이집, 쑥쑥어린이집 등이 위치함
+담당직원 홍길동에게 상황 전파 및 이관 조치함
+</div>
+                  </div>
+                </div>
+                <!-- //Case : 데이터 있을 때 -->
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+        <div class="window-popup__foot utility-check__foot">
+          <div class="window-popup__foot__left">
+            <button type="button" class="ui-button utility-do-not-see-today">더 이상 띄우지 않기</button>
+          </div>
+          <div class="window-popup__foot__right">
+            <div class="ui-buttons ui-buttons--right">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button" class="ui-button ui-basic-button ui-basic-button--quaternary">닫기</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_custom-config.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_Lib.js"></script>
+    <script type="text/javascript" src="./assets/lib/SBGrid/SBGrid_min.js"></script>
+    <script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/amcharts.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/serial.js"></script>
+    <script type="text/javascript" src="./assets/lib/amcharts3/pie.js"></script>
+    <script type="text/javascript" src="./assets/js/ui-script.js"></script>
+    <!-- //script -->
+  </body>
+</html>
