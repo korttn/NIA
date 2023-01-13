@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 활용 역량 진단 도구</title>
+
+    <script src="./assets/lib/jquery/jquery-3.5.1.js"></script>
+    <script src="./assets/lib/jquery/jquery-ui.min.js"></script>
+    <script src="./assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/ui-script.js"></script>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/ui-style.css">
+
+    <!-- 개별 css -->
+    <link rel="stylesheet" href="./assets/css/common.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container container-user">
+            <div class="container__inner">
+                <div class="user-common">
+                    <div class="user-common__inner">
+                        <div class="logo_area"></div>
+                        <div class="user-common__title mt-40">
+                            기관관리자 신청
+                        </div>
+                        <div class="user-common__des">
+                            소속 기관의 온라인 진단도구를 관리하기 위한 기관 관리자를 신청하는 화면입니다.  <br>
+                            신청이 완료되면 총괄 관리자가 확인 후에 입력하신 이메일로 기관 관리자 아이디를 발송해 드립니다.
+                        </div>
+                        <div class="user-common__des--ps">
+                            (소속하신 기관이 조회되지 않는 경우, [기관등록 요청] 버튼을 클릭해 주세요.)
+                        </div>
+
+
+                        <div class="enroll-organization-admin">
+                            <div class="enroll-organization-admin__inner">
+                                <div class="enroll-input__box">
+                                    <dl class="enroll-input__item">
+                                        <dt class="enroll-input__dt">소속기관<span class="ui-require"><span class="for-a11y">(필수)</span></span></dt>
+                                        <dd class="enroll-input__dd">
+                                            <div class="ui-form ui-form__flex ui-form__flex--row">
+                                                <div class="ui-form__cell--row">
+                                                    <div class="ui-select-block">
+                                                        <select class="ui-select" title="title">
+                                                            <option value="">대분류</option>
+                                                            <option value="">option 2</option>
+                                                            <option value="">option 3</option>
+                                                            <option value="">option 4</option>
+                                                            <option value="">option 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-form__cell--row">
+                                                    <div class="ui-select-block">
+                                                        <select class="ui-select" title="title">
+                                                            <option value="">중분류</option>
+                                                            <option value="">option 2</option>
+                                                            <option value="">option 3</option>
+                                                            <option value="">option 4</option>
+                                                            <option value="">option 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-form__cell--row">
+                                                    <div class="ui-select-block">
+                                                        <select class="ui-select ui-select__width--250" title="title">
+                                                            <option value="">기관명</option>
+                                                            <option value="">option 2</option>
+                                                            <option value="">option 3</option>
+                                                            <option value="">option 4</option>
+                                                            <option value="">option 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="ui-form__cell--row">
+                                                    <div class="ui-buttons">
+                                                        <button type="button" class="ui-button ui-button__width--150 ui-button__bg--skyblue" data-bs-toggle="modal" data-bs-target="#orgrequest">기관등록 요청</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="enroll-input__item">
+                                        <dt class="enroll-input__dt">소속부서<span class="ui-require"><span class="for-a11y">(필수)</span></span></dt>
+                                        <dd class="enroll-input__dd">
+                                            <div class="ui-form">
+                                                <input type="text" class="ui-input ui-input__width--330" id="" name="" placeholder="">
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="enroll-input__item">
+                                        <dt class="enroll-input__dt">성명<span class="ui-require"><span class="for-a11y">(필수)</span></span></dt>
+                                        <dd class="enroll-input__dd">
+                                            <div class="ui-form">
+                                                <input type="text" class="ui-input ui-input__width--330" id="" name="" placeholder="">
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="enroll-input__item">
+                                        <dt class="enroll-input__dt">연락처(사무실)<span class="ui-require"><span class="for-a11y">(필수)</span></span></dt>
+                                        <dd class="enroll-input__dd">
+                                            <div class="ui-form">
+                                                <input type="text" class="ui-input ui-input__width--330" id="" name="" placeholder="예) 000-0000-0000">
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <dl class="enroll-input__item">
+                                        <dt class="enroll-input__dt">이메일(소속기관)<span class="ui-require"><span class="for-a11y">(필수)</span></span></dt>
+                                        <dd class="enroll-input__dd">
+                                            <div class="ui-form">
+                                                <input type="text" class="ui-input ui-input__width--590" id="" name="" placeholder="예) example@example.com">
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <div class="mt-20">
+                                        <div class="ui-buttons ui-buttons__center ">
+                                            <a href="javascript:void(0)" class="ui-button ui-button__width--300 ui-button__height--50 ui-button__bg--blue" data-bs-toggle="modal" data-bs-target="#requestEnroll">신청</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+
+                    </div>
+                    
+
+                    
+
+
+                    <!-- 모달 -->
+
+                    <!-- 기관등록 요청 모달 -->
+                    <div class="modal fade" id="orgrequest" tabindex="-1" aria-labelledby="orgrequestLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header modal-header__with--close">
+                                    <h5 class="modal-title" id="modalLabel">기관 등록 요청</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body modal-body__padding--24">
+                                    <div class="ui-table ui-table__ver">
+                                        <div class="ui-table__inner">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width: 186px;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>요청 기관명<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                                        <td>
+                                                            <input type="text" class="ui-input ui-input__width--545 ui-input__bg--white ui-input__radius--3">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>기관 URL<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                                        <td>
+                                                            <input type="text" class="ui-input ui-input__width--545 ui-input__bg--white ui-input__radius--3">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>성명<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                                        <td>
+                                                            <input type="text" class="ui-input ui-input__width--545 ui-input__bg--white ui-input__radius--3">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>연락처(사무실)<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                                        <td>
+                                                            <input type="text" class="ui-input ui-input__width--545 ui-input__bg--white ui-input__radius--3">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>이메일(소속기관)<span class="ui-require"><span class="for-a11y">(필수)</span></span></th>
+                                                        <td>
+                                                            <input type="text" class="ui-input ui-input__width--545 ui-input__bg--white ui-input__radius--3">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="ui-buttons">
+                                        <button type="button" class="ui-button ui-button__bg--blue">요청</button>
+                                        <button type="button" class="ui-button ui-button__bg--gray" data-bs-dismiss="modal">닫기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //기관등록 요청 모달 -->
+
+                    <!-- 신청 모달 -->
+                    <div class="modal fade" id="requestEnroll" tabindex="-1" aria-labelledby="requestEnrollLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalLabel">알림</h5>
+                                </div>
+                                <div class="modal-body">기관 등록 요청이 되었습니다. <br>
+                                    확인 후, 작성하신 이메일로 결과를 전달 드리겠습니다.
+                                    <!-- 
+                                        [필수값이 입력되지 않은 경우]
+                                        미작성된 항목이 있습니다.
+                                        다시 확인해 주세요
+                                     -->
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="ui-buttons">
+                                        <button type="button" class="ui-button ui-button__bg--blue" data-bs-dismiss="modal">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //신청 모달 -->
+
+                    <!-- //모달 -->
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

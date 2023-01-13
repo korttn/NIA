@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 활용 역량 진단 도구</title>
+
+    <script src="./assets/lib/jquery/jquery-3.5.1.js"></script>
+    <script src="./assets/lib/jquery/jquery-ui.min.js"></script>
+    <script src="./assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/ui-script.js"></script>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/ui-style.css">
+
+    <!-- 개별 css -->
+    <link rel="stylesheet" href="./assets/css/common.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container container-user">
+            <div class="container__inner">
+                <div class="user-common">
+                    <div class="user-common__inner">
+                        <div class="logo_area"></div>
+                        <div class="user-common__title">
+                            데이터 활용 역량 온라인 진단 도구
+                        </div>
+                        <div class="user-common__des">
+                            비밀번호가 초기화 되어 , 비밀번호를 변경합니다. <br>
+                            변경할 새 비밀번호를 최소 6자 이상으로 입력해 주세요.
+                        </div>
+
+                        <form id="frm" name="frm" method="post" action="">
+                            <div id="login" class="login-box mt-30 mx-auto">
+                                <div class="login_inputbox ui-form">
+                                    <input type="password" class="ui-input login-password" id="loginId" name="loginId"
+                                        placeholder="새 비밀번호">
+                                    <input type="password" class="ui-input login-password" id="" name="" placeholder="새 비밀번호 확인">
+                                </div>
+                                <a href="javascript:void(0)" class="loginBtn" data-bs-toggle="modal" data-bs-target="#changePassword">비밀번호 변경
+                                </a>
+                            </div>
+                        </form>
+                        
+                        <div class="user-common__text text-center mt-50">변경 시, 새로운 비밀번호로 로그인 해주세요.</div>
+
+                    </div>
+                    
+
+                    
+
+
+
+                    <!-- 모달 -->
+                    <div class="modal fade" id="changePassword" tabindex="-1" aria-labelledby="changePasswordLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalLabel">알림</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- [비밀번호가 6자 미만인 경우] -->
+                                    비밀번호를 6자 이상으로 다시 입력해 주세요.                             
+
+                                    <!-- 알림문구 
+                                        [새 비밀번호와 새 비밀번호 확인이 다른 경우]
+                                        새 비밀번호와 비밀번호 확인이 일치하지 않습니다.
+
+                                        [비밀번호 또는 새 비밀번호 확인을 입력하지 않는 경우]
+                                        새 비밀번호를 입력하세요.
+                                        새 비밀번호 확인을 입력하세요.
+                                        (둘다 입력하지 않은 경우_ 새 비밀번호를 입력하세요)
+
+                                        [비밀번호가 정상적으로 입력된 경우]
+                                        비밀번호가 변경되었습니다. 새로운 비밀번호로 로그인 해주세요.
+                                        -->
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="ui-buttons">
+                                        <button type="button" class="ui-button ui-button__bg--blue" data-bs-dismiss="modal">닫기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //모달 -->
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

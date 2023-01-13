@@ -1,2 +1,22 @@
 @charset 'utf-8';
 
+@import './helper/index';
+
+.diagnosis {
+    &-header {
+        &__inner {
+            @include d-flex-center;
+            height: 319px;
+            background: url(../images/background/bg-diagnosis.jpg);
+        }
+        &__title {
+            margin-top: -110px;
+            font: {
+                size: 40px;
+                weight:600;
+            };
+            color: #ffffff;
+        }
+    }
+}
+

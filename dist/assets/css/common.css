@@ -23,9 +23,6 @@ body {
   max-width: 1200px;
   width: 100%;
   margin: 120px auto;
-  box-shadow: 50px 50px 60px rgba(0, 0, 0, 0.18);
-  border-radius: 6px;
-  overflow: hidden;
 }
 
 .login-wrap {
@@ -35,6 +32,10 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   height: 100%;
+  background: #ffffff;
+  box-shadow: 50px 50px 60px rgba(0, 0, 0, 0.18);
+  border-radius: 6px;
+  overflow: hidden;
 }
 .login-wrap .subject {
   margin-bottom: 60px;
@@ -98,6 +99,12 @@ body {
 .login_inputbox .login-password.is-inputed {
   background-image: url(../images/icon/icon-lock__on.png);
 }
+.login_inputbox .login-email {
+  background: #f5f6f7 url(../images/icon/icon-email.png) no-repeat left 20px center;
+}
+.login_inputbox .login-email.is-inputed {
+  background-image: url(../images/icon/icon-email__on.png);
+}
 .loginBtn {
   display: inline-block;
   width: 300px;
@@ -107,6 +114,7 @@ body {
   border-radius: 25px;
   color: #ffffff;
   font-size: 18px;
+  font-weight: 500;
   text-align: center;
   line-height: 50px;
 }
@@ -203,4 +211,83 @@ body {
   align-items: center;
   font-weight: 500;
   line-height: 28px;
+}
+
+/* DI-C1002.html :: 비밀번호 초기화 */
+.user-common .logo_area {
+  margin-left: 0;
+}
+.user-common__inner {
+  min-height: 700px;
+  padding: 20px 30px;
+  padding-bottom: 80px;
+  background: #ffffff;
+  box-shadow: 50px 50px 60px rgba(0, 0, 0, 0.18);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.user-common__title {
+  margin-top: 89px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+.user-common__title.mt-40 {
+  margin-top: 40px;
+}
+.user-common__des {
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 28px;
+}
+.user-common__des--ps {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #203c7d;
+  text-align: center;
+}
+.user-common__text {
+  font-size: 16px;
+  color: #545454;
+}
+
+/* DI-C1004.html :: 기관관리자 신청2 */
+.enroll-organization-admin {
+  margin-top: 25px;
+}
+.enroll-organization-admin__inner {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+}
+.enroll-input__item {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.enroll-input__item + .enroll-input__item {
+  margin-top: 10px;
+}
+.enroll-input__dt {
+  width: 150px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.enroll-input__dd .ui-select {
+  height: 50px;
+}
+.enroll-input__dd .ui-button {
+  height: 50px;
+  line-height: 100%;
 }

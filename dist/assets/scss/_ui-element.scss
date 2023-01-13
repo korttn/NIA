@@ -33,8 +33,6 @@
     }
 }
 
-
-
 .sub{
     /** sub-title */
     &-title{
@@ -214,35 +212,6 @@
 }
 
 
-// 별점 indexCase5
-.star-rating {
-    display:flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    width:100%;
-    height: 20rem;
-    font-size:1.5em;
-    text-align:center;
-    border-radius: 2rem;
-    background: #f3f5fb;
-    input {
-        display:none;
-        &:checked ~ label{
-            background: url(../image/common/icon/icon-straRating__on.png);
-            background-size: 10.3rem 9.8rem;
-        }
-     }
-      label {
-        width: 10.3rem;
-        height: 9.8rem;
-        margin: 0 4rem;
-        background: url(../image/common/icon/icon-straRating.png);
-        background-size: 10.3rem 9.8rem;
-        cursor:pointer;
-    }
-}
-
 
 //입력 예
 .text{
@@ -257,9 +226,37 @@
     }
 }
 
-.ui-required{
-    color: #DD5458;
-    margin-left: 1rem;
+/* hidden text style */
+.for-a11y {
+    display: block;
+    margin: 0;
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    color: transparent;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+    filter: alpha(opacity=0);
+    background: none;
+  }
+
+/* ui-require */
+.ui-require{
+    position: relative;
+    width: 0;
+    height:0;
+    &::before{
+        //position:absolute;
+        left: 2px;
+        width:4px;
+        height:4px;
+        content:"*";
+        color:#ff0000;
+    }
 }
 
 .ui-txt--blue{
@@ -267,40 +264,6 @@
     margin-left: 1rem;
 }
 
-
-//설명글
-.des-text{
-    &__inner{
-        padding: 3rem 3rem;
-        font-size: 4.2rem;
-        line-height: 8rem;
-        color:#9196a5;
-        background: #f3f5fb;
-        border-radius: 2rem;
-    }
-    &2{
-        font-size: 4.4rem;
-        color:#575c62;
-    }
-}
-.exp{
-    &-box{
-        &+&{
-            margin-top: 5rem;
-        }
-    }
-    &-title{
-        font: {
-            size:5rem;
-            weight:500;
-        };
-    }
-    &-text{
-        font-size: 5rem;
-        line-height: 8rem;
-        word-break: keep-all;
-    }
-}
 
 //line-gray
 .line-gray{
@@ -325,69 +288,6 @@
 
 
 
-// 모달 리스트?
-.care{
-    &-date{
-        &__list{
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            flex-wrap: wrap;
-            &+&{
-                margin-top: 5rem;
-            }
-        }
-        &__title, &__text{
-            font-size: 5.4rem;
-        }
-        &__title{
-            width:50%;
-            color:#575c62;
-            flex:none;
-            &--width{
-                &-418{
-                    width: 41.8rem;
-                }
-            }
-        }
-        &__text{
-            width:50%;
-        }
-        &__button{
-            margin-left: auto;
-            flex:none;
-        }
-    }
-}
- 
-
-// 총 합계금액
-.total{
-    &-cost{
-        &__list{
-            display: flex;
-            align-items: center;
-        }
-        &__title{
-            font-size: 5.5rem;
-        }
-        &__text{
-            flex:1;
-            text-align: right;
-            font: {
-                size: 7rem;
-                weight:600;
-            };
-        }
-        &__box{
-            &--inner{
-                margin-top: 8rem;
-                padding-top: 8rem;
-                border-top:.3rem solid #dfe0e2;
-            }
-        }
-    }
-}
 
 // date 박스
 .date{
@@ -494,87 +394,6 @@
     font-size: 1px;
     overflow: hidden;
 }
-
-.vomi-range{
-    width:100%;
-    height:4rem;
-    background:#f3f5fb;
-    border:0;
-    border-radius: 2rem;
-    &::-webkit-slider-thumb {
-        -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
-        appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
-        width: 7.5rem; /* 슬라이더 핸들 길이 */
-        height: 7.5rem; /* 슬라이더 핸들 높이 */
-        border-radius: 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
-        background: #4b62c3; /* 슬라이더 핸들 색상 */
-    }
-    &__img{
-        width: 100%;
-        margin-top: 3.8rem;
-    }
-}
-
-
-/* 간병 기간 변경하기&간병 신청 정보 확인 팝업 */ 
-.care{
-    &-date{
-        &__list{
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 100%;
-            &-wrap{
-                display: flex;
-                
-                flex-wrap: wrap;
-            }
-            &--width{
-                &-100{
-                    width:100%;
-                    .care-date__text{
-                        line-height: 8.4rem;
-                    }
-                }
-            }
-            &--col{
-                flex-direction: column;
-                .care-date__title, .care-date__text{
-                    width:100%;
-                }
-                .care-date__text{
-                    margin-top: 4rem;
-                    padding-left:4rem;
-                }
-            }
-        }
-        &__title{
-            position:relative;
-            // width: 40rem;
-            width: 50%;
-            padding-left:4rem;
-            color:#575c62;
-            flex:none;
-            &::before{
-                display: inline-block;
-                position: absolute;
-                top: 2rem;
-                left: 1rem;
-                width:.8rem;
-                height:.8rem;
-                border-radius: 100%;
-                background: #575c62;
-                content:""
-            }
-        }
-        &__button{
-            margin-left: auto;
-            flex:none;
-        }
-    }
-}
-
 
 /* tab */
 .tab{

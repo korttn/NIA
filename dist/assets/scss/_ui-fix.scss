@@ -56,10 +56,10 @@
             margin-right:auto;
         }
         &-100{
-            margin-right: 10rem;
+            margin-right: 100px;
         }
         &-120{
-            margin-right: 12rem;
+            margin-right: 120px;
         }
     }
     &l{
@@ -67,113 +67,119 @@
             margin-left:auto;
         }
         &-10{
-            margin-left:1rem;
+            margin-left:10px;
         }
         &-20{
             margin-left:2rem !important;
         }
         &-30{
-            margin-left:3rem;
+            margin-left:30px;
         }
         &-40{
-            margin-left:4rem;
+            margin-left:40px;
         }
         &-60{
-            margin-left:6rem;
+            margin-left:60px;
         }
     }
     &t{
         &-10{
-            margin-top:1rem;
+            margin-top:10px;
         }
         &-20{
-            margin-top:2rem;
+            margin-top:20px;
         }
         &-30{
-            margin-top:3rem;
+            margin-top:30px;
         }
         &-40{
-            margin-top:4rem;
+            margin-top:40px;
         }
         &-45{
-            margin-top:4.5ren;
+            margin-top:45px;
         }
         &-50{
-            margin-top:5rem;
+            margin-top:50px;
         }
         &-60{
-            margin-top:6rem !important;
+            margin-top:60px;
         }
         &-65{
-            margin-top:6.5rem;
+            margin-top:65px;
         }
         &-70{
-            margin-top:7rem;
+            margin-top:70px;
         }
         &-75{
-            margin-top:7.5rem;
+            margin-top:75px;
         }
         &-80{
-            margin-top:8rem;
+            margin-top:80px;
         }
         &-90{
-            margin-top:9rem;
+            margin-top:90px;
         }
         &-95{
-            margin-top:9.5rem;
+            margin-top:95px;
         }
         &-100{
-            margin-top:10rem;
+            margin-top:100px;
         }
         &-110{
-            margin-top:11rem;
+            margin-top:110px;
         }
         &-115{
-            margin-top:11.5rem;
+            margin-top:115px;
         }
         &-120{
-            margin-top:12rem;
+            margin-top:120px;
         }
         &-130{
-            margin-top:13rem;
+            margin-top:130px;
         }
         &-140{
-            margin-top:14rem;
+            margin-top:140px;
         }
         &-150{
-            margin-top:15rem;
+            margin-top:150px;
         }
         &-160{
-            margin-top:16rem;
+            margin-top:160px;
         }
         &-170{
-            margin-top:17rem;
+            margin-top:170px;
         }
         &-180{
-            margin-top:18rem;
+            margin-top:180px;
         }
         &-190{
-            margin-top:19rem !important;
+            margin-top:190px !important;
         }
         &-200{
-            margin-top:20rem;
+            margin-top:200px;
         }
     }
     &b{
         &-20{
-            margin-bottom:2rem;
+            margin-bottom:20px;
         }
         &-60{
-            margin-bottom:6rem;
+            margin-bottom:60px;
         }
         &-90{
-            margin-bottom:9rem;
+            margin-bottom:90px;
         }
         &-120{
-            margin-bottom:12rem;
+            margin-bottom:120px;
         }
         &-130{
-            margin-bottom:13rem !important;
+            margin-bottom:130px !important;
+        }
+    }
+    &x{
+        &-auto{
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
@@ -181,7 +187,7 @@
 .p{
     &d{
         &-5{
-            padding:5rem;
+            padding:50px;
         }
     }
     &r{
