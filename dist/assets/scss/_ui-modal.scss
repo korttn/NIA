@@ -1,352 +1,325 @@
 @charset 'utf-8';
 @import './helper/index';
 
-/*===== ui-modal =====*/ 
+/*===== ui-modal =====*/
 
 .modal {
-    &-isOpen{
-        overflow: hidden;
-        .modal{
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
-    }
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10rem 0;
-    padding-right: 0 !important;
-    &-header {
-        padding: 10rem 8rem 0 8rem;
-        &__flex{
-            display: flex;
-            align-items: flex-end;
-        }
-        &__padding{
-            &-s{
-                padding-left: 6rem !important;
-                padding-right: 6rem !important;
-            }
-        }
-        &__align{
-            &--center{
-                align-items: center;
-            }
-        }
-    }
-
-    &-body {
-        padding: 0;
-
-        &__main {
-            .modal-core {
-                padding: 10rem 8rem;
-            }
-        }
-    }
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
     &-dialog {
-        justify-content: center;
-    }
-
-    &-content {
-        max-width: calc(100% - 10rem);
-        max-height: 80%;
-        width: 100%;
-        padding: 0;
-        border: 0;
-        box-shadow: none;
-        border-radius: 2rem;
-        // overflow: hidden;
-        &__email {
+        position: relative;
+        width: auto;
+        margin: 0.5rem;
+        pointer-events: none;
+        &-scrollable {
+            height: calc(100% - 1rem);
             .modal {
-                &-tit {
-                    margin-bottom: 3rem;
-                    font-size: 2.4rem;
+                &-content {
+                    max-height: 100%;
+                    overflow: hidden;
                 }
-
-                &-img {
-                    display: block;
-                    margin-bottom: 2rem;
-                    text-align: center;
+                &-body{
+                    overflow-y: auto;
                 }
-            }
-        }
-        &__modifyDateCalendar{
-            .modal-header{
-                margin-top: 10rem;
-                margin-bottom: 9rem;
-                padding: 0 8rem;
-            }
-        }
-        &-chooseCarer{
-            .modal-core{
-                padding-top: 12rem;
-                padding-bottom: 13rem;
-            }
-        }
-        &__matchingCancel{
-            .modal-header{
-                padding-left:8rem;
-                padding-right:8rem;
-            }
-            .bg-darkgray{
-                padding:6rem;
-                border-radius: 2rem;
-            }
-            .ui-list-dashed{
-                li{
-                    &+li{
-                        margin-top: 5rem;
-                    }
-                }
-            }
-        }
-        &__modifyDate{
-            .modal-header{
-                padding-left:8rem;
-                padding-right:8rem;
-            }
-        }
-        // &-startCare{
-        //     .modal-core{
-        //         padding-top: 11rem;
-        //         padding-bottom: 10rem;
-        //     }
-        // }
-        /* 모달 사이즈 */
-        &__s{
-            width: calc(100% - 32rem);
-        }
-        &__vomiNote{
-            .bg-darkgray{
-                padding:6rem;
-                border-radius: 2rem;
-            }
-        }
-        &__dateExtStop{
-            .img-wrap{
-                img{
-                    max-width: 100%;
-                }
-            }
-        }
-    }
-
-    &-core {
-        padding: 12.5rem 5rem;
-        &2 {
-            padding: 4rem 6rem;
-            &:first-child{
-                margin-top: 5rem;
-            }
-            .modal-core2__title {
-                position: relative;
-                padding-bottom: 6rem;
-                // margin-bottom: 9rem;
-                font : {
-                    size: 6rem;
-                    weight:600;
-                }
-                // &::before{
-                //     position: absolute;
-                //     left: 0;
-                //     bottom: 0;
-                //     width: 100%;
-                //     height: .4rem;
-                //     background: #000000;
-                //     content: "";
-                // }
-                &--flex{
+                &-centered {
                     display: flex;
-                    align-items: flex-end;
-                }
-                &-s{
-                    margin-bottom: 8rem;
-                    font : {
-                        size: 5rem;
-                        weight:300;
-                    }
-                    line-height: 7rem;
-                }
-            }
-            // &+&{
-            //     border-top:3rem solid;
-            // }
-        }
-        &3{
-            padding-left: 8rem;
-            padding-right: 8rem;
-        }
-        &__p{
-            &y{
-                &-0{
-                    padding-top: 0;
-                    padding-bottom: 0;
+                    align-items: center;
+                    min-height: calc(100% - 1rem);
                 }
             }
         }
     }
-
-    &-tit {
-        margin-bottom: 2.5rem;
-        font : {
-            size: 2rem;
-            weight: 500;
-        }
-
-        text-align: center;
-    }
-
-    &-title {
-        margin-bottom: 7.5rem;
-        font : {
-            size: 6.5rem;
-            weight: 500;
-        }
-        text-align: center;
-        line-height: 9rem;
-        &2{
-            font : {
-                size: 6rem;
-                weight:500;
-            }
-        }
-        &__font{
-            &-m{
-                font : {
-                    size: 6rem;
-                    weight:500;
-                }
-                
-            }
-            &-l{
-                font-size: 7.5rem;
-            }
-        }
-        &__flex{
-            display: flex;
-            align-items: flex-end;
-        }
-        &__underline{
-            position: relative;
-            margin-bottom: 8rem;
-            padding-bottom: 6rem;
-            &::before {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 0.4rem;
-                background: #000000;
-                content: "";
+    &.fade {
+        .modal {
+            &-dialog {
+                transition: transform 0.3s ease-out;
+                transform: translate(0, -50px);
             }
         }
     }
-
-    &-text {
-        font-size: 6rem;
-        line-height: normal;
-        word-break: keep-all;
-        &__small {
-            font: {
-                size: 5rem;
-            };
-            line-height: 7rem;
-            &--title{
-                margin-bottom: 4rem;
-                font: {
-                    size: 5rem;
-                };
-            }
+    &.show .modal {
+        &-dialog {
+            transform: none;
         }
     }
-
+    &.modal-static .modal-dialog {
+        transform: scale(1.02);
+    }
+    &-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        min-width: 401px;
+        margin: 0 auto;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border-radius: 10px;
+        outline: 0;
+    }
     &-backdrop {
-        background: transparent;
-    }
-
-    &-buttons {
-        .ui-button {
-            height:20rem;
-            font : {
-                size: 6rem;
-                weight:500;
-            }
-            border-radius: 0 0 2rem 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1050;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        &.fade {
+            opacity: 0;
         }
-        &__sticky{
-            display: flex;
-            .ui-button{
-                border-bottom-left-radius: 2rem;
-                border-bottom-right-radius: 0;
-                border : {
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                }
-                font-weight: 400;
-                &+.ui-button{
-                    margin-left: 0;
-                    border-bottom-left-radius: 0rem;
-                    border-bottom-right-radius: 2rem;
-                }
-            }
+        &.show {
+            opacity: 0.66;
         }
     }
-
-    &-box {
-        &__gray {
-            padding: 5rem 6rem;
-            background: #f3f5fb;
-            border-radius: 2rem;
-
-            // * {
-            //     font-size: 5rem;
-            //     line-height: 7rem;
-            // }
+    &-header {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        border-bottom: 1px solid #d1d1d1;
+        .btn-close {
+            padding: 0.5rem 0.5rem;
+            margin: -0.5rem -0.5rem -0.5rem auto;
         }
     }
-
-    /* case3 간병시작하기 모달 */ 
-    &-user{
-        margin-bottom: 9rem;
-        font-size: 5rem;
-        &__name{
-            font: {
-                size: 6.5rem;
-                weight:500;
-            };
-        }
-    }
-
-    /* indexCase3 보미노트 모달 */ 
-    &-today{
-        margin-left: auto;
+    &-title{
+        margin-bottom: 0;
         font: {
-            size: 5.6rem;
-            weight:500;
+            size: 20px;
+            weight:600;
         };
-        color:#3c50a2;
     }
-}
-
-.vomi{
-    &Note{
-        &-text{
-            font-size: 5rem;
-            line-height: 9rem;
-            &__keyword{
-                font-weight: 600;
-                color:#3c50a2;
+    &-body{
+        position: relative;
+        flex: 1 1 auto;
+        padding: 20px 1rem;
+        font-size: 16px;
+        color: #555555;
+        line-height: 30px;
+        text-align: center;
+    }
+    &-footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        padding:0;
+        padding-bottom: 30px;
+        border-top: 0;
+        border-bottom-right-radius: calc(0.3rem - 1px);
+        border-bottom-left-radius: calc(0.3rem - 1px);
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0;
+            font-size: 1rem;
+            border-radius: 0.25rem;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        >* {
+            margin: 0;
+        }
+    }
+    &-fullscreen {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+        .modal{
+            &-content {
+                height: 100%;
+                border: 0;
+                border-radius: 0;
+            }
+            &-header {
+                border-radius: 0;
+            }
+            &-body {
+                overflow-y: auto;
+            }
+            &-footer {
+                border-radius: 0;
             }
         }
     }
 }
 
-#hosDep{
-    .ui-buttons__fourth .ui-button{
-        @include d-flex;
-        justify-content:flex-start;
-        padding: 0;
-        padding-left:3.9rem;
+@media (prefers-reduced-motion: reduce) {
+    .modal.fade .modal-dialog {
+        transition: none;
+    }
+}
+@media (min-width: 576px) {
+    .modal{
+        &-dialog {
+            max-width: 500px;
+            margin: 1.75rem auto;
+            &-scrollable {
+                height: calc(100% - 3.5rem);
+            }
+            &-centered {
+                min-height: calc(100% - 3.5rem);
+            }
+        }
+        &-sm{
+            max-width: 300px;
+        }
+    }
+}
+@media (min-width: 992px) {
+
+    .modal-lg,
+    .modal-xl {
+        max-width: 800px;
+    }
+}
+@media (min-width: 1200px) {
+    .modal-xl {
+        max-width: 1140px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .modal-fullscreen-sm-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+        &.modal{
+            &-content {
+                height: 100%;
+                border: 0;
+                border-radius: 0;
+            }
+            &-header {
+                border-radius: 0;
+            }
+            &-body {
+                overflow-y: auto;
+            }
+            &-footer {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .modal-fullscreen-md-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+        .modal{
+            &-content {
+                height: 100%;
+                border: 0;
+                border-radius: 0;
+            }
+            &-header {
+                border-radius: 0;
+            }
+            &-body {
+                overflow-y: auto;
+            }
+            &-footer {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .modal-fullscreen-lg-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+        .modal{
+            &-content {
+                height: 100%;
+                border: 0;
+                border-radius: 0;
+            }
+            &-header {
+                border-radius: 0;
+            }
+            &-body {
+                overflow-y: auto;
+            }
+            &-footer {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .modal-fullscreen-xl-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+        .modal{
+            &-content {
+                height: 100%;
+                border: 0;
+                border-radius: 0;
+            }
+            &-header {
+                border-radius: 0;
+            }
+            &-body {
+                overflow-y: auto;
+            }
+            &-footer {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .modal-fullscreen-xxl-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+        .modal{
+            &-content {
+                height: 100%;
+                border: 0;
+                border-radius: 0;
+            }
+            &-header {
+                border-radius: 0;
+            }
+            &-body {
+                overflow-y: auto;
+            }
+            &-footer {
+                border-radius: 0;
+            }
+        }
     }
 }

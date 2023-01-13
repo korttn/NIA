@@ -5,15 +5,17 @@
 
 /* button */ 
 .ui-button {
-    width:100%;
-    height: 13rem;
+    width:auto;
+    height: 44px;
+    padding: 0 25px;
+    margin: 5px;
     font: {
-        size: 6rem;
+        size: 16px;
         weight:500;
     };
     color:#000000;
-    border-radius: 1rem;
-    line-height: 13.1rem;
+    border-radius: 22px;
+    line-height: 44px;
     &:disabled{
         background-color:#f2f2f2 !important;
         color:#b2b2b2 !important;
@@ -25,7 +27,7 @@
         display: flex;
         &__half{
             flex-wrap: wrap;
-            margin: -1rem;
+            margin: -5px;
             .ui-button{
                 max-width: calc(100% / 2 - 2rem);
                 margin: 1rem;
@@ -112,9 +114,10 @@
         flex:none;
     }
     &__bg{
-        &-blue{
-            background: #4b62c3;
+        &--blue{
+            background: #203c7d;
             color:#ffffff;
+            border: 0;
         }
         &-gray{
             background: #e9ebf1;
@@ -304,44 +307,7 @@
         padding: 0 4rem ;
         text-align: left;
     }
-    &__check{
-        border-radius: 1.5rem;
-        font-weight: 400;
-        &.is-active{
-            font-weight: 500;
-            color:#3c50a2;
-            border-color: #4b62c3;
-            background: url(../image/common/icon/icon-check__blue.png) no-repeat right 3.9rem center;
-            background-size: 4.5rem 3.1rem;
-            box-shadow: 1rem 1rem 3.3rem rgba(0,0,0,.13);
-        }
-        &--multi{
-            font-weight: 400;
-            &.is-active{
-                font-weight: 500;
-                color:#3c50a2;
-                border-color: #4b62c3;
-                background: url(../image/common/icon/icon-check__blue.png) no-repeat right 3.9rem center;
-                background-size: 4.5rem 3.1rem;
-                box-shadow: 1rem 1rem 3.3rem rgba(0,0,0,.13);
-            }
-        }
-    }
-    &__click{
-        &.is-active{
-            font-weight: 500;
-            color:#3c50a2;
-            border-color: #4b62c3;
-            box-shadow: 1rem 1rem 3.3rem rgba(0,0,0,.13);
-        }
-        &Full{
-            border-radius: 3rem;
-            &.is-active{
-                color:#fff;
-                background-color:#4b62c3;
-            }
-        }
-    }
+    
     &__badge{
         @include d-flex;
         @include align-center;
@@ -377,95 +343,7 @@
     }
 }
 .button{
-    &-joinSocial{
-        width:100%;
-        height:20rem;
-        border-radius: 2rem;
-        font-size: 6rem;
-        color:#000000;
-        background-repeat: no-repeat ;
-        background-position: left 9.2rem center;
-        border:.3rem solid;
-        &__naver{
-            border-color: #06be34;
-            background-image: url(../image/common/icon-naver__colored.png) ;
-            background-size: 5.6rem 5.1rem;
-            flex: none;
-        }
-        &__google{
-            border-color: #dc4e41;
-            background-image: url(../image/common/icon-google__colored.png);
-            background-size: 5.3rem 5.5rem;
-        }
-        &__kakao{
-            border-color: #fae100;
-            background-image: url(../image/common/icon-kakao.png) ;
-            background-size: 8.5rem 7.7rem;
-        }
-        &__apple{
-            border-color: #000000;
-            background-image: url(../image/common/icon-apple.png) ;
-            background-size: 5.4rem 6.6rem;
-        }
-        &+.button-joinSocial {
-            margin-top:1.7rem;
-        }
-    }
-    &-kakao{
-        width:100%;
-        height:20rem;
-        font : {
-            size: 6rem;
-            weight:500;
-        }
-        background: #fae100 url(../image/common/icon-kakao.png) no-repeat left 7rem center ;
-        background-size: 9.9rem 9.1rem;
-        border:0;
-        border-radius: 2rem;
-        color:#000000;
-    }
-    &-naver{
-        &::before{
-            display: inline-block;
-            width: 5.6rem;
-            height: 5.1rem;
-            margin-top: -1rem;
-            margin-right: 2rem;
-            background: url(../image/common/icon-naver__colored.png);
-            background-size: 5.6rem 5.1rem;
-            vertical-align: middle;
-            flex:none;
-            content:""
-        }
-    }
-    &-google{   
-        &::before{
-            display: inline-block;
-            flex: none;
-            width: 5.3rem;
-            height: 5.5rem;
-            margin-top: -.5rem;
-            margin-right: 2rem;
-            background: url(../image/common/icon-google__colored.png);
-            background-size: 5.3rem 5.5rem;
-            vertical-align: middle;
-            content:""
-        }
-    }
-    &-apple{   
-        &::before{
-            display: inline-block;
-            flex: none;
-            width: 5.4rem;
-            height: 6.6rem;
-            margin-top: -2rem;
-            margin-right: 2rem;
-            background: url(../image/common/icon-apple.png);
-            background-size: 5.4rem 6.6rem;
-            vertical-align: middle;
-            content:""
-        }
-    }
+   
     &-plus{
         &-card{
             @include d-flex-center;

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>데이터 활용 역량 진단 도구</title>
 
-    <script src="./assets/lib/jquery/jquery-1.10.2.min.js"></script>
+    <script src="./assets/lib/jquery/jquery-3.5.1.js"></script>
     <script src="./assets/lib/jquery/jquery-ui.min.js"></script>
     <script src="./assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
 
@@ -14,60 +15,111 @@
 
     <!-- 공통 css -->
     <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/font.css">
     <link rel="stylesheet" href="./assets/css/ui-style.css">
 
     <!-- 개별 css -->
     <link rel="stylesheet" href="./assets/css/common.css">
-    
+
 </head>
+
 <body>
     <div class="wrap">
         <div class="container container-user">
             <div class="container__inner">
                 <div class="login-wrap">
                     <div class="login-left">
-                        <div class="logo_area">
-                        </div>
                         <div class="subject">데이터 활용 역량 <br>온라인 진단 도구</div>
-                        <div class="content">
-                            기관의 데이터 역량을 손쉽게 진단하기 위한 진단 도구에 접속하신 것을 환영합니다.<br>
-                            전달 받으신 아이디와 비밀번호를 입력해 주세요.
-                        </div>
                         <div class="inf_content_wrap">
                             <div class="inf_content">
                                 <span class="inf_content_head">취지</span>
-                                <span class="inf_content_body">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공공기관이 데이터기반행정 활성화를 위해 필요한 데이터 역량을 측정하고 보강할 수 있도록 하기 위함</span>
+                                <span class="inf_content_body">공공기관이 데이터기반행정 활성화를 위해 <br>필요한 데이터 역량을 측정하고 보강할 수 있도록 하기
+                                    위함</span>
                             </div>
                             <div class="inf_content">
                                 <span class="inf_content_head">사용자 안내</span>
-                                <span class="inf_content_body">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 총괄 관리자 <span class="inf_content_body3">: 전체 기관 응답현황 및 기관별 진단결과 조회</span><a class="manual" href="/survey/files/master_manual.pptx" download="">메뉴얼</a>
-                                        <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 기관 관리자  <span class="inf_content_body3">: 기관 데이터 역량지표 및 진단결과 확인</span><a href="/survey/files/manual.pptx" download="" class="manual">메뉴얼</a>
-                                        <br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 진단 응답자 <span class="inf_content_body3">: 기관 내 구성원일 경우</span><a href="/survey/files/survey_manual.pptx" download="" class="manual">메뉴얼</a>
-                                
-                                 </span>
+                                <span class="inf_content_body">
+                                    <ul class="inf_content_ul">
+                                        <li class="inf_content_li">총괄 관리자<span class="inf_content_body3"><span
+                                                    class="mark-colon">:</span>진단문항 관리 및 전체 기관 응답현황 조회</span><a
+                                                class="manual" href="/survey/files/master_manual.pptx"
+                                                download="">메뉴얼</a></li>
+                                        <li class="inf_content_li">기관 관리자 <span class="inf_content_body3"><span
+                                                    class="mark-colon">:</span>기관 내 구성원으로 진단설문을 통한 본인의 데이터 활용 역량
+                                                파악</span><a href="/survey/files/manual.pptx" download=""
+                                                class="manual">메뉴얼</a></li>
+                                        <li class="inf_content_li">진단 대상자 <span class="inf_content_body3"><span
+                                                    class="mark-colon">:</span>기관 내 구성원일 경우</span><a
+                                                href="/survey/files/survey_manual.pptx" download=""
+                                                class="manual">메뉴얼</a></li>
+                                    </ul>
+                                </span>
                             </div>
                         </div>
                     </div>
                     <div class="login-right">
+                        <div class="logo_area"></div>
+                        <div class="login-title">
+                            <div class="login-title__head">LOGIN</div>
+                            <div class="login-title__body">
+                                데이터 역량을 손쉽게 진단하기 위한 <br>
+                                진단 도구에 접속하신 것을 환영합니다.
+                            </div>
+                        </div>
                         <form id="frm" name="frm" method="post" action="">
-                            <div id="login" class="login">
-                                <div class="login_inputbox">
-                                    <input type="text" class="" id="loginId" name="loginId" placeholder="아이디 입력"><br>
-                                    <input type="password" class="" id="loginPw" name="loginPw" onkeypress="if(event.keyCode==13){fn_member_login(); return;}" placeholder="비밀번호 입력">
+                            <div id="login" class="login-box">
+                                <div class="login_inputbox ui-form">
+                                    <input type="text" class="ui-input login-id" id="loginId" name="loginId"
+                                        placeholder="아이디">
+                                    <input type="password" class="ui-input login-password" id="loginPw" name="loginPw" placeholder="비밀번호">
                                 </div>
-                                    <a href="#" onclick="fn_member_login()" class="loginBtn">로그인</a>
+                                <a href="javascript:void(0)" class="loginBtn" data-bs-toggle="modal" data-bs-target="#LoginBlockBox">로그인</a>
                             </div>
                         </form>
+                        <div class="login-linkbox">
+                            <a class="login-link" href="javascript:void(0)">비밀번호 초기화</a>
+                            <a class="login-link" href="javascript:void(0)">기관 관리자 신청</a>
+                        </div>
                     </div>
+
+
+
+                    <!-- 모달 -->
+                    <div class="modal fade" id="LoginBlockBox" tabindex="-1" aria-labelledby="LoginBlockBoxLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalLabel">알림</h5>
+                                </div>
+                                <div class="modal-body">아이디 또는 비밀번호를 잘못 입력했습니다. <br>
+                                    입력하신 내용을 다시 확인해주세요.                                    
+                                </div>
+                                <!-- 진단대상자의 진단 설문이 존재하지 않은 경우 ::
+                                <div class="modal-body">현재 대상자님의 해당되는 진단 설문이 없습니다.
+                                    자세한 사항은 기관 담당자에게 문의 부탁드립니다.                                         
+                                </div>
+                                -->
+                                <div class="modal-footer">
+                                    <div class="ui-buttons">
+                                        <button type="button" class="ui-button ui-button__bg--blue" data-bs-dismiss="modal">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //모달 -->
+
+
+
+
                 </div>
             </div>
-            
+
         </div>
     </div>
-    
+
 </body>
+
 </html>

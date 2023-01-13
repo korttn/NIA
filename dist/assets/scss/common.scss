@@ -11,6 +11,7 @@ body{
 
 /** 로그인 */ 
 .container{
+	background: #f4f8fa;
 	&-user{
 		@include d-flex;
 		height: 100%;
@@ -22,38 +23,179 @@ body{
 			border-radius: 6px;
 			overflow: hidden;
 		}
+		
+	}
+}
+.login{
+	&-wrap{
+		@include d-flex;
+		height:100%;
+		.subject{
+			margin-bottom: 60px;
+			font: {
+				size: 48px;
+				weight:500;
+			};
+			color:#ffffff;
+			line-height: 60px;
+			text-shadow: 0 0 5px rgba(0,0,0,0.66);
+		}
+	}
+	&-left{
+		width: 750px;
+		padding-top: 210px;
+		padding-left: 75px;
+		background: url(../images/background/bg-login.jpg) no-repeat;
+	}
+	&-right{
+		flex:1;
+		padding: 20px 30px 20px 75px;
+	}
+	&-title{
+		&__head{
+			margin-top: 130px;
+			margin-bottom: 15px;
+			font: {
+				size: 26px;
+				weight:500;
+			};
+			color:#203c7d;
+		}
+		&__body{
+			margin-bottom: 30px;
+			font: {
+				size: 16px;
+			};
+			color:#545454;
+			line-height: 22px;
+		}
+	}
+	&-box{
+		max-width: 300px;
+	}
+	&_inputbox{
+		input{
+			width: 300px;
+			height: 50px;
+			padding-left: 47px;
+			border-radius: 25px;
+			border: 2px solid #e4e4e4;
+			box-sizing: border-box;
+			line-height: 50px;
+			text-indent: 0;
+			&::placeholder{
+				color: #a8a8a8;
+			}
+			&+input{
+				margin-top: 15px;
+			}
+		}
 		.login{
-			&-wrap{
-				@include d-flex;
-				height:100%;
-				.subject{
-					font: {
-						size: 48px;
-						weight:600;
-					};
-					color:#ffffff;
-					line-height: 60px;
-					text-shadow: 0 0 5px rgba(0,0,0,0.66);
+			&-id{
+				background: #f5f6f7 url(../images/icon/icon-people.png) no-repeat left 20px center;
+				&.is-inputed{
+					background-image: url(../images/icon/icon-people__on.png);
 				}
 			}
-			&-left{
-				width: 750px;
-				background: url(../images/background/bg-login.jpg) no-repeat;
+			&-password{
+				background: #f5f6f7 url(../images/icon/icon-lock.png) no-repeat left 20px center;
+				&.is-inputed{
+					background-image: url(../images/icon/icon-lock__on.png);
+				}
 			}
 			
 		}
 	}
+	&Btn{
+		display: inline-block;
+		width:300px;
+		height: 50px;
+		margin-top: 55px;
+		background: #203c7d;
+		border-radius: 25px;
+		color:#ffffff;
+		font-size: 18px;
+		text-align: center;
+		line-height: 50px;
+	}
+	&-linkbox{
+		display: flex;
+		justify-content: center;
+		max-width: 300px;
+		margin-top: 28px;
+		.login{
+			&-link{
+				display: inline-block;
+				position: relative;
+				font: {
+					size: 16px;
+					weight:500;
+				};
+				color:#333333;
+				&::before{
+					position: absolute;
+					bottom: -5px;
+					width:100%;
+					height:1px;
+					background:#333333;
+					content: "";
+				}
+				&+.login-link{
+					margin-left: 34px;
+				}
+			}
+		}
+	}
+}
+.logo{
+	&_area{
+		width:228px;
+		height:21px;
+		margin-left: auto;
+		background: url(../images/common/logo.png);
+	}
 }
 .inf{
 	&_content{
+		&+&{
+			margin-top: 30px
+		}
 		&_head{
 			@include d-flex-center;
 			width: 99px;
 			height: 30px;
+			margin-bottom: 10px;
 			font-size: 15px;
 			color:#ffffff;
 			background: #1f3aa5;
 			border-radius: 15px;
+		}
+		&_body{
+			display: block;
+			padding-left: 5px ;
+			color: #ffffff;
+			line-height: 28px;
+			text-shadow: 0 0 5px rgba(0,0,0,0.66);
+			.mark-colon{
+				padding:0 5px;
+			}
+		}
+		.manual{
+			@include d-flex-center;
+			width: 57px;
+			height: 22px;
+			margin-left: 15px;
+			background: #8db6ef;
+			font-size: 13px;
+			color: #ffffff;
+			text-shadow: none;
+			border-radius: 11px;
+		}
+		&_li{
+			@include d-flex;
+			@include align-center;
+			font-weight: 500;
+			line-height: 28px;
 		}
 	}
 }
