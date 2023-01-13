@@ -1,14 +1,62 @@
 @charset 'utf-8';
 
-/** element */
-@import 'ui-fix',  // margin, padding, font ···
-        'ui-button', 
-        'ui-table', 
-        'ui-form', // input, select, radio, checkbox ···
-        'ui-modal',
-        'ui-element'; // component
+@import './helper/index';
 
-@import 'responsive';
+html, body, .wrap{
+	height: 100%;
+}
+body{
+	font-size: 16px;
+}
+
+/** 로그인 */ 
+.container{
+	&-user{
+		@include d-flex;
+		height: 100%;
+		.container__inner{
+			max-width: 1200px;
+			width:100%;
+			margin: 120px auto;
+			box-shadow: 50px 50px 60px rgba(0,0,0,0.18);
+			border-radius: 6px;
+			overflow: hidden;
+		}
+		.login{
+			&-wrap{
+				@include d-flex;
+				height:100%;
+				.subject{
+					font: {
+						size: 48px;
+						weight:600;
+					};
+					color:#ffffff;
+					line-height: 60px;
+					text-shadow: 0 0 5px rgba(0,0,0,0.66);
+				}
+			}
+			&-left{
+				width: 750px;
+				background: url(../images/background/bg-login.jpg) no-repeat;
+			}
+			
+		}
+	}
+}
+.inf{
+	&_content{
+		&_head{
+			@include d-flex-center;
+			width: 99px;
+			height: 30px;
+			font-size: 15px;
+			color:#ffffff;
+			background: #1f3aa5;
+			border-radius: 15px;
+		}
+	}
+}
 
 
 

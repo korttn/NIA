@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 활용 역량 진단 도구</title>
+
+    <script src="./assets/lib/jquery/jquery-1.10.2.min.js"></script>
+    <script src="./assets/lib/jquery/jquery-ui.min.js"></script>
+    <script src="./assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/ui-script.js"></script>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/ui-style.css">
+
+    <!-- 개별 css -->
+    <link rel="stylesheet" href="./assets/css/common.css">
+    
+</head>
+<body>
+    <div class="wrap">
+        <div class="container container-user">
+            <div class="container__inner">
+                <div class="login-wrap">
+                    <div class="login-left">
+                        <div class="logo_area">
+                        </div>
+                        <div class="subject">데이터 활용 역량 <br>온라인 진단 도구</div>
+                        <div class="content">
+                            기관의 데이터 역량을 손쉽게 진단하기 위한 진단 도구에 접속하신 것을 환영합니다.<br>
+                            전달 받으신 아이디와 비밀번호를 입력해 주세요.
+                        </div>
+                        <div class="inf_content_wrap">
+                            <div class="inf_content">
+                                <span class="inf_content_head">취지</span>
+                                <span class="inf_content_body">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공공기관이 데이터기반행정 활성화를 위해 필요한 데이터 역량을 측정하고 보강할 수 있도록 하기 위함</span>
+                            </div>
+                            <div class="inf_content">
+                                <span class="inf_content_head">사용자 안내</span>
+                                <span class="inf_content_body">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 총괄 관리자 <span class="inf_content_body3">: 전체 기관 응답현황 및 기관별 진단결과 조회</span><a class="manual" href="/survey/files/master_manual.pptx" download="">메뉴얼</a>
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 기관 관리자  <span class="inf_content_body3">: 기관 데이터 역량지표 및 진단결과 확인</span><a href="/survey/files/manual.pptx" download="" class="manual">메뉴얼</a>
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 진단 응답자 <span class="inf_content_body3">: 기관 내 구성원일 경우</span><a href="/survey/files/survey_manual.pptx" download="" class="manual">메뉴얼</a>
+                                
+                                 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-right">
+                        <form id="frm" name="frm" method="post" action="">
+                            <div id="login" class="login">
+                                <div class="login_inputbox">
+                                    <input type="text" class="" id="loginId" name="loginId" placeholder="아이디 입력"><br>
+                                    <input type="password" class="" id="loginPw" name="loginPw" onkeypress="if(event.keyCode==13){fn_member_login(); return;}" placeholder="비밀번호 입력">
+                                </div>
+                                    <a href="#" onclick="fn_member_login()" class="loginBtn">로그인</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
