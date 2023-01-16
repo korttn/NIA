@@ -163,6 +163,9 @@
         &-20{
             margin-bottom:20px;
         }
+        &-30{
+            margin-bottom:30px;
+        }
         &-60{
             margin-bottom:60px;
         }
@@ -322,6 +325,12 @@
         &__xxs{
             font-size: 4.6rem;
         }
+        &__20{
+            font-size: 20px;
+        }
+        &__30{
+            font-size: 30px;
+        }
         &__48{
             font-size: 4.8rem;
         }
@@ -348,6 +357,9 @@
         &__r{
             font-weight: 500;
         }
+        &__500{
+            font-weight: 500;
+        }
         &__m{
             font-weight: 600;
         }
@@ -366,8 +378,13 @@
 
 //color
 $color-blue : #3c50a2;
-.color-blue{
-    color: $color-blue;
+.color{
+    &-blue{
+        color: $color-blue;
+    }
+    &-skyblue{
+        color:#0367b0;
+    }
 }
 
 

@@ -158,8 +158,10 @@
         }
     }
     &__border{
-        &-gray{
-            border: .4rem solid #d8dce2; 
+        &--gray{
+            border: 1px solid #d9d9d9; 
+            color:#243b7c;
+            font-weight: 500;
         }
         &-blue{
             border: .4rem solid #4b62c3; 

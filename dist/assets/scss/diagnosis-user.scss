@@ -2,6 +2,27 @@
 
 @import './helper/index';
 
+.container{
+    &-diagnosis{
+        @include d-flex;
+        min-height: 100%;
+        height:auto;
+        .container__inner{
+            width:100%;
+            padding-bottom: 50px
+        }   
+    }    
+}
+
+.layout-diagnosis{
+    *{font-size: 18px;}
+    &__padding{
+        &--136{
+            padding:136px 0;
+        }
+    }
+}
+
 .diagnosis {
     &-header {
         &__inner {
@@ -17,6 +38,203 @@
             };
             color: #ffffff;
         }
+    }
+    &-structure{
+        &__exp{
+            display: flex;
+            margin-top: 15px;
+        }
+        &__ul{
+            margin-left: 20px;
+        }
+        &__item{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+/* button */ 
+.container-diagnosis{
+    .ui-button{
+        width:218px;
+        height: 66px;
+        line-height: 66px;
+        border-radius: 3px;
+        font-size: 20px;
+        font-weight: 400;
+        &__border{
+            &--gray{
+                font-weight: 500;
+            }
+        }
+    }
+    .ui{
+        &-form{
+            input{
+                height:44px;
+                border:1px solid #dddddd;
+                border-radius: 3px;
+                background: #ffffff;
+            }
+        }
+        &-input{
+            &__width{
+                &--560{
+                    width: 560px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.user-guide{
+    &__title{
+        margin-bottom: 45px;
+        font-size: 36px;
+        font-weight:500;
+        text-align: center;
+        &.font{
+            &-size{
+                &__30{
+                    font-size: 30px;
+                }
+            }
+            &-weight{
+                &__600{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &__text{
+        font-size: 18px;
+        line-height: 32px;
+        text-align: left;
+    }
+    &__des{
+        font-size: 18px;
+        color:#747478;
+        line-height: 32px;
+        text-align: center;
+    }
+    &__top{
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+.save{
+    &-date{
+        margin-bottom: 45px;
+        font-size: 24px;
+        font-weight: 500;
+        color:#0367b0;
+        text-align: center;
+    }
+}
+
+/* DI-U1101.html */ 
+.user-diagnosis{
+    &__title{
+        margin-bottom: 10px;
+        color:#0367b0;
+        font-weight: 500;
+        line-height: 32px;
+    }
+}
+.ui{
+    &-radio{
+        input{
+            &[type="radio"]{
+                -webkit-appearance:none;
+                width : 18px;
+                height : 18px;
+                border : 1px solid #dddddd;
+                outline: none;
+                cursor : pointer;
+                background : #fff;
+                border-radius : 50%;
+                vertical-align : middle;
+                margin : -4px 5px 0px 0px;
+                line-height: 32px;
+                &:before{
+                    content : '';
+                    display : block;
+                    width : 100%;
+                    height : 100%;
+                    margin : auto;
+                    border-radius : 50%;
+                    background : #fff;
+                }
+                &:checked{
+                    background: #203c7d;
+                    border-color: #203c7d;
+                    &:before{
+                        content : '';
+                        display : block;
+                        width : 6px;
+                        height : 6px;
+                        margin : 4.5px auto;
+                        border-radius : 50%;
+                        background : #ffffff;
+                    }
+                }
+            }
+            
+        }
+        label{
+            font-size: 18px;
+            color:#747478;
+            line-height: 32px;
+        }
+    }
+    &-checkbox{
+        margin-top: 15px;
+        input{
+            &[type="checkbox"]{
+                -webkit-appearance:none;
+                width : 18px;
+                height : 18px;
+                border : 1px solid #dddddd;
+                outline: none;
+                cursor : pointer;
+                background : #fff;
+                border-radius : 3px;
+                vertical-align : middle;
+                margin : -4px 5px 0px 0px;
+                &:checked{
+                    background: #203c7d url(../images/icon/icon-check.png) no-repeat center;
+                    border-color: #203c7d;
+                    
+                }
+            }
+            
+        }
+        label{
+            font-size: 18px;
+            color:#747478;
+        }
+    }
+}
+
+.user{
+    &-diagnosis{
+        &__item{
+            &+&{
+                margin-top: 30px;
+            }
+        }
+    }
+    &_agree_contents{
+        padding:20px;
+        font-size: 16px;
+        color:#747478;
+        line-height: 24px;
+        background: #eef3f7;
+        word-break: keep-all;
     }
 }
 
