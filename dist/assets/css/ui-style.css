@@ -319,6 +319,13 @@
   color: #0367b0;
 }
 
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+
 /* img */
 .img-alert {
   width: 16.8rem;
@@ -406,7 +413,6 @@
   width: auto;
   height: 44px;
   padding: 0 25px;
-  margin: 5px;
   font-size: 16px;
   font-weight: 500;
   color: #000000;
@@ -420,6 +426,9 @@
 .ui-buttons {
   display: flex;
   margin: -5px;
+}
+.ui-buttons .ui-button {
+  margin: 5px;
 }
 .ui-buttons__half {
   flex-wrap: wrap;
@@ -452,10 +461,6 @@
   margin-top: 2rem;
   margin-left: 0rem;
 }
-.ui-buttons--faq .ui-button.is-active {
-  background-color: #4b62c3;
-  color: #fff;
-}
 .ui-buttons .ui-form__direct {
   flex: 1;
   margin: 1rem;
@@ -487,30 +492,22 @@
   width: auto;
   padding: 0 4.8rem;
 }
+.ui-button__width--120 {
+  width: 120px !important;
+}
 .ui-button__width--150 {
   width: 150px;
 }
 .ui-button__width--300 {
   width: 300px;
 }
+.ui-button__height--46 {
+  height: 46px !important;
+  line-height: 46px !important;
+}
 .ui-button__height--50 {
   height: 50px;
   line-height: 50px;
-}
-.ui-button__page--back {
-  width: 12.9rem;
-  height: 100%;
-  background-image: url("../image/common/icon/icon_arrowBack.png");
-  background-size: 5.9rem 4rem;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-.ui-button__certi {
-  width: 42rem;
-  margin-left: 2rem;
-  background: #666666;
-  color: #ffffff;
-  flex: none;
 }
 .ui-button__bg--blue {
   background: #203c7d;
@@ -535,6 +532,9 @@
   border: 0.4rem solid #4b62c3;
   background: #ffffff;
   color: #3c50a2;
+}
+.ui-button__font--18 {
+  font-size: 18px !important;
 }
 .ui-button__font-xxs {
   font-size: 4.6rem;
@@ -740,15 +740,26 @@
   border-top: 2px solid;
 }
 .ui-table th {
-  font-size: 17px;
+  padding: 10px;
+  font-size: 18px;
   font-weight: 500;
   vertical-align: middle;
   text-align: center;
   color: #000000;
+  line-height: 26px;
+  background: #f6f7f9;
+  border-bottom: 1px solid #b6b5b5;
 }
-.ui-table th {
-  font-size: 17px;
-  color: #000000;
+.ui-table th + th {
+  border-left: 1px solid #e8e8e8;
+}
+.ui-table td {
+  padding: 20px 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.ui-table td + td {
+  border-left: 1px solid #e8e8e8;
 }
 .ui-table__ver tr {
   height: 65px;
@@ -1486,6 +1497,10 @@
   }
 }
 /*===== ui-element =====*/
+.container {
+  max-width: 100%;
+  padding: 0;
+}
 .container__sub {
   padding: 0 5rem 10rem 5rem;
 }

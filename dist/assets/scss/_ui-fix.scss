@@ -373,6 +373,15 @@ $color-skyblue : #0367b0;
     }
 }
 
+.text{
+    &-right{
+        text-align: right;
+    }
+    &-left{
+        text-align: left;
+    }
+}
+
 
 /* img */ 
 .img{

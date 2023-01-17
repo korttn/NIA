@@ -8,7 +8,7 @@
     width:auto;
     height: 44px;
     padding: 0 25px;
-    margin: 5px;
+    
     font: {
         size: 16px;
         weight:500;
@@ -23,6 +23,9 @@
     &s{
         display: flex;
         margin: -5px;
+        .ui-button{
+            margin: 5px;
+        }
         &__half{
             flex-wrap: wrap;
             margin: -5px;
@@ -65,14 +68,7 @@
                 }
             }
         }
-        &--faq{
-            .ui-button{
-                &.is-active{
-                    background-color:#4b62c3;
-                    color:#fff;
-                }
-            }
-        }
+        
         .ui-form{
             &__direct{
                 flex:1;
@@ -110,6 +106,9 @@
             width: auto;
             padding: 0 4.8rem;
         }
+        &--120{
+            width:120px !important;
+        }
         &--150{
             width:150px;
         }
@@ -118,29 +117,16 @@
         }
     }
     &__height{
+        &--46{
+            height: 46px !important;
+            line-height: 46px !important;
+        }
         &--50{
             height: 50px;
             line-height: 50px;
         }
     }
-    &__page {
-        &--back {
-            width: 12.9rem;
-            height: 100%;
-            // margin-right: 7rem;
-            background-image: url("../image/common/icon/icon_arrowBack.png");
-            background-size: 5.9rem 4rem;
-            background-repeat: no-repeat;
-            background-position: left center;
-        }
-    }
-    &__certi {
-        width: 42rem;
-        margin-left: 2rem;
-        background: #666666;
-        color: #ffffff;
-        flex:none;
-    }
+   
     &__bg{
         &--blue{
             background: #203c7d;
@@ -171,6 +157,9 @@
     }
     
     &__font{
+        &--18{
+            font-size: 18px !important;
+        }
         &-xxs{
             font-size: 4.6rem;
         }

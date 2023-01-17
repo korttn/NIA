@@ -402,10 +402,12 @@
 .my-ability{
     &__inner{
         @include d-flex;
+        padding: 0 14px;
     }
     &__score{
         @include d-flex;
         @include align-center;
+        flex:none;
         flex-direction: column;
         &--num{
             font: {
@@ -425,13 +427,28 @@
             margin: 0 -10px;
         }
         &--li{
-            @include d-flex-center;
+            @include d-flex;
+            @include align-center;
+            position: relative;
             flex-direction: column;
             width:110px;
             height:110px;
             margin: 0 10px;
+            padding: 18px 0;
             background: #e8ecf0;
             border-radius: 100%;
+            z-index: 1;
+            &::before{
+                position: absolute;
+                top: 50%;
+                right: -8px;
+                width: 25px;
+                height: 30px;
+                background: url(../images/etc/scrore-arrow.png);
+                transform: translateY(-50%);
+                content:"";
+                z-index: -1;
+            }
             .icon-question{
                 display: inline-block;
                 width: 22px;
@@ -444,6 +461,11 @@
             }
             &.is-active{
                 background: #243b7c;
+                z-index: 1;
+                box-shadow: 5px 5px 10px rgba(0 0 0 / 18%);
+                &::before{
+                    background: url(../images/etc/scrore-arrow__color--blue.png);
+                }
                 .my-ability__process--text{
                     color:#ffffff;
                     font-weight: 500;
@@ -454,7 +476,9 @@
             }
         }
         &__exp{
-            flex:none;
+            display: flex;
+            align-items: center;
+            //flex:none;
         }
         &--text{
             font-size: 16px;
@@ -464,16 +488,28 @@
         }
     }
     &__exp{
-        flex:none;
-        padding:10px 14px 10px 30px;
-        border-left: 1px solid #cccccc;
+        //flex:none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         &--title{
-            font-weight: 500;
+            font-weight: 600;
+            line-height: 24px;
+        }
+        &--text{
+            font-size: 16px;
             line-height: 24px;
         }
     }
     .icon-question{
         color:#747478;
+    }
+    .line-vertical{
+        flex:none;
+        width:1px;
+        height:103px;
+        margin: 0 30px;
+        background:#cccccc;
     }
 }
 .tooltip{

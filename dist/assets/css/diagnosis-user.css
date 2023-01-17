@@ -367,6 +367,7 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+  padding: 0 14px;
 }
 .my-ability__score {
   display: flex;
@@ -377,6 +378,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  flex: none;
   flex-direction: column;
 }
 .my-ability__score--num {
@@ -405,13 +407,26 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
+  position: relative;
   flex-direction: column;
   width: 110px;
   height: 110px;
   margin: 0 10px;
+  padding: 18px 0;
   background: #e8ecf0;
   border-radius: 100%;
+  z-index: 1;
+}
+.my-ability__process--li::before {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  width: 25px;
+  height: 30px;
+  background: url(../images/etc/scrore-arrow.png);
+  transform: translateY(-50%);
+  content: "";
+  z-index: -1;
 }
 .my-ability__process--li .icon-question {
   display: inline-block;
@@ -425,6 +440,11 @@
 }
 .my-ability__process--li.is-active {
   background: #243b7c;
+  z-index: 1;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.18);
+}
+.my-ability__process--li.is-active::before {
+  background: url(../images/etc/scrore-arrow__color--blue.png);
 }
 .my-ability__process--li.is-active .my-ability__process--text {
   color: #ffffff;
@@ -434,7 +454,8 @@
   background: url(../images/icon/icon-qusetion__on.png);
 }
 .my-ability__process__exp {
-  flex: none;
+  display: flex;
+  align-items: center;
 }
 .my-ability__process--text {
   font-size: 16px;
@@ -443,16 +464,27 @@
   text-align: center;
 }
 .my-ability__exp {
-  flex: none;
-  padding: 10px 14px 10px 30px;
-  border-left: 1px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .my-ability__exp--title {
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 24px;
+}
+.my-ability__exp--text {
+  font-size: 16px;
   line-height: 24px;
 }
 .my-ability .icon-question {
   color: #747478;
+}
+.my-ability .line-vertical {
+  flex: none;
+  width: 1px;
+  height: 103px;
+  margin: 0 30px;
+  background: #cccccc;
 }
 
 .tooltip {

@@ -4,9 +4,10 @@
 /*===== ui-element =====*/
 
 .container {
+    max-width: 100%;
+    padding: 0;
     &__sub {
         padding: 0 5rem 10rem 5rem;
-
         &--p {
             &-0 {
                 padding: 0;

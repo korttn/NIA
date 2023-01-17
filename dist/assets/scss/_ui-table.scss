@@ -8,15 +8,26 @@
         border-top:2px solid;
     }
     th{
-        font-size:17px;
+        padding: 10px;
+        font-size:18px;
         font-weight: 500;
         vertical-align: middle;
         text-align: center;
         color:#000000;
+        line-height: 26px;
+        background: #f6f7f9;
+        border-bottom:1px solid #b6b5b5;
+        &+th{
+            border-left:1px solid #e8e8e8;
+        }
     }
-    th{
-        font-size:17px; 
-        color:#000000;
+    td{
+        padding: 20px 10px;
+        font-size:18px;
+        border-bottom: 1px solid #e8e8e8;
+        &+td{
+            border-left:1px solid #e8e8e8;
+        }
     }
     &__ver{
         tr{

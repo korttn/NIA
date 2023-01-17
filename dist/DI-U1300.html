@@ -10,7 +10,7 @@
     <script src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
     <script src="./assets/lib/jquery/jquery-ui.min.js"></script>
     <script src="./assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="./assets/lib/simplebar/simplebar.min.js"></script>
+    <!-- <script src="./assets/lib/simplebar/simplebar.min.js"></script> -->
     
 
     <script src="./assets/js/ui-script.js"></script>
@@ -83,17 +83,16 @@
 
                             <div class="report_container ">
                                 <div class="report show tab-content is-active" id="tab-link1">
-                                    <div class="ui-scroller" style="height: 500px;">
+                                    <div>
                                         <div class="result-item">
                                             <div class="result-title">나의 역량수준</div>
-
-                                           
                                             <div class="my-ability">
                                                 <div class="my-ability__inner">
                                                     <div class="my-ability__score">
                                                         <p class="my-ability__score--num">79</p>
                                                         <p class="my-ability__score--text">개인역량 점수</p>
                                                     </div>
+                                                    <div class="line-vertical"></div>
                                                     <div class="my-ability__process">
                                                         <div class="my-ability__process--inner">
                                                             <ul class="my-ability__process--ul">
@@ -102,7 +101,6 @@
                                                                         입문형 <br>
                                                                         (Beginner)
                                                                     </span>
-                                                                    
                                                                     <i class="icon-question" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="정책과 데이터활용에 대한 이해가 미흡, 학습이 필요한 수준"></i>
                                                                 </li>
                                                                 <li class="my-ability__process--li">
@@ -110,32 +108,33 @@
                                                                         도전형 <br>
                                                                         (Attempter)
                                                                     </span>
-                                                                    <i class="icon-question"></i>
+                                                                    <i class="icon-question" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="정책과 데이터활용에 대한 지식과 스킬을 이해하고, 데이터를 업무에 활용하는 시도를 하는 수준"></i>
                                                                 </li>
                                                                 <li class="my-ability__process--li is-active">
                                                                     <span class="my-ability__process--text">
                                                                         수행형 <br>
                                                                         (Perfomer)
                                                                     </span>
-                                                                    <i class="icon-question"></i>
+                                                                    <i class="icon-question" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="정책과 데이터활용에 대한 지식과 스킬을 적용하여 스스로 데이터를 업무에 활용할 수 있는 수준"></i>
                                                                 </li>
                                                                 <li class="my-ability__process--li">
                                                                     <span class="my-ability__process--text">
                                                                         문제해결형<br>
                                                                         (Expert)
                                                                     </span>
-                                                                    <i class="icon-question"></i>
+                                                                    <i class="icon-question" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="정책과 데이터활용에 대한 지식 및 스킬을 응용하여 데이터 분석활용의 더욱 복잡한 수준의 문제를 해결할 수 있는 수준"></i>
                                                                 </li>
                                                                 <li class="my-ability__process--li">
                                                                     <span class="my-ability__process--text">
                                                                         혁신형 <br>
                                                                         (Innovator)
                                                                     </span>
-                                                                    <i class="icon-question"></i>
+                                                                    <i class="icon-question" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="정책과 데이터활용에 대한 리더십을 바탕으로 조직 전체에 영향을 미치는 혁신을 주도할 수 있는 수준"></i>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                     </div>
+                                                    <div class="line-vertical"></div>
                                                     <div class="my-ability__exp">
                                                         <div class="my-ability__exp--title">수행형(Perfomer)</div>
                                                         <div class="my-ability__exp--text">
@@ -148,66 +147,68 @@
                                             </div>
                                         </div>
     
-                                        <div class="result-item">
-                                            <div class="analysis_head"><span>진단결과 종합</span></div>
+                                        <div class="result-item mt-50">
+                                            <div class="result-title">역량별 진단점수</div>
                                             <div class="analysis_content">
-                                                <table class="result">
-                                                    <tbody><tr>
-                                                        <th class="w1">총점</th>
-                                                        <th class="w1">역량수준</th>
-                                                        <th class="w2">취약유형</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="w1"><label>20</label>점</td>
-                                                        <td class="w1"><label>1</label>수준</td>
-                                            
-                                            
-                                                                <td class="w2">
-                                            
-                                                                        <p>[데이터 수집]데이터 윤리</p>
-                                            
-                                                                        <p>[데이터 활용 성과관리]과제기획관리</p>
-                                            
-                                                                </td>
-                                            
-                                            
-                                            
-                                                    </tr>
-                                                </tbody></table>
-                                                    <ul>
-                                                        <li>귀하의 데이터활용 역량은  <label>입문형</label> 입니다.</li>
-                                                        <li>해당 수준은  <label>정책과 데이터활용에 대한 이해가 미흡, 학습필요</label> 상태 입니다.</li>
-                                            
-                                            
-                                                                <li>2수준으로 향상을 위해 아래의 교육과정을 추천합니다.</li>
-                                            
-                                            
-                                            
-                                                    </ul>
-                                            
-                                                <div class="analysis_head"><span>역량강화 추천 교육과정</span></div>
-                                                <table class="edu">
-                                                    <tbody><tr>
-                                                        <th class="w1">구분</th>
-                                                        <th class="w3">교육과정</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="w1 lg">데이터기반 행정</td>
-                                                        <td class="w3 left"><pre>1.데이터기반행정의 이해
-                                                                2.사례공유화</pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="w1 lg">직무공통</td>
-                                                        <td class="w3 left"><pre>1.정책/분석 기획 이해
-                                                                2.데이터 확보 이해
-                                                                3.데이터 분석 이해
-                                                                4.결과 활용 이해</pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="w1 lg">직무심화</td>
-                                                        <td class="w3 left"><pre>1.직무공통 필수과정</pre></td>
-                                                    </tr>
-                                                </tbody></table>
+                                                <div class="ui-table">
+                                                    <div class="ui-table__inner">
+                                                        <table class="score text-center">
+                                                            <colgroup>
+                                                                <col style="width: calc(100%/6);">
+                                                                <col style="width: calc(100%/6);">
+                                                                <col style="width: calc(100%/6);">
+                                                                <col style="width: calc(100%/6);">
+                                                                <col style="width: calc(100%/6);">
+                                                                <col style="width: calc(100%/6);">
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th class="w30 lg">진단역량</th>
+                                                                    <th class="w17 green">소속기관<br>요구 진단점수</th>
+                                                                    <th class="w17 lg">소속기관<br>평균 진단점수</th>
+                                                                    <th class="w17 lg">본인 진단점수</th>
+                                                                    <th class="w17 lg">요구 진단점수 격차</th>
+                                                                    <th class="w17 lg">진단 평균점수 격차</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="w30">정책/분석기획</td>
+                                                                    <td class="w17 green">2.2</td>
+                                                                    <td class="w17">1.0</td>
+                                                                    <td class="w17 red">-1.2</td>
+                                                                    <td class="w17 gray drawData">20</td>
+                                                                    <td>-</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="w30">데이터 수집</td>
+                                                                    <td class="w17 green">2.5</td>
+                                                                    <td class="w17">1.0</td>    
+                                                                    <td class="w17 red">-1.5</td>
+                                                                    <td class="w17 gray drawData">20</td>
+                                                                    <td>+1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="w30">데이터 분석</td>
+                                                                    <td class="w17 green">2.6</td>
+                                                                    <td class="w17">1.0</td>    
+                                                                    <td class="w17 red">-1.6</td>
+                                                                    <td class="w17 gray drawData">20</td>
+                                                                    <td>-1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="w30">분석결과 활용</td>
+                                                                    <td class="w17 green">3.0</td>
+                                                                    <td class="w17">1.0</td>    
+                                                                    <td class="w17 red">-2</td>
+                                                                    <td class="w17 gray drawData">20</td>
+                                                                    <td>+1</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-10 text-right">
+                                                <button type="button" class="ui-button ui-button__width--120 ui-button__height--46 ui-button__bg--blue ui-button__font--18">상세보기</button>
                                             </div>
                                         </div>
     
