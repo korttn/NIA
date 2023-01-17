@@ -310,3 +310,67 @@
   color: #ffffff;
   letter-spacing: 1px;
 }
+.survey-part * {
+  font-size: 18px;
+}
+.survey-part__title {
+  font-size: 30px;
+  font-weight: 600;
+}
+.survey-part__head + .ui-scroller {
+  margin-top: 28px;
+}
+.survey-part__head .part-info {
+  margin-top: 20px;
+  padding: 30px 0;
+  border-top: 4px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+.survey-part__head .part-info__title {
+  font-size: 24px;
+  font-weight: 500;
+}
+.survey-part__head .part-info__text {
+  margin-top: 10px;
+  padding-left: 25px;
+  font-size: 18px;
+}
+.survey-part__head .part-info__text li {
+  font-size: 18px;
+}
+.survey-part__head .part-info__text li + li {
+  margin-top: 10px;
+}
+.survey-container .sur_q {
+  color: #0367b0;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* 문항구조 DI-U1203.html */
+.question-exp__title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.question-exp__text {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.question-item {
+  margin-top: 30px;
+}
+.question-item .answer-box {
+  margin-top: 10px;
+}
+.question-item .answer-box .ui-radio {
+  padding: 9px 14px;
+}
+.question-item .answer-box.no-checked {
+  background: #eef3f7;
+}
+.question-info {
+  margin-top: 10px;
+  margin-left: 36px;
+  font-size: 16px;
+  color: #0367b0;
+}

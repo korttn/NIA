@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 활용 역량 진단 도구</title>
+
+    <script src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/lib/jquery/jquery-ui.min.js"></script>
+    <script src="./assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/lib/simplebar/simplebar.min.js"></script>
+
+    <script src="./assets/js/ui-script.js"></script>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/ui-style.css">
+
+    <!-- 개별 css -->
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/diagnosis-user.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container container-diagnosis">
+            <div class="container__inner">
+                <div class="diagnosis-header">
+                    <div class="diagnosis-header__inner">
+                        <div class="diagnosis-header__title">NIA 데이터 활용 역량 온라인 진단도구 안정화</div>
+                    </div>
+                </div>
+                <div class="layout-container diagnosis-body">
+                    <div class="layout-header diagnosis-head modal-header__with--close">
+                        진단설문
+                        <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#logoutBtn"></button>
+                    </div>
+                    <div class="layout-body layout-diagnosis layout-diagnosis__padding--136">
+                        
+                        <div>
+                            <div >
+                                <div class="user-guide-small">
+                                    <ul>
+                                        <li class="user-guide__title">데이터 활용 역량진단이 제출되셨습니다.</li>
+                                        <li class="save-date">2022년 10월 25일(화) 18:00:34 제출</li>
+                                        <li class="user-guide__des">참여해 주셔서 감사합니다.</li> 
+                                        <li class="user-guide__des">제출하신 진단설문에 대한 개인역량 진단 결과 확인을 원하시는 경우
+                                            아래의 [진단결과 조회] 버튼을 눌러주세요.</li> 
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-50">
+                                <div class="ui-buttons ui-buttons__center">
+                                    <a href="#" class="ui-button ui-button__bg--blue" id="continueBtn" > 진단결과 조회</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- 모달 -->
+
+    <!-- 로그아웃 모달 -->
+    <div class="modal fade" id="logoutBtn" tabindex="-1" aria-labelledby="logoutLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">알림</h5>
+                </div>
+                <div class="modal-body">로그아웃을 하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                    <div class="ui-buttons">
+                        <button type="button" class="ui-button ui-button__bg--blue">확인</button>
+                        <button type="button" class="ui-button ui-button__bg--gray" data-bs-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //로그아웃 모달 -->
+
+
+    <!-- 신청 모달 -->
+    <div class="modal fade" id="restart" tabindex="-1" aria-labelledby="restartLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">알림</h5>
+                </div>
+                <div class="modal-body">설문을 새로 시작 하시겠습니까? <br>
+                    새로 시작하는 경우, 기존 응답하셨던 설문은 삭제됩니다.
+                </div>
+                <div class="modal-footer">
+                    <div class="ui-buttons">
+                        <button type="button" class="ui-button ui-button__bg--blue">확인</button>
+                        <button type="button" class="ui-button ui-button__bg--gray" data-bs-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //신청 모달 -->
+
+    <!-- //모달 -->
+
+
+</body>
+
+</html>

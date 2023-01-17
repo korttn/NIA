@@ -322,29 +322,14 @@
 }
 .font{
     &-size{
-        &__xxs{
-            font-size: 4.6rem;
+        &__16{
+            font-size: 16px !important;
         }
         &__20{
-            font-size: 20px;
+            font-size: 20px !important;
         }
         &__30{
-            font-size: 30px;
-        }
-        &__48{
-            font-size: 4.8rem;
-        }
-        &__xs{
-            font-size: 5rem;
-        }
-        &__s{
-            font-size: 5.5rem;
-        }
-        &__m{
-            font-size: 6rem;
-        }
-        &__l{
-            font-size: 6.5rem;
+            font-size: 30px !important;
         }
     }
     &-weight{
@@ -378,6 +363,7 @@
 
 //color
 $color-blue : #3c50a2;
+$color-skyblue : #0367b0;
 .color{
     &-blue{
         color: $color-blue;

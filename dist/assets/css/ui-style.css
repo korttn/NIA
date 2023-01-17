@@ -280,29 +280,14 @@
   font-size: 12px;
 }
 
-.font-size__xxs {
-  font-size: 4.6rem;
+.font-size__16 {
+  font-size: 16px !important;
 }
 .font-size__20 {
-  font-size: 20px;
+  font-size: 20px !important;
 }
 .font-size__30 {
-  font-size: 30px;
-}
-.font-size__48 {
-  font-size: 4.8rem;
-}
-.font-size__xs {
-  font-size: 5rem;
-}
-.font-size__s {
-  font-size: 5.5rem;
-}
-.font-size__m {
-  font-size: 6rem;
-}
-.font-size__l {
-  font-size: 6.5rem;
+  font-size: 30px !important;
 }
 .font-weight__200 {
   font-weight: 200 !important;

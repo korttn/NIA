@@ -341,5 +341,88 @@
             }
         }
     }
+    &-part{
+        *{
+            font-size: 18px;
+        }
+        &__title{
+            font: {
+                size: 30px;
+                weight:600;
+            };
+        }
+        &__head{
+            &+.ui-scroller{
+                margin-top: 28px;
+            }
+            .part-info{
+                margin-top: 20px;
+                padding: 30px 0;
+                border-top:4px solid #000000;
+                border-bottom:1px solid #000000;
+                &__title{
+                    font: {
+                        size: 24px;
+                        weight:500;
+                    };
+                }
+                &__text{
+                    margin-top: 10px;
+                    padding-left:25px;
+                    font-size: 18px;
+                    li{
+                        font-size: 18px;
+                        &+li{
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-container{
+        .sur{
+            &_q{
+                color: #0367b0;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
 }
 
+
+
+/* 문항구조 DI-U1203.html */ 
+.question{
+    &-exp{
+        &__title{
+            font: {
+                size: 20px;
+                weight:500;
+            };
+        }
+        &__text{
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    }
+    &-item{
+        margin-top: 30px;
+        .answer-box{
+            margin-top: 10px;
+            .ui-radio  {
+                padding: 9px 14px;
+            }
+            &.no-checked{
+                background: #eef3f7;
+            }
+        }
+    }
+    &-info{
+        margin-top: 10px;
+        margin-left: 36px;
+        font-size: 16px;
+        color:#0367b0;
+    }
+}

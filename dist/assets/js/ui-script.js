@@ -3575,4 +3575,24 @@ $(function () {
 	new SimpleBar(document.querySelector('.ui-scroller'), option)
 
 
+
+
+
+
+	//미 선택 보기 : 바탕색 표시, 선택된 보기 : 바탕색 삭제
+
+	const $answerRadio = $('.answer-box .ui-radio');
+	const $CheckRadioCheck = $answerRadio.find('input[type="radio"]');
+
+	$CheckRadioCheck.change(function(){
+		if ($CheckRadioCheck.is(':checked')) {
+			$(this).parents(".answer-box").removeClass("no-checked");
+		} else {
+			
+		}
+	})
+	
+
+
+
 })
