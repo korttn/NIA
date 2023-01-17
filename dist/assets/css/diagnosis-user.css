@@ -386,7 +386,7 @@
 }
 .my-ability__score--text {
   margin-top: 15px;
-  font-size: 24px;
+  font-size: 18px;
 }
 .my-ability__process--ul {
   display: flex;
@@ -394,9 +394,44 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+  margin: 0 -10px;
+}
+.my-ability__process--li {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 110px;
+  height: 110px;
+  margin: 0 10px;
+  background: #e8ecf0;
+  border-radius: 100%;
+}
+.my-ability__process--li .icon-question {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-top: 5px;
+  background: url(../images/icon/icon-qusetion.png);
 }
 .my-ability__process--li .hover-tooltip {
   display: none;
+}
+.my-ability__process--li.is-active {
+  background: #243b7c;
+}
+.my-ability__process--li.is-active .my-ability__process--text {
+  color: #ffffff;
+  font-weight: 500;
+}
+.my-ability__process--li.is-active .icon-question {
+  background: url(../images/icon/icon-qusetion__on.png);
 }
 .my-ability__process__exp {
   flex: none;
@@ -406,4 +441,48 @@
   line-height: 24px;
   color: #747478;
   text-align: center;
+}
+.my-ability__exp {
+  flex: none;
+  padding: 10px 14px 10px 30px;
+  border-left: 1px solid #cccccc;
+}
+.my-ability__exp--title {
+  font-weight: 500;
+  line-height: 24px;
+}
+.my-ability .icon-question {
+  color: #747478;
+}
+
+.tooltip {
+  margin: 23px 0 !important;
+}
+.tooltip-inner {
+  padding: 5px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #747478;
+  background: #fcffec;
+  border: 1px solid #dbdbdc;
+  opacity: 1;
+}
+.tooltip.show {
+  margin: 23px 0 !important;
+  opacity: 1;
+}
+.tooltip .tooltip-arrow {
+  height: 4px;
+}
+
+.bs-tooltip-auto[data-popper-placement^=bottom],
+.bs-tooltip-bottom {
+  padding: 4px 0;
+}
+
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before,
+.bs-tooltip-bottom .tooltip-arrow::before {
+  bottom: 0px;
+  border-width: 0 4px 4px;
+  border-bottom-color: #dddddd;
 }

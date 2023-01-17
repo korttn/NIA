@@ -416,16 +416,41 @@
         }
         &--text{
             margin-top: 15px;
-            font-size:24px;
+            font-size:18px;
         }
     }
     &__process{
         &--ul{
             @include d-flex;
+            margin: 0 -10px;
         }
         &--li{
+            @include d-flex-center;
+            flex-direction: column;
+            width:110px;
+            height:110px;
+            margin: 0 10px;
+            background: #e8ecf0;
+            border-radius: 100%;
+            .icon-question{
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                margin-top: 5px;
+                background: url(../images/icon/icon-qusetion.png);
+            }
             .hover-tooltip{
                 display: none;
+            }
+            &.is-active{
+                background: #243b7c;
+                .my-ability__process--text{
+                    color:#ffffff;
+                    font-weight: 500;
+                }
+                .icon-question{
+                    background: url(../images/icon/icon-qusetion__on.png);
+                }
             }
         }
         &__exp{
@@ -438,4 +463,47 @@
             text-align: center;
         }
     }
+    &__exp{
+        flex:none;
+        padding:10px 14px 10px 30px;
+        border-left: 1px solid #cccccc;
+        &--title{
+            font-weight: 500;
+            line-height: 24px;
+        }
+    }
+    .icon-question{
+        color:#747478;
+    }
+}
+.tooltip{
+    margin: 23px 0 !important;
+    &-inner{
+        //margin: 23px 0 !important;
+        padding:5px;
+        font-size: 12px;
+        line-height: 14px;
+        color:#747478;
+        background: #fcffec;
+        border:1px solid #dbdbdc;
+        opacity: 1;
+    }
+    &.show{
+        margin: 23px 0 !important;
+        opacity: 1;
+    }
+    .tooltip-arrow{
+        height: 4px;
+    }
+}
+
+.bs-tooltip-auto[data-popper-placement^=bottom], 
+.bs-tooltip-bottom{
+    padding: 4px 0;
+}
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, 
+.bs-tooltip-bottom .tooltip-arrow::before {
+    bottom: 0px;
+    border-width: 0 4px 4px;
+    border-bottom-color: #dddddd;
 }

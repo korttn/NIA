@@ -15,7 +15,7 @@ body{
 	background: #f4f8fa;
 	&-user{
 		@include d-flex;
-		height: 100%;
+		height: auto;
 		.container__inner{
 			max-width: 1200px;
 			width:100%;
@@ -45,9 +45,11 @@ body{
 	}
 	&-left{
 		width: 750px;
-		padding-top: 210px;
+		padding-top: 200px;
 		padding-left: 75px;
+		padding-bottom: 60px;
 		background: url(../images/background/bg-login.jpg) no-repeat;
+		background-size: cover;
 	}
 	&-right{
 		flex:1;

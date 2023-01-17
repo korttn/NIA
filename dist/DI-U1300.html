@@ -83,9 +83,11 @@
 
                             <div class="report_container ">
                                 <div class="report show tab-content is-active" id="tab-link1">
-                                    <div class="ui-scoller" style="height: 500px;">
+                                    <div class="ui-scroller" style="height: 500px;">
                                         <div class="result-item">
                                             <div class="result-title">나의 역량수준</div>
+
+                                           
                                             <div class="my-ability">
                                                 <div class="my-ability__inner">
                                                     <div class="my-ability__score">
@@ -100,50 +102,48 @@
                                                                         입문형 <br>
                                                                         (Beginner)
                                                                     </span>
-                                                                    <div class="hover-tooltip">
-                                                                        <div class="hover-tooltip__inner">
-                                                                            정책과 데이터활용에 대한 리더십을 
-                                                                            바탕으로 조직 전체에 영향을 미치는 
-                                                                            혁신을 주도할 수 있는 수준
-                                                                        </div>
-                                                                    </div>
+                                                                    
+                                                                    <i class="icon-question" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="정책과 데이터활용에 대한 이해가 미흡, 학습이 필요한 수준"></i>
                                                                 </li>
                                                                 <li class="my-ability__process--li">
                                                                     <span class="my-ability__process--text">
                                                                         도전형 <br>
                                                                         (Attempter)
                                                                     </span>
+                                                                    <i class="icon-question"></i>
                                                                 </li>
-                                                                <li class="my-ability__process--li">
+                                                                <li class="my-ability__process--li is-active">
                                                                     <span class="my-ability__process--text">
                                                                         수행형 <br>
                                                                         (Perfomer)
                                                                     </span>
+                                                                    <i class="icon-question"></i>
                                                                 </li>
                                                                 <li class="my-ability__process--li">
                                                                     <span class="my-ability__process--text">
                                                                         문제해결형<br>
                                                                         (Expert)
                                                                     </span>
+                                                                    <i class="icon-question"></i>
                                                                 </li>
                                                                 <li class="my-ability__process--li">
                                                                     <span class="my-ability__process--text">
                                                                         혁신형 <br>
                                                                         (Innovator)
                                                                     </span>
-
+                                                                    <i class="icon-question"></i>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="my-ability__exp">
-                                                        <span class="my-ability__exp--title">수행형(Perfomer)</span>
-                                                        <span class="my-ability__exp--text">
+                                                        <div class="my-ability__exp--title">수행형(Perfomer)</div>
+                                                        <div class="my-ability__exp--text">
                                                             정책과 데이터 활용에 대한 지식과
                                                             스킬을 적용하여 스스로 데이터를
                                                             업무에 활용할 수 있는 수준
-                                                        </span>
-                                                    </div>
+                                                        </div>
+                                                    </divn>
                                                 </div>
                                             </div>
                                         </div>
@@ -1083,7 +1083,12 @@
 
 
 </body>
-
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
 
 </html>
 
