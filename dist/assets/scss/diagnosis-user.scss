@@ -9,7 +9,7 @@
         height:auto;
         .container__inner{
             width:100%;
-            padding-bottom: 50px
+            padding-bottom: 50px;
         }   
         .layout-content{
             &__inner{
@@ -39,11 +39,14 @@
                 }
             }
         }
+        .no-title{
+            margin-top: -260px;
+        }
     }    
 }
 
 .layout-diagnosis{
-    *{font-size: 18px;}
+    //*{font-size: 18px;}
     &__padding{
         &--136{
             padding:136px 0;
@@ -173,80 +176,7 @@
         line-height: 32px;
     }
 }
-.ui{
-    &-radio{
-        input{
-            &[type="radio"]{
-                -webkit-appearance:none;
-                width : 18px;
-                height : 18px;
-                border : 1px solid #dddddd;
-                outline: none;
-                cursor : pointer;
-                background : #fff;
-                border-radius : 50%;
-                vertical-align : middle;
-                margin : -4px 5px 0px 0px;
-                line-height: 32px;
-                &:before{
-                    content : '';
-                    display : block;
-                    width : 100%;
-                    height : 100%;
-                    margin : auto;
-                    border-radius : 50%;
-                    background : #fff;
-                }
-                &:checked{
-                    background: #203c7d;
-                    border-color: #203c7d;
-                    &:before{
-                        content : '';
-                        display : block;
-                        width : 6px;
-                        height : 6px;
-                        margin : 4.5px auto;
-                        border-radius : 50%;
-                        background : #ffffff;
-                    }
-                }
-            }
-            
-        }
-        label{
-            font-size: 18px;
-            color:#747478;
-            line-height: 32px;
-        }
-    }
-    &-checkbox{
-        margin-top: 15px;
-        input{
-            &[type="checkbox"]{
-                -webkit-appearance:none;
-                width : 18px;
-                height : 18px;
-                border : 1px solid #dddddd;
-                outline: none;
-                cursor : pointer;
-                background : #fff;
-                border-radius : 3px;
-                vertical-align : middle;
-                margin : -4px 5px 0px 0px;
-                &:checked{
-                    background: #203c7d url(../images/icon/icon-check.png) no-repeat center;
-                    border-color: #203c7d;
-                    
-                }
-            }
-            
-        }
-        label{
-            font-size: 18px;
-            color:#747478;
-        }
-    }
-}
+
 
 .user{
     &-diagnosis{
@@ -350,6 +280,10 @@
                 size: 30px;
                 weight:600;
             };
+            &--flex{
+                @include d-flex;
+                @include align-center;
+            }
         }
         &__head{
             &+.ui-scroller{
@@ -424,5 +358,84 @@
         margin-left: 36px;
         font-size: 16px;
         color:#0367b0;
+    }
+}
+
+/* DI-U1300.html */ 
+.department{
+    &-info{
+        @include d-flex;
+    }
+    &-list{
+        @include d-flex;
+        @include align-center;
+        &+&{
+            margin-left: 30px;
+        }
+    }
+    &-dt{
+        margin-right: 10px;
+        padding: 5px 10px;
+        font: {
+            size: 18px;
+            weight:500;
+        };
+        background: #b9edfb;
+        border-radius: 13px;
+    }
+}
+
+.report{
+    &_container{
+        margin-top: 30px;
+    }
+}
+.result{
+    &-title{
+        margin-bottom: 30px;
+        font: {
+            size:24px;
+            weight:500;
+        };
+    }
+}
+.my-ability{
+    &__inner{
+        @include d-flex;
+    }
+    &__score{
+        @include d-flex;
+        @include align-center;
+        flex-direction: column;
+        &--num{
+            font: {
+                size: 60px;
+                weight:600;
+            };
+            color:#243b7c;
+        }
+        &--text{
+            margin-top: 15px;
+            font-size:24px;
+        }
+    }
+    &__process{
+        &--ul{
+            @include d-flex;
+        }
+        &--li{
+            .hover-tooltip{
+                display: none;
+            }
+        }
+        &__exp{
+            flex:none;
+        }
+        &--text{
+            font-size: 16px;
+            line-height: 24px;
+            color:#747478;
+            text-align: center;
+        }
     }
 }

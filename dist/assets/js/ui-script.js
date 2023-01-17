@@ -3529,7 +3529,7 @@
 
 // 로그인 페이지 추가
 $(function () {
-	$(".ui-input").on("change keyup paste", function () {
+	$(".login_inputbox .ui-input, .container-diagnosis .ui-input").on("change keyup paste", function () {
 		var currentVal = $(this).val();
 		if (currentVal == "") {
 			$(this).removeClass("is-inputed");
@@ -3590,7 +3590,19 @@ $(function () {
 		} else {
 			
 		}
-	})
+	});
+
+	//tab
+	$(".tab-menu__link").click(function () {
+		if ($(this).parent().hasClass("is-active") == false) {
+		  $(this).parent().siblings().removeClass("is-active");
+		  $(this).parent().addClass("is-active");
+		  $(".tab-content").removeClass("is-active");
+		  var activeContent = $(this).attr("href");
+		  $(activeContent).addClass("is-active");
+		}
+		event.preventDefault();
+	  });
 	
 
 

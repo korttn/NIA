@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 활용 역량 진단 도구</title>
+
+    <script src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/lib/jquery/jquery-ui.min.js"></script>
+    <script src="./assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/lib/simplebar/simplebar.min.js"></script>
+    
+
+    <script src="./assets/js/ui-script.js"></script>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/lib/simplebar/simplebar.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/ui-style.css">
+
+    <!-- 개별 css -->
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/diagnosis-user.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container container-diagnosis">
+            <div class="container__inner">
+                <div class="diagnosis-header">
+                    <div class="diagnosis-header__inner">
+                        
+                    </div>
+                </div>
+
+                
+                <div class="no-title">
+                    <div class="layout-container diagnosis-body">
+                        <div class="layout-header diagnosis-head modal-header__with--close">
+                            진단결과
+                            <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#logoutBtn"></button>
+                        </div>
+                        <div class="layout-body layout-diagnosis">
+
+                            <ul class="tab-menu">
+                                <li class="tab-menu__li is-active"><a href="#tab-link1" class="tab-menu__link">분석보고서</a></li>
+                                <li class="tab-menu__li"><a href="#tab-link2" class="tab-menu__link">응답내역</a></li>
+                            </ul>
+
+                            <div class="survey-part__head">
+                                <div class="survey-part__title--flex">
+                                    <p class="survey-part__title">분석보고서</p>
+                                    <a href="#" class="ui-button__custom ui-button__custom--print ml-auto" id="print_tab" onclick="window.print()"><span class="hidden">인쇄</span></a>
+                                </div>
+                                <div class="part-info">
+                                    <ul class="department-info">
+                                        <dl class="department-list">
+                                            <dt class="department-dt">기관</dt>
+                                            <dd class="department-dd">한국지능정보사회진흥원</dd>
+                                        </dl>
+                                        <dl class="department-list">
+                                            <dt class="department-dt">소속</dt>
+                                            <dd class="department-dd">제도혁신팀</dd>
+                                        </dl>
+                                        <dl class="department-list">
+                                            <dt class="department-dt">직군</dt>
+                                            <dd class="department-dd">데이터 관련 직군</dd>
+                                        </dl>
+                                        <dl class="department-list">
+                                            <dt class="department-dt">직책</dt>
+                                            <dd class="department-dd">부서장</dd>
+                                        </dl>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <div class="report_container ">
+                                <div class="report show tab-content is-active" id="tab-link1">
+                                    <div class="ui-scoller" style="height: 500px;">
+                                        <div class="result-item">
+                                            <div class="result-title">나의 역량수준</div>
+                                            <div class="my-ability">
+                                                <div class="my-ability__inner">
+                                                    <div class="my-ability__score">
+                                                        <p class="my-ability__score--num">79</p>
+                                                        <p class="my-ability__score--text">개인역량 점수</p>
+                                                    </div>
+                                                    <div class="my-ability__process">
+                                                        <div class="my-ability__process--inner">
+                                                            <ul class="my-ability__process--ul">
+                                                                <li class="my-ability__process--li">
+                                                                    <span class="my-ability__process--text">
+                                                                        입문형 <br>
+                                                                        (Beginner)
+                                                                    </span>
+                                                                    <div class="hover-tooltip">
+                                                                        <div class="hover-tooltip__inner">
+                                                                            정책과 데이터활용에 대한 리더십을 
+                                                                            바탕으로 조직 전체에 영향을 미치는 
+                                                                            혁신을 주도할 수 있는 수준
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="my-ability__process--li">
+                                                                    <span class="my-ability__process--text">
+                                                                        도전형 <br>
+                                                                        (Attempter)
+                                                                    </span>
+                                                                </li>
+                                                                <li class="my-ability__process--li">
+                                                                    <span class="my-ability__process--text">
+                                                                        수행형 <br>
+                                                                        (Perfomer)
+                                                                    </span>
+                                                                </li>
+                                                                <li class="my-ability__process--li">
+                                                                    <span class="my-ability__process--text">
+                                                                        문제해결형<br>
+                                                                        (Expert)
+                                                                    </span>
+                                                                </li>
+                                                                <li class="my-ability__process--li">
+                                                                    <span class="my-ability__process--text">
+                                                                        혁신형 <br>
+                                                                        (Innovator)
+                                                                    </span>
+
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="my-ability__exp">
+                                                        <span class="my-ability__exp--title">수행형(Perfomer)</span>
+                                                        <span class="my-ability__exp--text">
+                                                            정책과 데이터 활용에 대한 지식과
+                                                            스킬을 적용하여 스스로 데이터를
+                                                            업무에 활용할 수 있는 수준
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="result-item">
+                                            <div class="analysis_head"><span>진단결과 종합</span></div>
+                                            <div class="analysis_content">
+                                                <table class="result">
+                                                    <tbody><tr>
+                                                        <th class="w1">총점</th>
+                                                        <th class="w1">역량수준</th>
+                                                        <th class="w2">취약유형</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="w1"><label>20</label>점</td>
+                                                        <td class="w1"><label>1</label>수준</td>
+                                            
+                                            
+                                                                <td class="w2">
+                                            
+                                                                        <p>[데이터 수집]데이터 윤리</p>
+                                            
+                                                                        <p>[데이터 활용 성과관리]과제기획관리</p>
+                                            
+                                                                </td>
+                                            
+                                            
+                                            
+                                                    </tr>
+                                                </tbody></table>
+                                                    <ul>
+                                                        <li>귀하의 데이터활용 역량은  <label>입문형</label> 입니다.</li>
+                                                        <li>해당 수준은  <label>정책과 데이터활용에 대한 이해가 미흡, 학습필요</label> 상태 입니다.</li>
+                                            
+                                            
+                                                                <li>2수준으로 향상을 위해 아래의 교육과정을 추천합니다.</li>
+                                            
+                                            
+                                            
+                                                    </ul>
+                                            
+                                                <div class="analysis_head"><span>역량강화 추천 교육과정</span></div>
+                                                <table class="edu">
+                                                    <tbody><tr>
+                                                        <th class="w1">구분</th>
+                                                        <th class="w3">교육과정</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="w1 lg">데이터기반 행정</td>
+                                                        <td class="w3 left"><pre>1.데이터기반행정의 이해
+                                                                2.사례공유화</pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="w1 lg">직무공통</td>
+                                                        <td class="w3 left"><pre>1.정책/분석 기획 이해
+                                                                2.데이터 확보 이해
+                                                                3.데이터 분석 이해
+                                                                4.결과 활용 이해</pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="w1 lg">직무심화</td>
+                                                        <td class="w3 left"><pre>1.직무공통 필수과정</pre></td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </div>
+                                        </div>
+    
+                                        <div class="result-item">
+                                            <div class="core_competencies_head"><span>나의 핵심역량 현황</span><a href="#" class="view_detail">상세보기</a></div>
+                                            <div class="core_competencies_content">
+                                                <table class="score">
+                                                    <tbody><tr>
+                                                        <th class="w30 lg">역량진단 항목</th>
+                                                        <th class="w17 green">소속기관<p>평균점수(A)</p></th>
+                                                        <th class="w17 lg">본인 진단점수(B)</th>
+                                                        <th class="w17 lg">점수격차(B-A)</th>
+                                                        <th class="w17 lg">100점 환산점수</th>
+                                                    </tr>
+                                                
+                                                    
+                                                        <tr>
+                                                            <td class="w30">정책/분석기획</td>
+                                                            <td class="w17 green">2.2</td>
+                                                            <td class="w17">1.0</td>
+                                                            
+                                                                
+                                                                    <td class="w17 red">-1.2</td>
+                                                                
+                                                                
+                                                            
+                                                            <td class="w17 gray drawData">20</td>
+                                                        </tr>
+                                                    
+                                                        <tr>
+                                                            <td class="w30">데이터 수집</td>
+                                                            <td class="w17 green">2.5</td>
+                                                            <td class="w17">1.0</td>
+                                                            
+                                                                
+                                                                    <td class="w17 red">-1.5</td>
+                                                                
+                                                                
+                                                            
+                                                            <td class="w17 gray drawData">20</td>
+                                                        </tr>
+                                                    
+                                                        <tr>
+                                                            <td class="w30">데이터 분석</td>
+                                                            <td class="w17 green">2.6</td>
+                                                            <td class="w17">1.0</td>
+                                                            
+                                                                
+                                                                    <td class="w17 red">-1.6</td>
+                                                                
+                                                                
+                                                            
+                                                            <td class="w17 gray drawData">20</td>
+                                                        </tr>
+                                                    
+                                                        <tr>
+                                                            <td class="w30">분석결과 활용</td>
+                                                            <td class="w17 green">3.0</td>
+                                                            <td class="w17">1.0</td>
+                                                            
+                                                                
+                                                                    <td class="w17 red">-2</td>
+                                                                
+                                                                
+                                                            
+                                                            <td class="w17 gray drawData">20</td>
+                                                        </tr>
+                                                    
+                                                
+                                            </tbody></table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="result_answer tab-content" id="tab-link2">
+                                    <div class="answer_head"><span>[Part I] 응답자 기본조사</span></div>
+                                    <div class="answer_container">
+                                        <div class="survey part1_page1">
+                                            <div class="question">
+                                                <div class="q1 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">1-1. 귀하의 성별을 선택해 주시기 바랍니다.</div><br>
+                                                        <div class="q_info">* 통계처리 적용으로 제한 함</div>
+                                                        <div class="part1_answer">
+                                                            <div class="rBtn"><input type="radio" name="q1AnsGroup" value="1" id="q1a1" disabled="disabled"><label for="q1a1">남(male)</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q1AnsGroup" value="2" id="q1a2" disabled="disabled" checked="checked"><label for="q1a2">여(female)</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q1AnsGroup" value="3" id="q1a3" disabled="disabled"><label for="q1a3">기재하고 싶지 않음</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="q2 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">1-2. 귀하의 연령대를 선택해 주시기 바랍니다.</div><br>
+                                                        <div class="part1_answer">
+                                                            <div class="rBtn"><input type="radio" name="q2AnsGroup" value="1" id="q2a1" disabled="disabled"><label for="q2a1">20대</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q2AnsGroup" value="2" id="q2a2" disabled="disabled"><label for="q2a2">30대</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q2AnsGroup" value="3" id="q2a3" disabled="disabled" checked="checked"><label for="q2a3">40대</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q2AnsGroup" value="4" id="q2a4" disabled="disabled"><label for="q2a4">50대 이상</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="q3 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">1-3. 현재 귀하가 수행하고 있는 업무 중 가장 비중이 큰 업무는 무엇입니까?</div><br>
+                                                        <div class="q_info">* 데이터 분석업무 없이 공공데이터 수집/개방/품질관리가 주 업무인 경우는 '행정/일반업무' 선택</div>
+                                                        <div class="q_info">* 시스템 및 전산인프라 관리, 플랫폼운영관리, 데이터 운영관리 직무는 '행정/일반업무' 선택</div>
+                                                        <div class="part1_answer">
+                                                            <div class="rBtn"><input type="radio" name="q3AnsGroup" value="1" id="q3a1" disabled="disabled" checked="checked"><label for="q3a1">행정/일반업무: 정책수립/시행 등 공공분야 행정, 사무 등 일반 직무</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q3AnsGroup" value="2" id="q3a2" disabled="disabled"><label for="q3a2">현장업무: 현장지도, 기술지원 등 사무실보다는 현장 및 기능 업무 비중이 30%이하인 직무</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q3AnsGroup" value="3" id="q3a3" disabled="disabled"><label for="q3a3">연구업무: 연구기획, 연구수행 등 연구에 데이터를 활용하여 분석, 해석, 결론 도출 등을 수행하는 직무</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q3AnsGroup" value="4" id="q3a4" disabled="disabled"><label for="q3a4">분석/통계업무*: 데이터 분석, 통계 등 데이터 분석 및 활용 업무가 주인 직무</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q3AnsGroup" value="5" id="q3a5" disabled="disabled"><label for="q3a5">기타( )</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="q4 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">1-4. 귀하의 총 업무 경력을 선택해 주시기 바랍니다.</div><br>
+                                                        <div class="q_info">* 공직 또는 관련 분야 종사 기간 기준으로 선택</div>
+                                                        <div class="part1_answer">
+                                                            <div class="rBtn"><input type="radio" name="q4AnsGroup" value="1" id="q4a1" disabled="disabled"><label for="q4a1">5년 미만</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q4AnsGroup" value="2" id="q4a2" disabled="disabled" checked="checked"><label for="q4a2">5년 이상 10년 미만 </label></div>
+                                                            <div class="rBtn"><input type="radio" name="q4AnsGroup" value="3" id="q4a3" disabled="disabled"><label for="q4a3">10년 이상 15년 미만</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q4AnsGroup" value="4" id="q4a4" disabled="disabled"><label for="q4a4">15년 이상 20년 미만</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q4AnsGroup" value="5" id="q4a5" disabled="disabled"><label for="q4a5">20년 이상</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="q5 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">1-5. 귀하는 현재 데이터 관련 업무를 수행 중이십니까?</div><br>
+                                                        <div class="q_info">* 데이터 관련 업무: 공공데이터담당자, 데이터기반행정담당자, 데이터품질담당자, 개인정보보호담당자 등</div>
+                                                        <div class="part1_answer">
+                                                            <div class="rBtn"><input type="radio" name="q5AnsGroup" value="1" id="q5a1" disabled="disabled" checked="checked"><label for="q5a1">수행중</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q5AnsGroup" value="2" id="q5a2" disabled="disabled"><label for="q5a2">향후 1~2년내 수행 가능성 있음</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q5AnsGroup" value="3" id="q5a3" disabled="disabled"><label for="q5a3">수행 중이지 않으며, 향후 수행 가능성 없음</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="q6 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">1-6. 귀하는 과거에 데이터 활용 역량 진단을 수행한 경험이 있으십니까?</div><br>
+                                                        <div class="q_info">* 기관 내·외부 기관에서 실시한 진단에 참여한 경우 모두 포함</div>
+                                                        <div class="part1_answer">
+                                                            <div class="rBtn"><input type="radio" name="q6AnsGroup" value="1" id="q6a1" disabled="disabled" checked="checked"><label for="q6a1">있다</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q6AnsGroup" value="2" id="q6a2" disabled="disabled"><label for="q6a2">없다(처음 실시)</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="q7 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="Y">
+                                                    <div class="sur_q">1-6-1. 과거 데이터 활용 역량진단을 수행한 경험이 있는 경우 마지막으로 역량진단을 수행한 시기는 언제입니까?</div><br>
+                                                        <div class="part1_answer">
+                                                            <div class="rBtn"><input type="radio" name="q7AnsGroup" value="1" id="q7a1" disabled="disabled" checked="checked"><label for="q7a1">2022년</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q7AnsGroup" value="2" id="q7a2" disabled="disabled"><label for="q7a2">2021년</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q7AnsGroup" value="3" id="q7a3" disabled="disabled"><label for="q7a3">2020년 이전</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="q8 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">1-7. 귀하는 과거에 데이터기반행정 관련한 교육에 참여(내외부 포함)한 경험이 있으십니까?</div><br>
+                                                        <div class="part1_answer">
+                                                            <div class="rBtn"><input type="radio" name="q8AnsGroup" value="1" id="q8a1" disabled="disabled"><label for="q8a1">개념 및 기획 교육</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q8AnsGroup" value="2" id="q8a2" disabled="disabled" checked="checked"><label for="q8a2">데이터 분석 교육</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q8AnsGroup" value="3" id="q8a3" disabled="disabled"><label for="q8a3">1주 이상 기술 교육</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q8AnsGroup" value="4" id="q8a4" disabled="disabled"><label for="q8a4">기타</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q8AnsGroup" value="5" id="q8a5" disabled="disabled"><label for="q8a5">없음</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="q9 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">1-8. 귀하는 과거에 데이터 분석을 수행한 경험이 있으십니까?</div><br>
+                                                        <div class="part1_answer">
+                                                            <div class="rBtn"><input type="radio" name="q9AnsGroup" value="1" id="q9a1" disabled="disabled" checked="checked"><label for="q9a1">용역과제 관리 등 간접 경험</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q9AnsGroup" value="2" id="q9a2" disabled="disabled"><label for="q9a2">교육 등 간접 경험</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q9AnsGroup" value="3" id="q9a3" disabled="disabled"><label for="q9a3">직접 분석 경험</label></div>
+                                                            <div class="rBtn"><input type="radio" name="q9AnsGroup" value="4" id="q9a4" disabled="disabled"><label for="q9a4">데이터 분석이 무엇인지 모름</label></div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>	
+                                    
+                                    <!-- PART2 -->
+                                    <div class="answer_head"><span>[Part II] (구성원) 조직역량 </span></div>
+                                    <div class="answer_container">
+                                        <div class="survey part2_page1">
+                                            <div class="question">
+                                                <div class="section_info">
+                                                    <ul>
+                                                        <li>▣ 전략/리더십 </li>
+                                                        <li>데이터 기반 행정을 위해 조직의 전략을 수립하고 주요 정책 의사결정에 분석결과를 활용하는 등 리더십을 발휘하는 기반을 마련하여 추진한다.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="p2q1 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-1. [전략수립] 나는 우리 기관이 기관 특성을 반영하여 적절한 데이터 분석 및 활용 전략을 수립하고 있다고 생각한다.</div><br>
+                                                        <div class="part1_answer">
+                                                            <div class="rBtn"><input type="radio" name="p2q1AnsGroup" value="1" id="p2q1a1" disabled="disabled" checked="checked"><label for="p2q1a1">전혀 아니다</label></div>
+                                                            <div class="rBtn"><input type="radio" name="p2q1AnsGroup" value="2" id="p2q1a2" disabled="disabled"><label for="p2q1a2">아니다</label></div>
+                                                            <div class="rBtn"><input type="radio" name="p2q1AnsGroup" value="3" id="p2q1a3" disabled="disabled"><label for="p2q1a3">보통이다</label></div>
+                                                            <div class="rBtn"><input type="radio" name="p2q1AnsGroup" value="4" id="p2q1a4" disabled="disabled"><label for="p2q1a4">그렇다</label></div>
+                                                            <div class="rBtn"><input type="radio" name="p2q1AnsGroup" value="5" id="p2q1a5" disabled="disabled"><label for="p2q1a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="p2q2 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-2. [기관장 리더십] 나는 우리 기관장이 업무에 데이터를 활용하도록 장려하고 있다고 생각한다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q2AnsGroup" value="1" id="p2q2a1" disabled="disabled" checked="checked"><label for="p2q2a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q2AnsGroup" value="2" id="p2q2a2" disabled="disabled"><label for="p2q2a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q2AnsGroup" value="3" id="p2q2a3" disabled="disabled"><label for="p2q2a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q2AnsGroup" value="4" id="p2q2a4" disabled="disabled"><label for="p2q2a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q2AnsGroup" value="5" id="p2q2a5" disabled="disabled"><label for="p2q2a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="p2q3 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-3. [기관장 리더십] 나는 우리 기관장이 업무에 데이터를 활용하도록 장려하고 있다고 생각한다.</div>
+                                                        <div class="p2q_info">※ 부서장: 직속 상관(자신이 속한 부서, 팀, 과 등의 책임자를 지칭함), 공공기관은 보직자</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q3AnsGroup" value="1" id="p2q3a1" disabled="disabled" checked="checked"><label for="p2q3a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q3AnsGroup" value="2" id="p2q3a2" disabled="disabled"><label for="p2q3a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q3AnsGroup" value="3" id="p2q3a3" disabled="disabled"><label for="p2q3a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q3AnsGroup" value="4" id="p2q3a4" disabled="disabled"><label for="p2q3a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q3AnsGroup" value="5" id="p2q3a5" disabled="disabled"><label for="p2q3a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="p2q4 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-4. [조직의사결정활용] 나는 우리 기관이 정책 수립 및 의사결정에 데이터를 적극 활용한다고 생각한다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q4AnsGroup" value="1" id="p2q4a1" disabled="disabled" checked="checked"><label for="p2q4a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q4AnsGroup" value="2" id="p2q4a2" disabled="disabled"><label for="p2q4a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q4AnsGroup" value="3" id="p2q4a3" disabled="disabled"><label for="p2q4a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q4AnsGroup" value="4" id="p2q4a4" disabled="disabled"><label for="p2q4a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q4AnsGroup" value="5" id="p2q4a5" disabled="disabled"><label for="p2q4a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                            <div class="section_info">
+                                                <ul>
+                                                    <li>▣ 문화관리  </li>
+                                                    <li>구성원이 데이터를 정책에 활용하는 것을 장려하고, 기관의 효율적 데이터 활용을 위한 협업지원체계를 수립하여 추진한다.</li>
+                                                </ul>
+                                            </div>
+                                                <div class="p2q5 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-5. [데이터 활용 문화] 나는 우리 기관에 데이터 분석 및 활용을 장려하는 정책이 있다는 것을 알고 있다.</div><br>
+                                                    <div class="p2q_info">※ 장려정책: 연구모임, 세미나, 인센티브, 성과급, 포상, 평정가점 등 활성화 정책 포함</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q5AnsGroup" value="1" id="p2q5a1" disabled="disabled" checked="checked"><label for="p2q5a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q5AnsGroup" value="2" id="p2q5a2" disabled="disabled"><label for="p2q5a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q5AnsGroup" value="3" id="p2q5a3" disabled="disabled"><label for="p2q5a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q5AnsGroup" value="4" id="p2q5a4" disabled="disabled"><label for="p2q5a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q5AnsGroup" value="5" id="p2q5a5" disabled="disabled"><label for="p2q5a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="p2q6 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-6. [협업문화] 우리 기관은 분석과제를 수행하는 과정에서 관련 부서와의 협업활성화 문화가 체계적으로 마련되어 있다고 생각한다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q6AnsGroup" value="1" id="p2q6a1" disabled="disabled" checked="checked"><label for="p2q6a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q6AnsGroup" value="2" id="p2q6a2" disabled="disabled"><label for="p2q6a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q6AnsGroup" value="3" id="p2q6a3" disabled="disabled"><label for="p2q6a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q6AnsGroup" value="4" id="p2q6a4" disabled="disabled"><label for="p2q6a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q6AnsGroup" value="5" id="p2q6a5" disabled="disabled"><label for="p2q6a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="p2q7 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-7. [정책활용문화] 나는 우리 기관이 행정·공공서비스의 질을 향상하기 위한 데이터 분석결과 활용 문화가 정착되어 있다고 생각한다.</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q7AnsGroup" value="1" id="p2q7a1" disabled="disabled" checked="checked"><label for="p2q7a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q7AnsGroup" value="2" id="p2q7a2" disabled="disabled"><label for="p2q7a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q7AnsGroup" value="3" id="p2q7a3" disabled="disabled"><label for="p2q7a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q7AnsGroup" value="4" id="p2q7a4" disabled="disabled"><label for="p2q7a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q7AnsGroup" value="5" id="p2q7a5" disabled="disabled"><label for="p2q7a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                            <div class="section_info">
+                                                <ul class="tab">
+                                                    <li>▣ 플랫폼/분석도구  </li>
+                                                    <li>구성원이 데이터 분석과 활용을 쉽게 할 수 있도록 데이터 플랫폼과 데이터 분석·활용 도구를 제공한다.</li>
+                                                </ul>
+                                            </div>
+                                                <div class="p2q8 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-8.  [도구제공/운영] 나는 우리 기관이 데이터 분석을 수행할 수 있도록 구성원들에게 분석 및 시각화 도구 등을 충분히 제공하고 있다고 생각한다.</div><br>
+                                                    <div class="p2q_info">※ 도구: 엑셀, 파이썬, R, QGIS, Tableau, BI, RapidMiner 등</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q8AnsGroup" value="1" id="p2q8a1" disabled="disabled" checked="checked"><label for="p2q8a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q8AnsGroup" value="2" id="p2q8a2" disabled="disabled"><label for="p2q8a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q8AnsGroup" value="3" id="p2q8a3" disabled="disabled"><label for="p2q8a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q8AnsGroup" value="4" id="p2q8a4" disabled="disabled"><label for="p2q8a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q8AnsGroup" value="5" id="p2q8a5" disabled="disabled"><label for="p2q8a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                <div class="p2q9 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-9. [데이터 플랫폼 활용] 나는 우리 기관이 데이터 분석 및 활용에 필요한 데이터 플랫폼을 제공하고 적극적으로 활용할 수 있도록 지원하고 있다고 생각한다.</div><br>
+                                                    <div class="p2q_info">※ 데이터 플랫폼 : 데이터수집, 저장, 처리, 분석 전 과정을 수행하기 위한 기능을 통합적으로 제공하는 시스템</div>
+                                                    <div class="p2q_info">예) 데이터 공동활용플랫폼, 분석플랫폼, 범정부 데이터플랫폼(혜안) 등</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q9AnsGroup" value="1" id="p2q9a1" disabled="disabled" checked="checked"><label for="p2q9a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q9AnsGroup" value="2" id="p2q9a2" disabled="disabled"><label for="p2q9a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q9AnsGroup" value="3" id="p2q9a3" disabled="disabled"><label for="p2q9a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q9AnsGroup" value="4" id="p2q9a4" disabled="disabled"><label for="p2q9a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q9AnsGroup" value="5" id="p2q9a5" disabled="disabled"><label for="p2q9a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                            <div class="section_info">
+                                                <ul>
+                                                    <li>▣ 전문조직/인력  </li>
+                                                    <li>구성원이 데이터를 업무에 활용하는 과정에서 과제기획, 데이터 확보, 분석기술 등 지원이 가능한 전문조직을 운영하거나 전문인력을 확보하여 추진한다.</li>
+                                                </ul>
+                                            </div>
+                                                <div class="p2q10 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-10.  [전담조직체계] 나는 우리 기관의 데이터 분석 및 활용 업무를 담당하는 부서에 대해 알고 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q10AnsGroup" value="1" id="p2q10a1" disabled="disabled" checked="checked"><label for="p2q10a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q10AnsGroup" value="2" id="p2q10a2" disabled="disabled"><label for="p2q10a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q10AnsGroup" value="3" id="p2q10a3" disabled="disabled"><label for="p2q10a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q10AnsGroup" value="4" id="p2q10a4" disabled="disabled"><label for="p2q10a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q10AnsGroup" value="5" id="p2q10a5" disabled="disabled"><label for="p2q10a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p2q11 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-11. [전문가 지원] 나는 데이터 분석을 수행할 때 우리 기관의 데이터 분석인력 또는 담당부서의 충분한 지원을 받고 있다고 생각한다.</div><br>
+                                                    <div class="p2q_info">※ 데이터 확보 및 분석기술 지원, 전문인력 지원, 기술적 자문 등</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q11AnsGroup" value="1" id="p2q11a1" disabled="disabled" checked="checked"><label for="p2q11a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q11AnsGroup" value="2" id="p2q11a2" disabled="disabled"><label for="p2q11a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q11AnsGroup" value="3" id="p2q11a3" disabled="disabled"><label for="p2q11a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q11AnsGroup" value="4" id="p2q11a4" disabled="disabled"><label for="p2q11a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q11AnsGroup" value="5" id="p2q11a5" disabled="disabled"><label for="p2q11a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                            
+                                            <div class="section_info">
+                                                <ul class="tab">
+                                                    <li>▣ 과제기획관리   </li>
+                                                    <li>구성원이 데이터기반행정 수행을 위해 다양한 데이터 활용 아이디어를 도출하여 관련 분야에 활용할 수 있도록 과제기획을 지원하고 체계적으로 관리한다.</li>
+                                                </ul>
+                                            </div>
+                                                <div class="p2q12 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-12.  [과제기획] 나는 우리 기관이 데이터 활용 아이디어를 도출하여 업무에 활용할 수 있도록 구성원의 과제기획을 지원하고 체계적으로 관리하고 있다고 생각한다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q12AnsGroup" value="1" id="p2q12a1" disabled="disabled" checked="checked"><label for="p2q12a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q12AnsGroup" value="2" id="p2q12a2" disabled="disabled"><label for="p2q12a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q12AnsGroup" value="3" id="p2q12a3" disabled="disabled"><label for="p2q12a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q12AnsGroup" value="4" id="p2q12a4" disabled="disabled"><label for="p2q12a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q12AnsGroup" value="5" id="p2q12a5" disabled="disabled"><label for="p2q12a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                            
+                                            <div class="section_info">
+                                                <ul>
+                                                    <li>▣ 절차관리   </li>
+                                                    <li>구성원이 도출한 분석과제의 수행 절차를 정의하고 이행여부를 추적·관리한다.</li>
+                                                </ul>
+                                            </div>
+                                                <div class="p2q13 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-13. [절차정의] 나는 우리 기관이 구성원이 참조 가능한 분석 활용 업무 절차와 관련 가이드를 적절하게 제공하고 있다고 생각한다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q13AnsGroup" value="1" id="p2q13a1" disabled="disabled" checked="checked"><label for="p2q13a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q13AnsGroup" value="2" id="p2q13a2" disabled="disabled"><label for="p2q13a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q13AnsGroup" value="3" id="p2q13a3" disabled="disabled"><label for="p2q13a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q13AnsGroup" value="4" id="p2q13a4" disabled="disabled"><label for="p2q13a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q13AnsGroup" value="5" id="p2q13a5" disabled="disabled"><label for="p2q13a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p2q14 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-14. [이행관리] 나는 우리 기관이 각 부서에서 수행하고 있는 분석과제의 목록 및 진행상황을 기관 차원에서 체계적으로 관리하고 있다고 생각한다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q14AnsGroup" value="1" id="p2q14a1" disabled="disabled" checked="checked"><label for="p2q14a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q14AnsGroup" value="2" id="p2q14a2" disabled="disabled"><label for="p2q14a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q14AnsGroup" value="3" id="p2q14a3" disabled="disabled"><label for="p2q14a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q14AnsGroup" value="4" id="p2q14a4" disabled="disabled"><label for="p2q14a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q14AnsGroup" value="5" id="p2q14a5" disabled="disabled"><label for="p2q14a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                            
+                                            <div class="section_info">
+                                                <ul class="tab">
+                                                    <li>▣ 성과관리   </li>
+                                                    <li>기관에서 수행한 분석과제의 업무활용 성과를 추적·관리하고 홍보한다.</li>
+                                                </ul>
+                                            </div>
+                                                <div class="p2q15 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-15. [성과공유] 나는 우리 기관이 데이터 분석 및 활용 결과/성과를 기관 내외부에 제공하고 홍보하고 있다고 생각한다.</div><br>
+                                                    <div class="p2q_info">※ 기관내외부: 구성원, 타부서, 타기관, 대국민</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q15AnsGroup" value="1" id="p2q15a1" disabled="disabled" checked="checked"><label for="p2q15a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q15AnsGroup" value="2" id="p2q15a2" disabled="disabled"><label for="p2q15a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q15AnsGroup" value="3" id="p2q15a3" disabled="disabled"><label for="p2q15a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q15AnsGroup" value="4" id="p2q15a4" disabled="disabled"><label for="p2q15a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q15AnsGroup" value="5" id="p2q15a5" disabled="disabled"><label for="p2q15a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p2q16 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-16. [성과환류] 나는 우리 기관이 데이터 분석 및 활용 결과에 대한 성과를 측정하고 환류하는 체계를 갖추고 있다고 생각한다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q16AnsGroup" value="1" id="p2q16a1" disabled="disabled" checked="checked"><label for="p2q16a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q16AnsGroup" value="2" id="p2q16a2" disabled="disabled"><label for="p2q16a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q16AnsGroup" value="3" id="p2q16a3" disabled="disabled"><label for="p2q16a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q16AnsGroup" value="4" id="p2q16a4" disabled="disabled"><label for="p2q16a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q16AnsGroup" value="5" id="p2q16a5" disabled="disabled"><label for="p2q16a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                            
+                                            <div class="section_info">
+                                                <ul>
+                                                    <li>▣ 교육/인적관리</li>
+                                                    <li>구성원의 데이터 활용역량 강화를 위해 중장단기 교육계획 등을 수립하여 추진한다.</li>
+                                                </ul>
+                                            </div>
+                                                <div class="p2q17 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-17. [역량강화관리] 나는 우리 기관이 데이터 역량강화 교육의 참여 기회를 충분히 체공하고 있다고 생각한다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q17AnsGroup" value="1" id="p2q17a1" disabled="disabled" checked="checked"><label for="p2q17a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q17AnsGroup" value="2" id="p2q17a2" disabled="disabled"><label for="p2q17a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q17AnsGroup" value="3" id="p2q17a3" disabled="disabled"><label for="p2q17a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q17AnsGroup" value="4" id="p2q17a4" disabled="disabled"><label for="p2q17a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q17AnsGroup" value="5" id="p2q17a5" disabled="disabled"><label for="p2q17a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                            
+                                            <div class="part2_page9">
+                                            <div class="section_info">
+                                                <ul>
+                                                    <li>▣ 부서장 심화 </li>
+                                                </ul>
+                                            </div>
+                                                <div class="p2q18 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-18. [전략수립] 나는 우리 부서의 업무개선 또는 대국민 서비스 개선을 위한 데이터 활용 방안을 수립하고 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q18AnsGroup" value="1" id="p2q18a1" disabled="disabled" checked="checked"><label for="p2q18a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q18AnsGroup" value="2" id="p2q18a2" disabled="disabled"><label for="p2q18a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q18AnsGroup" value="3" id="p2q18a3" disabled="disabled"><label for="p2q18a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q18AnsGroup" value="4" id="p2q18a4" disabled="disabled"><label for="p2q18a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q18AnsGroup" value="5" id="p2q18a5" disabled="disabled"><label for="p2q18a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p2q19 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-19. [기관장리더십] 나는 우리 부서원이 업무에 데이터를 활용하도록 장려하고 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q19AnsGroup" value="1" id="p2q19a1" disabled="disabled" checked="checked"><label for="p2q19a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q19AnsGroup" value="2" id="p2q19a2" disabled="disabled"><label for="p2q19a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q19AnsGroup" value="3" id="p2q19a3" disabled="disabled"><label for="p2q19a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q19AnsGroup" value="4" id="p2q19a4" disabled="disabled"><label for="p2q19a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q19AnsGroup" value="5" id="p2q19a5" disabled="disabled"><label for="p2q19a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p2q20 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-20. [부서장리더십] 나는 우리 부서의 정책 수립 및 의사결정에 데이터를 적극 활용하고 있다.</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q20AnsGroup" value="1" id="p2q20a1" disabled="disabled" checked="checked"><label for="p2q20a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q20AnsGroup" value="2" id="p2q20a2" disabled="disabled"><label for="p2q20a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q20AnsGroup" value="3" id="p2q20a3" disabled="disabled"><label for="p2q20a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q20AnsGroup" value="4" id="p2q20a4" disabled="disabled"><label for="p2q20a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q20AnsGroup" value="5" id="p2q20a5" disabled="disabled"><label for="p2q20a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p2q21 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-21. [데이터 활용문화] 나는 우리 부서원의 데이터 분석 및 활용을 촉진하기 위해 부서 차원의 활성화 정책을 적극 추진하고 있다.</div><br>
+                                                    <div class="p2q_info">※ 연구모임, 세미나, 인센티브, 성과급, 포상, 평정가점 등</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q21AnsGroup" value="1" id="p2q21a1" disabled="disabled" checked="checked"><label for="p2q21a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q21AnsGroup" value="2" id="p2q21a2" disabled="disabled"><label for="p2q21a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q21AnsGroup" value="3" id="p2q21a3" disabled="disabled"><label for="p2q21a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q21AnsGroup" value="4" id="p2q21a4" disabled="disabled"><label for="p2q21a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q21AnsGroup" value="5" id="p2q21a5" disabled="disabled"><label for="p2q21a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p2q22 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">3-22. [협업문화] 나는 우리 부서의 분석과제를 수행하는 과정에서 관련 부서와의 협업을 적극 지원하고 있다.</div><br>
+                                                    <div class="p2q_info">※ 필요 데이터 확보 협조 요청, 분석 과제 추진을 위한 부서 간 역할 조율 등</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p2q22AnsGroup" value="1" id="p2q22a1" disabled="disabled" checked="checked"><label for="p2q22a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q22AnsGroup" value="2" id="p2q22a2" disabled="disabled"><label for="p2q22a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q22AnsGroup" value="3" id="p2q22a3" disabled="disabled"><label for="p2q22a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q22AnsGroup" value="4" id="p2q22a4" disabled="disabled"><label for="p2q22a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p2q22AnsGroup" value="5" id="p2q22a5" disabled="disabled"><label for="p2q22a5">아주 그렇다</label></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>	
+                                    </div>
+                                    <!-- PART3 -->
+                                    
+                                        
+                                            <div class="answer_head"><span>[Part Ⅲ] (직무심화) 개인역량</span></div>
+                                        
+                                        
+                                    
+                                    <div class="answer_container">
+                                        <div class="survey part3_page1">
+                                            <div class="question">
+                                                <div class="p3q1 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-1. [과제정의] 나는 해결이 필요한 업무의 문제를 정의하고, 데이터를 활용한 해결방안을 도출할 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q1AnsGroup" value="1" id="p3q1a1" disabled="disabled" checked="checked"><label for="p3q1a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q1AnsGroup" value="2" id="p3q1a2" disabled="disabled"><label for="p3q1a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q1AnsGroup" value="3" id="p3q1a3" disabled="disabled"><label for="p3q1a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q1AnsGroup" value="4" id="p3q1a4" disabled="disabled"><label for="p3q1a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q1AnsGroup" value="5" id="p3q1a5" disabled="disabled"><label for="p3q1a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q2 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-2. [계획수립] 나는 데이터 활용 목적, 절차, 이행 방법이 포함된 데이터 활용 계획을 수립할 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q2AnsGroup" value="1" id="p3q2a1" disabled="disabled" checked="checked"><label for="p3q2a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q2AnsGroup" value="2" id="p3q2a2" disabled="disabled"><label for="p3q2a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q2AnsGroup" value="3" id="p3q2a3" disabled="disabled"><label for="p3q2a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q2AnsGroup" value="4" id="p3q2a4" disabled="disabled"><label for="p3q2a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q2AnsGroup" value="5" id="p3q2a5" disabled="disabled"><label for="p3q2a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q3 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-3. [데이터식별] 나는 분석과제 수행에 필요한 핵심 데이터를 식별하고 데이터 확보방안을 마련할 수 있다.</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q3AnsGroup" value="1" id="p3q3a1" disabled="disabled" checked="checked"><label for="p3q3a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q3AnsGroup" value="2" id="p3q3a2" disabled="disabled"><label for="p3q3a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q3AnsGroup" value="3" id="p3q3a3" disabled="disabled"><label for="p3q3a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q3AnsGroup" value="4" id="p3q3a4" disabled="disabled"><label for="p3q3a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q3AnsGroup" value="5" id="p3q3a5" disabled="disabled"><label for="p3q3a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                            
+                                                <div class="p3q4 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-4. [데이터 윤리] 나는 데이터 관리의 주요 규정을 준수하여 데이터 확보방안/계획을 수립할 수 있다.</div><br>
+                                                    <div class="p2q_info">※ 주요규정: 개인정보보호법, 저작권법, 기관별 보안사항 등을 정의한 문서</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q4AnsGroup" value="1" id="p3q4a1" disabled="disabled" checked="checked"><label for="p3q4a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q4AnsGroup" value="2" id="p3q4a2" disabled="disabled"><label for="p3q4a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q4AnsGroup" value="3" id="p3q4a3" disabled="disabled"><label for="p3q4a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q4AnsGroup" value="4" id="p3q4a4" disabled="disabled"><label for="p3q4a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q4AnsGroup" value="5" id="p3q4a5" disabled="disabled"><label for="p3q4a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q5 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-5. [데이터 수집] 나는 필요한 데이터를 관련 규정 및 절차에 따라 확보할 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q5AnsGroup" value="1" id="p3q5a1" disabled="disabled" checked="checked"><label for="p3q5a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q5AnsGroup" value="2" id="p3q5a2" disabled="disabled"><label for="p3q5a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q5AnsGroup" value="3" id="p3q5a3" disabled="disabled"><label for="p3q5a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q5AnsGroup" value="4" id="p3q5a4" disabled="disabled"><label for="p3q5a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q5AnsGroup" value="5" id="p3q5a5" disabled="disabled"><label for="p3q5a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q6 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-6. [데이터 처리/변환] 나는 수집한 데이터의 이상 유무를 판단하여 적합한 값으로 보정할 수 있다.</div>
+                                                    <div class="p2q_info">※ 데이터 이상(오류) : 공백, 중복 등의 비정상 값</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q6AnsGroup" value="1" id="p3q6a1" disabled="disabled" checked="checked"><label for="p3q6a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q6AnsGroup" value="2" id="p3q6a2" disabled="disabled"><label for="p3q6a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q6AnsGroup" value="3" id="p3q6a3" disabled="disabled"><label for="p3q6a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q6AnsGroup" value="4" id="p3q6a4" disabled="disabled"><label for="p3q6a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q6AnsGroup" value="5" id="p3q6a5" disabled="disabled"><label for="p3q6a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                            
+                                                <div class="p3q7 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-7. [분석모델링] 나는 데이터 분석 목적에 적합한 데이터 분석 기법을 이해하고 선정할 수 있다.</div><br>
+                                                    <div class="p2q_info">※ 분석기법: 텍스트분석, 선형분석, 회귀분석, 시계열분석 등</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q7AnsGroup" value="1" id="p3q7a1" disabled="disabled" checked="checked"><label for="p3q7a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q7AnsGroup" value="2" id="p3q7a2" disabled="disabled"><label for="p3q7a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q7AnsGroup" value="3" id="p3q7a3" disabled="disabled"><label for="p3q7a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q7AnsGroup" value="4" id="p3q7a4" disabled="disabled"><label for="p3q7a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q7AnsGroup" value="5" id="p3q7a5" disabled="disabled"><label for="p3q7a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q8 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-8. [데이터분석] 나는 분석 및 시각화 도구를 활용하여 데이터의 패턴을 찾아낼 수 있다.</div><br>
+                                                    <div class="p2q_info">※ 도구: 엑셀, 파이썬, R, QGIS, Tableau, BI, RapidMiner 등</div>
+                                                    <div class="p2q_info">※ 데이터 패턴: 데이터 규칙, 분포, 경향성, 반복성 등</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q8AnsGroup" value="1" id="p3q8a1" disabled="disabled" checked="checked"><label for="p3q8a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q8AnsGroup" value="2" id="p3q8a2" disabled="disabled"><label for="p3q8a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q8AnsGroup" value="3" id="p3q8a3" disabled="disabled"><label for="p3q8a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q8AnsGroup" value="4" id="p3q8a4" disabled="disabled"><label for="p3q8a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q8AnsGroup" value="5" id="p3q8a5" disabled="disabled"><label for="p3q8a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q9 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-9. [데이터시각화] 나는 데이터 분석결과를 시각화 도구를 활용하여 표현할 수 있다.</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q9AnsGroup" value="1" id="p3q9a1" disabled="disabled" checked="checked"><label for="p3q9a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q9AnsGroup" value="2" id="p3q9a2" disabled="disabled"><label for="p3q9a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q9AnsGroup" value="3" id="p3q9a3" disabled="disabled"><label for="p3q9a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q9AnsGroup" value="4" id="p3q9a4" disabled="disabled"><label for="p3q9a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q9AnsGroup" value="5" id="p3q9a5" disabled="disabled"><label for="p3q9a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                            
+                                                <div class="p3q10 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-10. [결과해석] 나는 데이터 분석결과를 해석하여 업무와 연관하여 의미있는 시사점을 도출할 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q10AnsGroup" value="1" id="p3q10a1" disabled="disabled" checked="checked"><label for="p3q10a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q10AnsGroup" value="2" id="p3q10a2" disabled="disabled"><label for="p3q10a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q10AnsGroup" value="3" id="p3q10a3" disabled="disabled"><label for="p3q10a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q10AnsGroup" value="4" id="p3q10a4" disabled="disabled"><label for="p3q10a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q10AnsGroup" value="5" id="p3q10a5" disabled="disabled"><label for="p3q10a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q11 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-11. [업무활용] 나는 데이터 분석결과를 업무보고서 작성 및 이행계획 수립 등에 활용할 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q11AnsGroup" value="1" id="p3q11a1" disabled="disabled" checked="checked"><label for="p3q11a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q11AnsGroup" value="2" id="p3q11a2" disabled="disabled"><label for="p3q11a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q11AnsGroup" value="3" id="p3q11a3" disabled="disabled"><label for="p3q11a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q11AnsGroup" value="4" id="p3q11a4" disabled="disabled"><label for="p3q11a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q11AnsGroup" value="5" id="p3q11a5" disabled="disabled"><label for="p3q11a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                            
+                                            <div class="part3_page5">
+                                                <div class="p3q12 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-12. [계획수립_심화] 나는 데이터 분석 과제를 수행하기 위한 필요 자원을 계획하고 확보 방안을 마련할 수 있다.</div>
+                                                    <div class="p2q_info">※ 자원: 인력, 인프라, 분석도구, 소요예산 등</div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q12AnsGroup" value="1" id="p3q12a1" disabled="disabled" checked="checked"><label for="p3q12a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q12AnsGroup" value="2" id="p3q12a2" disabled="disabled"><label for="p3q12a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q12AnsGroup" value="3" id="p3q12a3" disabled="disabled"><label for="p3q12a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q12AnsGroup" value="4" id="p3q12a4" disabled="disabled"><label for="p3q12a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q12AnsGroup" value="5" id="p3q12a5" disabled="disabled"><label for="p3q12a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q13 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-13. [데이터 수집-심화] 나는 SQL 등 데이터베이스 관리 언어를 사용하여 데이터를 수집할 수 있다.</div><br>
+                                                    <div class="p2q_info">※ SQL(StructuredQueryLanguage): 데이터를 관리하기 위해 </div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q13AnsGroup" value="1" id="p3q13a1" disabled="disabled" checked="checked"><label for="p3q13a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q13AnsGroup" value="2" id="p3q13a2" disabled="disabled"><label for="p3q13a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q13AnsGroup" value="3" id="p3q13a3" disabled="disabled"><label for="p3q13a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q13AnsGroup" value="4" id="p3q13a4" disabled="disabled"><label for="p3q13a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q13AnsGroup" value="5" id="p3q13a5" disabled="disabled"><label for="p3q13a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q14 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-14. [데이터 수집-심화] 나는 타기관에서 제공하는 데이터의 제공방식을 이해하고 필요한 데이터를 수집할 수 있다.</div><br>
+                                                    <div class="p2q_info">※ 데이터 제공 방식: JSON, XML, OpenAPI 등  </div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q14AnsGroup" value="1" id="p3q14a1" disabled="disabled" checked="checked"><label for="p3q14a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q14AnsGroup" value="2" id="p3q14a2" disabled="disabled"><label for="p3q14a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q14AnsGroup" value="3" id="p3q14a3" disabled="disabled"><label for="p3q14a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q14AnsGroup" value="4" id="p3q14a4" disabled="disabled"><label for="p3q14a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q14AnsGroup" value="5" id="p3q14a5" disabled="disabled"><label for="p3q14a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q15 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-15. [데이터 처리/변환-심화] 나는 수집한 데이터에 대해 탐색적 분석 기법을 활용하여 정제 여부를 결정하고 전처리를 수행할 수 있다.</div><br>
+                                                    <div class="p2q_info">※ 탐색적 분석기법(ExploratoryDataAnalysis): 데이터를 분석하고 조사하여 주요 특성을 파악하는 기법 </div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q15AnsGroup" value="1" id="p3q15a1" disabled="disabled" checked="checked"><label for="p3q15a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q15AnsGroup" value="2" id="p3q15a2" disabled="disabled"><label for="p3q15a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q15AnsGroup" value="3" id="p3q15a3" disabled="disabled"><label for="p3q15a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q15AnsGroup" value="4" id="p3q15a4" disabled="disabled"><label for="p3q15a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q15AnsGroup" value="5" id="p3q15a5" disabled="disabled"><label for="p3q15a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q16 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-16. [데이터 처리/변환-심화] 나는 수집한 데이터를 결합하거나 변환하여 분석에 필요한 데이터 셋을 생성할 수 있다.</div><br>
+                                                    <div class="p2q_info">※ 데이터셋(Dataset): 특정한 작업을 위해서 데이터를 관련성 있게 모아 놓은 집합  </div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q16AnsGroup" value="1" id="p3q16a1" disabled="disabled" checked="checked"><label for="p3q16a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q16AnsGroup" value="2" id="p3q16a2" disabled="disabled"><label for="p3q16a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q16AnsGroup" value="3" id="p3q16a3" disabled="disabled"><label for="p3q16a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q16AnsGroup" value="4" id="p3q16a4" disabled="disabled"><label for="p3q16a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q16AnsGroup" value="5" id="p3q16a5" disabled="disabled"><label for="p3q16a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q17 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-17. [분석모델링-심화] 나는 데이터 분석을 위해 가설 검정 모델을 설계할 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q17AnsGroup" value="1" id="p3q17a1" disabled="disabled"><label for="p3q17a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q17AnsGroup" value="2" id="p3q17a2" disabled="disabled"><label for="p3q17a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q17AnsGroup" value="3" id="p3q17a3" disabled="disabled" checked="checked"><label for="p3q17a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q17AnsGroup" value="4" id="p3q17a4" disabled="disabled"><label for="p3q17a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q17AnsGroup" value="5" id="p3q17a5" disabled="disabled"><label for="p3q17a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q18 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-18. [데이터분석-심화] 나는 전문 분석도구(SW)를 사용하여 데이터를 분석할 수 있다.</div><br>
+                                                    <div class="p2q_info">※ 전문 분석도구: SAS 등 통계분석도구, RapidMiner 등 No-code 분석 소프트웨어 </div>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q18AnsGroup" value="1" id="p3q18a1" disabled="disabled"><label for="p3q18a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q18AnsGroup" value="2" id="p3q18a2" disabled="disabled"><label for="p3q18a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q18AnsGroup" value="3" id="p3q18a3" disabled="disabled" checked="checked"><label for="p3q18a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q18AnsGroup" value="4" id="p3q18a4" disabled="disabled"><label for="p3q18a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q18AnsGroup" value="5" id="p3q18a5" disabled="disabled"><label for="p3q18a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q19 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-19. [데이터분석-심화] 나는 R 또는 파이썬 등의 분석 프로그래밍 언어를 사용하여 데이터를 분석할 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q19AnsGroup" value="1" id="p3q19a1" disabled="disabled"><label for="p3q19a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q19AnsGroup" value="2" id="p3q19a2" disabled="disabled"><label for="p3q19a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q19AnsGroup" value="3" id="p3q19a3" disabled="disabled" checked="checked"><label for="p3q19a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q19AnsGroup" value="4" id="p3q19a4" disabled="disabled"><label for="p3q19a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q19AnsGroup" value="5" id="p3q19a5" disabled="disabled"><label for="p3q19a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q20 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-20. [데이터분석-심화] 나는 데이터 분석결과 및 모델의 타당성을 검증할 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q20AnsGroup" value="1" id="p3q20a1" disabled="disabled"><label for="p3q20a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q20AnsGroup" value="2" id="p3q20a2" disabled="disabled"><label for="p3q20a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q20AnsGroup" value="3" id="p3q20a3" disabled="disabled" checked="checked"><label for="p3q20a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q20AnsGroup" value="4" id="p3q20a4" disabled="disabled"><label for="p3q20a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q20AnsGroup" value="5" id="p3q20a5" disabled="disabled"><label for="p3q20a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        
+                                        <div class="part3_page6">
+                                                <div class="p3q21 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-21. [과제정의-심화] 나는 도출된 데이터 분석 및 활용 과제의 추진 우선순위를 판단할 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q21AnsGroup" value="1" id="p3q21a1" disabled="disabled"><label for="p3q21a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q21AnsGroup" value="2" id="p3q21a2" disabled="disabled" checked="checked"><label for="p3q21a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q21AnsGroup" value="3" id="p3q21a3" disabled="disabled"><label for="p3q21a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q21AnsGroup" value="4" id="p3q21a4" disabled="disabled"><label for="p3q21a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q21AnsGroup" value="5" id="p3q21a5" disabled="disabled"><label for="p3q21a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q22 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-22. [결과해석-심화] 나는 분석결과보고서에서 업무적 해석의 오류를 찾아낼 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q22AnsGroup" value="1" id="p3q22a1" disabled="disabled"><label for="p3q22a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q22AnsGroup" value="2" id="p3q22a2" disabled="disabled" checked="checked"><label for="p3q22a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q22AnsGroup" value="3" id="p3q22a3" disabled="disabled"><label for="p3q22a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q22AnsGroup" value="4" id="p3q22a4" disabled="disabled"><label for="p3q22a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q22AnsGroup" value="5" id="p3q22a5" disabled="disabled"><label for="p3q22a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="p3q23 qTab">
+                                                    <input type="hidden" id="qCntYn" name="qCntYn" value="N">
+                                                    <div class="sur_q">4-23. [업무활용-심화] 나는 데이터 분석결과를 정책 의사결정에 활용할 수 있다.</div><br>
+                                                        <div class="part1_answer">
+                                                                <div class="rBtn"><input type="radio" name="p3q23AnsGroup" value="1" id="p3q23a1" disabled="disabled"><label for="p3q23a1">전혀 아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q23AnsGroup" value="2" id="p3q23a2" disabled="disabled" checked="checked"><label for="p3q23a2">아니다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q23AnsGroup" value="3" id="p3q23a3" disabled="disabled"><label for="p3q23a3">보통이다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q23AnsGroup" value="4" id="p3q23a4" disabled="disabled"><label for="p3q23a4">그렇다</label></div>
+                                                                <div class="rBtn"><input type="radio" name="p3q23AnsGroup" value="5" id="p3q23a5" disabled="disabled"><label for="p3q23a5">아주 그렇다</label></div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- 모달 -->
+
+    <!-- 제출버튼 클릭시 모달 -->
+    <div class="modal fade" id="submitBtn" tabindex="-1" aria-labelledby="submitLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">알림</h5>
+                </div>
+                <div class="modal-body">진단설문을 제출 하시겠습니까? <br>
+                    제출 후, 수정 및 재 제출은 불가합니다.                     
+                </div>
+                <div class="modal-footer">
+                    <div class="ui-buttons">
+                        <button type="button" class="ui-button ui-button__bg--blue">확인</button>
+                        <button type="button" class="ui-button ui-button__bg--gray" data-bs-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //제출버튼 클릭시 모달 -->
+
+    <!-- 로그아웃 모달 -->
+    <div class="modal fade" id="logoutBtn" tabindex="-1" aria-labelledby="logoutLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">알림</h5>
+                </div>
+                <div class="modal-body">시스템을 종료 하시겠습니까?</div>
+                <div class="modal-footer">
+                    <div class="ui-buttons">
+                        <button type="button" class="ui-button ui-button__bg--blue">확인</button>
+                        <button type="button" class="ui-button ui-button__bg--gray" data-bs-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //로그아웃 모달 -->
+
+
+
+    <!-- //모달 -->
+
+
+</body>
+
+
+</html>
+
+
