@@ -11,6 +11,34 @@
             width:100%;
             padding-bottom: 50px
         }   
+        .layout-content{
+            &__inner{
+                max-width: 1200px;
+                margin: 20px auto 0 auto;
+                padding:40px;
+                background: #ffffff;
+                box-shadow: 10px 10px 20px rgb(0 0 0 / 10%);
+                border-radius: 30px;
+                overflow: hidden;
+            }
+        }
+        .ui-button{
+            font-size: 20px;
+            font-weight: 400;
+            *{
+                font-size: 20px;
+                font-weight: 400;
+            }
+            &__border{
+                &--gray{
+                    font-weight: 500;
+                    *{
+                        font-weight: 500;
+                    }
+                    
+                }
+            }
+        }
     }    
 }
 
@@ -235,6 +263,83 @@
         line-height: 24px;
         background: #eef3f7;
         word-break: keep-all;
+    }
+}
+
+/* 초기 화면, progress bar */ 
+.survey{
+    &_count{
+        margin-left: 17px;
+    }
+    &_top{
+        @include d-flex;
+        @include align-center;
+        margin: -20px 0;
+        .count{
+            @include d-flex;
+            @include align-center;
+            &-text{
+                margin-right: 12px;
+            }
+            &-num{
+                font-size: 20px;
+                color:#3b3f47;
+                &__count{
+                    font: {
+                        size: 20px;
+                        weight:500;
+                    };
+                    color:#3b3f47;
+                }
+            }
+            input{
+                width:30px;            
+                padding:0;
+                font: {
+                    size: 20px;
+                    weight:500;
+                };
+                color:#3b3f47;
+                border:0;
+                text-indent: 0;
+                text-align: right;
+            }
+        }
+        .process{
+            &-wrap{
+                @include d-flex;
+                @include align-center;
+                flex:1;
+                .progress{
+                    width:100%;
+                    height:12px;
+                    border-radius: 6px;
+                    &::-webkit-progress-bar{
+                        background: #d9d9d9;
+                        
+                    }
+                    &::-webkit-progress-value{
+                        background:  -webkit-linear-gradient(to right, #01c0f1 0%, #1d8dca 33%,  #2a73b6 66%,  #3b63b6 100%);
+                        background: linear-gradient(to right, #01c0f1 0%, #1d8dca 33%,  #2a73b6 66%,  #3b63b6 100%);
+                        border-radius: 6px;
+                    }
+                }
+            }
+            &-bar{
+                flex:1;
+            }
+            &-percent{
+                @include d-flex-center;
+                width:76px;
+                height:40px;
+                margin-left: -73px;
+                padding-left:7px;
+                background: url(../images/etc/bg-progress.png);
+                font-weight: 600;
+                color:#ffffff;
+                letter-spacing: 1px;
+            }
+        }
     }
 }
 

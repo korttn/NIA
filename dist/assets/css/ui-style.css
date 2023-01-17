@@ -679,6 +679,16 @@
   margin-top: 1.6rem;
   line-height: 5.2rem;
 }
+.ui-button__disabled {
+  color: #c1c1c1 !important;
+  background: #f6f6f6 !important;
+  cursor: default !important;
+}
+.ui-button[aria-disabled=true] {
+  color: #c1c1c1 !important;
+  background: #f6f6f6 !important;
+  cursor: default !important;
+}
 
 .button-plus-card {
   display: flex;
@@ -2072,6 +2082,9 @@
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   overflow: hidden;
+}
+.layout-container.no-title {
+  margin-top: -260px;
 }
 .layout-body {
   padding: 40px;

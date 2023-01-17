@@ -11,12 +11,14 @@
     <script src="./assets/lib/jquery/jquery-ui.min.js"></script>
     <script src="./assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./assets/lib/simplebar/simplebar.min.js"></script>
+    
 
     <script src="./assets/js/ui-script.js"></script>
 
     <!-- 공통 css -->
     <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
     <link rel="stylesheet" href="./assets/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/lib/simplebar/simplebar.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/font.css">
     <link rel="stylesheet" href="./assets/css/ui-style.css">
@@ -33,37 +35,57 @@
             <div class="container__inner">
                 <div class="diagnosis-header">
                     <div class="diagnosis-header__inner">
-                        <div class="diagnosis-header__title">NIA 데이터 활용 역량 온라인 진단도구 안정화</div>
+                        
                     </div>
                 </div>
-                <div class="layout-container diagnosis-body">
+                <div class="layout-container diagnosis-body no-title">
                     <div class="layout-header diagnosis-head modal-header__with--close">
-                        진단설문 (제출완료)
+                        진단설문
                         <button type="button" class="btn-close" data-bs-toggle="modal" data-bs-target="#logoutBtn"></button>
                     </div>
-                    <div class="layout-body layout-diagnosis layout-diagnosis__padding--136">
-                        
-                        <div>
-                            <div >
-                                <div class="user-guide-small">
-                                    <ul>
-                                        <li class="user-guide__title">귀하께서는 진단설문을 제출하신 상태입니다.</li>
-                                        <li class="save-date">2022년 10월 25일(화) 18:00:34 제출</li>
-                                        <li class="user-guide__des">한번 제출하신 진단설문은 수정 및 재 제출이 불가합니다. <br>
-                                        제출하신 진단설문에 대한 분석결과를 조회를 원하시는 경우
-                                        아래의 [진단결과 조회] 버튼을 눌러주세요.
-                                        </li> 
-                                    </ul>
+                    <div class="layout-body layout-diagnosis">
+
+                        <div class="survey_top survey_top_container">
+                            
+                            <div class="process-wrap">
+                                <div class="process-bar">
+                                    <progress min="0" max="100" value="0" class="progress"></progress>
+                                </div>	
+                                <div class="process-percent">
+                                    <span class="process-percent__num">0</span>%    
+                                </div>	
+                            </div>
+
+                            <div class="survey_count">
+                                <div class="count">
+                                    <span class="count-text">진단문항</span>
+                                    <span class="count-num"><span class="count-num__count">0</span>/30</span>
                                 </div>
                             </div>
-                            <div class="mt-50">
-                                <div class="ui-buttons ui-buttons__center">
-                                    <a href="#" class="ui-button ui-button__bg--blue" id="continueBtn" > 진단결과 조회</a>
-                                </div>
+
+                        </div>
+                        
+                    </div>
+
+                    
+                </div>
+
+                <div class="layout-content">
+                    <div class="layout-content__inner">
+                        <div class="ui-scroller" style="height: 457px;">
+                            <div class="" style="height:500px;"></div>
+                        </div><!-- //ui-scroller -->
+
+                        <div class="mt-30">
+                            <div class="info_btn_tab ui-buttons ui-buttons__center">
+                                <a class="next_btn on ui-button ui-button__border--gray" ><span>이전</span></a>
+                                <a class="next_btn on ui-button ui-button__bg--blue" data-bs-toggle="modal" data-bs-target="#nextStepBtn"><span>다음</span></a>
+                                <a class="next_btn on ui-button ui-button__bg--gray" ><span>임시저장</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -72,6 +94,26 @@
 
     <!-- 모달 -->
 
+    <!-- 다음 버튼 클릭시 모달 -->
+    <div class="modal fade" id="nextStepBtn" tabindex="-1" aria-labelledby="nextStepLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">알림</h5>
+                </div>
+                <div class="modal-body">[문항번호1, 문항번호2….] 항목에 대하여 응답하지 않으셨습니다.
+
+                </div>
+                <div class="modal-footer">
+                    <div class="ui-buttons">
+                        <button type="button" class="ui-button ui-button__bg--blue" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //다음 버튼 클릭시 모달 -->
+
     <!-- 로그아웃 모달 -->
     <div class="modal fade" id="logoutBtn" tabindex="-1" aria-labelledby="logoutLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -79,8 +121,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="">알림</h5>
                 </div>
-                <div class="modal-body">로그아웃을 하시겠습니까?
-                </div>
+                <div class="modal-body">시스템을 종료 하시겠습니까?</div>
                 <div class="modal-footer">
                     <div class="ui-buttons">
                         <button type="button" class="ui-button ui-button__bg--blue">확인</button>
@@ -93,30 +134,13 @@
     <!-- //로그아웃 모달 -->
 
 
-    <!-- 신청 모달 -->
-    <div class="modal fade" id="restart" tabindex="-1" aria-labelledby="restartLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="">알림</h5>
-                </div>
-                <div class="modal-body">설문을 새로 시작 하시겠습니까? <br>
-                    새로 시작하는 경우, 기존 응답하셨던 설문은 삭제됩니다.
-                </div>
-                <div class="modal-footer">
-                    <div class="ui-buttons">
-                        <button type="button" class="ui-button ui-button__bg--blue">확인</button>
-                        <button type="button" class="ui-button ui-button__bg--gray" data-bs-dismiss="modal">닫기</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //신청 모달 -->
 
     <!-- //모달 -->
 
 
 </body>
 
+
 </html>
+
+

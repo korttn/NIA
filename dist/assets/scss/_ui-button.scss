@@ -335,6 +335,16 @@
             }
         }
     }
+    &__disabled{
+        color:#c1c1c1 !important;
+        background: #f6f6f6 !important;
+        cursor: default !important;
+    }
+    &[aria-disabled="true"]{
+        color:#c1c1c1 !important;
+        background: #f6f6f6 !important;
+        cursor: default !important;
+    }
 }
 .button{
    
