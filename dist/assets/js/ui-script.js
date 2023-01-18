@@ -3565,6 +3565,24 @@ $(function () {
 		event.preventDefault();
 	});
 
+	$(function() {
+		$('a[data-tab]').click(function() {
+			var onTab = $(this).attr('data-tab');
+			$(this).parent().toggleClass('is-active');
+			$(this).parent().siblings().removeClass('is-active');
+
+			$(".edu-li").removeClass('is-active');
+			$('#' + onTab).addClass('is-active');
+			
+			if($('a[data-tab]').parent().hasClass("is-active")){
+			}else{
+				$('#' + onTab).removeClass('is-active');
+			}
+		})
+	});
+
+	
+
 
 
 })

@@ -5,7 +5,8 @@
 
 .ui-table{
     &__inner{
-        border-top:2px solid;
+        border-top:2px solid #000000;
+        border-bottom:1px solid #b6b5b5;
     }
     th{
         padding: 10px;
@@ -20,13 +21,47 @@
         &+th{
             border-left:1px solid #e8e8e8;
         }
+        &.bg{
+            &-skyblue{
+                background: #b9edfb;
+            }
+            &-gray{
+                background: #e8ecf0;
+            }
+        }
+        &.thead{
+            &-top{
+                color: #243b7c;
+                background: #e8ecf0;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
     }
     td{
         padding: 20px 10px;
         font-size:18px;
-        border-bottom: 1px solid #e8e8e8;
+        border-top: 1px solid #e8e8e8;
         &+td{
             border-left:1px solid #e8e8e8;
+        }
+        &.bg-skyblue{
+            background: #f4fcfe;
+        }
+    }
+    th, td{
+        &.color-blue{
+            color: #243b7c;
+        }
+        &.font{
+            &-weight{
+                &__500{
+                    font-weight: 500;
+                } 
+                &__600{
+                    font-weight: 600;
+                } 
+            }
         }
     }
     &__ver{
@@ -48,163 +83,6 @@
             padding: 10px;
         }
     }
-    &__list{
-        table{
-            table-layout: fixed;
-        }   
-        thead{
-            tr{
-                height:6.9rem;
-                background:#fafcff;
-                border-top:2px solid #4568a9;
-                border-bottom:1px solid #b5b5b5;
-            }
-            .num{
-                width: 9%;
-            }
-            .category{
-                width: 8.6%;
-            }
-            .addfile{
-                width: 8.6%;
-            }
-            .date{
-                width: 12.9%;
-            }
-            .name{
-                width:16.65%;
-            }
-            .callnum{
-                width:16.79%;
-            }
-        }
-        tbody{
-            td{
-                height: 6.8rem;
-                padding: 2rem 0;
-                font-size: 1.8rem;
-                text-align: center;
-                vertical-align: middle;
-                border-bottom:1px solid #d2d5dc;
-                box-sizing: border-box;
-                a{
-                    font-size: 1.8rem;
-                }
-            }
-        }
-        .td{
-            &-title{
-                padding-left:4rem;
-                text-align: left;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                &__inner{
-                    @include d-flex;
-                    @include align-center;
-                }
-            }
-            &-titlelink{
-                @include ellipsis(1);
-            }
-            &-process{
-                .badge-process{
-                    @include d-flex;
-                    align-items: center;
-                    justify-content: center;
-                    width:9.2rem;
-                    height:4rem;
-                    margin: 0 auto;
-                    border:1px solid #4568a9;
-                    font-size:1.6rem;
-                    color:#4568a9;
-                    box-sizing: border-box;
-                    &__end{
-                        background: #4568a9;
-                        color:#ffffff;
-                    }
-                }
-            }
-            &-work{
-                text-align: left;
-                //@include ellipsis(1)
-                line-height: normal;
-            }
-        }
-        &--press{
-            thead{
-                .num{
-                    width: 8.572%;
-                }
-                .press{
-                    width: 8.6%;
-                }
-            }
-        }
-        &--qna{
-            thead{
-                .num, .process, .author{
-                    width: 8.572%;
-                }
-            }
-        }
-        &--org{
-            thead{
-                tr{
-                    height: 6rem;
-                    border-top-width: 1px;
-                }
-            }
-            tbody{
-                td{
-                    height: 6rem;
-                    padding:1.5rem 0;
-                }
-            }
-        }
-        
-    }
-    &__view{
-        table{
-            tbody{
-                tr{
-                    &:nth-child(1){
-                        border-top:2px solid #365ca3;
-                    }
-                }
-            }
-            
-        }
-        .ver-th{
-            width: 28rem;
-        }
-        tr{
-            border-bottom:1px solid #cccfd6;
-        }
-        th, td{
-            vertical-align: middle;
-        }
-        th{
-            height: 8rem;
-            border-right:1px solid #cccfd6;
-            background:#fafcff;
-        }
-        td{
-            height: 8rem;
-            padding: 1.5rem;
-            padding-right:0;
-            text-align: left;
-        }
-    }
-    &__bottom{
-        position: relative;
-        padding-top:4.5rem;
-        .btn-wrap--absolute{
-            top: 3rem;
-            right:0;
-        }
-        .pagination-wrap{
-            margin-top: 0;
-        }
-    }
+   
 }
 

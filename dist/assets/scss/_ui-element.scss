@@ -743,7 +743,14 @@
 
 .ui-button__custom--print{
     display: inline-block;
+    flex:none;
     width: 31px;
     height: 27px;
     background: url(../images/icon/icon-print.png);
+}
+
+
+/* 그래프 */ 
+.report_graph{
+    border: 1px solid #e8e8e8;
 }

@@ -226,17 +226,17 @@
                     background : #fff;
                 }
                 &:checked{
-                    background: #203c7d;
-                    border-color: #203c7d;
-                    &:before{
-                        content : '';
-                        display : block;
-                        width : 6px;
-                        height : 6px;
-                        margin : 5.5px auto;
-                        border-radius : 50%;
-                        background : #ffffff;
-                    }
+                    background: #fff;
+                    border:6px solid #203c7d;
+                    // &:before{
+                    //     content : '';
+                    //     display : block;
+                    //     width : 6px;
+                    //     height : 6px;
+                    //     margin : 4.5px auto;
+                    //     border-radius : 50%;
+                    //     background : #ffffff;
+                    // }
                 }
             }
             

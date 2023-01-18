@@ -325,6 +325,9 @@
         &__16{
             font-size: 16px !important;
         }
+        &__18{
+            font-size: 18px !important;
+        }
         &__20{
             font-size: 20px !important;
         }
@@ -398,6 +401,22 @@ $color-skyblue : #0367b0;
         margin: 0 auto;
         background: url(../image/common/img-check.png);
         background-size: 22.1rem 22rem;
+    }
+}
+.icon{
+    &-book{
+        display: inline-block;
+        width: 15px;
+        height: 18px;
+        background: url(../images/icon/icon-book.png);
+        
+    }
+    &-caution{
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url(../images/icon/icon-caution.png);
+        
     }
 }
 

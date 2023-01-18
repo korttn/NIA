@@ -65,6 +65,23 @@
         background-clip: padding-box;
         border-radius: 10px;
         outline: 0;
+        &__size{
+            &--l{
+                width:800px;
+            }
+        }
+        &__padding{
+            &--24{
+                .modal{
+                    &-header{
+                        padding: 14px 24px;
+                    }
+                    &-body{
+                        padding: 24px;
+                    }
+                }
+            }
+        }
     }
     &-backdrop {
         position: fixed;
@@ -104,7 +121,9 @@
                     width: 40px;
                     height: 40px;
                     margin-left: auto;
+                    padding: 0;
                     background: url(../images/icon/icon-modal__close.png);
+                    opacity: 1;
                 }
 
             }
@@ -161,25 +180,36 @@
             margin: 0;
         }
     }
-    &-fullscreen {
-        width: 100vw;
-        max-width: none;
-        height: 100%;
-        margin: 0;
-        .modal{
-            &-content {
-                height: 100%;
-                border: 0;
-                border-radius: 0;
+    &-item{ 
+        &__title{
+            margin-bottom: 20px;
+            font: {
+                size: 22px;
+                weight:500;
+            };
+            color:#000000;
+            text-align: left;
+        }
+        .ui-table {
+            th, td{
+                font-size: 16px;
+                line-height: 22px;
             }
-            &-header {
-                border-radius: 0;
+            th{
+                &.thead{
+                    &-top{
+                        padding:16px 0;
+                        color: #243b7c;
+                        background: #e8ecf0;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
             }
-            &-body {
-                overflow-y: auto;
-            }
-            &-footer {
-                border-radius: 0;
+            td{
+                padding: 14px 10px;
+                color:#000000;
+                font-weight: 300;
             }
         }
     }
