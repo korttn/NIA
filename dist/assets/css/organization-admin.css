@@ -1,0 +1,123 @@
+@charset "UTF-8";
+.paging-first {
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='11'%3E%3Cpath fill='%23A0A8AB' fill-rule='evenodd' d='m13.182 9.268-1.414 1.414-4.95-4.95.232-.232-.232-.232 4.95-4.95 1.414 1.414L9.414 5.5l3.768 3.768Zm-6 0-1.414 1.414-4.95-4.95.232-.232-.232-.232 4.95-4.95 1.414 1.414L3.414 5.5l3.768 3.768Z'/%3E%3C/svg%3E");
+}
+.paging-prev {
+  background-image: url("data:image/svg+xml;charset=utf8, %0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='11'%3E%3Cpath fill='%23A0A8AB' fill-rule='evenodd' d='m7.182 9.268-1.414 1.414-4.95-4.95.232-.232-.232-.232 4.95-4.95 1.414 1.414L3.414 5.5l3.768 3.768Z'/%3E%3C/svg%3E");
+}
+
+/* 관리자 공통 */
+.adminLayout .ui-table {
+  text-align: center;
+}
+.adminLayout .ui-table table {
+  table-layout: fixed;
+}
+.adminLayout .ui-table td, .adminLayout .ui-table th {
+  height: 38px;
+  padding: 7px 15px;
+  font-size: 14px;
+  line-height: normal;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.adminLayout .ui-table td *, .adminLayout .ui-table th * {
+  font-size: 14px;
+}
+.adminLayout .ui-table__title {
+  text-align: left;
+}
+.adminLayout .ui-table__title--inner {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.adminLayout .ui-table__title--link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.adminLayout .ui-table .status {
+  font-weight: 500;
+}
+.adminLayout .ui-table .status-ing {
+  color: #dc042d;
+}
+.adminLayout .ui-table .status-temp {
+  color: #ae00ff;
+}
+.adminLayout .ui-table .status-waiting {
+  color: #002ddc;
+}
+.adminLayout .ui-table .status-cancle {
+  color: #000000;
+}
+.adminLayout .ui-table .status-end {
+  color: #039243;
+}
+.adminLayout .ui-button {
+  width: auto;
+  height: 35px;
+  padding: 0 21px;
+  font-size: 14px;
+}
+.adminLayout .ui-button__plus {
+  width: 14px;
+  height: 14px;
+  margin-left: auto;
+  padding: 0;
+  border-radius: 0px;
+}
+.adminLayout .ui-button__reset {
+  width: 15px;
+  height: 16px;
+  margin-left: auto;
+  padding: 0;
+  border-radius: 0px;
+}
+
+/* dashboard */
+.dashboard {
+  margin-left: 210px;
+}
+.dashboard-cell {
+  background: #ffffff;
+}
+.dashboard-cell__inner {
+  padding: 20px;
+}
+.dashboard-col {
+  display: flex;
+  margin: -5px;
+}
+.dashboard-col .dashboard-cell {
+  margin: 5px;
+  flex: 1;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+}
+.dashboard-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.dashboard-title__wrap {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.dashboard-sub-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #203c7d;
+}

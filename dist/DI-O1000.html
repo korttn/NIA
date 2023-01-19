@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 활용 역량 진단 도구</title>
+
+    <script src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/lib/jquery/jquery-ui.min.js"></script>
+    <script src="./assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/lib/simplebar/simplebar.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+
+    <script src="./assets/js/ui-script.js"></script>
+    <script src="./assets/js/admin-common.js"></script>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/ui-style.css">
+
+    <!-- 개별 css -->
+    <link rel="stylesheet" href="./assets/css/admin-common.css">
+    <link rel="stylesheet" href="./assets/css/organization-admin.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container adminLayout">
+            <div class="container__inner">
+                <!-- layout-wrap -->
+                <div class="layout-wrap">
+                    <div class="top-wrap">
+                        <header class="header">
+                            <ul class="d-flex">
+                                <li class="headAuthority">
+                                    <i class="manager"></i>
+                                    <i class="admin"></i>
+                                </li>
+                                <li>
+                                    <p class="headName">홍길동</p><span>님 환영합니다.</span>
+                                </li>
+                                <li>
+                                    <span class="headLogout"><button>로그아웃.......</button></span>
+                                </li>
+                            </ul>
+                        </header>
+                    </div> 
+                    <nav class="gnb">
+                        
+                        <div class="menu">
+                            <ul>
+                                <li>
+                                    <h1>
+                                        <a href="javascript:void(0);">데이터 활용 역량 온라인 진단도구</a>
+                                    </h1>
+                                </li>
+                                <li class="list active">
+                                    <a href="#">
+                                        <span class="icon home"><i></i></span>
+                                        <span class="title">Home</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <span class="icon notice"><i></i></span>
+                                        <span class="title">공지사항</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <span class="icon calendar"><i></i></span>
+                                        <span class="title">진단일정 관리</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <span class="icon survey"><i></i></span>
+                                        <span class="title">진단설문 관리</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <span class="icon group"><i></i></span>
+                                        <span class="title">부서 관리</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <span class="icon manager"><i></i></span>
+                                        <span class="title">관리자 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                    <div class="contents-wrap dashboard">
+                        
+                        <section class="dashboard-col">
+                            <div class="dashboard-cell">
+                                <div class="dashboard-cell__inner">
+                                    <div class="dashboard-title__wrap">
+                                        <div class="dashboard-title">공지사항</div>
+                                        <button type="button" class="ui-button ui-button__plus"></button>
+                                    </div>
+                                    <div class="ui-table">
+                                        <div class="ui-table__inner">
+                                            <table>
+                                                <caption>게시물 목록</caption>
+                                                <colgroup>
+                                                    <col style="width:61px">
+                                                    <col style="width:auto">
+                                                    <col style="width:130px">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">No.</th>
+                                                        <th scope="col">제목</th>
+                                                        <th scope="col">등록일</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            5
+                                                        </td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <span class="ui-badge ui-badge__notice">공지</span>
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">공지사항 입니다.</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2023-01-01</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            4
+                                                        </td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <span class="ui-badge ui-badge__notice">공지</span>
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2023-01-01</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            3
+                                                        </td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.공지사항 입니다.</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2022-12-26</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">공지사항 입니다.</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2022-12-26</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">공지사항 입니다.</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2022-12-26</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dashboard-cell">
+                                <div class="dashboard-cell__inner">
+                                    <div class="dashboard-title__wrap">
+                                        <div class="dashboard-title">진단설문</div>
+                                        <button type="button" class="ui-button ui-button__plus"></button>
+                                    </div>
+                                    <div class="ui-table">
+                                        <div class="ui-table__inner">
+                                            <table>
+                                                <caption>게시물 목록</caption>
+                                                <colgroup>
+                                                    <col style="width:61px">
+                                                    <col style="width:80px">
+                                                    <col style="width:auto">
+                                                    <col style="width:130px">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">No.</th>
+                                                        <th scope="col">문항수</th>
+                                                        <th scope="col">제목</th>
+                                                        <th scope="col">등록일</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            5
+                                                        </td>
+                                                        <td>45</td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">부서장을 위한 설문 구성</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2022-12-26</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            4
+                                                        </td>
+                                                        <td>44</td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">비데이터 직군을 위한설문</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2022-12-26</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            3
+                                                        </td>
+                                                        <td>44</td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">데이터 직군을 위한 설문</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2022-12-26</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td>44</td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">진단문항 필수 설문</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2023-01-11</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            1
+                                                        </td>
+                                                        <td>60</td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">진단문항 필수 + 선택 설문 </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2023-01-11</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="dashboard-col">
+                            <div class="dashboard-cell">
+                                <div class="dashboard-cell__inner">
+                                    <div class="ui-table">
+                                        <div class="ui-table__inner">
+                                            <table>
+                                                <caption>게시물 목록</caption>
+                                                <colgroup>
+                                                    <col style="width:85px">
+                                                    <col style="width:66px">
+                                                    <col style="width:auto">
+                                                    <col style="width:195px">
+                                                    <col style="width:153px">
+                                                    <col style="width:93px">
+                                                    <col style="width:125px">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">진단ID</th>
+                                                        <th scope="col">상태</th>
+                                                        <th scope="col">진단설문명</th>
+                                                        <th scope="col">진단기간</th>
+                                                        <th scope="col">개인/조직 요구수준</th>
+                                                        <th scope="col">진단문항</th>
+                                                        <th scope="col">응답자/대상자</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            202205
+                                                        </td>
+                                                        <td class="status status-ing">진행</td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">부서장을 위한 설문 구성</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2023-01-01 ~ 2023-06-30</td>
+                                                        <td>개인(80) / 조직(80)</td>
+                                                        <td>45</td>
+                                                        <td><span class="color-skyblue">45</span>/300</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            202204
+                                                        </td>
+                                                        <td class="status status-temp">임시</td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">비데이터 직군을 위한설문</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2023-01-01 ~ 2023-06-30</td>
+                                                        <td>개인(80) / 조직(80)</td>
+                                                        <td>44</td>
+                                                        <td><span class="color-skyblue">300</span>/300</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            202203
+                                                        </td>
+                                                        <td class="status status-waiting">대기</td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">데이터 직군을 위한 설문</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2023-01-01 ~ 2023-06-30</td>
+                                                        <td>개인(80) / 조직(80)</td>
+                                                        <td>50</td>
+                                                        <td><span class="color-skyblue">300</span>/300</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            202202
+                                                        </td>
+                                                        <td class="status status-cancel">취소</td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">진단문항 필수 설문</a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2023-01-01 ~ 2023-06-30</td>
+                                                        <td>개인(80) / 조직(80)</td>
+                                                        <td>44</td>
+                                                        <td><span class="color-skyblue">300</span>/300</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            202201
+                                                        </td>
+                                                        <td class="status status-end">만료</td>
+                                                        <td class="ui-table__title">
+                                                            <div class="ui-table__title--inner">
+                                                                <a href="javascript:void(0)" class="ui-table__title--link">진단문항 필수 + 선택 설문 </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>2023-01-01 ~ 2023-06-30</td>
+                                                        <td>개인(80) / 조직(80)</td>
+                                                        <td>44</td>
+                                                        <td><span class="color-skyblue">300</span>/300</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="dashboard-col">
+                            <div class="dashboard-cell">
+                                <div class="dashboard-cell__inner">
+                                    <div class="dashboard-title__wrap">
+                                        <div class="dashboard-title">진단현황</div>
+                                        <button type="button" class="ui-button ui-button__reset"></button>
+                                    </div>
+                                    <div class="dashboard-sub-title">
+                                        부서별 설문 응답
+                                    </div>
+                                    <div class="ui-table">
+                                        <div class="ui-table__inner">
+                                            <table class="score text-center">
+                                                <colgroup>
+                                                    <col style="width: calc(100%/6);">
+                                                    <col style="width: calc(100%/6);">
+                                                    <col style="width: calc(100%/6);">
+                                                    <col style="width: calc(100%/6);">
+                                                    <col style="width: calc(100%/6);">
+                                                    <col style="width: calc(100%/6);">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="">진단역량</th>
+                                                        <th class="bg-skyblue">소속기관<br>요구 진단점수</th>
+                                                        <th class="bg-skyblue">소속기관<br>평균 진단점수</th>
+                                                        <th class="">본인 진단점수</th>
+                                                        <th class="">요구 진단점수 격차</th>
+                                                        <th class="">진단 평균점수 격차</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="">정책/분석기획</td>
+                                                        <td class="bg-skyblue">2.2</td>
+                                                        <td class="bg-skyblue">1.0</td>
+                                                        <td class="">-1.2</td>
+                                                        <td class="">20</td>
+                                                        <td>-</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="">데이터 수집</td>
+                                                        <td class="bg-skyblue">2.5</td>
+                                                        <td class="bg-skyblue">1.0</td>
+                                                        <td class="">-1.5</td>
+                                                        <td class="">20</td>
+                                                        <td>+1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="">데이터 분석</td>
+                                                        <td class="bg-skyblue">2.6</td>
+                                                        <td class="bg-skyblue">1.0</td>
+                                                        <td class="">-1.6</td>
+                                                        <td class="">20</td>
+                                                        <td>-1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="">분석결과 활용</td>
+                                                        <td class="bg-skyblue">3.0</td>
+                                                        <td class="bg-skyblue">1.0</td>
+                                                        <td class="">-2</td>
+                                                        <td class="">20</td>
+                                                        <td>+1</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                    </div>
+                </div>
+                <!-- //layout-wrap -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

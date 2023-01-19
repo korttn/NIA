@@ -1,1 +1,112 @@
 @charset 'utf-8';
+
+@import './helper/index';
+
+
+/* 관리자 공통 */ 
+
+.adminLayout{
+    .ui-table{
+        text-align: center;
+        table{
+            table-layout: fixed;
+        }
+        td, th{
+            height: 38px;
+            padding: 7px 15px;
+            font-size: 14px;
+            line-height: normal;
+            box-sizing: border-box;
+            vertical-align: middle;
+            *{
+                font-size: 14px;  
+            }
+        }
+        &__title{
+            text-align: left;
+            &--inner{
+                @include d-flex;
+                @include align-center;
+            }
+            &--link{
+                @include ellipsis(1);
+            }
+        }
+        .status{
+            font-weight: 500;
+            &-ing{
+                color:#dc042d;
+            }
+            &-temp{
+                color:#ae00ff;
+            }
+            &-waiting{
+                color:#002ddc;
+            }
+            &-cancle{
+                color:#000000;
+            }
+            &-end{
+                color:#039243;
+            }
+        }
+    }
+    .ui-button{
+        width: auto;
+        height: 35px;
+        padding: 0 21px;
+        font-size:14px;
+        &__plus{
+            width:14px;
+            height:14px;
+            margin-left: auto;
+            padding: 0;
+            border-radius: 0px;
+        }
+        &__reset{
+            width:15px;
+            height:16px;
+            margin-left: auto;
+            padding: 0;
+            border-radius: 0px;
+        }
+    }
+}
+
+/* dashboard */ 
+.dashboard{
+    margin-left: 210px;
+    &-cell{
+        background: #ffffff;
+        &__inner{
+            padding: 20px;
+        }
+    }
+    &-col{
+        display: flex;
+        margin: -5px;
+        .dashboard-cell{
+            margin: 5px;
+            flex:1;
+            border-radius: 6px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.08);
+        }
+    }
+    &-title{
+        font: {
+            size: 18px;
+            weight:500;
+        };
+        &__wrap{
+            @include d-flex;
+            @include align-center;
+            margin-bottom: 20px;
+        }
+    }
+    &-sub-title{
+        margin-bottom: 10px;
+        font-weight: 500;
+        color:#203c7d;
+    }
+}
+

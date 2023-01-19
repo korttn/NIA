@@ -1,4 +1,11 @@
 @charset "UTF-8";
+.paging-first {
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='11'%3E%3Cpath fill='%23A0A8AB' fill-rule='evenodd' d='m13.182 9.268-1.414 1.414-4.95-4.95.232-.232-.232-.232 4.95-4.95 1.414 1.414L9.414 5.5l3.768 3.768Zm-6 0-1.414 1.414-4.95-4.95.232-.232-.232-.232 4.95-4.95 1.414 1.414L3.414 5.5l3.768 3.768Z'/%3E%3C/svg%3E");
+}
+.paging-prev {
+  background-image: url("data:image/svg+xml;charset=utf8, %0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='11'%3E%3Cpath fill='%23A0A8AB' fill-rule='evenodd' d='m7.182 9.268-1.414 1.414-4.95-4.95.232-.232-.232-.232 4.95-4.95 1.414 1.414L3.414 5.5l3.768 3.768Z'/%3E%3C/svg%3E");
+}
+
 .container-diagnosis {
   display: flex;
   -ms-display: flexbox;

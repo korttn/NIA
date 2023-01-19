@@ -754,3 +754,20 @@
 .report_graph{
     border: 1px solid #e8e8e8;
 }
+
+
+/* badge */ 
+.ui-badge{
+    display: inline-block;
+    height:23px;
+    font-size: 12px !important;
+    line-height: 100%;
+    flex:none;
+    &__notice{
+        margin-right: 10px;
+        padding:6px 10px;
+        background: #8db6ef;
+        border-radius: 11.5px;
+        color:#ffffff;
+    }
+}
