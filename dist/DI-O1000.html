@@ -41,14 +41,20 @@
                         <header class="header">
                             <ul class="d-flex">
                                 <li class="headAuthority">
-                                    <i class="manager"></i>
-                                    <i class="admin"></i>
+                                    <div class="manager">
+                                        <i></i>
+                                        <span>2</span>
+                                    </div>
+                                    <div class="admin">
+                                        <i></i>
+                                        <span></span>
+                                    </div>
                                 </li>
                                 <li>
                                     <p class="headName">홍길동</p><span>님 환영합니다.</span>
                                 </li>
                                 <li>
-                                    <span class="headLogout"><button>로그아웃.......</button></span>
+                                    <button class="headLogout"><i></i></button>
                                 </li>
                             </ul>
                         </header>
@@ -407,61 +413,10 @@
                                     <div class="dashboard-sub-title">
                                         부서별 설문 응답
                                     </div>
-                                    <div class="ui-table">
-                                        <div class="ui-table__inner">
-                                            <table class="score text-center">
-                                                <colgroup>
-                                                    <col style="width: calc(100%/6);">
-                                                    <col style="width: calc(100%/6);">
-                                                    <col style="width: calc(100%/6);">
-                                                    <col style="width: calc(100%/6);">
-                                                    <col style="width: calc(100%/6);">
-                                                    <col style="width: calc(100%/6);">
-                                                </colgroup>
-                                                <tbody>
-                                                    <tr>
-                                                        <th class="">진단역량</th>
-                                                        <th class="bg-skyblue">소속기관<br>요구 진단점수</th>
-                                                        <th class="bg-skyblue">소속기관<br>평균 진단점수</th>
-                                                        <th class="">본인 진단점수</th>
-                                                        <th class="">요구 진단점수 격차</th>
-                                                        <th class="">진단 평균점수 격차</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="">정책/분석기획</td>
-                                                        <td class="bg-skyblue">2.2</td>
-                                                        <td class="bg-skyblue">1.0</td>
-                                                        <td class="">-1.2</td>
-                                                        <td class="">20</td>
-                                                        <td>-</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="">데이터 수집</td>
-                                                        <td class="bg-skyblue">2.5</td>
-                                                        <td class="bg-skyblue">1.0</td>
-                                                        <td class="">-1.5</td>
-                                                        <td class="">20</td>
-                                                        <td>+1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="">데이터 분석</td>
-                                                        <td class="bg-skyblue">2.6</td>
-                                                        <td class="bg-skyblue">1.0</td>
-                                                        <td class="">-1.6</td>
-                                                        <td class="">20</td>
-                                                        <td>-1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="">분석결과 활용</td>
-                                                        <td class="bg-skyblue">3.0</td>
-                                                        <td class="bg-skyblue">1.0</td>
-                                                        <td class="">-2</td>
-                                                        <td class="">20</td>
-                                                        <td>+1</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+
+                                    <div class="report_graph" style="width: 645px;">
+                                    <!--차트가 그려질 부분-->
+                                        <canvas id="chart1" width="645" height="356"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -476,4 +431,6 @@
 
 </body>
 
+
+<script src="../dist/assets/js/result.js"></script>
 </html>
