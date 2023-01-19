@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 활용 역량 진단 도구</title>
+
+    <script src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./assets/lib/jquery/jquery-ui.min.js"></script>
+    <script src="./assets/lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./assets/lib/simplebar/simplebar.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.0/chart.min.js"></script>
+
+    <script src="./assets/js/ui-script.js"></script>
+    <script src="./assets/js/admin-common.js"></script>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="./assets/css/ui-style.css">
+
+    <!-- 개별 css -->
+    <link rel="stylesheet" href="./assets/css/admin-common.css">
+    <link rel="stylesheet" href="./assets/css/organization-admin.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container adminLayout">
+            <div class="container__inner">
+                <!-- layout-wrap -->
+                <div class="layout-wrap">
+                    <div class="top-wrap">
+                        <header class="header">
+                            <ul class="d-flex">
+                                <li class="headAuthority">
+                                    <div class="manager">
+                                        <i></i>
+                                        <span>2</span>
+                                    </div>
+                                    <div class="admin">
+                                        <i></i>
+                                        <span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="headName">홍길동</p><span>님 환영합니다.</span>
+                                </li>
+                                <li>
+                                    <button class="headLogout"><i></i></button>
+                                </li>
+                            </ul>
+                        </header>
+                    </div>
+                    <nav class="gnb">
+
+                        <div class="menu">
+                            <ul>
+                                <li>
+                                    <h1>
+                                        <a href="javascript:void(0);">데이터 활용 역량 온라인 진단도구</a>
+                                    </h1>
+                                </li>
+                                <li class="list active">
+                                    <a href="#">
+                                        <span class="icon home"><i></i></span>
+                                        <span class="title">Home</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <span class="icon notice"><i></i></span>
+                                        <span class="title">공지사항</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <span class="icon calendar"><i></i></span>
+                                        <span class="title">진단일정 관리</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <span class="icon survey"><i></i></span>
+                                        <span class="title">진단설문 관리</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <span class="icon group"><i></i></span>
+                                        <span class="title">부서 관리</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#">
+                                        <span class="icon manager"><i></i></span>
+                                        <span class="title">관리자 관리</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                    <div class="contents-wrap dashboard">
+                        <div class="dashboard-title">
+                            공지사항
+                        </div>
+                        <section class="dashboard-col">
+                            <div class="dashboard-cell">
+                                <div class="dashboard-cell__inner">
+                                    <div class="float-right">
+
+                                        <fieldset>
+                                            <legend class="hidden">검색</legend>
+                                            <input name="searchWrd" type="text" size="35" value="" maxlength="35" onkeypress="press(event);" title="검색어 입력" placeholder="제목을 검색하세요.">
+                                            <a href="#LINK" class="search_img" onclick="javascript:fn_egov_select_noticeList('1'); return false;"><img src="/survey/images/search.svg"></a>
+                                        </fieldset>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                        </section>
+                        
+                    </div>
+                </div>
+                <!-- //layout-wrap -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script src="../dist/assets/js/result.js"></script>
+
+<script type="text/javascript">
+    /* 차트 시작 */
+    // cnt array list
+    const barList = [30, 18, 10, 25, 45];
+    const barList2 = [30, 18, 10, 25, 25];
+
+
+    if (barList.length > 0) {
+        
+
+        const labels = ['경영기획실', '기획조정팀', '인사평가팀', '정책본부', '기획총괄팀'];
+        const datasets = {
+            datasets: [
+                {
+                label: "응답자",
+                backgroundColor: ['#5999d4'], //라벨별 컬러설정
+                borderColor: '#22252B',
+                data: barList,
+                barPercentage: 0.5,
+            },
+            {
+                label: "대상자",
+                backgroundColor: ['#ed7b2f'], //라벨별 컬러설정
+                borderColor: '#ed7b2f',
+                data: barList2,
+                barPercentage: 0.5,
+            },
+            
+            ],
+            labels: labels
+        }
+
+        const barData = {
+            type: 'bar',
+            data: datasets, //데이터 셋 ,
+            
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, //true 하게 되면 캔버스 width,height에 따라 리사이징된다.
+                plugins: {
+                    legend: {
+                        position: 'bottom',    
+                        fontColor: 'black',
+                        align: 'center',
+                        display: true,
+                        fullWidth: true,
+                        labels: {
+                            fontColor: 'rgb(0, 0, 0)'
+                        }
+                    },
+                },
+                interaction: {
+                    intersect: false,
+                },
+                scales: {
+                    x: {
+                        stacked: true, 
+                        ticks: {  
+                            padding: 5, // x축 값의 상하 패딩을 설정할 수 있어요.
+                        },
+                    },
+                    y: {
+                        stacked: true,
+                        afterDataLimits: (scale) => {
+                            // y축의 최대값은 데이터의 최대값에 딱 맞춰져서 그려지므로
+                            // y축 위쪽 여유공간이 없어 좀 답답한 느낌이 들 수 있는데요,
+                            // 이와 같이 afterDataLimits 콜백을 사용하여 y축의 최대값을 좀 더 여유있게 지정할 수 있습니다!
+                            scale.max = scale.max * 1.2;
+                        },
+                    },
+                   
+                }
+                
+            }
+        }
+
+        const canvas = document.getElementById('barChart');
+        const donutChart = new Chart(canvas, barData);
+    }
+
+
+    /* 도넛 차트 시작 */
+    // cnt array list
+    const list = [5, 1, 1, 6];
+
+    if (list.length > 0) {
+        $.each(list, function (index, item) {
+            console.log(index + "::" + item.cnt);
+            console.log(index + "::" + item.TYPE);
+        });
+
+        const dataset = {
+            label: "진단 참여 현황",
+            backgroundColor: ['#4472c4', '#ed7d31', '#a5a5a5', '#ffc000'], //라벨별 컬러설정
+            //borderColor: '#22252B',
+            data: list
+        }
+
+        const labels = ['데이터 관련 직군(부서장)', '데이터 관련 직군(부서원)', '비 데이터 관련 직군(부서장)', '비 데이터 관련 직군(부서원)'];
+        const datasets = {
+            datasets: [dataset],
+            labels: labels
+        }
+
+        const config = {
+            type: 'doughnut',
+            data: datasets, //데이터 셋 
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, //true 하게 되면 캔버스 width,height에 따라 리사이징된다.
+                plugins: {
+                    legend: {
+                        position: 'right',    
+                        fontColor: 'black',
+                        align: 'center',
+                        display: true,
+                        fullWidth: true,
+                        labels: {
+                            fontColor: 'rgb(0, 0, 0)'
+                        }
+                    },
+                },
+            }
+        }
+
+        const canvas = document.getElementById('donutChart');
+        const donutChart = new Chart(canvas, config);
+    }
+    /* 도넛 차트 끝 */
+
+    //init
+    $(function () {
+        addButtonEvent();
+    });
+</script>
+
+</html>

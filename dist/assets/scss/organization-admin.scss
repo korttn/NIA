@@ -3,3 +3,11 @@
 @import './helper/index';
 
 
+.chart{
+    &-wrap{
+        @include d-flex;
+        .donut_class{
+            flex:1;
+        }
+    }
+}

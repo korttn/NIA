@@ -751,8 +751,23 @@
 
 
 /* 그래프 */ 
-.report_graph{
-    border: 1px solid #e8e8e8;
+.chart{
+    &-wrap{
+        display: flex;
+        margin: -5px;
+    }
+    &-item{
+        @include d-flex-center;
+        width:auto;
+        flex:none;
+        margin: 5px;
+        padding:20px;
+        border: 1px solid #e8e8e8;
+        box-sizing: border-box;
+        &.flex{
+            flex:1;
+        }
+    }
 }
 
 

@@ -2018,8 +2018,29 @@
 }
 
 /* 그래프 */
-.report_graph {
+.chart-wrap {
+  display: flex;
+  margin: -5px;
+}
+.chart-item {
+  display: flex;
+  -ms-display: flexbox;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  flex: none;
+  margin: 5px;
+  padding: 20px;
   border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+.chart-item.flex {
+  flex: 1;
 }
 
 /* badge */
