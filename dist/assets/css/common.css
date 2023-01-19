@@ -12,9 +12,9 @@ body {
   background: #f4f8fa;
 }
 .container-user {
+  display: -webkit-box;
   display: flex;
   -ms-display: flexbox;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   height: auto;
@@ -26,14 +26,15 @@ body {
 }
 
 .login-wrap {
+  display: -webkit-box;
   display: flex;
   -ms-display: flexbox;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   height: 100%;
   background: #ffffff;
-  box-shadow: 50px 50px 60px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 50px 50px 60px rgba(0, 0, 0, 0.18);
+          box-shadow: 50px 50px 60px rgba(0, 0, 0, 0.18);
   border-radius: 6px;
   overflow: hidden;
 }
@@ -54,7 +55,9 @@ body {
   background-size: cover;
 }
 .login-right {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 20px 30px 20px 75px;
 }
 .login-title__head {
@@ -79,9 +82,22 @@ body {
   padding-left: 47px;
   border-radius: 25px;
   border: 2px solid #e4e4e4;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 50px;
   text-indent: 0;
+}
+.login_inputbox input::-webkit-input-placeholder {
+  color: #a8a8a8;
+}
+.login_inputbox input::-moz-placeholder {
+  color: #a8a8a8;
+}
+.login_inputbox input:-ms-input-placeholder {
+  color: #a8a8a8;
+}
+.login_inputbox input::-ms-input-placeholder {
+  color: #a8a8a8;
 }
 .login_inputbox input::placeholder {
   color: #a8a8a8;
@@ -121,8 +137,12 @@ body {
   line-height: 50px;
 }
 .login-linkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 300px;
   margin-top: 28px;
 }
@@ -156,15 +176,17 @@ body {
   margin-top: 30px;
 }
 .inf_content_head {
+  display: -webkit-box;
   display: flex;
   -ms-display: flexbox;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 99px;
   height: 30px;
   margin-bottom: 10px;
@@ -184,15 +206,17 @@ body {
   padding: 0 5px;
 }
 .inf_content .manual {
+  display: -webkit-box;
   display: flex;
   -ms-display: flexbox;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 57px;
   height: 22px;
   margin-left: 15px;
@@ -203,9 +227,9 @@ body {
   border-radius: 11px;
 }
 .inf_content_li {
+  display: -webkit-box;
   display: flex;
   -ms-display: flexbox;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   -webkit-box-align: center;
@@ -224,7 +248,8 @@ body {
   padding: 20px 30px;
   padding-bottom: 80px;
   background: #ffffff;
-  box-shadow: 50px 50px 60px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 50px 50px 60px rgba(0, 0, 0, 0.18);
+          box-shadow: 50px 50px 60px rgba(0, 0, 0, 0.18);
   border-radius: 6px;
   overflow: hidden;
 }
@@ -261,17 +286,19 @@ body {
   margin-top: 25px;
 }
 .enroll-organization-admin__inner {
+  display: -webkit-box;
   display: flex;
   -ms-display: flexbox;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .enroll-input__item {
+  display: -webkit-box;
   display: flex;
   -ms-display: flexbox;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   -webkit-box-align: center;
