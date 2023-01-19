@@ -292,6 +292,11 @@ body{
 		&__dd{
 			.ui-select{
 				height: 50px;
+				color:#a8a8a8;
+				font-size: 16px;
+				option{
+					color:#000000;
+				}
 			}
 			.ui-button{
 				height: 50px;
@@ -301,5 +306,9 @@ body{
 	}
 }
 
-
+.password-reset{
+	.user-common__title{
+		margin-top: 54px;
+	}
+}
 

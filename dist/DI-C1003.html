@@ -30,30 +30,33 @@
     <div class="wrap">
         <div class="container container-user">
             <div class="container__inner">
-                <div class="user-common">
+                <div class="user-common password-reset">
                     <div class="user-common__inner">
                         <div class="logo_area"></div>
                         <div class="user-common__title">
                             데이터 활용 역량 온라인 진단 도구
                         </div>
                         <div class="user-common__des">
-                            비밀번호가 초기화 되어 , 비밀번호를 변경합니다. <br>
-                            변경할 새 비밀번호를 최소 6자 이상으로 입력해 주세요.
+                            비밀번호가 초기화 되어, 비밀번호를 변경합니다. <br>
+                            변경하실 새 비밀번호(최소 6자 이상)와 비밀번호 변경 시 초기화를 위한 본인의 기관 이메일 주소를 입력해 주세요.
+                        </div>
+                        <div class="user-common__des--ps">
+                            (해당 이메일 주소는 시스템에서 저장되거나 조회되지 않습니다.)
                         </div>
 
                         <form id="frm" name="frm" method="post" action="">
-                            <div id="login" class="login-box mt-30 mx-auto">
+                            <div id="login" class="login-box mt-25 mx-auto">
                                 <div class="login_inputbox ui-form">
-                                    <input type="password" class="ui-input login-password" id="loginId" name="loginId"
-                                        placeholder="새 비밀번호">
-                                    <input type="password" class="ui-input login-password" id="" name="" placeholder="새 비밀번호 확인">
+                                    <input type="password" class="ui-input login-password" id="loginPw" name="loginPw" placeholder="새 비밀번호">
+                                    <input type="password" class="ui-input login-password" id="loginPw" name="loginPw" placeholder="새 비밀번호 확인">
+                                    <input type="text" class="ui-input login-email" id="" name="" placeholder="기관 이메일 주소">
                                 </div>
-                                <a href="javascript:void(0)" class="loginBtn" data-bs-toggle="modal" data-bs-target="#changePassword">비밀번호 변경
+                                <a href="javascript:void(0)" class="loginBtn mt-35" data-bs-toggle="modal" data-bs-target="#resetPassword">비밀번호 변경
                                 </a>
                             </div>
                         </form>
                         
-                        <div class="user-common__text text-center mt-50">변경 시, 새로운 비밀번호로 로그인 해주세요.</div>
+                        <div class="user-common__text text-center mt-50">변경 후, 새로운 비밀번호로 다시 로그인 해주세요.</div>
 
                     </div>
                     

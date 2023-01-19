@@ -315,8 +315,17 @@ body {
 }
 .enroll-input__dd .ui-select {
   height: 50px;
+  color: #a8a8a8;
+  font-size: 16px;
+}
+.enroll-input__dd .ui-select option {
+  color: #000000;
 }
 .enroll-input__dd .ui-button {
   height: 50px;
   line-height: 100%;
+}
+
+.password-reset .user-common__title {
+  margin-top: 54px;
 }
