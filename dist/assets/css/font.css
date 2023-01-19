@@ -112,3 +112,23 @@
     font-weight: 600;
     src: local('Noto Serif CJK KR'), local('Source Han Serif K'), local('Source Han Serif'), local('Noto Serif CJK'), local('Noto Serif'), url(../fonts/NotoSerifCJKkr-Bold.woff) format('woff');
 }
+
+
+@font-face {
+    font-family: 'mof';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/mofL.woff) format('woff'),url(../fonts/mofL.woff) format('eot');
+}
+@font-face {
+    font-family: 'mof';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/mofM.woff) format('woff'),url(../fonts/mofM.woff) format('eot');
+}
+@font-face {
+    font-family: 'mof';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../fonts/mofB.woff) format('woff'),url(../fonts/mofB.eot) format('eot');
+}
