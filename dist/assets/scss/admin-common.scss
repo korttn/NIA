@@ -7,13 +7,53 @@
     }
 }
 .top-wrap {
+    position:relative;
     padding:  0 0 0 210px;
     height: 50px;
     box-sizing: border-box;
     background-color: #fff;
-    box-shadow: 0px 3px 5px 0 rgb(23 0 55 / 8%);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.13);
+    z-index:1;
     ul {
+        padding:10px 20px;
+        justify-content: flex-end;
+        text-align: right;
+        align-items: flex-start;
         li {
+            margin-top:5px;
+            &.headAuthority {
+                position:relative;
+                width: calc(100% - 155px);
+                .manager {
+                    display: block;
+                    i{
+                        position:absolute;
+                        top:-4px;
+                        left:0;
+                        width:29px;
+                        height:29px;
+                        background:url('../images/icon/icon-manager.png') no-repeat;
+                    }
+                    span {
+                        position:absolute;
+                        padding:4px 6px;
+                        top: -10px;
+                        left: 20px;
+                        background-color: #eb1f1f;
+                        color:#fff;
+                        font-size:12px;
+                        box-sizing:border-box;
+                        border-radius: 50%;
+                    }
+                }
+                .admin {
+                    display: none;
+                }
+
+                
+                
+            }
+            
             .headName {
                 display:inline-block;
                 font-size:14px;
@@ -24,6 +64,22 @@
                 display:inline-block;
                 font-size:14px;
             }
+
+            .headLogout {
+                position:relative;
+                display: block;
+                padding-left:20px;
+                margin-left:15px;
+                i{
+                    position:absolute;
+                    top:-2px;
+                    left:0;
+                    width:23px;
+                    height:21px;
+                    background:url('../images/icon/icon-logout.png') no-repeat;
+                }
+            }
+
         }
        
     }
@@ -63,9 +119,11 @@
                     a {
                         padding:0;
                         line-height:1.7rem;
-                        font-size:20px;
+                        font-size:21px;
+                        font-weight:500;
                         font-family: 'mof';
                         color:#fff;
+                        letter-spacing: -1.2px;
                     }
                 }
                 &.active {
